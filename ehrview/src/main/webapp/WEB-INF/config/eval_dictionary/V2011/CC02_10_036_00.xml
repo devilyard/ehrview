@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="未治"/>
+  <item key="2" text="间断门诊治疗"/>
+  <item key="3" text="持续门诊治疗"/>
+</dic>

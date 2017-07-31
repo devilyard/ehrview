@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="1组高血压（轻度）"/>
+  <item key="2" text="2组高血压（中度）"/>
+  <item key="3" text="3组高血压（重度）"/>
+  <item key="4" text="理想血压"/>
+  <item key="5" text="正常血压"/>
+  <item key="6" text="正常高值"/>
+  <item key="7" text="单纯收缩性高血压"/>
+</dic>

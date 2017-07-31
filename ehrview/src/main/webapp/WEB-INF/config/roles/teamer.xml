@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<role name="组员" parent="base" version="1325815979516">
+  <accredit>
+    <apps>
+      <app id="SYS">
+        <module id="SYS01"/>
+        <module id="SYS02"/>
+      </app>
+    </apps>
+    <service acType="whitelist">
+      <service id="logon"/>
+      <service id="schemaLoader"/>
+      <service id="simpleSave"/>
+      <service id="simpleLoad"/>
+      <service id="simpleQuery"/>
+      <service id="simpleRemove"/>
+      <others/>
+    </service>
+    <storage acType="whitelist">
+      <others acValue="1111"/>
+    </storage>
+  </accredit>
+</role>

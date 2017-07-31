@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<dic id="imageIPRoute" version="1387775683407"> 
+  <item key="47011661433010211A1001" text="杭州市第一人民医院" pyCode="hzsdyrmyy" port="80" url="http://10.10.13.7/webviewer.html" ip="10.10.13.7"/>  
+  <item key="470051742" text="浙江省肿瘤医院" pyCode="zjszlyy" port="80" url="http://10.1.1.70/webviewer.html" ip="10.1.1.70"/>  
+  <item key="470051734" text="浙江医院" pyCode="zjyy" company="bsoft" url="http://10.10.12.67/main/webview.aspx"/>  
+  <item key="470051726" text="浙江省人民医院" pyCode="zjsrmyy" url="http://10.1.1.70/webviewer.html"/>  
+  <item key="470051793" text="浙江省立同德医院" pyCode="zjsltdyy" url="http://10.1.1.70/webviewer.html"/> 
+  <item key="000000008" text="公司测试服务" pyCode="gscsfw" company="bsoft" url="http://172.16.59.100/webview_ss/main/webview.aspx"/>  
+</dic>

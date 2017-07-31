@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="156" text="中国" comment="CHINA"/>
+  <item key="004" text="阿富汗" comment="AFGHANISTAN"/>
+  <item key="008" text="阿尔巴尼亚" comment="ALBANIA"/>
+  <item key="010" text="南极洲" comment="ANTARCTICA"/>
+  <item key="012" text="阿尔及利亚" comment="ALGERIA"/>
+  <item key="016" text="美属萨摩亚" comment="AMERICAN SAMOA"/>
+  <item key="020" text="安道尔" comment="ANDORRA"/>
+  <item key="024" text="安哥拉" comment="ANGOLA"/>
+  <item key="028" text="安提瓜和巴布达" comment="ANTIGUA AND BARBUDA"/>
+  <item key="031" text="阿塞拜疆" comment="AZERBAIJAN"/>
+  <item key="032" text="阿根廷" comment="ARGENTINA"/>
+  <item key="036" text="澳大利亚" comment="AUSTRALIA"/>
+  <item key="040" text="奥地利" comment="AUSTRIA"/>
+  <item key="044" text="巴哈马" comment="BAHAMAS"/>
+  <item key="048" text="巴林" comment="BAHRAIN"/>
+  <item key="050" text="孟加拉国" comment="BANGLADESH"/>
+  <item key="051" text="亚美尼亚" comment="ARMENIA"/>
+  <item key="052" text="巴巴多斯" comment="BARBADOS"/>
+  <item key="056" text="比利时" comment="BELGIUM"/>
+  <item key="060" text="百慕大" comment="BERMUDA"/>
+  <item key="064" text="不丹" comment="BHUTAN"/>
+  <item key="068" text="玻利维亚" comment="BOLIVIA"/>
+  <item key="070" text="波黑" comment="BOSNIA AND HERZEGOVINA"/>
+  <item key="072" text="博茨瓦纳" comment="BOTSWANA"/>
+  <item key="074" text="布维岛" comment="BOUVET ISLAND"/>
+  <item key="076" text="巴西" comment="BRAZIL"/>
+  <item key="084" text="伯利兹" comment="BELIZE"/>
+  <item key="086" text="英属印度洋领地" comment="BRITISH INDIAN OCEAN TERRITORY"/>
+  <item key="090" text="所罗门群岛" comment="SOLOMON ISLLANDS"/>
+  <item key="092" text="英属维尔京群岛" comment="VIRGIN ISLANDS,BRITISH"/>
+  <item key="096" text="文莱" comment="BRUNEI"/>
+  <item key="100" text="保加利亚" comment="BULGARIA"/>
+  <item key="104" text="缅甸" comment="MYANMAR"/>
+  <item key="108" text="布隆迪" comment="BURUNDI"/>
+  <item key="112" text="白俄罗斯" comment="BELARUS"/>
+  <item key="116" text="埔寨" comment="CAMBODIA"/>
+  <item key="120" text="喀麦隆" comment="CAMEROON"/>
+  <item key="124" text="加拿大" comment="CANADA"/>
+  <item key="132" text="佛得角" comment="CANADA"/>
+  <item key="136" text="开曼群岛" comment="CAPE VERDE"/>
+  <item key="140" text="中非" comment="CAYMAN ISLANDS"/>
+  <item key="144" text="斯里兰卡" comment="CENTRAL AFRICAN REPUBLIC"/>
+  <item key="148" text="咋得" comment="SRILANKA"/>
+  <item key="152" text="智利" comment="CHILE"/>
+  <item key="158" text="台湾" comment="TAIWAN,PROVINCE OF CHINA"/>
+  <item key="162" text="圣诞岛" comment="CHRISTMAS ISLAND"/>
+  <item key="166" text="科科斯（基林）群岛" comment="COCOS(KEELING)ISLANDS"/>
+  <item key="170" text="哥伦比亚" comment="COLOMBIA"/>
+  <item key="174" text="科摩罗" comment="COMOROS"/>
+  <item key="175" text="马约特" comment="MAYOTTE"/>
+  <item key="178" text="刚果（布）" comment="CONGO"/>
+  <item key="180" text="刚果（金）" comment="CONGO,THE DEMOCRATIC REPUBLIC OF THE"/>
+  <item key="184" text="库克群岛" comment="COOK ISLANDS"/>
+  <item key="188" text="哥斯达黎加" comment="COSTA RICA"/>
+  <item key="191" text="克罗地亚" comment="CROATIA"/>
+  <item key="192" text="古巴" comment="CUBA"/>
+  <item key="196" text="塞浦路斯" comment="CYPRUS"/>
+  <item key="203" text="捷克" comment="CZECH REPUBLIC"/>
+  <item key="204" text="贝宁" comment="BENIN"/>
+  <item key="208" text="丹麦" comment="DENMARK"/>
+  <item key="212" text="多米尼克" comment="DOMINICA"/>
+  <item key="214" text="多米尼加" comment="DOMINICAN REPUBLIC"/>
+  <item key="218" text="厄瓜多尔" comment="ECUADOR"/>
+  <item key="222" text="萨尔瓦多" comment="EL SALVADOR"/>
+  <item key="226" text="赤道几内亚" comment="EQUATORIAL GUINEA"/>
+  <item key="231" text="埃塞俄比亚" comment="ETHIOPIA"/>
+  <item key="232" text="厄立特里亚" comment="ERITREA"/>
+  <item key="233" text="爱沙尼亚" comment="ESTONIA"/>
+  <item key="234" text="法罗群岛" comment="FAROE ISLANDS"/>
+  <item key="238" text="福克兰群岛(马尔维纳斯)" comment="FALKLAND ISLANDS(MALVINAS)"/>
+  <item key="239" text="南乔治亚岛和南桑德韦奇岛" comment="SOUTH GEORGIA AND THE SOUTH SANDWICH ISLANDS"/>
+  <item key="242" text="斐济" comment="FIJI"/>
+  <item key="246" text="芬兰" comment="FINLAND"/>
+  <item key="250" text="法国" comment="FRANCE"/>
+  <item key="254" text="法属圭亚那" comment="FRENCH GUIANA"/>
+  <item key="258" text="法属波利尼西亚" comment="FRENCH POLYNESIA"/>
+  <item key="260" text="发属南部领地" comment="FRENCH SOUTHERN TERRITORIES"/>
+  <item key="262" text="吉布提" comment="DJIBOUTI"/>
+  <item key="266" text="加蓬" comment="GABON"/>
+  <item key="268" text="格鲁吉亚" comment="GEORGIA"/>
+  <item key="270" text="冈比亚" comment="GAMBIA"/>
+  <item key="275" text="巴勒斯坦" comment="PALESTINE"/>
+  <item key="276" text="德国" comment="GERMANY"/>
+  <item key="288" text="加纳" comment="GHANA"/>
+  <item key="292" text="直布罗陀" comment="GIBRALTAR"/>
+  <item key="296" text="基里巴斯" comment="KIRIBATI"/>
+  <item key="300" text="希腊" comment="GREECE"/>
+  <item key="304" text="格林兰" comment="GREENLAND"/>
+  <item key="308" text="格林纳达" comment="GRENADA"/>
+  <item key="312" text="瓜德罗普" comment="GUADELOUPE"/>
+  <item key="316" text="关岛" comment="GUAM"/>
+  <item key="320" text="危地马拉" comment="GUATEMALA"/>
+  <item key="324" text="几内亚" comment="GUINEA"/>
+  <item key="328" text="圭亚那" comment="GUYANA"/>
+  <item key="332" text="海地" comment="HAITI"/>
+  <item key="334" text="赫德岛和麦克唐纳岛" comment="HEARD ISLAND AND MCDONALD ISLANDS"/>
+  <item key="336" text="梵蒂冈" comment="VATICAN"/>
+  <item key="340" text="洪都拉斯" comment="HONDURAS"/>
+  <item key="344" text="香港" comment="HONG KONG"/>
+  <item key="348" text="匈牙利" comment="HUNGARY"/>
+  <item key="352" text="冰岛" comment="ICELAND"/>
+  <item key="356" text="印度" comment="INDIA"/>
+  <item key="360" text="印度尼西亚" comment="INDONESIA"/>
+  <item key="364" text="伊朗" comment="IRAN"/>
+  <item key="368" text="伊拉克" comment="IRAQ"/>
+  <item key="372" text="爱尔兰" comment="IRELAND"/>
+  <item key="376" text="以色列" comment="ISRAEI"/>
+  <item key="380" text="意大利" comment="ITALY"/>
+  <item key="384" text="科特迪瓦" comment="COTE D'IV0IRE"/>
+  <item key="388" text="牙买加" comment="JAMAICA"/>
+  <item key="392" text="日本" comment="JAPAN"/>
+  <item key="398" text="哈萨克斯坦" comment="KAZAKHSTAN"/>
+  <item key="400" text="约旦" comment="YORDAN"/>
+  <item key="404" text="肯尼亚" comment="KENYA"/>
+  <item key="408" text="朝鲜" comment="KOREA,DEMOCRATIC PEOPLE'S REPUBLIC OF"/>
+  <item key="410" text="韩国" comment="KOREA,REPUBLIC OF"/>
+  <item key="414" text="科威特" comment="KUWAIT"/>
+  <item key="417" text="吉尔吉斯斯坦" comment="KYRGYZSTAN"/>
+  <item key="418" text="老挝" comment="LAOS"/>
+  <item key="422" text="黎巴嫩" comment="LEBANON"/>
+  <item key="426" text="莱索托" comment="LESOTHO"/>
+  <item key="428" text="拉脱维亚" comment="LATVIA"/>
+  <item key="430" text="利比里亚" comment="LIBERIA"/>
+  <item key="434" text="利比亚" comment="LIBYA"/>
+  <item key="438" text="列支敦士登" comment="LIECHTENSTEIN"/>
+  <item key="440" text="立陶宛" comment="LITHUANIA"/>
+  <item key="442" text="卢森堡" comment="LUXEMBOURG"/>
+  <item key="446" text="澳门" comment="MACAU"/>
+  <item key="450" text="马达加斯加" comment="MADAGASCAR"/>
+  <item key="454" text="马拉维" comment="MALAWI"/>
+  <item key="458" text="马来西亚" comment="MALAYSIA"/>
+  <item key="462" text="马尔代夫" comment="MALDIVES"/>
+  <item key="466" text="马里" comment="MALI"/>
+  <item key="470" text="马耳他" comment="MALTA"/>
+  <item key="474" text="马提尼克" comment="MARTINIQUE"/>
+  <item key="478" text="毛里塔尼亚" comment="MAURITANIA"/>
+  <item key="480" text="毛里求斯" comment="MAURITIUS"/>
+  <item key="484" text="墨西哥" comment="MEXICO"/>
+  <item key="492" text="摩纳哥" comment="MONACO"/>
+  <item key="496" text="蒙古" comment="MONGOLIA"/>
+  <item key="498" text="摩尔多瓦" comment="MOLDOVA"/>
+  <item key="500" text="蒙特塞拉特" comment="MONTSERRAT"/>
+  <item key="504" text="摩洛哥" comment="MOROCCO"/>
+  <item key="508" text="莫桑比克" comment="MOZAMBIQUE"/>
+  <item key="512" text="阿曼" comment="OMAN"/>
+  <item key="516" text="纳米比亚" comment="NAMIBIA"/>
+  <item key="520" text="瑙鲁" comment="NAURU"/>
+  <item key="524" text="尼泊尔" comment="NEPAL"/>
+  <item key="528" text="荷兰" comment="NETHERLANDS"/>
+  <item key="530" text="荷属安的列斯" comment="NETHERLANDS ANTILLES"/>
+  <item key="533" text="阿鲁巴" comment="ARUBA"/>
+  <item key="540" text="新喀里多尼亚" comment="NEW CALEDONIA"/>
+  <item key="548" text="瓦努阿图" comment="VANUATU"/>
+  <item key="554" text="新西兰" comment="NEW ZEALAND"/>
+  <item key="558" text="尼加拉瓜" comment="NICARAGUA"/>
+  <item key="562" text="尼日尔" comment="NIGER"/>
+  <item key="566" text="尼日利亚" comment="NIGERIA"/>
+  <item key="570" text="纽埃" comment="NIUE"/>
+  <item key="574" text="诺福克岛" comment="NORFOLK ISLAND"/>
+  <item key="578" text="挪威" comment="NORWAY"/>
+  <item key="580" text="北马里亚纳" comment="NORTHERN MARIAN ISLANDS"/>
+  <item key="581" text="美国本土外小岛屿" comment="UNITED STATES MIN OUTLYING ISLANDS"/>
+  <item key="583" text="密克罗尼西亚联邦" comment="MICRONESIA,FEDER STATES OF"/>
+  <item key="384" text="马绍尔群岛" comment="MARSHALL ISLANDS"/>
+  <item key="585" text="帕劳" comment="PALAU"/>
+  <item key="586" text="巴基斯坦" comment="PAKISTAN"/>
+  <item key="591" text="巴拿马" comment="PANAMA"/>
+  <item key="598" text="巴布亚新几内亚" comment="PAPUA NEW GUINEA"/>
+  <item key="600" text="巴拉圭" comment="PARAGUAY"/>
+  <item key="604" text="秘鲁" comment="PERU"/>
+  <item key="608" text="菲律宾" comment="PHILIPPINES"/>
+  <item key="672" text="皮特凯恩" comment="PITCAIRN"/>
+  <item key="616" text="波兰" comment="POLAND"/>
+  <item key="620" text="葡萄牙" comment="PORTUGAI"/>
+  <item key="624" text="几内亚比绍" comment="GUINEA-BISSAU"/>
+  <item key="626" text="东帝演" comment="EASTTIMOR"/>
+  <item key="630" text="波多黎各" comment="PUERTO RICO"/>
+  <item key="634" text="卡塔尔" comment="QATAR"/>
+  <item key="638" text="留尼汪" comment="REUNION"/>
+  <item key="642" text="罗马尼亚" comment="ROMANIA"/>
+  <item key="643" text="俄罗斯联邦" comment="RUSSIAN FEDERATION"/>
+  <item key="646" text="卢旺达" comment="RWANDA"/>
+  <item key="654" text="圣赫勒拿" comment="SAINTHELENA"/>
+  <item key="659" text="圣基茨和尼维斯" comment="SAINTKITTS AND NEVIS"/>
+  <item key="660" text="安圭拉" comment="ANGUILLA"/>
+  <item key="662" text="圣卢西亚" comment="SAINTLUCIA"/>
+  <item key="666" text="圣皮埃尔和密克隆" comment="SAINTPIERRE AND MIQUELON"/>
+  <item key="670" text="圣文森特和格林纳丁斯" comment="SAIN VINCENT AND THE GRENADINES"/>
+  <item key="674" text="圣马力诺" comment="SAN MARINO"/>
+  <item key="678" text="圣多美和普林西比" comment="SAO TOME AND PRINCIPE"/>
+  <item key="682" text="沙特阿拉伯" comment="SAUDI ARABIA"/>
+  <item key="686" text="塞内加尔" comment="SENEGAL"/>
+  <item key="690" text="塞舌尔" comment="SEYCHELLES"/>
+  <item key="694" text="塞拉利昂" comment="SIERR ALEONE"/>
+  <item key="702" text="新加坡" comment="SINGAPORE"/>
+  <item key="703" text="斯洛伐克" comment="SLOVAKIA"/>
+  <item key="704" text="越南" comment="VIET NAM"/>
+  <item key="705" text="斯洛文尼亚" comment="SLOVENIA"/>
+  <item key="706" text="索马里" comment="SOMALIA"/>
+  <item key="710" text="南非" comment="SOUTH AFRICA"/>
+  <item key="716" text="津巴布韦" comment="ZIMBABWE"/>
+  <item key="724" text="西班牙" comment="SPAIN"/>
+  <item key="732" text="西撒哈拉" comment="WESTERN SAHARA"/>
+  <item key="736" text="苏丹" comment="SUDAN"/>
+  <item key="740" text="苏里南" comment="SURINAME"/>
+  <item key="744" text="斯瓦尔巴岛和扬马延岛" comment="SVALBARD AND JAN MAYEN"/>
+  <item key="748" text="斯威士兰" comment="SWAZILAND"/>
+  <item key="752" text="瑞典" comment="SWEDEN"/>
+  <item key="756" text="瑞士" comment="SWITZERLAND"/>
+  <item key="760" text="叙利亚" comment="SYRIAN ARAB REPUBLIC"/>
+  <item key="762" text="塔吉克斯坦" comment="TAJIKISTAN"/>
+  <item key="764" text="泰国" comment="THAILAND"/>
+  <item key="768" text="多哥" comment="TOGO"/>
+  <item key="772" text="托克劳" comment="TOKELAU"/>
+  <item key="776" text="汤加" comment="TONGA"/>
+  <item key="780" text="特立尼达和多巴哥" comment="TRINIDAD AND TOBAGO"/>
+  <item key="784" text="阿联酋" comment="UNITED ARAB EMIRATES"/>
+  <item key="788" text="突尼斯" comment="TUNISIA"/>
+  <item key="792" text="土耳其" comment="TURKEY"/>
+  <item key="795" text="土库曼斯坦" comment="TURKMENISTAN"/>
+  <item key="796" text="特克斯和凯科斯群岛" comment="TURKS AND CAICOS ISLANDS"/>
+  <item key="798" text="图瓦卢" comment="TUVALU"/>
+  <item key="800" text="乌干达" comment="UGANDA"/>
+  <item key="804" text="乌克兰" comment="UKRAINE"/>
+  <item key="807" text="前南马其顿" comment="MACEDONIA,THE FORMER YUGOSLAV REPUBLIC OF"/>
+  <item key="818" text="埃及" comment="EGYPT"/>
+  <item key="826" text="英国" comment="UNITED KINGDOM"/>
+  <item key="834" text="坦桑尼亚" comment="TANZANIA"/>
+  <item key="840" text="美国" comment="UNITED STATES"/>
+  <item key="850" text="美属维尔京群岛" comment="VIRGIN ISLANDS,US"/>
+  <item key="854" text="布基纳法索" comment="BURKINA FASO"/>
+  <item key="858" text="乌拉圭" comment="URUGUAY"/>
+  <item key="860" text="乌兹别克斯坦" comment="UZBEKISTAN"/>
+  <item key="862" text="委内瑞拉" comment="VENEZUELA"/>
+  <item key="876" text="瓦利斯和富图纳" comment="WALLIS AND FUTUNA"/>
+  <item key="882" text="萨摩亚" comment="SAMOA"/>
+  <item key="887" text="也门" comment="YEMEN"/>
+  <item key="891" text="南斯拉夫" comment="YUGOSLAVIA"/>
+  <item key="894" text="赞比亚" comment="ZAMBIA"/>
+</dic>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="无"/>
+  <item key="2" text="盲"/>
+  <item key="3" text="聋"/>
+  <item key="4" text="哑"/>
+  <item key="5" text="精神病"/>
+  <item key="6" text="先天性智力低下"/>
+  <item key="7" text="先天性心脏病"/>
+  <item key="8" text="血友病"/>
+  <item key="9" text="糖尿病"/>
+  <item key="10" text="其他"/>
+</dic>

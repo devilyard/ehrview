@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="初次定级"/>
+  <item key="2" text="维持原级"/>
+  <item key="3" text="定期转级"/>
+  <item key="4" text="不定期转级"/>
+</dic>

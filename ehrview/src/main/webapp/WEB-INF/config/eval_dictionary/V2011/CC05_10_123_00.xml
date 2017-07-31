@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="自知力完全"/>
+  <item key="2" text="自知力不全"/>
+  <item key="3" text="自知力缺失"/>
+</dic>

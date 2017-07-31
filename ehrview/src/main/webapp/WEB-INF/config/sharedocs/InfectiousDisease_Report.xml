@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClinicalDocument xmlns="urn:hl7-org:v3" xmlns:mif="urn:hl7-org:v3/mif" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 ..\sdschemas\CDA.xsd">
+
+	<realmCode code="CN"/>
+	<typeId root="2.16.840.1.113883.1.3" extension="POCD_MT000040"/>
+	<templateId  root="2.16.156.10011.2.1.1.10"/>
+	<id root="2.16.156.10011.1.1.1.3" datacode="DE01.00.008.00" extension="" datatype="not-null"/>
+	<code code="HSDB03.02" codeSystem="2.16.156.10011.2.4" codeSystemName="卫生信息共享文档规范编码体系"/>
+	<title>传染病报告</title>
+	<effectiveTime xsi:type="TS" value="20111231154823"/>
+	<confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25" codeSystemName="Confidentiality" displayName="正常访问保密级别"/>
+	<languageCode code="zh-CN"/>
+	<setId/>
+	<versionNumber/>
+
+	<recordTarget typeCode="RCT" contextControlCode="OP">
+		<patientRole classCode="PAT">
+			<!--健康档案标识号-->
+			<id root="2.16.156.10011.1.2" datacode="DE01.00.009.00" extension="" datatype="N17"/>
+			
+			<addr use="H">
+				<houseNumber datacode="DE02.01.009.06" datatype="AN1..70"></houseNumber>
+				<streetName datacode="DE02.01.009.05" datatype="AN1..70"></streetName>
+				<township datacode="DE02.01.009.04" datatype="AN1..70"></township>
+				<county datacode="DE02.01.009.03" datatype="AN1..70"></county>
+				<city datacode="DE02.01.009.02" datatype="AN1..70"></city>
+				<state datacode="DE02.01.009.01" datatype="AN1..70"></state>
+			</addr>
+			<telecom datacode="DE02.01.010.00" datatype="AN1..20" value=""/>
+			<patient classCode="PSN" determinerCode="INSTANCE">
+				<!--患者身份证号-->
+				<id root="2.16.156.10011.1.3" datacode="DE02.01.030.00" extension="" datatype="AN18"/>
+				<name datacode="DE02.01.039.00" datatype="A1..50"></name>
+				<administrativeGenderCode datacode="DE02.01.040.00" datatype="N1" code="" dic="GB_T2261_1" codeSystem="2.16.156.10011.2.3.3.4" codeSystemName="生理性别代码表(GB/T 2261.1)"/>
+				<birthTime datacode="DE02.01.005.01" value="" datatype="D8"/>
+				
+				<!-- 家长信息（姓名、电话） -->
+				<guardian>
+					<code code="51" displayName="父亲" codeSystem="2.16.156.10011.2.3.3.8" codeSystemName="家庭关系代码表（GB/T 4761）"/>
+					<telecom datacode="DE02.01.010.00" datatype="AN1..20" value=""></telecom>
+					<guardianPerson>
+						<name datacode="DE02.01.039.00" datatype="A1..50"></name>
+					</guardianPerson>
+				</guardian>
+				
+				<!-- 工作单位 -->
+				<employerOrganization>
+					<name datacode="DE08.10.007.00"></name>
+					<telecom datacode="DE02.01.010.00" value=""></telecom>
+					<addr use="H">
+						<houseNumber datacode="DE02.01.009.06" datatype="AN1..70"></houseNumber>
+						<streetName datacode="DE02.01.009.05" datatype="AN1..70"></streetName>
+						<township datacode="DE02.01.009.04" datatype="AN1..70"></township>
+						<county datacode="DE02.01.009.03" datatype="AN1..70"></county>
+						<city datacode="DE02.01.009.02" datatype="AN1..70"></city>
+						<state datacode="DE02.01.009.01" datatype="AN1..70"></state>
+					</addr>
+				</employerOrganization>
+				
+				<!-- 户籍信息 -->
+				<household>
+					<place>
+						<addr use="H">
+							<houseNumber datacode="DE02.01.009.06" datatype="AN1..70"></houseNumber>
+							<streetName datacode="DE02.01.009.05" datatype="AN1..70"></streetName>
+							<township datacode="DE02.01.009.04" datatype="AN1..70"></township>
+							<county datacode="DE02.01.009.03" datatype="AN1..70"></county>
+							<city datacode="DE02.01.009.02" datatype="AN1..70"></city>
+							<state datacode="DE02.01.009.01" datatype="AN1..70"></state>
+						</addr>
+					</place>
+				</household>
+				
+				<!-- 职业状况 -->
+				<occupation>
+					<occupationCode code="99" displayName="其他" codeSystem="2.16.156.10011.2.3.1.6" codeSystemName="传染病患者职业代码表"></occupationCode>
+				</occupation>
+			</patient>
+		</patientRole>
+	</recordTarget>
+	
+	<author typeCode="AUT" contextControlCode="OP">
+		<!-- 填报日期 -->
+		<time xsi:type="TS" datacode="DE02.01.035.00" value="" datatype="D8"/>
+		<assignedAuthor classCode="ASSIGNED">
+			<id root="2.16.156.10011.1.7" extension="234234234"/>
+			<assignedPerson>
+				<!-- 报告医师姓名 -->
+				<name datacode="DE02.01.039.00" datatype="A1..50"></name>
+			</assignedPerson>
+			<representedOrganization>
+				<id root="2.16.156.10011.1.5" extension="0187565656"/>
+				<!-- 填报机构名称 -->
+				<name datacode="DE08.10.013.00" datatype="AN1..70"></name>
+				<!-- 填报机构电话号码 -->
+				<telecom datacode="DE02.01.010.00" datatype="AN1..20" value=""></telecom>
+				<addr></addr>
+			</representedOrganization>
+		</assignedAuthor>
+	</author>
+	
+	<custodian typeCode="CST">
+		<assignedCustodian classCode="ASSIGNED">
+			<representedCustodianOrganization classCode="ORG" determinerCode="INSTANCE">
+				<id root="2.16.156.10011.1.6" extension="32290176-8"/>
+				<name>苏州市卫生和计划生育委员会</name>
+				<telecom value="0512-65226855"/>
+				<addr>苏州市平泷路188号</addr>
+			</representedCustodianOrganization>
+		</assignedCustodian>
+	</custodian>
+
+	<relatedDocument typeCode="RPLC">
+		<parentDocument classCode="DOCCLIN" moodCode="EVN">
+			<id root="2.16.156.10011.1.1.1.3" extension="D2011000000"/>
+			<setId/>
+			<versionNumber value="1"/>
+		</parentDocument>
+	</relatedDocument>
+
+	<component>
+		<structuredBody>
+
+			<!--症状章节-->
+			<component>
+				<section>
+					<code code="11450-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="PROBLEM LIST"/>
+					<text/>
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="DE04.01.005.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录"/>
+							<!-- 传染病首次出现症状日期 -->
+							<value xsi:type="TS" datacode="DE04.01.005.00" value="" datatype="D8"/>
+						</observation>							
+					</entry>
+				</section>
+			</component>
+
+            <!--诊断记录章节-->
+			<component>
+				<section>
+                    <code code="29548-5" displayName="Diagnosis" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+                    <text/>
+
+					<!-- 发病类别代码 -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="DE05.10.015.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录"/>
+							<!-- 传染病急性、慢性代码 -->
+							<value xsi:type="CD" datacode="DE05.10.015.00" datatype="N1" code="" dic="CC05_10_015_00" codeSystem="2.16.156.10011.2.3.2.21" codeSystemName="传染病发病类别代码表"/>
+						</observation>
+					</entry>
+					
+					<!-- 传染病病例诊断状态代码 -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="DE05.01.060.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="疾病的诊断状态类型条目代码"/>
+							<!-- 传染病病例诊断状态代码 -->
+							<value xsi:type="CD" datacode="DE05.01.060.00" datatype="N1" code="" dic="CV05_01_002" codeSystem="2.16.156.10011.2.3.1.101" codeSystemName="诊断状态代码表"/>
+						</observation>
+					</entry>
+					
+					<!-- 诊断日期 -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="DE02.01.035.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="传染病诊断日期代码"/>
+							<!-- 传染病诊断日期 -->
+							<value xsi:type="TS" datacode="DE02.01.035.00" value="" datatype="D8"/>
+						</observation>
+					</entry>
+					
+					<!-- 传染病类别代码 -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="DE05.01.016.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="传染病类别代码"/>
+							<value xsi:type="CD" datacode="DE05.01.016.00" datatype="N1" code="" dic="CC05_10_016_00" codeSystem="2.16.156.10011.2.3.2.22" codeSystemName="传染病类别代码表"/>
+						</observation>
+					</entry>
+					
+					<!-- 传染病名称代码 -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="DE05.01.012.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="传染病名称代码"/>
+							<value xsi:type="CD" datacode="DE05.01.012.00" datatype="N1" code="" dic="CV05_01_017" codeSystem="2.16.156.10011.2.3.1.116" codeSystemName="传染病名称代码表"/>
+						</observation>
+					</entry>
+					
+					<!-- 其他法定管理及重点监测传染病名称 -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="DE09.00.041.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="其他法定管理及重点监测传染病名称代码"/>
+							<value xsi:type="ST" datacode="DE09.00.041.00" datatype="A1..20"></value>
+						</observation>
+					</entry>
+					
+					<!-- 订正病名 -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="DE05.01.013.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="订正病名代码"/>
+							<value xsi:type="ST" datacode="DE05.01.013.00" datatype="A1..70"></value>
+						</observation >
+					</entry>
+				</section>
+            </component>
+			
+			<!-- 死亡信息章节-->
+			<component>
+				<section>
+					<code displayName="传染病死亡信息"/>
+					<text/>	
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="DE02.01.035.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录"/>
+							<!-- 传染病死亡日期 -->
+							<value xsi:type="TS" datacode="DE02.01.035.00" value="" datatype="D8"/>
+						</observation >
+					</entry>
+				</section>
+			</component>
+			
+			<!-- 行政管理章节 -->
+			<component>
+				<section>
+					<code displayName="行政管理"></code>
+					<text/>
+
+					<!-- 报卡类别代码 -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="DE01.00.002.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="报卡类别代码条目代码"/>
+							<value xsi:type="CD" datacode="DE01.00.002.00" datatype="N1" code="" dic="CC01_00_002_00" codeSystem="2.16.156.10011.2.3.2.20" codeSystemName="报卡类别代码表"/>
+						</observation >
+					</entry>
+
+					<!-- 传染病患者归属代码 -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="DE02.01.006.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="传染病患者归属代码条目"/>
+							<value xsi:type="CD" datacode="DE02.01.006.00" datatype="N1" code="" dic="CV02_01_104" codeSystem="2.16.156.10011.2.3.1.4" codeSystemName="传染病患者归属代码表"/>
+						</observation >
+					</entry>
+
+					<!-- 退卡原因 -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="DE09.00.055.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录"/>
+							<value xsi:type="ST" datacode="DE09.00.055.00" datatype="A1..100"></value>
+						</observation >
+					</entry>
+
+				</section>
+			</component>
+		</structuredBody>
+	</component>
+</ClinicalDocument>

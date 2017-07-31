@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry  alias="LabExamSet" >
+	<item id="RecordClassifying" alias="业务名称" queryable="true" type="string" generator="assigned" pkey="true" length="50" not-null="1">
+		<dic id="title" />
+	</item>
+	<item id="limit" alias="显示条数" type="string" length="20" not-null="1">
+		<dic id="limit" />
+	</item>
+	<item id="times" alias="查询时间段" type="string" length="32" not-null="1" width="100">
+		<dic id="times" />
+	</item>
+	<item id="AuthorOrganizationCode" alias="医疗机构编码" type="string" length="32" not-null="1" width="100">
+	</item>
+</entry>

@@ -1,0 +1,62 @@
+@CHARSET "UTF-8";
+.x-icon-wrap{
+	width:120px;
+	float: left;
+	background:transparent;
+	padding: 5px;
+	cursor: pointer;
+	text-align: center;
+	-moz-user-select:none;
+	hutia:expression(this.onselectstart=function(){return(false)});
+}
+.x-icon-wrap div{
+	height: 120px;
+	width: 120px;
+	margin-left: auto;
+	margin-right: auto;	
+	float:none;
+	background-color:#fff;
+}
+
+.x-icon-wrap span{
+	width:120px;
+	height:30px;
+	white-space:normal;
+	display: block;
+	text-overflow:ellipsis;
+	overflow: hidden;
+	margin-left: auto;
+	margin-right: auto;	
+	color:#ffffff;
+    font-size:9pt;
+	background-color:#246aa5;
+}
+
+.x-icon-prop{
+	height:20px !important;;
+	text-align: left !important;
+	color:#000000 !important;
+    font-size:9pt !important;
+    background-color:#fff !important;
+}
+
+.x-icon-over{
+    border:1px solid #99bbe8;
+  	padding: 4px;
+  	background:transparent;
+}
+
+.x-icon-selected{
+	border:0px solid;
+	padding:5px;
+}
+.x-icon-selected span{
+	background-color:#14afb4;
+	display: block;
+	color:red;
+}
+
+.x-icon-list-view{
+	background-color:#8db2e3;
+}
+

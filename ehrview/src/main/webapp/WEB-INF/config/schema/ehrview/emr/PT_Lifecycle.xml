@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<entry id="PT_Lifecycle" alias="生命周期">
+  <item id="DCID" alias="记录号" type="int" not-null="1" generator="assigned" pkey="true"/>
+  <item id="MPIID" alias="个人索引号" type="string" length="32" not-null="1"/>
+  <item id="SystemTime" alias="创建时间" type="date" not-null="1"/>
+  <item id="UploadTime" alias="上传时间" type="date" not-null="1"/>
+  <item id="TimeSlot" alias="时间段" length="22" not-null="1"/>
+  <item id="JCSJ" alias="检验时间" type="date" not-null="1"/>
+  <item id="TS" alias="提示" length="500"/>
+  <item id="XSSX" alias="显 示顺序" length="3"/>
+  <item id="YL1" alias="预留一" length="100"/>
+  <item id="YL2" alias="预留二" length="100"/>
+  <item id="KM" alias="科目" length="22"/>
+  <item id="TIME" alias="检查时间" type="date" not-null="1"/>
+  <item id="ContingencyTable" alias="关联表" length="22"/>
+  <item id="RecordDCID" alias="关联表字段" length="50"/>
+  <item id="RecordName" alias="记录名称" length="50"/>
+</entry>

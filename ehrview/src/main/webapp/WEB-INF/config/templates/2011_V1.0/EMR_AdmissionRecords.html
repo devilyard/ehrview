@@ -1,0 +1,238 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>入 院 记 录</title>
+<style>
+div {
+	text-align: left;
+}
+.table-bordered {
+    border: 1px solid #DDDDDD;
+}
+.table {
+    margin-bottom: 20px;
+    width: 100%;
+}
+table {
+    background-color: rgba(0, 0, 0, 0);
+    max-width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+</style>
+</head>
+
+<body>
+	<div style="width: 100%; min-width: 500px;">
+		<div style="text-align: center; font-size: 16px;"></div>
+		<div
+			style="text-align: center; font-size: 24px; height: 40px; line-height: 40px; font-weight: bold">入 院 记 录</div>
+		<div
+			style="text-align: left; line-height: 30px; height: 30px; padding-left: 15px;">
+			科别 &nbsp;<span th:text="${doc.elementText('DeptName')}"></span>&nbsp;
+			病区 &nbsp;<span th:text="${doc.elementText('WardAreaNm')}"></span>&nbsp;
+			床号 &nbsp;<span th:text="${doc.elementText('SickbedID')}"></span>&nbsp;
+			住院号 &nbsp;<span th:text="${doc.elementText('HospizationID')}"></span>&nbsp;
+		</div>
+		<div style="font-size: 12px;">
+			<table class="table table-bordered" width="95%" border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td width="80px" bgcolor="#CAE2F7">姓 名：</td>
+					<td th:text="${doc.elementText('Name')}"></td>
+					<td width="80px" bgcolor="#CAE2F7">职业：</td>
+					<td th:text="${doc.element('OccupationCategoryCode').attributeValue('display')}"></td>
+				</tr>
+				<tr>
+					<td width="80" bgcolor="#CAE2F7">性 别：</td>
+					<td th:text="${doc.element('Sex').attributeValue('display')}"></td>
+					<td width="80" bgcolor="#CAE2F7">工作单位：</td>
+					<td>
+						<span th:text="${doc.elementText('WorkAddrProvince')}"></span>
+						<span th:text="${doc.elementText('WorkAddrCity')}"></span>
+						<span th:text="${doc.elementText('WorkAddrCounty')}"></span>
+						<span th:text="${doc.elementText('WorkAddrTown')}"></span>
+						<span th:text="${doc.elementText('WorkAddrVillage')}"></span>
+						<span th:text="${doc.elementText('WorkAddrHouseNumber')}"></span>
+					</td>
+				</tr>
+				<tr>
+					<td width="80" bgcolor="#CAE2F7">年 龄：</td>
+					<td  th:if="${doc.element('Age') != null}" th:text="${doc.element('Age').getText() +'岁'}"></td>
+					<td width="80" bgcolor="#CAE2F7">住 址：</td>
+					<td>
+						<span th:text="${doc.elementText('ContactPersonProvince')}"></span>
+						<span th:text="${doc.elementText('ContactPersonCity')}"></span>
+						<span th:text="${doc.elementText('ContactCounty')}"></span>
+						<span th:text="${doc.elementText('ContactTown')}"></span>
+						<span th:text="${doc.elementText('ContactVillage')}"></span>
+						<span th:text="${doc.elementText('ContactHouseNumber')}"></span>
+					</td>
+				</tr>
+				<tr>
+					<td width="80" bgcolor="#CAE2F7">婚 姻：</td>
+					<td th:if="${doc.element('MaritalStatus').attribute('display')!=null}"
+						th:text="${doc.element('MaritalStatus').attribute('display').getValue()}"></td>
+					<td width="80" bgcolor="#CAE2F7">供史者：</td>
+					<td>
+						<span th:text="${doc.element('IllnessDeclare').getText()}"></span>
+						<span th:text="${' (' + doc.element('RelationshipCode').attributeValue('display') + ')'}"></span>
+					</td>
+				</tr>
+				<tr>
+					<td width="80" bgcolor="#CAE2F7">出生地：</td>
+					<td>
+						<span th:text="${doc.elementText('Province')}"></span>
+						<span th:text="${doc.elementText('City')}"></span>
+						<span th:text="${doc.elementText('County')}"></span>
+					</td>
+					<td width="80" bgcolor="#CAE2F7">入院时间：</td>
+					<td th:text="${doc.elementText('AdmissionDateTime')}"></td>
+				</tr>
+				<tr>
+					<td width="80" bgcolor="#CAE2F7">民 族：</td>
+					<td
+						th:if="${doc.element('EthnicGroup').attribute('display')!=null}"
+						th:text="${doc.element('EthnicGroup').attribute('display').getValue()}"></td>
+					<td width="80" bgcolor="#CAE2F7">记录时间：</td>
+					<td th:text="${doc.elementText('RecorderDateTime')}"></td>
+				</tr>
+			</table>
+		</div>
+		<div style="height: 40px; line-height: 40px; padding-left: 15px;">
+			<strong>主 诉:&nbsp;&nbsp;</strong><span
+				 th:if="${doc.element('ChiefComplaint') != null}" th:text="${doc.element('ChiefComplaint').getText()}"></span>
+		</div>
+		<div style="line-height: 18px;">
+			<div
+				style="background-color: #CAE2F7; height: 30px; border-bottom: 1px #ccc dotted; line-height: 30px; padding-left: 15px; font-size: 12px;">
+				<strong>现病史:</strong>
+			</div>
+			<div style="text-indent: 2em; padding: 10px; font-size: 13px;">
+				<p  th:if="${doc.element('PresentHistory') != null}" th:text="${doc.element('PresentHistory').getText()}"></p>
+			</div>
+		</div>
+		<div
+			style="background-color: #CAE2F7; height: 30px; border-bottom: 1px #ccc dotted; line-height: 30px; padding-left: 15px; font-size: 12px;">
+			<strong>既往史:</strong>
+		</div>
+		<div style="text-indent: 2em; padding: 10px; font-size: 13px;">
+			<p th:text="${doc.element('DiseasesHistory').getText()}"></p>
+		</div>
+		<div
+			style="background-color: #CAE2F7; height: 30px; border-bottom: 1px #ccc dotted; line-height: 30px; padding-left: 15px; font-size: 12px;">
+			<strong>个人史:</strong>
+		</div>
+		<div style="text-indent: 2em; padding: 10px; font-size: 13px;">
+			<p th:if="${doc.element('PersonalHistory') != null}" th:text="${doc.element('PersonalHistory').getText()}"></p>
+		</div>
+		<div
+			style="background-color: #CAE2F7; height: 30px; border-bottom: 1px #ccc dotted; line-height: 30px; padding-left: 15px; font-size: 12px;">
+			<strong>家族史:</strong>
+		</div>
+		<div style="text-indent: 2em; padding: 10px; font-size: 13px;">
+			<p  th:if="${doc.element('FamilyHistory') != null}" th:text="${doc.element('FamilyHistory').getText()}"></p>
+		</div>
+		<div
+			style="background-color: #CAE2F7; height: 30px; border-bottom: 1px #ccc dotted; line-height: 30px; padding-left: 15px; font-size: 12px;">
+			<strong>体格检查:</strong>
+		</div>
+		<div
+			style="text-indent: 2em; padding: 10px; font-size: 10.5pt; line-height: 18px;">
+			体温：<span  th:if="${doc.element('Temperatrue') != null}" th:text="${doc.element('Temperatrue').getText()}"></span>℃
+			脉率：<span  th:if="${doc.element('PulseRate') != null}" th:text="${doc.element('PulseRate').getText()}"></span>次/分
+			呼吸频率：<span  th:if="${doc.element('BeathingRate') != null}" th:text="${doc.element('BeathingRate').getText()}"></span>次/分
+			血压：<span  th:if="${doc.element('SystolicPressure') != null}" th:text="${doc.element('SystolicPressure').getText()}"></span>/
+			<span  th:if="${doc.element('DiastolicPressure') != null}" th:text="${doc.element('DiastolicPressure').getText()}"></span>mmHg(kPa)
+			<p>
+				一般情况：<span
+					 th:if="${doc.element('CommomCondtionExaminationResul') != null}" th:text="${doc.element('CommomCondtionExaminationResul').getText()}"></span>
+			</p>
+			<p>
+				皮肤粘膜:<span
+					 th:if="${doc.element('SkinMucosaExaminationResults') != null}" th:text="${doc.element('SkinMucosaExaminationResults').getText()}"></span>
+			</p>
+			<p>
+				淋巴结：<span
+					 th:if="${doc.element('WholeLymphExaminationResults') != null}" th:text="${doc.element('WholeLymphExaminationResults').getText()}"></span>
+			</p>
+			<p>
+				头面部：<span
+					 th:if="${doc.element('HeadExaminationResults') != null}" th:text="${doc.element('HeadExaminationResults').getText()}"></span>
+			</p>
+			<p>
+				颈 部：<span
+					 th:if="${doc.element('NeckExaminationResults') != null}" th:text="${doc.element('NeckExaminationResults').getText()}"></span>
+			</p>
+			<p>
+				胸 部：<span
+					 th:if="${doc.element('ChesExaminationResults') != null}" th:text="${doc.element('ChesExaminationResults').getText()}"></span>
+			</p>
+			<p>
+				腹 部：<span
+					 th:if="${doc.element('AbdominalExaminationResults') != null}" th:text="${doc.element('AbdominalExaminationResults').getText()}"></span>
+			</p>
+			<p>
+				脊 柱：<span
+					 th:if="${doc.element('SpinalExaminationResults') != null}" th:text="${doc.element('SpinalExaminationResults').getText()}"></span>
+			</p>
+			<p>
+				四 肢：<span
+					 th:if="${doc.element('FourLimbsExaminationResults') != null}" th:text="${doc.element('FourLimbsExaminationResults').getText()}"></span>
+			</p>
+			<p>
+				肛门指诊检查结果描述：<span
+					 th:if="${doc.element('DreExaminationResults') != null}" th:text="${doc.element('DreExaminationResults').getText()}"></span>
+			</p>
+			<p>
+				外生殖器检查：<span
+					 th:if="${doc.element('GenitaliaExaminationResults') != null}" th:text="${doc.element('GenitaliaExaminationResults').getText()}"></span>
+			</p>
+			<p>
+				神经系统检查：<span
+					 th:if="${doc.element('NeuralsysExaminationResults') != null}" th:text="${doc.element('NeuralsysExaminationResults').getText()}"></span>
+			</p>
+		</div>
+		<div
+			style="background-color: #CAE2F7; height: 30px; border-bottom: 1px #ccc dotted; line-height: 30px; padding-left: 15px; font-size: 12px;">
+			<strong>专科情况：</strong>
+		</div>
+		<div style="text-indent: 2em; padding: 10px; font-size: 13px;">
+			<p  th:if="${doc.element('SpecialistCase') != null}" th:text="${doc.element('SpecialistCase').getText()}"></p>
+		</div>
+		<div
+			style="background-color: #CAE2F7; height: 30px; border-bottom: 1px #ccc dotted; line-height: 30px; padding-left: 15px; font-size: 12px;">
+			<strong>辅助检查结果：</strong>
+		</div>
+		<div style="text-indent: 2em; padding: 10px; font-size: 13px;">
+			<p th:text="${doc.element('AssistExamResult').getText()}"></p>
+		</div>
+		<div style="font-size: 12px">
+			<table class="table table-bordered" width="95%" border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td width="150px" bgcolor="#CAE2F7"><p style="text-align: right" />
+						<span>初步诊断：</span></td>
+					<td  th:if="${doc.element('InitiativeDiagnose') != null}" th:text="${doc.element('InitiativeDiagnose').getText()}"></td>
+				</tr>
+				<tr>
+					<td width="100" bgcolor="#CAE2F7"><p style="text-align: right" />
+						<span style="text-align: left">医师签名：</span></td>
+					<td  th:if="${doc.element('HospizationDoctor') != null}" th:text="${doc.element('HospizationDoctor').getText()}"></td>
+				</tr>
+				<tr>
+					<td width="100" bgcolor="#CAE2F7">入院诊断：</td>
+					<td  th:if="${doc.element('AddDiagnose') != null}" th:text="${doc.element('AddDiagnose').getText()}"></td>
+				</tr>
+				<tr>
+					<td width="100" align="left" bgcolor="#CAE2F7">主治及以上医师签名：</td>
+					<td  th:if="${doc.element('AttendingDoctor') != null}" th:text="${doc.element('AttendingDoctor').getText()}"></td>
+				</tr>
+				<tr>
+					<td width="100" align="left" bgcolor="#CAE2F7">入院日期：</td>
+					<td th:text="${doc.element('AdmissionDateTime').getText()}"></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</body>
+</html>

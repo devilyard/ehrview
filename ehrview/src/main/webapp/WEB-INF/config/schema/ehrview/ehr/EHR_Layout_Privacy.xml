@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<entry id="SYS_Layout_Privacy" alias="隐私管理">
+	<item id="RecordID" alias="记录号" type="string" length="16" not-null="1" generator="assigned" pkey="true">
+	<key>
+       <rule name="increaseId" type="increase" defaultFill="0" startPos="0" />
+     </key>
+	</item>
+  	<item id="MPIID" alias="mpi" type="string" length="32" not-null="1"/>
+  	<item id="ENTRYNAME" type="string" length="50" not-null="1"/>
+  	<item id="TITLE" type="string" length="100" not-null="1"/>
+</entry>

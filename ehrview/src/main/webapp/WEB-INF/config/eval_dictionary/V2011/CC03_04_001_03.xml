@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="正常"/>
+  <item key="2" text="超重"/>
+  <item key="3" text="轻度肥胖"/>
+  <item key="4" text="中度肥胖"/>
+  <item key="5" text="重度肥胖"/>
+  <item key="6" text="体重低下"/>
+  <item key="7" text="生长迟缓"/>
+  <item key="8" text="消瘦"/>
+  <item key="9" text="严重慢性营养不良"/>
+</dic>

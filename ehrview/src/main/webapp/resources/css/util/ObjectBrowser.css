@@ -1,0 +1,16 @@
+@CHARSET "UTF-8";
+.x-debbug-tnode-func{
+	background-image:url(images/func.gif)!important;
+}
+
+.x-debbug-tnode-prop{
+	background-image:url(images/prop.gif)!important;
+}
+
+.x-debbug-tnode-str{
+	background-image:url(images/str.gif)!important;
+}
+
+.x-debbug-tnode-obj{
+	background-image:url(images/obj.gif)!important;
+}

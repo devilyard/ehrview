@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="&gt;=2小时/天"/>
+  <item key="2" text="1~2小时/天"/>
+  <item key="3" text="小于1小时/天"/>
+  <item key="4" text="基本不外出"/>
+</dic>

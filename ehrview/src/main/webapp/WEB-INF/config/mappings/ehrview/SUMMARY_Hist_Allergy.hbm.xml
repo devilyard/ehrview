@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="SUMMARY_Hist_Allergy" table="SUMMARY_Hist_Allergy">
+			<id name="DCID" type="java.lang.String">
+            	<column name="DCID"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="MPIID" type="java.lang.String" length="32" />
+        	<property name="UploadTime" type="date"  />
+        	<property name="SystemTime" type="date"  />
+        	<property name="EffectiveFlag" type="java.lang.String" length="1" />
+        	<property name="AuthorOrganization" type="java.lang.String" length="16" />
+        	<property name="AuthorOrganization_Text" type="java.lang.String" length="200" />
+        	<property name="SRCEntryName" type="java.lang.String" length="50" />
+        	<property name="SRCID" type="java.lang.String" length="50" />
+        	<property name="AllergenCode" type="java.lang.String" length="30" />
+        	<property name="AllergenName" type="java.lang.String" length="50" />
+        	<property name="AllergyMedicineCode" type="java.lang.String" length="10" />
+        	<property name="AllergyMedicineName" type="java.lang.String" length="50" />
+        	<property name="AllergyMedicineCategory" type="java.lang.String" length="10" />
+        	<property name="AllergyMedicineCategoryNm" type="java.lang.String" length="50" />
+</class>
+</hibernate-mapping>

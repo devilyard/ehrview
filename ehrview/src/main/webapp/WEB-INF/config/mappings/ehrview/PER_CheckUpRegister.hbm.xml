@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="PER_CheckUpRegister" table="PER_CheckUpRegister">
+			<id name="DCID" type="java.lang.String">
+            	<column name="DCID"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="MPIID" type="java.lang.String" length="32" />
+        	<property name="SourceID" type="java.lang.String" length="50" />
+        	<property name="RecordClassifying" type="java.lang.String" length="50" />
+        	<property name="RecordTitle" type="java.lang.String" length="50" />
+        	<property name="EffectiveTime" type="java.util.Date"  />
+        	<property name="EffectiveFlag" type="java.lang.String" length="1" />
+        	<property name="VersionNumber" type="java.lang.String" length="10" />
+        	<property name="AuthorOrganization" type="java.lang.String" length="16" />
+        	<property name="AuthorOrganization_Text" type="java.lang.String" length="200" />
+        	<property name="Author" type="java.lang.String" length="32" />
+        	<property name="SystemTime" type="date"  />
+        	<property name="UploadTime" type="date"  />
+        	<property name="UpdateTime" type="date"  />
+        	<property name="CheckUpNo" type="java.lang.String" length="16" />
+        	<property name="ManaUnitID" type="java.lang.String" length="16" />
+        	<property name="PHRID" type="java.lang.String" length="16" />
+</class>
+</hibernate-mapping>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="核燃料循环"/>
+  <item key="101" text="铀矿开采"/>
+  <item key="102" text="铀矿水冶"/>
+  <item key="103" text="铀的浓缩和转化"/>
+  <item key="104" text="燃料制造"/>
+  <item key="105" text="反应堆运行"/>
+  <item key="106" text="燃料后处理"/>
+  <item key="107" text="核燃料循环研究"/>
+  <item key="199" text="其他"/>
+  <item key="2" text="医学应用"/>
+  <item key="201" text="诊断放射学"/>
+  <item key="202" text="牙科放射学"/>
+  <item key="204" text="放射治疗"/>
+  <item key="205" text="介入放射学"/>
+  <item key="209" text="其他"/>
+  <item key="3" text="工业应用"/>
+  <item key="301" text="工业辐照"/>
+  <item key="302" text="工业探伤"/>
+  <item key="303" text="发光涂料工业"/>
+  <item key="304" text="放射性同位素生产"/>
+  <item key="305" text="测井"/>
+  <item key="306" text="加速器运行"/>
+  <item key="309" text="其他"/>
+  <item key="4" text="天然源"/>
+  <item key="401" text="民用航空"/>
+  <item key="402" text="煤矿开采"/>
+  <item key="403" text="其他矿藏开采"/>
+  <item key="404" text="石油和天然气工业"/>
+  <item key="405" text="矿物和矿石处理"/>
+  <item key="409" text="其他"/>
+  <item key="9" text="其他"/>
+  <item key="901" text="教育"/>
+  <item key="902" text="兽医学"/>
+  <item key="903" text="科学研究"/>
+  <item key="909" text="其他"/>
+</dic>

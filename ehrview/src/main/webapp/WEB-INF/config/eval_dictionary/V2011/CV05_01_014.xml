@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="临床诊断"/>
+  <item key="2" text="超声检查"/>
+  <item key="3" text="尸体解剖"/>
+  <item key="4" text="生化检查"/>
+  <item key="5" text="染色体检测"/>
+  <item key="9" text="其他"/>
+</dic>

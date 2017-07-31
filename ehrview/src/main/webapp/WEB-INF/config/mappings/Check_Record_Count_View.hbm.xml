@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="Check_Record_Count_View" table="Check_Record_Count_View">
+        <composite-id>
+            <key-property name="mpiid" type="java.lang.String">
+                <column name="MPIID" length="32" />
+            </key-property>
+            <key-property name="recordclassifying" type="java.lang.String">
+                <column name="RECORDCLASSIFYING" length="25" />
+            </key-property>
+            <key-property name="effectiveflag" type="java.lang.String">
+                <column name="EFFECTIVEFLAG" length="1" />
+            </key-property>
+            <key-property name="cnt" type="java.math.BigDecimal">
+                <column name="CNT" precision="22" scale="0" />
+            </key-property>
+        </composite-id>
+</class>
+</hibernate-mapping>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<filters>
+	<filter entryName="EMR_InpatientRecordHomes">
+		<!-- <preventRoles>
+			<preventRole>01</preventRole>
+		</preventRoles>
+		 -->
+		<maskFields>
+			<maskField name="MasterDiseaseName" begin="0" direct="+" roles="system" maskDic="diseases"/>
+			<maskField name="ClinicDiagnosis" begin="0" direct="+" roles="system" maskDic="diseases"/>
+		</maskFields>
+		<!-- <condition>
+			['and',
+				['eq', ['$', 'AuthorOrganization'], ['$', ':AuthorOrganization']],
+				['eq', ['$', 'roleId'], ['$', ':roleId']]
+			]
+		</condition>
+		<variables>
+			<variable name="AuthorOrganization" value="$AuthorOrganization" type="string"/>
+		</variables> -->
+	</filter>
+	
+	<filter entryName="OPT_Record">
+		<maskFields>
+			<maskField name="ZDMC" begin="0" direct="+" roles="system" maskDic="diseases"/>
+		</maskFields>
+	</filter>
+	
+	<filter entryName="EMR_InpatientRecordHome">
+		<maskFields>
+			<maskField name="MasterDiseaseName" begin="0" direct="+" roles="system" maskDic="diseases"/>
+		</maskFields>
+	</filter>
+	
+	<filter entryName="EHR_PastHistory">
+		<maskFields>
+			<maskField name="DiseaseText" begin="0" direct="+" roles="system" maskDic="diseases"/>
+		</maskFields>
+	</filter>
+	
+	<filter entryName="SUMMARY_Hist_Sick">
+		<maskFields>
+			<maskField name="Diagnosis" begin="0" direct="+" roles="system" maskDic="diseases"/>
+		</maskFields>
+	</filter>
+	
+	<filter entryName="EMR_OperationRecord">
+		<maskFields>
+			<maskField name="OperationName" begin="0" direct="+" roles="system" maskDic="diseases"/>
+			<maskField name="PreoperativeDiagnosis" begin="0" direct="+" roles="system" maskDic="diseases"/>
+			<maskField name="PostoperativeDiagnosis" begin="0" direct="+" roles="system" maskDic="diseases"/>
+		</maskFields>
+	</filter>
+</filters>

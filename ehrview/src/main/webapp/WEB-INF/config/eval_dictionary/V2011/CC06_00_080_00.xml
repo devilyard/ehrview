@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="常规免疫"/>
+  <item key="2" text="应急免疫"/>
+  <item key="3" text="强化免疫"/>
+</dic>

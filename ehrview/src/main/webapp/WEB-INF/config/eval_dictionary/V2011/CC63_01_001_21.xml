@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="0" text="未打印"/>
+  <item key="1" text="开嘱打印"/>
+  <item key="2" text="停嘱打印"/>
+</dic>

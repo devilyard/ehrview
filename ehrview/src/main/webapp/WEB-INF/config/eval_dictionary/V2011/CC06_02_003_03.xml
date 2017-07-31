@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="001" text="口服"/>
+  <item key="002" text="直肠给药"/>
+  <item key="003" text="舌下给药"/>
+  <item key="004" text="注射给药"/>
+  <item key="401" text="皮下注射"/>
+  <item key="402" text="皮内注射"/>
+  <item key="403" text="肌肉注射"/>
+  <item key="404" text="静脉注射或静脉滴注"/>
+  <item key="005" text="吸入给药"/>
+  <item key="006" text="局部用药"/>
+  <item key="601" text="椎管内给药"/>
+  <item key="602" text="关节腔内给药"/>
+  <item key="603" text="胸膜腔给药"/>
+  <item key="604" text="腹腔给药"/>
+  <item key="605" text="阴道用药"/>
+  <item key="606" text="滴眼"/>
+  <item key="607" text="滴鼻"/>
+  <item key="608" text="喷喉"/>
+  <item key="609" text="含化"/>
+  <item key="610" text="敷伤口"/>
+  <item key="611" text="擦皮肤
+6XX.局部用药扩充内容"/>
+  <item key="99" text="其他局部给药途径"/>
+  <item key="9" text="其他给药途径"/>
+</dic>

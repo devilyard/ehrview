@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="规律"/>
+  <item key="2" text="间断"/>
+  <item key="3" text="不服药"/>
+  <item key="4" text="拒绝服药"/>
+</dic>

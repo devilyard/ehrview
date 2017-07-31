@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="SUMMARY_Hist_Reproductive" table="SUMMARY_Hist_Reproductive">
+			<id name="DCID" type="java.lang.String">
+            	<column name="DCID"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="MPIID" type="java.lang.String" length="32" />
+        	<property name="WayStop" type="java.lang.String" length="100" />
+        	<property name="StopDate" type="java.util.Date"  />
+        	<property name="Twins" type="java.lang.String"  />
+        	<property name="UploadTime" type="java.util.Date"  />
+        	<property name="SystemTime" type="java.util.Date"  />
+        	<property name="AuthorOrganization" type="java.lang.String" length="16" />
+        	<property name="AuthorOrganization_Text" type="java.lang.String" length="200" />
+        	<property name="SRCEntryName" type="java.lang.String" length="50" />
+        	<property name="SRCID" type="java.lang.String" length="50" />
+        	<property name="EffectiveFlag" type="java.lang.String" length="1" />
+</class>
+</hibernate-mapping>

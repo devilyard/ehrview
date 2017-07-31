@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>出院记录</title>
+</head>
+
+<body style="padding: 20px;">
+<style type="text/css">
+.my * {
+	font-family: "微软雅黑","宋体"; font-size:12px;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	color: #232323
+}
+.my table {
+border-collapse:collapse;
+}
+.my table {
+	border-bottom: #ccc solid 1px;
+	border-left: #ccc solid 1px;
+	border-top: #ccc solid 1px;
+	text-align: left;
+}
+
+.my td {
+	border-right: #ccc solid 1px;
+	border-bottom: #ccc dotted 1px;
+	padding: 4px;
+}
+
+.my div {
+	border-bottom: dotted #fff 1px;
+	min-height: 20px;
+}
+</style>
+	<!--th:with="dischargeRecord=${doc.element('EMR_dischargeRecord')}"-->
+	<div class="my" style="width: 100%; min-width: 500px;">
+		<div style="text-align: center; font-size: 16px;"></div>
+		<div
+			style="text-align: center; font-size: 24px; height: 40px; line-height: 40px; font-weight: bold">出
+			院 记 录</div>
+		<div
+			style="text-align: left; line-height: 30px; height: 30px; padding-left: 15px;">
+			<!-- 			科别 呼吸内科一 病区 十六病区 床号 11618  -->
+			住院号 <span th:if="${doc.element('BZBAH') != null}"
+				th:text="${doc.element('BZBAH').getText()}"></span>
+		</div>
+		<div style="font-size: 12px;">
+			<table width="100%" border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td width="10%" bgcolor="#CAE2F7">姓 名：</td>
+					<td width="40%"><span th:if="${personName != null}"
+						th:text="${personName}"></span></td>
+					<td width="10%" bgcolor="#CAE2F7">性 别：</td>
+					<!-- <span th:if="${sexCode_text != null}" th:text="${sexCode_text}"> -->
+					<td width="40%"><span th:text="(${sexCode} == '1') ?'男':'女'"></span></td>
+				</tr>
+				<tr>
+					<td width="80" bgcolor="#CAE2F7">出生日期：</td>
+					<td><span th:text="${#dates.format(birthday,'yyyy-MM-dd')}"></span></td>
+					<td width="80" bgcolor="#CAE2F7">婚 姻：</td>
+					<td><span th:if="${maritalStatusCode_text != null}"
+						th:text="${maritalStatusCode_text}"></span></td>
+				</tr>
+				<tr>
+					<td width="80" bgcolor="#CAE2F7">职业：</td>
+					<td th:text="${workCode_text}"></td>
+					<td width="80" bgcolor="#CAE2F7">记录时间:</td>
+					<td><span th:if="${doc.element('JLSJ') != null}"
+						th:text="${doc.element('JLSJ').getText()}"></span></td>
+				</tr>
+				<tr>
+					<td width="80" bgcolor="#CAE2F7">入院诊断：</td>
+					<td><span th:if="${doc.element('RYZDMC') != null}"
+						th:text="${doc.element('RYZDMC').getText()}"></span></td>
+					<td width="80" bgcolor="#CAE2F7">入院日期：</td>
+					<td><span th:if="${doc.element('RYSJ') != null}"
+						th:text="${doc.element('RYSJ').getText()}"></span></td>
+				</tr>
+
+				<tr>
+					<td width="80" bgcolor="#CAE2F7">出院诊断：</td>
+					<td><span th:if="${doc.element('CYZDMC') != null}"
+						th:text="${doc.element('CYZDMC').getText()}"></span></td>
+					<td width="80" bgcolor="#CAE2F7">出院日期：</td>
+					<td><span th:if="${doc.element('CYSJ') != null}"
+						th:text="${doc.element('CYSJ').getText()}"></span></td>
+				</tr>
+				<tr>
+					<td width="80" bgcolor="#CAE2F7">手术名称：</td>
+					<td></td>
+					<td width="80" bgcolor="#CAE2F7">手术日期：</td>
+					<td></td>
+				</tr>
+			</table>
+		</div>
+
+		<div
+			style="background-color: #CAE2F7; height: 30px; border-bottom: 1px #ccc dotted; line-height: 30px; padding-left: 15px; font-size: 12px;">
+			<strong>入院时情况（简要病史、阳性体征、有关实验室及器械检查结果）</strong>
+		</div>
+		<div style="text-indent: 2em; padding: 10px; font-size: 13px;">
+			<span th:if="${doc.element('RYQK') != null}"
+				th:text="${doc.element('RYQK').getText()}"></span>
+		</div>
+		<div
+			style="background-color: #CAE2F7; height: 30px; border-bottom: 1px #ccc dotted; line-height: 30px; padding-left: 15px; font-size: 12px;">
+			<strong>住院经过：</strong>
+		</div>
+		<div style="text-indent: 2em; padding: 10px; font-size: 13px;">
+			<span th:if="${doc.element('ZZJG') != null}"
+				th:text="${doc.element('ZZJG').getText()}"></span>
+		</div>
+		<div
+			style="background-color: #CAE2F7; height: 30px; border-bottom: 1px #ccc dotted; line-height: 30px; padding-left: 15px; font-size: 12px;">
+			<strong>出院情况：</strong>
+		</div>
+		<div style="text-indent: 2em; padding: 10px; font-size: 13px;">
+			<span th:if="${doc.element('CYQK') != null}"
+				th:text="${doc.element('CYQK').getText()}"></span>
+		</div>
+		<div
+			style="background-color: #CAE2F7; height: 30px; border-bottom: 1px #ccc dotted; line-height: 30px; padding-left: 15px; font-size: 12px;">
+			<strong>伤口愈合：</strong>
+		</div>
+		<div style="text-indent: 2em; padding: 10px; font-size: 13px;">
+			<span></span>
+		</div>
+		<div
+			style="background-color: #CAE2F7; height: 30px; border-bottom: 1px #ccc dotted; line-height: 30px; padding-left: 15px; font-size: 12px;">
+			<strong>出院医嘱：</strong>
+		</div>
+		<div style="padding: 10px; font-size: 13px;">
+			<span th:if="${doc.element('CYYZ') != null}"
+				th:text="${doc.element('CYYZ').getText()}"></span>
+		</div>
+		<div style="font-size: 12px">
+			<table width="100%" border="0" cellpadding="0" cellspacing="0">
+				<!-- 				<tr> -->
+				<!-- 					<td width="250" align="left" bgcolor="#CAE2F7">X光片号：</td> -->
+				<!-- 					<td>A0123E</td> -->
+				<!-- 				</tr> -->
+				<!-- 				<tr> -->
+				<!-- 					<td align="left" bgcolor="#CAE2F7">CT号：</td> -->
+				<!-- 					<td>012365478</td> -->
+				<!-- 				</tr> -->
+				<!-- 				<tr> -->
+				<!-- 					<td align="left" bgcolor="#CAE2F7">MRI：</td> -->
+				<!-- 					<td>00000000214</td> -->
+				<!-- 				</tr> -->
+				<!-- 				<tr> -->
+				<!-- 					<td align="left" bgcolor="#CAE2F7">病理检验号：</td> -->
+				<!-- 					<td>02</td> -->
+				<!-- 				</tr> -->
+				<tr>
+					<td width="10%" align="left" bgcolor="#CAE2F7">主治医师：</td>
+					<td><span
+						th:if="${doc.element('ZZYSGH') != null and doc.element('ZZYSGH').attribute('localText') != null }"
+						th:text="${doc.element('ZZYSGH').attribute('localText').getValue()}"></span></td>
+				</tr>
+				<tr>
+					<td align="left" bgcolor="#CAE2F7">医师签名：</td>
+					<td><span
+						th:if="${doc.element('ZYYSGH') != null and doc.element('ZYYSGH').attribute('localText') != null }"
+						th:text="${doc.element('ZYYSGH').attribute('localText').getValue()}"></span></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="本县区"/>
+  <item key="2" text="本市其他县区"/>
+  <item key="3" text="本省其他地市"/>
+  <item key="4" text="外省"/>
+  <item key="5" text="港澳台"/>
+  <item key="6" text="外籍"/>
+</dic>

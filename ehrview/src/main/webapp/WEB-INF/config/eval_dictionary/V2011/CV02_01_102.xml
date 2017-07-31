@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="医院"/>
+  <item key="11" text="省(市)级医院"/>
+  <item key="12" text="县(区)级医院"/>
+  <item key="2" text="妇幼保健院"/>
+  <item key="3" text="乡(街道)卫生机构"/>
+  <item key="4" text="村(诊所)卫生机构"/>
+  <item key="5" text="途中"/>
+  <item key="6" text="家庭(家中)"/>
+  <item key="9" text="其他"/>
+</dic>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="本市"/>
+  <item key="5" text="本市非主城区"/>
+  <item key="2" text="本省外市"/>
+  <item key="3" text="外省"/>
+  <item key="4" text="婚嫁到本市"/>
+</dic>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="耐药"/>
+  <item key="2" text="敏感"/>
+  <item key="3" text="污染"/>
+  <item key="4" text="未做"/>
+</dic>

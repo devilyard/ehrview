@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>就诊信息</title>
+</head>
+<body style="padding: 20px; font-size: 12px;">
+
+<style type="text/css">
+.two table {
+	border-bottom: #ccc solid 1px;
+	border-left: #ccc solid 1px;
+	border-top: #ccc solid 1px;
+	text-align: left;
+	margin-bottom: 20px;
+}
+
+.two td {
+	border-right: #ccc solid 1px;
+	height: 24px;
+	line-height: 18px;
+	text-indent: 4px;
+	border-bottom: #ccc dotted 1px;
+}
+
+
+</style>
+	<table width="100%" border="0" align="center" cellpadding="0"
+		cellspacing="0">
+		<tr>
+			<td align="center" colspan="2"
+				style="font-size: 24px; height: 40px; line-height: 50px; text-align: center">就诊信息</td>
+		</tr>
+		<tr>
+			<td style="border-bottom: 4px #09F solid;" colspan="2"></td>
+		</tr>
+		<tr>
+			<td style="height: 1px;" colspan="2"></td>
+		</tr>
+		<tr>
+			<td height="10" style="border-top: 1px #09f solid;" colspan="2"></td>
+		</tr>
+	</table>
+	<div class="two">
+		<table width="100%" border="0" align="center" cellpadding="0"
+			cellspacing="0">
+			<tr>
+				<td bgcolor="#CAE2F7" width="20%"><strong>就诊流水号</strong></td>
+				<td th:if="${doc.element('JZLSH') != null}" th:text="${doc.element('JZLSH').getText()}"></td>
+				<td bgcolor="#CAE2F7" width="20%"><strong>就诊日期</strong></td>
+				<td th:if="${doc.element('JZRQ') != null}" th:text="${doc.element('JZRQ').getText()}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7" width="20%"><strong>卡号</strong></td>
+				<td th:if="${doc.element('KH') != null}" th:text="${doc.element('KH').getText()}"></td>
+				<td bgcolor="#CAE2F7" width="20%"><strong>卡类型</strong></td>
+				<td th:if="${doc.element('KLX').attribute('localText') != null}" th:text="${doc.element('KLX').attribute('localText').getValue()}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7" width="20%"><strong>门诊类别</strong></td>
+				<td th:if="${doc.element('MZLB').attribute('localText') != null}" th:text="${doc.element('MZLB').attribute('localText').getValue()}"></td>
+				<td bgcolor="#CAE2F7" width="20%"><strong>就诊科室编码</strong></td>
+				<td th:if="${doc.element('JZKSBM').attribute('localText') != null}" th:text="${doc.element('JZKSBM').attribute('localText').getValue()}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7" width="20%"><strong>诊断编码</strong></td>
+				<td th:if="${doc.element('ZDBM') != null}" th:text="${doc.element('ZDBM').getText()}"></td>
+				<td bgcolor="#CAE2F7" width="20%"><strong>诊断名称</strong></td>
+				<td th:if="${doc.element('ZDMC') != null}" th:text="${doc.element('ZDMC').getText()}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7" width="20%"><strong>主诉</strong></td>
+				<td th:if="${doc.element('ZS') != null}" th:text="${doc.element('ZS').getText()}"></td>
+				<td bgcolor="#CAE2F7" width="20%"><strong>症状描述</strong></td>
+				<td th:if="${doc.element('ZZMS') != null}" th:text="${doc.element('ZZMS').getText()}"></td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

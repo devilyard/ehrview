@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="Ⅰ度"/>
+  <item key="2" text="Ⅱ度"/>
+  <item key="3" text="Ⅲ度"/>
+  <item key="4" text="Ⅳ度"/>
+</dic>

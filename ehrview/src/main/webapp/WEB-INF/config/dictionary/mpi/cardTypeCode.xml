@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dic> 
+  <item key="01" text="健康卡" mCode="1" pyCode="jkk"/>  
+  <item key="02" text="市民卡" mCode="2" pyCode="smk"/>  
+  <item key="03" text="社保卡" mCode="3" pyCode="sbk"/>  
+  <item key="04" text="就诊卡" mCode="4" pyCode="jzk"/>
+  <item key="99" text="其他卡" mCode="9" pyCode="qtk"/>
+</dic>

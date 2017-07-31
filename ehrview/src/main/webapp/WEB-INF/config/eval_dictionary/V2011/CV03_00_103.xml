@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="01" text="机制卷烟"/>
+  <item key="02" text="手卷烟"/>
+  <item key="03" text="旱烟"/>
+  <item key="04" text="烟斗"/>
+  <item key="05" text="水烟"/>
+  <item key="06" text="雪茄"/>
+  <item key="07" text="非燃烧型烟草"/>
+  <item key="99" text="其他"/>
+</dic>

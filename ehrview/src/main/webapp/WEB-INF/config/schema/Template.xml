@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry  alias="Template" >
+	<item id="templateName" alias="模板名称" queryable="true" type="string" width="300" not-null="1">
+	</item>
+</entry>

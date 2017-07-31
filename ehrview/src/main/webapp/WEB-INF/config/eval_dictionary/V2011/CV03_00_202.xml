@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="责任事故"/>
+  <item key="11" text="违反操作规程"/>
+  <item key="12" text="安全观念薄弱"/>
+  <item key="13" text="缺乏知识"/>
+  <item key="14" text="操作失误"/>
+  <item key="15" text="管理不善"/>
+  <item key="16" text="领导失误"/>
+  <item key="2" text="技术事故"/>
+  <item key="21" text="设计不合理"/>
+  <item key="22" text="设备意外故障"/>
+  <item key="23" text="监测系统缺乏"/>
+  <item key="3" text="自然原因"/>
+  <item key="4" text="原因不明"/>
+</dic>

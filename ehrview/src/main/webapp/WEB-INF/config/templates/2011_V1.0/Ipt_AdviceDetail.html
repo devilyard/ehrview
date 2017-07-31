@@ -1,0 +1,13 @@
+<tr>
+	<td style='text-align:left;'><span th:if="${doc.element('KDSJ') != null}" th:text="${doc.element('KDSJ').getText()}"></span></td>
+	<td style='text-align:left;'><span th:if="${doc.element('ZZSJ') != null}" th:text="${doc.element('ZZSJ').getText()}"></span></td>
+	<td style='text-align:left;'><span th:if="${doc.element('KDYSXM') != null}" th:text="${doc.element('KDYSXM').getText()}"></span></td>
+	<td style='text-align:left;'><span th:if="${doc.element('YZMXMC') != null}" th:text="${doc.element('YZMXMC').getText()}"></span></td>
+	<td style='text-align:left;'><span th:if="${doc.element('MCSYJL') != null}" th:text="${doc.element('MCSYJL').getText() + doc.element('MCSYJLDW').getText()}"></span></td>
+	<td style='text-align:left;'><span th:if="${doc.element('YPSL') != null}" th:text="${doc.element('YPSL').getText() + doc.element('YPDW').getText()}"></span></td>
+	<td style='text-align:left;'><span th:if="${doc.element('YYPD').attribute('localText') != null}" th:text="${doc.element('YYPD').attribute('localText').getValue()}"></span></td>
+	<td style='text-align:left;'><span th:if="${doc.element('TJMC') != null}" th:text="${doc.element('TJMC').getText()}"></span></td>
+	<td style='text-align:left;'><span th:if="${doc.element('YZBS').attribute('localText') != null}" th:text="${doc.element('YZBS').attribute('localText').getValue()}"></span></td>
+	<td style='text-align:left;'><span th:if="${doc.element('YYTS') != null}" th:text="${doc.element('YYTS').getText()}"></span></td>
+</tr>
+			

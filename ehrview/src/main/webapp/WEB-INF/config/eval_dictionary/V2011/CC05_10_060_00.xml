@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="高强度身体活动"/>
+  <item key="2" text="中等强度身体活动"/>
+  <item key="3" text="低强度身体活动"/>
+</dic>

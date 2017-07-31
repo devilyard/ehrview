@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:ssdev="http://www.bsoft.com.cn/schema/ssdev"
+	xmlns:ehr="http://www.bsoft.com.cn/schema/ehr"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.bsoft.com.cn/schema/ssdev
+	http://www.bsoft.com.cn/schema/ssdev/ssdev.xsd
+	http://www.bsoft.com.cn/schema/ehr
+	http://www.bsoft.com.cn/schema/ehr/ehr.xsd">
+	
+	<bean id="serviceDao" class="com.bsoft.xds.support.dao.DefaultDAO">
+		<property name="sessionFactory" ref="mySessionFactory" />
+	</bean>
+	<bean id="gzipDocumentCompressor" class="com.bsoft.xds.support.instance.GZIPDocumentCompressor"/>
+	<bean id="bsxmlTemplateFormater" class="com.bsoft.xds.support.instance.BSXMLTemplateFormater" />
+	
+	<bean id="commonDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.CommonDocumentEntryRetrieveService">
+		<property name="dao" ref="serviceDao"/>
+		<property name="templateFormaters">
+			<list>
+				<ref bean="bsxmlTemplateFormater"/>
+			</list>
+		</property>
+		<property name="documentDecompressors">
+			<list>
+				<ref bean="gzipDocumentCompressor"/>
+			</list>
+		</property>
+	</bean>
+	<bean id="commonDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.CommonDocumentEntrySubmitService">
+		<property name="dao" ref="serviceDao"/>
+		<property name="documentCompressors">
+			<list>
+				<ref bean="gzipDocumentCompressor"/>
+			</list>
+		</property>
+	</bean>
+	
+	<!--高血压管理-->
+	<bean id="hypertensionRecordDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.hypertension.HypertensionRecordDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<property name="recordClassifying" value="MDC_HypertensionRecord"/>
+	</bean>
+	<bean id="hypertensionRecordDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.hypertension.HypertensionRecordDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<property name="recordClassifying" value="MDC_HypertensionRecord"/>
+	</bean>
+	
+	<!--糖尿病管理-->
+	<bean id="diabetesRecordDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.diabetes.DiabetesRecordDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<property name="recordClassifying" value="MDC_DiabetesRecord"/>
+	</bean>
+	<bean id="diabetesRecordDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.diabetes.DiabetesRecordDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<property name="recordClassifying" value="MDC_DiabetesRecord"/>
+	</bean>
+	
+	<!--精神病管理-->
+	<bean id="psychosisRecordDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.psychosis.PsychosisRecordDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<property name="recordClassifying" value="PSY_PsychosisRecord"/>
+	</bean>
+	<bean id="psychosisRecordDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.psychosis.PsychosisRecordDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<property name="recordClassifying" value="PSY_PsychosisRecord"/>
+	</bean>
+	
+	<!--健康档案管理-->
+	<bean id="healthRecordDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.healthRecord.HealthRecordDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<property name="recordClassifying" value="EHR_HealthRecord"/>
+	</bean>
+	<bean id="healthRecordDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.healthRecord.HealthRecordDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<property name="recordClassifying" value="EHR_HealthRecord"/>
+	</bean>
+	
+	<!--健康档案-既往史管理-->
+	<bean id="pastHistoryDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.healthRecord.PastHistoryDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<property name="recordClassifying" value="EHR_PastHistory"/>
+	</bean>
+	<bean id="pastHistoryDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.healthRecord.PastHistoryDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<property name="recordClassifying" value="EHR_PastHistory"/>
+	</bean>
+	
+	<!--健康档案-家庭档案管理-->
+	<bean id="familyRecordDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.healthRecord.FamilyRecordDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<property name="recordClassifying" value="EHR_FamilyRecord"/>
+	</bean>
+	<bean id="familyRecordDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.healthRecord.FamilyRecordDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<property name="recordClassifying" value="EHR_FamilyRecord"/>
+	</bean>
+	
+	<!--预防接种管理-->
+	<bean id="vaccinateRecordDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.vaccinate.VaccinateRecordDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<property name="recordClassifying" value="PIV_VaccinateRecord"/>
+	</bean>
+	<bean id="vaccinateRecordDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.vaccinate.VaccinateRecordDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<property name="recordClassifying" value="PIV_VaccinateRecord"/>
+	</bean>
+	<bean id="vaccinateListDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.vaccinate.VaccinateListDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<property name="recordClassifying" value="PIV_VaccinateList"/>
+	</bean>
+	<bean id="vaccinateListDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.vaccinate.VaccinateListDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<property name="recordClassifying" value="PIV_VaccinateList"/>
+	</bean>
+	
+	<!--儿童保健:体弱儿档案-->
+	<bean id="debilityChildrenDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.children.DebilityChildrenDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<property name="recordClassifying" value="CDH_DebilityChildren"/>
+	</bean>
+	<bean id="debilityChildrenDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.children.DebilityChildrenDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<property name="recordClassifying" value="CDH_DebilityChildren"/>
+	</bean>
+	
+	<!--儿童保健:体弱儿随访-->
+	<bean id="debilityChildrenVisitDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.children.DebilityChildrenVisitDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<property name="recordClassifying" value="CDH_DebilityChildrenVisit"/>
+	</bean>
+	<bean id="debilityChildrenVisitDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.children.DebilityChildrenVisitDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<property name="recordClassifying" value="CDH_DebilityChildrenVisit"/>
+	</bean>
+	
+	<!--儿童保健:儿童保健卡-->
+	<bean id="healthCardDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.children.HealthCardDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<property name="recordClassifying" value="CDH_HealthCard"/>
+	</bean>
+	<bean id="healthCardDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.children.HealthCardDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<property name="recordClassifying" value="CDH_HealthCard"/>
+	</bean>
+	
+	<!--儿童保健:周岁小结-->
+	<bean id="oneYearSummaryDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.children.OneYearSummaryDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<property name="recordClassifying" value="CDH_OneYearSummary"/>
+	</bean>
+	<bean id="oneYearSummaryDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.children.OneYearSummaryDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<property name="recordClassifying" value="CDH_OneYearSummary"/>
+	</bean>
+	
+	<!--儿童保健:意外伤害-->
+	<bean id="accidentDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.children.AccidentDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<property name="recordClassifying" value="CDH_Accident"/>
+	</bean>
+	<bean id="accidentDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.children.AccidentDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<property name="recordClassifying" value="CDH_Accident"/>
+	</bean>
+	
+	<!--儿童保健:儿童缺陷登记-->
+	<bean id="defectRegisterDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.children.DefectRegisterDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<property name="recordClassifying" value="CDH_DefectRegister"/>
+	</bean>
+	<bean id="defectRegisterDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.children.DefectRegisterDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<property name="recordClassifying" value="CDH_DefectRegister"/>
+	</bean>
+	
+	<!--儿童保健:儿童产时记录-->
+	<bean id="deliveryRecordDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.children.DeliveryRecordDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<property name="recordClassifying" value="CDH_DeliveryRecord"/>
+	</bean>
+	<bean id="deliveryRecordDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.children.DeliveryRecordDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<property name="recordClassifying" value="CDH_DeliveryRecord"/>
+	</bean>
+	
+	<!--儿童保健:儿童体检-->
+	<bean id="checkUpDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.children.CheckUpDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<property name="recordClassifying" value="CDH_CheckUp"/>
+	</bean>
+	<bean id="checkUpDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.children.CheckUpDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<property name="recordClassifying" value="CDH_CheckUp"/>
+	</bean>
+	
+	<!--儿童保健:儿童死亡登记-->
+	<bean id="deadRegisterDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.children.DeadRegisterDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<property name="recordClassifying" value="CDH_DeadRegister"/>
+	</bean>
+	<bean id="deadRegisterDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.children.DeadRegisterDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<property name="recordClassifying" value="CDH_DeadRegister"/>
+	</bean>
+	
+	<!--儿童保健:儿童询问-->
+	<bean id="inquireDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.children.InquireDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<property name="recordClassifying" value="CDH_Inquire"/>
+	</bean>
+	<bean id="inquireDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.children.InquireDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<property name="recordClassifying" value="CDH_Inquire"/>
+	</bean>
+	
+	<!--儿童保健:儿童疑似残疾报告卡-->
+	<bean id="disabilityMonitorDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.children.DisabilityMonitorDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<property name="recordClassifying" value="CDH_DisabilityMonitor"/>
+	</bean>
+	<bean id="disabilityMonitorDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.children.DisabilityMonitorDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<property name="recordClassifying" value="CDH_DisabilityMonitor"/>
+	</bean>
+	
+	<!--孕产妇健康管理:孕妇档案-->
+	<bean id="pregnantRecordDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.pregnant.PregnantRecordDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<property name="recordClassifying" value="MHC_PregnantRecord"/>
+	</bean>
+	<bean id="pregnantRecordDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.pregnant.PregnantRecordDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<property name="recordClassifying" value="MHC_PregnantRecord"/>
+	</bean>
+	
+	<!--孕产妇健康管理:产后42天检查-->
+	<bean id="postnatal42DayDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.pregnant.Postnatal42DayDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<property name="recordClassifying" value="MHC_Postnatal42DayRecord"/>
+	</bean>
+	<bean id="postnatal42DayDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.pregnant.Postnatal42DayDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<property name="recordClassifying" value="MHC_Postnatal42DayRecord"/>
+	</bean>
+	
+	<!--孕产妇健康管理:孕妇特殊情况-->
+	<bean id="pregnantSpecialDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.pregnant.PregnantSpecialDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<property name="recordClassifying" value="MHC_PregnantSpecial"/>
+	</bean>
+	<bean id="pregnantSpecialDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.pregnant.PregnantSpecialDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<property name="recordClassifying" value="MHC_PregnantSpecial"/>
+	</bean>
+	
+	<!--孕产妇健康管理:新生儿基本信息-->
+	<bean id="babyVisitInfoDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.pregnant.BabyVisitInfoDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<property name="recordClassifying" value="MHC_BabyVisitInfo"/>
+	</bean>
+	<bean id="babyVisitInfoDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.pregnant.BabyVisitInfoDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<property name="recordClassifying" value="MHC_BabyVisitInfo"/>
+	</bean>
+	
+	<!--孕产妇健康管理:新生儿随访记录-->
+	<bean id="babyVisitRecordDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.pregnant.BabyVisitRecordDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<property name="recordClassifying" value="MHC_BabyVisitRecord"/>
+	</bean>
+	<bean id="babyVisitRecordDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.pregnant.BabyVisitRecordDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<property name="recordClassifying" value="MHC_BabyVisitRecord"/>
+	</bean>
+	
+	<!--孕产妇健康管理:孕妇随访记录-->
+<!-- 	<bean id="visitRecordDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.pregnant.VisitRecordDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService"> -->
+<!-- 		<property name="recordClassifying" value="MHC_VisitRecord"/> -->
+<!-- 	</bean> -->
+<!-- 	<bean id="visitRecordDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.pregnant.VisitRecordDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService"> -->
+<!-- 		<property name="recordClassifying" value="MHC_VisitRecord"/> -->
+<!-- 	</bean> -->
+	
+	<!--孕产妇健康管理：产后访视信息-->
+	<bean id="postnatalVisitInfoDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.pregnant.PostnatalVisitInfoDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<property name="recordClassifying" value="MHC_PostnatalVisitInfo"/>
+	</bean>
+	<bean id="postnatalVisitInfoDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.pregnant.PostnatalVisitInfoDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<property name="recordClassifying" value="MHC_PostnatalVisitInfo"/>
+	</bean>
+	
+	<!--孕产妇健康管理：孕妇指标-->
+	<bean id="pregnantWomanIndexDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.pregnant.PregnantWomanIndexDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<property name="recordClassifying" value="MHC_PregnantWomanIndex"/>
+	</bean>
+	<bean id="pregnantWomanIndexDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.pregnant.PregnantWomanIndexDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<property name="recordClassifying" value="MHC_PregnantWomanIndex"/>
+	</bean>
+	
+	<!--孕产妇健康管理:高危因素-->
+	<bean id="highRiskVisitReasonDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.pregnant.HighRiskVisitReasonDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<property name="recordClassifying" value="MHC_HighRiskVisitReason"/>
+	</bean>
+	<bean id="highRiskVisitReasonDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.pregnant.HighRiskVisitReasonDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<property name="recordClassifying" value="MHC_HighRiskVisitReason"/>
+	</bean>
+	
+	<!--老年人健康管理:老年人随访-->
+	<bean id="oldPeopleVisitDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.oldPeople.OldPeopleVisitDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<property name="recordClassifying" value="MDC_OldPeopleVisit"/>
+	</bean>
+	<bean id="oldPeopleVisitDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.oldPeople.OldPeopleVisitDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<property name="recordClassifying" value="MDC_OldPeopleVisit"/>
+	</bean>
+	
+	<!--老年人健康管理:老年人健康档案-->
+	<bean id="oldPeopleRecordDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.oldPeople.OldPeopleRecordDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<property name="recordClassifying" value="MDC_OldPeopleRecord"/>
+	</bean>
+	<bean id="oldPeopleRecordDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.oldPeople.OldPeopleRecordDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<property name="recordClassifying" value="MDC_OldPeopleRecord"/>
+	</bean>
+	
+	<!--高血压管理:高血压首诊测压-->
+	<bean id="hypertensionFirstDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.hypertension.HypertensionFirstDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<property name="recordClassifying" value="MDC_HypertensionFirst"/>
+	</bean>
+	<bean id="hypertensionFirstDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.hypertension.HypertensionFirstDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<property name="recordClassifying" value="MDC_HypertensionFirst"/>
+	</bean>
+	
+	<!--高血压管理:高血压门诊记录-->
+	<bean id="hypertensionClinicRecordDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.hypertension.HypertensionClinicRecordDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<property name="recordClassifying" value="MDC_HypertensionClinicRecord"/>
+	</bean>
+	<bean id="hypertensionClinicRecordDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.hypertension.HypertensionClinicRecordDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<property name="recordClassifying" value="MDC_HypertensionClinicRecord"/>
+	</bean>
+	
+	<!--高血压管理:高血压询问-->
+	<bean id="hypertensionInquireDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.hypertension.HypertensionInquireDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<property name="recordClassifying" value="MDC_HypertensionInquire"/>
+	</bean>
+	<bean id="hypertensionInquireDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.hypertension.HypertensionInquireDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<property name="recordClassifying" value="MDC_HypertensionInquire"/>
+	</bean>
+	
+	<!--高血压管理:高血压随访-->
+	<bean id="hypertensionVisitDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.hypertension.HypertensionVisitDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<property name="recordClassifying" value="MDC_HypertensionVisit"/>
+	</bean>
+	<bean id="hypertensionVisitDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.hypertension.HypertensionVisitDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<property name="recordClassifying" value="MDC_HypertensionVisit"/>
+	</bean>
+	
+	<!--糖尿病管理:糖尿病询问-->
+	<bean id="diabetesInquireDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.diabetes.DiabetesInquireDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<property name="recordClassifying" value="MDC_DiabetesInquire"/>
+	</bean>
+	<bean id="diabetesInquireDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.diabetes.DiabetesInquireDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<property name="recordClassifying" value="MDC_DiabetesInquire"/>
+	</bean>
+	
+	<!--糖尿病管理:糖尿病随访-->
+	<bean id="diabetesVisitDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.diabetes.DiabetesVisitDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<property name="recordClassifying" value="MDC_DiabetesVisit"/>
+	</bean>
+	<bean id="diabetesVisitDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.diabetes.DiabetesVisitDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<property name="recordClassifying" value="MDC_DiabetesVisit"/>
+	</bean>
+	
+	<!--精神病管理:精神病随访-->
+	<bean id="psychosisVisitDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.psychosis.PsychosisVisitDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<property name="recordClassifying" value="PSY_PsychosisVisit"/>
+	</bean>
+	<bean id="psychosisVisitDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.psychosis.PsychosisVisitDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<property name="recordClassifying" value="PSY_PsychosisVisit"/>
+	</bean>
+	
+	<!--精神病管理:精神病随访用药-->
+	<bean id="psychosisVisitMedicineDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.psychosis.PsychosisVisitMedicineDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<property name="recordClassifying" value="PSY_PsychosisVisitMedicine"/>
+	</bean>
+	<bean id="psychosisVisitMedicineDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.psychosis.PsychosisVisitMedicineDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<property name="recordClassifying" value="PSY_PsychosisVisitMedicine"/>
+	</bean>
+	
+	<!--体检录入:体检档案-->
+	<bean id="checkUpRegisterDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.check.CheckUpRegisterDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<property name="recordClassifying" value="PER_CheckUpRegister"/>
+	</bean>
+	<bean id="checkUpRegisterDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.check.CheckUpRegisterDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<property name="recordClassifying" value="PER_CheckUpRegister"/>
+	</bean>
+	
+	<!--肿瘤管理:肿瘤档案-->
+	<bean id="tumourRecordDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.tumour.TumourRecordDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<property name="recordClassifying" value="MDC_TumourRecord"/>
+	</bean>
+	<bean id="tumourRecordDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.tumour.TumourRecordDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<property name="recordClassifying" value="MDC_TumourRecord"/>
+	</bean>
+	
+	<!--肿瘤管理:肿瘤随访-->
+	<bean id="tumourVisitDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.tumour.TumourVisitDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<property name="recordClassifying" value="MDC_TumourVisit"/>
+	</bean>
+	<bean id="tumourVisitDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.tumour.TumourVisitDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<property name="recordClassifying" value="MDC_TumourVisit"/>
+	</bean>
+	
+	<!--门诊:门诊就诊记录-->
+	<bean id="optRecordDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.opt.OptRecordDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<property name="recordClassifying" value="Opt_Record"/>
+	</bean>
+	
+	<!--门诊:门诊挂号记录-->
+	<bean id="optRegisterDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.opt.OptRegisterDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<property name="recordClassifying" value="Opt_Register"/>
+	</bean>
+	
+	<!--门诊:门诊处方记录-->
+	<bean id="optRecipeDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.opt.OptRecipeDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<property name="recordClassifying" value="Opt_Recipe"/>
+	</bean>
+	
+	<!--门诊:门诊收费明细记录-->
+	<bean id="optFeeDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.opt.OptFeeDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<property name="recordClassifying" value="Opt_Fee"/>
+	</bean>
+	
+	<!--住院:体温单记录-->
+<!-- 	<bean id="iptSignsRecordDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.ipt.IptSignsRecordDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService"> -->
+<!-- 		<property name="recordClassifying" value="Ipt_SignsRecord"/> -->
+<!-- 	</bean> -->
+	
+	<!--住院:病案首页记录-->
+<!-- 	<bean id="iptMedicalRecordPageDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.ipt.IptMedicalRecordPageDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService"> -->
+<!-- 		<property name="recordClassifying" value="Ipt_MedicalRecordPage"/> -->
+<!-- 	</bean> -->
+	
+	<!--住院:就诊记录-->
+<!-- 	<bean id="iptRecordDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.ipt.IptRecordDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService"> -->
+<!-- 		<property name="recordClassifying" value="Ipt_Record"/> -->
+<!-- 	</bean> -->
+	
+	<!--住院:医嘱明细记录-->
+	<bean id="iptAdviceDetailDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.ipt.IptAdviceDetailDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<property name="recordClassifying" value="Ipt_AdviceDetail"/>
+	</bean>
+	
+	<!--住院:入院记录-->
+	<bean id="iptAdmissionNoteDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.ipt.IptAdmissionNoteDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<property name="recordClassifying" value="Ipt_AdmissionNote"/>
+	</bean>
+	
+	<!--住院:出院记录-->
+	<bean id="iptLeaveRecordDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.ipt.IptLeaveRecordDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<property name="recordClassifying" value="Ipt_LeaveRecord"/>
+	</bean>
+	
+	<!--检查报告记录-->
+<!-- 	<bean id="ptExamReportDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.pt.PtExamReportDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService"> -->
+<!-- 		<property name="recordClassifying" value="Pt_ExamReport"/> -->
+<!-- 	</bean> -->
+	
+	<!--检验报告记录-->
+<!-- 	<bean id="ptLabReportDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.pt.PtLabReportDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService"> -->
+<!-- 		<property name="recordClassifying" value="Pt_LabReport"/> -->
+<!-- 	</bean> -->
+	
+	<!--输血史记录-->
+	<bean id="ptTransfusionDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.pt.PtTransfusionDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<property name="recordClassifying" value="Pt_Transfusion"/>
+	</bean>
+	
+	<!--手术记录-->
+	<bean id="ptOperationDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.pt.PtOperationDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<property name="recordClassifying" value="Pt_Operation"/>
+	</bean>
+	
+	<!--过敏史记录-->
+<!-- 	<bean id="ptAllergyDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.pt.PtAllergyDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService"> -->
+<!-- 		<property name="recordClassifying" value="Pt_Allergy"/> -->
+<!-- 	</bean> -->
+	
+	<!--药物毒物依赖史记录-->
+<!-- 	<bean id="ptMedicineRelyDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.pt.PtMedicineRelyDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService"> -->
+<!-- 		<property name="recordClassifying" value="Pt_MedicineRely"/> -->
+<!-- 	</bean> -->
+	
+	<!--诊断明细报告-->
+<!-- 	<bean id="ptDiagnosisDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.pt.PtDiagnosisDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService"> -->
+<!-- 		<property name="recordClassifying" value="Pt_Diagnosis"/> -->
+<!-- 	</bean> -->
+	
+	<ssdev:service id="hypertensionRecordRetriever" ref="hypertensionRecordDocumentEntryRetrieveService"/>
+	<ssdev:service id="hypertensionRecordSubmiter" ref="hypertensionRecordDocumentEntrySubmitService"/>
+	<ssdev:service id="diabetesRecordRetriever" ref="diabetesRecordDocumentEntryRetrieveService"/>
+	<ssdev:service id="diabetesRecordSubmiter" ref="diabetesRecordDocumentEntrySubmitService"/>
+	<ssdev:service id="psychosisRecordRetriever" ref="psychosisRecordDocumentEntryRetrieveService"/>
+	<ssdev:service id="psychosisRecordSubmiter" ref="psychosisRecordDocumentEntrySubmitService"/>
+	<!--个人健康档案-->
+	<ssdev:service ref="healthRecordDocumentEntryRetrieveService"/>
+	<ssdev:service id="healthRecordSubmiter" ref="healthRecordDocumentEntrySubmitService"/>
+	<!--既往史-->
+	<ssdev:service id="pastHistoryRetriever" ref="pastHistoryDocumentEntryRetrieveService"/>
+	<ssdev:service id="pastHistorySubmiter" ref="pastHistoryDocumentEntrySubmitService"/>
+	<!--家庭档案-->
+	<ssdev:service id="familyRecordRetriever" ref="familyRecordDocumentEntryRetrieveService"/>
+	<ssdev:service id="familyRecordSubmiter" ref="familyRecordDocumentEntrySubmitService"/>
+	<!--计免档案-->
+	<ssdev:service id="vaccinateRecordRetriever" ref="vaccinateRecordDocumentEntryRetrieveService"/>
+	<ssdev:service id="vaccinateRecordSubmiter" ref="vaccinateRecordDocumentEntrySubmitService"/>
+	<!--接种记录-->
+	<ssdev:service id="vaccinateListRetriever" ref="vaccinateListDocumentEntryRetrieveService"/>
+	<ssdev:service id="vaccinateListSubmiter" ref="vaccinateListDocumentEntrySubmitService"/>
+	<!--体弱儿档案-->
+	<ssdev:service id="debilityChildrenRetriever" ref="debilityChildrenDocumentEntryRetrieveService"/>
+	<ssdev:service id="debilityChildrenSubmiter" ref="debilityChildrenDocumentEntrySubmitService"/>
+	<!--体弱儿随访-->
+	<ssdev:service id="debilityChildrenVisitRetriever" ref="debilityChildrenVisitDocumentEntryRetrieveService"/>
+	<ssdev:service id="debilityChildrenVisitSubmiter" ref="debilityChildrenVisitDocumentEntrySubmitService"/>
+	<!--儿童保健卡-->
+	<ssdev:service id="healthCardRetriever" ref="healthCardDocumentEntryRetrieveService"/>
+	<ssdev:service id="healthCardSubmiter" ref="healthCardDocumentEntrySubmitService"/>
+	<!--周岁小结-->
+	<ssdev:service id="oneYearSummaryRetriever" ref="oneYearSummaryDocumentEntryRetrieveService"/>
+	<ssdev:service id="oneYearSummarySubmiter" ref="oneYearSummaryDocumentEntrySubmitService"/>
+	<!--意外伤害-->
+	<ssdev:service id="accidentRetriever" ref="accidentDocumentEntryRetrieveService"/>
+	<ssdev:service id="accidentSubmiter" ref="accidentDocumentEntrySubmitService"/>
+	<!--儿童缺陷登记-->
+	<ssdev:service id="defectRegisterRetriever" ref="defectRegisterDocumentEntryRetrieveService"/>
+	<ssdev:service id="defectRegisterSubmiter" ref="defectRegisterDocumentEntrySubmitService"/>
+	<!--儿童产时记录-->
+	<ssdev:service id="deliveryRecordRetriever" ref="deliveryRecordDocumentEntryRetrieveService"/>
+	<ssdev:service id="deliveryRecordSubmiter" ref="deliveryRecordDocumentEntrySubmitService"/>
+	<!--儿童体检-->
+	<ssdev:service id="checkUpRetriever" ref="checkUpDocumentEntryRetrieveService"/>
+	<ssdev:service id="checkUpSubmiter" ref="checkUpDocumentEntrySubmitService"/>
+	<!--儿童死亡登记-->
+	<ssdev:service id="deadRegisterRetriever" ref="deadRegisterDocumentEntryRetrieveService"/>
+	<ssdev:service id="deadRegisterSubmiter" ref="deadRegisterDocumentEntrySubmitService"/>
+	<!--儿童询问-->
+	<ssdev:service id="inquireRetriever" ref="inquireDocumentEntryRetrieveService"/>
+	<ssdev:service id="inquireSubmiter" ref="inquireDocumentEntrySubmitService"/>
+	<!--儿童疑似残疾报告卡-->
+	<ssdev:service id="disabilityMonitorRetriever" ref="disabilityMonitorDocumentEntryRetrieveService"/>
+	<ssdev:service id="disabilityMonitorSubmiter" ref="disabilityMonitorDocumentEntrySubmitService"/>
+	<!--孕妇档案-->
+	<ssdev:service id="pregnantRecordRetriever" ref="pregnantRecordDocumentEntryRetrieveService"/>
+	<ssdev:service id="pregnantRecordSubmiter" ref="pregnantRecordDocumentEntrySubmitService"/>
+	<!--产后42天检查-->
+	<ssdev:service id="postnatal42DayRecordRetriever" ref="postnatal42DayDocumentEntryRetrieveService"/>
+	<ssdev:service id="postnatal42DayRecordSubmiter" ref="postnatal42DayDocumentEntrySubmitService"/>
+	<!--孕妇特殊情况-->
+	<ssdev:service id="pregnantSpecialRetriever" ref="pregnantSpecialDocumentEntryRetrieveService"/>
+	<ssdev:service id="pregnantSpecialSubmiter" ref="pregnantSpecialDocumentEntrySubmitService"/>
+	<!--新生儿基本信息-->
+	<ssdev:service id="babyVisitInfoRetriever" ref="babyVisitInfoDocumentEntryRetrieveService"/>
+	<ssdev:service id="babyVisitInfoSubmiter" ref="babyVisitInfoDocumentEntrySubmitService"/>
+	<!--新生儿随访记录-->
+	<ssdev:service id="babyVisitRecordRetriever" ref="babyVisitRecordDocumentEntryRetrieveService"/>
+	<ssdev:service id="babyVisitRecordSubmiter" ref="babyVisitRecordDocumentEntrySubmitService"/>
+	<!--孕妇随访记录-->
+	<ssdev:service id="visitRecordRetriever" ref="visitRecordDocumentEntryRetrieveService"/>
+	<ssdev:service id="visitRecordSubmiter" ref="visitRecordDocumentEntrySubmitService"/>
+	<!--产后访视信息-->
+	<ssdev:service id="postnatalVisitInfoRetriever" ref="postnatalVisitInfoDocumentEntryRetrieveService"/>
+	<ssdev:service id="postnatalVisitInfoSubmiter" ref="postnatalVisitInfoDocumentEntrySubmitService"/>
+	<!--孕妇指标-->
+	<ssdev:service id="pregnantWomanIndexRetriever" ref="pregnantWomanIndexDocumentEntryRetrieveService"/>
+	<ssdev:service id="pregnantWomanIndexSubmiter" ref="pregnantWomanIndexDocumentEntrySubmitService"/>
+	<!--高危因素-->
+	<ssdev:service id="highRiskVisitReasonRetriever" ref="highRiskVisitReasonDocumentEntryRetrieveService"/>
+	<ssdev:service id="highRiskVisitReasonSubmiter" ref="highRiskVisitReasonDocumentEntrySubmitService"/>
+	<!--老年人随访-->
+	<ssdev:service id="oldPeopleVisitRetriever" ref="oldPeopleVisitDocumentEntryRetrieveService"/>
+	<ssdev:service id="oldPeopleVisitSubmiter" ref="oldPeopleVisitDocumentEntrySubmitService"/>
+	<!--老年人健康档案-->
+	<ssdev:service id="oldPeopleRecordRetriever" ref="oldPeopleRecordDocumentEntryRetrieveService"/>
+	<ssdev:service id="oldPeopleRecordSubmiter" ref="oldPeopleRecordDocumentEntrySubmitService"/>
+	<!--高血压首诊测压-->
+	<ssdev:service id="hypertensionFirstRetriever" ref="hypertensionFirstDocumentEntryRetrieveService"/>
+	<ssdev:service id="hypertensionFirstSubmiter" ref="hypertensionFirstDocumentEntrySubmitService"/>
+	<!--高血压门诊记录-->
+	<ssdev:service id="hypertensionClinicRecordRetriever" ref="hypertensionClinicRecordDocumentEntryRetrieveService"/>
+	<ssdev:service id="hypertensionClinicRecordSubmiter" ref="hypertensionClinicRecordDocumentEntrySubmitService"/>
+	<!--高血压询问-->
+	<ssdev:service id="hypertensionInquireRetriever" ref="hypertensionInquireDocumentEntryRetrieveService"/>
+	<ssdev:service id="hypertensionInquireSubmiter" ref="hypertensionInquireDocumentEntrySubmitService"/>
+	<!--高血压随访-->
+	<ssdev:service id="hypertensionVisitRetriever" ref="hypertensionVisitDocumentEntryRetrieveService"/>
+	<ssdev:service id="hypertensionVisitSubmiter" ref="hypertensionVisitDocumentEntrySubmitService"/>
+	<!--糖尿病询问-->
+	<ssdev:service id="diabetesInquireRetriever" ref="diabetesInquireDocumentEntryRetrieveService"/>
+	<ssdev:service id="diabetesInquireSubmiter" ref="diabetesInquireDocumentEntrySubmitService"/>
+	<!--糖尿病随访-->
+	<ssdev:service id="diabetesVisitRetriever" ref="diabetesVisitDocumentEntryRetrieveService"/>
+	<ssdev:service id="diabetesVisitSubmiter" ref="diabetesVisitDocumentEntrySubmitService"/>
+	<!--精神病随访-->
+	<ssdev:service id="psychosisVisitRetriever" ref="psychosisVisitDocumentEntryRetrieveService"/>
+	<ssdev:service id="psychosisVisitSubmiter" ref="psychosisVisitDocumentEntrySubmitService"/>
+	<!--精神病随访用药-->
+	<ssdev:service id="psychosisVisitMedicineRetriever" ref="psychosisVisitMedicineDocumentEntryRetrieveService"/>
+	<ssdev:service id="psychosisVisitMedicineSubmiter" ref="psychosisVisitMedicineDocumentEntrySubmitService"/>
+	<!--体检档案-->
+	<ssdev:service id="checkUpRegisterRetriever" ref="checkUpRegisterDocumentEntryRetrieveService"/>
+	<ssdev:service id="checkUpRegisterSubmiter" ref="checkUpRegisterDocumentEntrySubmitService"/>
+	<!--肿瘤档案-->
+	<ssdev:service id="tumourRecordRetriever" ref="tumourRecordDocumentEntryRetrieveService"/>
+	<ssdev:service id="tumourRecordSubmiter" ref="tumourRecordDocumentEntrySubmitService"/>
+	<!--肿瘤随访-->
+	<ssdev:service id="tumourVisitRetriever" ref="tumourVisitDocumentEntryRetrieveService"/>
+	<ssdev:service id="tumourVisitSubmiter" ref="tumourVisitDocumentEntrySubmitService"/>
+	<!--门诊就诊记录-->
+	<ssdev:service id="OptRecordRetriever" ref="optRecordDocumentEntryRetrieveService"/>
+	<!--挂号记录-->
+	<ssdev:service id="OptRegister" ref="optRegisterDocumentEntryRetrieveService"/>
+	
+	<!--门诊处方记录-->
+	<ssdev:service id="OptRecipe" ref="optRecipeDocumentEntryRetrieveService"/>
+	<!--门诊收费明细记录-->
+	<ssdev:service id="OptFee" ref="optFeeDocumentEntryRetrieveService"/>
+	<!--住院体温单记录-->
+	<ssdev:service id="IptSignsRecord" ref="iptSignsRecordDocumentEntryRetrieveService"/>
+	<!--住院病案首页记录-->
+	<ssdev:service id="IptMedicalRecordPage" ref="iptMedicalRecordPageDocumentEntryRetrieveService"/>
+	<!--住院就诊记录-->
+	<ssdev:service id="IptRecord" ref="iptRecordDocumentEntryRetrieveService"/>
+	<!--住院医嘱明细记录-->
+	<ssdev:service id="IptAdviceDetail" ref="iptAdviceDetailDocumentEntryRetrieveService"/>
+	<!--住院入院记录-->
+	<ssdev:service id="IptAdmissionNote" ref="iptAdmissionNoteDocumentEntryRetrieveService"/>
+	<!--住院出院记录-->
+	<ssdev:service id="IptLeaveRecord" ref="iptLeaveRecordDocumentEntryRetrieveService"/>
+	<!--检查报告记录-->
+	<ssdev:service id="PtExamReport" ref="ptExamReportDocumentEntryRetrieveService"/>
+	<!--检验报告记录-->
+	<ssdev:service id="PtLabReport" ref="ptLabReportDocumentEntryRetrieveService"/>
+	<!--输血史记录-->
+	<ssdev:service id="PtTransfusion" ref="ptTransfusionDocumentEntryRetrieveService"/>
+	<!--手术记录-->
+	<ssdev:service id="PtOperation" ref="ptOperationDocumentEntryRetrieveService"/>
+	<!--过敏史记录-->
+	<ssdev:service id="PtAllergy" ref="ptAllergyDocumentEntryRetrieveService"/>
+	<!--药物毒物依赖史记录-->
+	<ssdev:service id="PtMedicineRely" ref="ptMedicineRelyDocumentEntryRetrieveService"/>
+	<!--诊断明细报告-->
+	<ssdev:service id="PtDiagnosis" ref="ptDiagnosisDocumentEntryRetrieveService"/>
+	
+</beans>

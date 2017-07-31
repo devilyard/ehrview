@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="01" text="抗洪救灾"/>
+  <item key="02" text="农业生产"/>
+  <item key="03" text="捕鱼捞虾"/>
+  <item key="04" text="放牧与割草"/>
+  <item key="05" text="抢种抢收"/>
+  <item key="06" text="洗涮生活用品"/>
+  <item key="07" text="玩水游泳"/>
+  <item key="08" text="洗手、脚"/>
+  <item key="99" text="其他"/>
+</dic>

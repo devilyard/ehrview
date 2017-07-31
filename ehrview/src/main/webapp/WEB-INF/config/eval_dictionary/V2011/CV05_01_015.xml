@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="产前"/>
+  <item key="2" text="产后七天内"/>
+  <item key="3" text="产后四十二天内"/>
+  <item key="4" text="儿童一周岁内"/>
+  <item key="5" text="儿童一周岁后"/>
+</dic>

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="PIV_VaccinateRecord_Doc" table="PIV_VaccinateRecord_Doc">
+			<id name="DocID" type="java.lang.String">
+            	<column name="DocID"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="DCID" type="java.lang.String" length="16" />
+        	<property name="DocFormat" type="java.lang.String" length="2" />
+        	<property name="DocContent"  type="binary" />
+</class>
+</hibernate-mapping>

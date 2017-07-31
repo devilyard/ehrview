@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:ssdev="http://www.bsoft.com.cn/schema/ssdev"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.bsoft.com.cn/schema/ssdev http://www.bsoft.com.cn/schema/ssdev/ssdev.xsd">
+	
+	<bean id="templateListService" class="com.bsoft.ehr.service.ssdev.TemplateListService"/>
+	<bean id="sessionIdService" class="com.bsoft.ehr.service.ssdev.SessionIdService"/>
+	<bean id="setMPILevelService" class="com.bsoft.ehr.service.ssdev.SetMPILevelService"/>
+	<bean class="com.bsoft.ehr.util.MPIProxyInitializer" lazy-init="false" />
+	<bean id="browsingHistoryListService" class="com.bsoft.ehr.service.ssdev.BrowsingHistoryListService"/>
+	<bean id="mpiListService" class="com.bsoft.ehr.service.ssdev.MPIListService"/>
+	<bean id="LayoutConfigService" class="com.bsoft.ehr.service.ssdev.LayoutConfigService"/>
+	
+	<bean id="imageLoader" class="com.bsoft.ehr.image.FileImageLoader" />
+	<bean id="httpImageLoader" class="com.bsoft.ehr.image.HttpImageLoader" />
+	
+	<bean id="htmlTemplateResolver"
+		class="org.thymeleaf.templateresolver.ServletContextTemplateResolver">
+		<property name="templateMode" value="XHTML" />
+		<property name="suffix" value=".html" />
+		<property name="prefix" value="WEB-INF/config/templates/" />
+		<property name="characterEncoding" value="UTF-8" />
+		<property name="cacheTTLMs" value="3000" />
+	</bean>
+	<bean id="xmlTemplateResolver"
+		class="org.thymeleaf.templateresolver.ServletContextTemplateResolver">
+		<property name="templateMode" value="XML" />
+		<property name="suffix" value=".xml" />
+		<property name="prefix" value="WEB-INF/config/templates/" />
+		<property name="characterEncoding" value="UTF-8" />
+		<property name="cacheTTLMs" value="3000" />
+	</bean>
+	<bean id="htmlTemplateEngine" class="org.thymeleaf.TemplateEngine" >
+		<property name="templateResolver" ref="htmlTemplateResolver"/>
+	</bean>
+	<bean id="xmlTemplateEngine" class="org.thymeleaf.TemplateEngine" >
+		<property name="templateResolver" ref="xmlTemplateResolver"/>
+	</bean>
+	
+	<!-- application-config -->
+	<bean id="applicationConfigController" class="com.bsoft.ehr.config.app.ApplicationConfigController" />
+
+	<!-- dataFilter -->
+	<bean id="privacyFilterConfigController" class="com.bsoft.ehr.privacy.config.PrivacyFilterConfigController"/>
+	
+	<!-- LabExamSet -->
+	<bean id="labExamSetConfigLocalLoader" class="com.bsoft.ehr.config.labexam.LabExamSetConfigLocalLoader"/>
+	
+	<bean id="evalDictionaryLoader" class="com.bsoft.ehr.config.eval.EvalDictionary"/>
+</beans>

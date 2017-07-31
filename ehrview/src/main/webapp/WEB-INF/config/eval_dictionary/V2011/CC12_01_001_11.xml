@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="手术"/>
+  <item key="2" text="化疗"/>
+  <item key="3" text="放疗"/>
+  <item key="4" text="中药"/>
+  <item key="5" text="免疫"/>
+  <item key="6" text="介入"/>
+  <item key="7" text="对症治疗"/>
+  <item key="8" text="止痛治疗"/>
+  <item key="9" text="其他治疗"/>
+</dic>

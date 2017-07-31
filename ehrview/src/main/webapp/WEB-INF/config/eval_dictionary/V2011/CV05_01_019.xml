@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="淋巴结"/>
+  <item key="2" text="脑"/>
+  <item key="3" text="骨关节"/>
+  <item key="4" text="腹腔"/>
+  <item key="5" text="泌尿生殖系统"/>
+  <item key="9" text="其他部位"/>
+</dic>

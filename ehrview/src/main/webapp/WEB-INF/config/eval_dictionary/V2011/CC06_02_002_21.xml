@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="03" text="一级"/>
+  <item key="02" text="二级"/>
+  <item key="01" text="三级"/>
+</dic>

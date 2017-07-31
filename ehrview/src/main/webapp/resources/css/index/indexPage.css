@@ -1,0 +1,40 @@
+
+/***********便捷CSS********************/
+.x-tool-closed {
+    background-position: 0 0;
+    margin: 10px 12px;
+}
+.x-tool-conf {
+    background-position:0 -90px;
+    margin: 10px -5px;
+}
+.quick ul{ width:61px; height:72px; margin:8px 8px; float:left; cursor:pointer;}
+.quick li{ text-align:center; color:#FFF;}
+.quick img{ margin-top:8px;}
+.mbselect { 
+    background:url(images/quickbg.png) no-repeat; 
+	font-weight:bold; 
+	color:#FFF;
+}
+.qmconf dl{ border-bottom:1px #ccc dotted; height:55px; width:380px;}
+.qmconf dt{ float:left; display:inline; padding:5px; height:40px;}
+.qmconf li{ width:200px; padding-top:5px;list-style:none; color:#454545}
+.qmconf img{ padding:5px 10px;}
+.qmconf input{ padding-top:10px;}
+/****************设置模块CSS**********************/
+.x-tool-sclosed {
+    background-position: 0 0;
+    margin: 6px 25px;
+}
+.setbody ul{ width:61px; height:72px; margin:8px 0 8px 8px; float:left; cursor: pointer;}
+.setbody li{ text-align:center; color:#FFF;}
+.setbody img{ margin-top:8px; margin-bottom:5px;}
+/*****************组织架构类型CSS**********************/
+.unitType ul{ width:61px; height:72px; margin:8px 8px; float:left; cursor:pointer;}
+.unitType li{ text-align:center; color:#000;}
+.unitType img{ margin-top:8px;}
+.utselect { 
+    background:url(images/quickbg.png) no-repeat; 
+	font-weight:bold; 
+	color:#000;
+}

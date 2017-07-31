@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="01" text="无"/>
+  <item key="02" text="外阴瘙痒"/>
+  <item key="03" text="白带异常"/>
+  <item key="04" text="宫颈触血"/>
+  <item key="05" text="下腹不适"/>
+  <item key="06" text="情绪改变"/>
+  <item key="07" text="潮热出汗"/>
+  <item key="08" text="月经不规律"/>
+  <item key="09" text="失眠"/>
+  <item key="10" text="乳房疼痛"/>
+  <item key="11" text="乳腺肿块"/>
+  <item key="12" text="乳腺异常泌乳"/>
+  <item key="13" text="性交出血"/>
+  <item key="14" text="性交疼痛"/>
+  <item key="15" text="绝经后阴道出血"/>
+  <item key="99" text="其他"/>
+</dic>

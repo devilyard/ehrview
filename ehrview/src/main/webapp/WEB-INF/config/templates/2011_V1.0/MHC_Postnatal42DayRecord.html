@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>产后42天健康检查记录表</title>
+</head>
+
+<body style="padding: 20px;">
+	<style type="text/css">
+.my table {
+	border-bottom: #ccc solid 1px;
+	border-left: #ccc solid 1px;
+	border-top: #ccc solid 1px;
+	text-align: left;
+}
+
+.my td {
+	border-right: #ccc solid 1px;
+	border-bottom: #ccc dotted 1px;
+	padding: 4px;
+}
+
+.red {
+	color: red;
+	font-weight: bold;
+}
+</style>
+	<div style="text-align: center; height: 40px; line-height: 40px; font-size: 16px; font-weight: bold;">产后42天健康检查记录表</div>
+	<table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
+		<tr>
+			<td width="500" height="30" align="left" style="padding-left: 10px"><strong>姓名</strong>
+				<u style="margin-right: 100px;" th:text="${personName}"></u></td>
+			<td align="right"><strong>编号</strong> <u th:text="${doc.elementText('PregnantID')}"></u></td>
+		</tr>
+		<tr>
+			<td style="border-bottom: 4px #09F solid;" colspan="2"></td>
+		</tr>
+		<tr>
+			<td style="height: 1px;" colspan="2"></td>
+		</tr>
+		<tr>
+			<td height="10" style="border-top: 1px #09f solid;" colspan="2"></td>
+		</tr>
+	</table>
+	<div class="my">
+		<table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
+			<tr>
+				<td bgcolor="#CAE2F7" width="15%"><strong>随访日期</strong></td>
+				<td colspan="3" th:text="${doc.elementText('CheckDate')}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>一般健康情况</strong></td>
+				<td colspan="3" th:text="${doc.elementText('HealthState')}">&nbsp;</td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>一般心理状况</strong></td>
+				<td colspan="3" th:text="${doc.elementText('PsychologyState')}">&nbsp;</td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>血压</strong></td>
+				<td><span th:text="${doc.elementText('Constriction')}"></span>/<span th:text="${doc.elementText('Diastolic')}"></span>mmHg</td>
+				<td width="15%" bgcolor="#CAE2F7"><strong>乳 房</strong></td>
+				<td th:if="${doc.element('Breast') != null}" th:text="${doc.element('Breast').attributeValue('display')}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>恶 露</strong></td>
+				<td th:if="${doc.element('Lochia') != null}" th:text="${doc.element('Lochia').attributeValue('display')}"></td>
+				<td bgcolor="#CAE2F7"><strong>子  宫</strong></td>
+				<td th:if="${doc.element('Uterus') != null}" th:text="${doc.element('Uterus').attributeValue('display')}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>伤  口</strong></td>
+				<td th:if="${doc.element('Wound') != null}" th:text="${doc.element('Wound').attributeValue('display')}"></td>
+				<td bgcolor="#CAE2F7"><strong>其 他</strong></td>
+				<td th:text="${doc.elementText('Other')}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>分 类</strong></td>
+				<td th:if="${doc.element('Classification') != null}" th:text="${doc.element('Classification').attributeValue('display')}"></td>
+				<td bgcolor="#CAE2F7"><strong>指 导</strong></td>
+				<td th:if="${doc.element('Suggestion') != null}" th:text="${doc.element('Suggestion').attributeValue('display')}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>处理</strong></td>
+				<td colspan="3" th:if="${doc.element('Treat') != null}" th:text="${doc.element('Treat').attributeValue('display')}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>随访医生签名</strong></td>
+				<td colspan="3" th:text="${doc.elementText('CheckDoctor')}"></td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

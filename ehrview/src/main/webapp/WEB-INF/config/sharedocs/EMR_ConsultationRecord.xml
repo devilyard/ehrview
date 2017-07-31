@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClinicalDocument xmlns="urn:hl7-org:v3" xmlns:mif="urn:hl7-org:v3/mif" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 ..\sdschemas\CDA.xsd">
+
+	<realmCode code="CN"/>
+	<typeId root="2.16.840.1.113883.1.3" extension="POCD_MT000040"/>
+	<templateId  root="2.16.156.10011.2.1.1.19"/>
+	
+	<!-- 会诊单编号 -->
+	<id root="2.16.156.10011.1.1.2" datacode="DE01.00.008.00" extension="" datatype="not-null"/>
+	<code code="HSDC00.04" codeSystem="2.16.156.10011.2.4" codeSystemName="卫生信息共享文档规范编码体系"/>
+	<title>会诊记录</title>
+	<effectiveTime xsi:type="TS" datacode="DE09.00.042.00" value="" datatype="D8"/>
+	<confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25" codeSystemName="Confidentiality" displayName="正常访问保密级别"/>
+	<languageCode code="zh-CN"/>
+	<setId/>
+	<versionNumber/>
+
+	<recordTarget typeCode="RCT" contextControlCode="OP">
+		<patientRole classCode="PAT">
+			<!--健康档案标识号-->
+			<id root="2.16.156.10011.1.2" datacode="DE01.00.009.00" extension="" datatype="N17"/>
+				
+			<patient classCode="PSN" determinerCode="INSTANCE">
+				<name datacode="DE02.01.039.00" datatype="N1..20"></name>
+			</patient>
+		</patientRole>
+	</recordTarget>
+	<author typeCode="AUT" contextControlCode="OP">
+		<time xsi:type="TS" value="20110404"/>
+		<assignedAuthor classCode="ASSIGNED">
+			<id root="2.16.156.10011.1.7" extension="234234234"/>
+			<assignedPerson>
+				<name datacode="DE02.01.039.00"></name>
+			</assignedPerson>
+			<representedOrganization>
+				<id root="2.16.156.10011.1.5" extension="0187565656"/>
+				<name>苏州市立医院</name>
+				<addr>苏州市沧浪区道前街26号</addr>			
+			</representedOrganization>
+		</assignedAuthor>
+	</author>
+	<custodian typeCode="CST">
+		<assignedCustodian classCode="ASSIGNED">
+			<representedCustodianOrganization classCode="ORG" determinerCode="INSTANCE">
+				<id root="2.16.156.10011.1.6" extension="32290176-8"/>
+				<name>苏州市卫生和计划生育委员会</name>
+				<telecom value="0512-65226855"/>
+				<addr>苏州市平泷路188号</addr>
+			</representedCustodianOrganization>
+		</assignedCustodian>
+	</custodian>
+	
+	<!-- 责任医生 -->
+	<legalAuthenticator>
+		<!-- 体检时间 -->
+		<time value="20120105"/>
+		<signatureCode></signatureCode>
+		<assignedEntity>
+			<id/>
+			<assignedPerson>
+				<name datacode="DE02.01.039.00" datatype="A1..50"></name>
+			</assignedPerson>
+		</assignedEntity>
+	</legalAuthenticator>
+	
+	<relatedDocument typeCode="RPLC">
+		<parentDocument classCode="DOCCLIN" moodCode="EVN">
+			<id root="2.16.156.10011.1.1.2" extension="D2011000000"/>
+			<setId/>
+			<versionNumber value="1"/>
+		</parentDocument>
+	</relatedDocument>
+
+	<component>
+		<structuredBody>
+			<!--会诊原因章节 -->
+			<component>
+				<section>
+					<code code="DE06.00.039.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="会诊原因"/>
+					<text datacode="DE06.00.039.00" datatype="AN1..200"></text>
+				</section>
+			</component>
+
+			<!--会诊意见章节--> 
+			<component>
+				<section>
+					<code code="DE06.00.038.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="会诊意见"/>
+					<text/>
+					<entry>
+						<observation classCode="OBS" moodCode="PRP">
+							<code/>
+							<!--会诊日期-->
+							<effectiveTime datacode="DE06.00.037.00"  value="" datatype="D8"></effectiveTime>
+							<value xsi:type="ST" datacode="DE06.00.038.00" datatype="AN1..200"></value>
+							<performer>
+								<assignedEntity>
+									<id/>
+									<!--会诊医生姓名-->
+									<assignedPerson>
+										<name datacode="DE02.10.039.00" datatype="A1..50"></name>
+									</assignedPerson>
+									<representedOrganization>
+										<name/>
+										<asOrganizationPartOf>
+											<!-- 会诊医生所在医疗机构名称 -->
+											<wholeOrganization>
+												<id root="2.16.156.10011.1.5" extension="会诊医生所在机构代码" datacode="DE08.10.052.00" datatype="AN10"></id>
+												<name datacode="DE08.10.013.00" datatype="AN1..70"></name>
+											</wholeOrganization>
+										</asOrganizationPartOf>
+									</representedOrganization>
+								</assignedEntity>
+							</performer>
+						</observation>
+					</entry>
+				</section>
+			</component>
+		</structuredBody>
+	</component>
+</ClinicalDocument>

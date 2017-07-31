@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="0类切口"/>
+  <item key="2" text="Ⅰ类切口"/>
+  <item key="3" text="Ⅱ类切口"/>
+  <item key="4" text="Ⅲ类切口"/>
+</dic>

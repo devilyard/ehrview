@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="SUMMARY_Sym_WHHist" table="SUMMARY_Sym_WHHist">
+			<id name="DCID" type="java.lang.String">
+            	<column name="DCID"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="MPIID" type="java.lang.String" length="32" />
+        	<property name="Height" type="java.lang.String"  />
+        	<property name="Weight" type="java.lang.String"  />
+        	<property name="BMI" type="java.lang.String"  />
+        	<property name="UploadTime" type="java.util.Date"  />
+        	<property name="SystemTime" type="java.util.Date"  />
+        	<property name="AuthorOrganization" type="java.lang.String" length="16" />
+        	<property name="SRCEntryName" type="java.lang.String" length="50" />
+        	<property name="SRCID" type="java.lang.String" length="50" />
+        	<property name="EffectiveFlag" type="java.lang.String" length="1" />
+</class>
+</hibernate-mapping>

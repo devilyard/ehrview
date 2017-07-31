@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>高血压患者管理卡</title>
+</head>
+
+<body style="padding: 20px; font-size: 12px;">
+	<style type="text/css">
+.my table {
+	text-align: left;
+	margin-bottom: 20px;
+}
+
+.my td {
+	padding-left: 6px;
+	line-height: 24px;
+	border-bottom: #eee solid 1px;
+}
+
+.two table {
+	border-bottom: #ccc solid 1px;
+	border-left: #ccc solid 1px;
+	border-top: #ccc solid 1px;
+	text-align: left;
+	margin-bottom: 20px;
+}
+
+.two td {
+	border-right: #ccc solid 1px;
+	height: 24px;
+	line-height: 18px;
+	text-indent: 4px;
+	border-bottom: #ccc dotted 1px;
+}
+
+.linenone {
+	border-bottom: none;
+}
+
+.two td .ta2 {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+.two td .ta2 td {
+	margin: 0;
+}
+
+.ta2 td.none {
+	border-right: none;
+}
+
+.ta2 td.none2 {
+	border-bottom: none;
+}
+</style>
+	<table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
+		<tr>
+			<td align="center" colspan="2" style="font-size: 24px; height: 40px; line-height: 50px; text-align: center">高血压患者管理卡</td>
+		</tr>
+		<tr>
+			<td height="30" width="75%"></td>
+			<td align="right"><strong>编号：</strong> 
+				<u th:text="${doc.elementText('PHRID')}"></u>
+			</td>
+		</tr>
+		<tr>
+			<td style="border-bottom: 4px #09F solid;" colspan="2"></td>
+		</tr>
+		<tr>
+			<td style="height: 1px;" colspan="2"></td>
+		</tr>
+		<tr>
+			<td height="10" style="border-top: 1px #09f solid;" colspan="2"></td>
+		</tr>
+	</table>
+	<div class="two">
+		<table width="95%" border="0" align="center" cellpadding="0"
+			cellspacing="0">
+			<tr>
+				<td bgcolor="#CAE2F7" width="15%"><strong>姓名</strong></td>
+				<td width="20%" th:text="${personName}"></td>
+				<td bgcolor="#CAE2F7" width="15%"><strong>性 别</strong></td>
+				<td width="20%" th:text="${sexCode_text}"></td>
+				<td bgcolor="#CAE2F7" width="15%"><strong>出生日期</strong></td>
+				<td th:if="${doc.element('birthday') != null}" th:text="${#dates.format(birthday,'yyyy-MM-dd')}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>职业</strong></td>
+				<td th:text="${workCode_text}"></td>
+				<td bgcolor="#CAE2F7"><strong>联系电话</strong></td>
+				<td th:text="${contactNo}"></td>
+				<td bgcolor="#CAE2F7"><strong>邮编</strong></td>
+				<td th:text="${postalCode}"></td>
+				<tr>
+					<td bgcolor="#CAE2F7"><strong>住址</strong></td>
+					<td colspan="5" th:text="${address}"></td>
+				</tr>
+				<tr>
+					<td bgcolor="#CAE2F7" rowspan="4"><strong>生活习惯</strong></td>
+					<td colspan="2"><strong>吸烟情况：</strong>
+						<span th:if="${doc.element('Smoke') != null}" th:text="${doc.element('Smoke').attributeValue('display')}"></span>
+					</td>
+					<td colspan="3"><strong>吸烟量：</strong>
+						<span th:text="${doc.elementText('SmokeCount')} + '支/日'"></span>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2"><strong>饮酒情况：</strong>
+						<span th:if="${doc.element('Drink') != null}" th:text="${doc.element('Drink').attributeValue('display')}"></span>
+					</td>
+					<td colspan="3"><strong>饮酒量：</strong>
+						<span th:text="${doc.elementText('DrinkTypeCode')}"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+						<span th:text="${doc.elementText('DrinkCount')} + '两/日'"></span>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="5"><strong>体育锻炼：</strong>
+						<span th:text="${doc.elementText('Train')}"></span>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="5"><strong>饮食偏好（尤其是是否喜食偏咸食物）：</strong>
+						<span th:text="${doc.elementText('EateHabit')}"></span>
+					</td>
+				</tr>
+				<tr>
+					<td bgcolor="#CAE2F7"><strong>检出途径</strong></td>
+					<td colspan="5" th:text="${doc.elementText('RecordSource')}"></td>
+				</tr>
+				<tr>
+					<td bgcolor="#CAE2F7"><strong>高血压临床确诊时间</strong></td>
+					<td th:text="${doc.elementText('ConfirmDate')}"></td>
+					<td bgcolor="#CAE2F7">病程</td>
+					<td colspan="3" th:text="${DiseaseCourse}"></td>
+				</tr>
+				<tr>
+					<td bgcolor="#CAE2F7"><strong>经常就诊地点</strong></td>
+					<td colspan="5" th:text="${doc.elementText('ClinicAddress')}"></td>
+				</tr>
+				<tr>
+					<td bgcolor="#CAE2F7"><strong>生活自理能力</strong></td>
+					<td colspan="5" th:if="${doc.element('Viability') != null}" th:text="${doc.element('Viability').attributeValue('display')}"></td>
+				</tr>
+				<tr>
+					<td bgcolor="#CAE2F7"><strong>身高(cm)</strong></td>
+					<td th:text="${doc.elementText('Height')}"></td>
+					<td bgcolor="#CAE2F7"><strong>体重(kg)</strong></td>
+					<td th:text="${doc.elementText('Weight')}"></td>
+					<td bgcolor="#CAE2F7"><strong>BMI指数</strong></td>
+					<td th:text="${doc.elementText('BMI')}"></td>
+				</tr>
+				<tr>
+					<td bgcolor="#CAE2F7"><strong>未服用降压药物情况下血压水平</strong></td>
+					<td colspan="5" th:text="${doc.elementText('Constriction')} + '/' + ${doc.elementText('Diastolic')} + 'mmHg'"></td>
+				</tr>
+				<tr>
+					<td bgcolor="#CAE2F7"><strong>危险评估结果</strong></td>
+					<td colspan="5" th:if="${doc.element('RiskLevel') != null}" th:text="${doc.element('RiskLevel').attributeValue('display')}"></td>
+				</tr>
+				<tr>
+					<td bgcolor="#CAE2F7"><strong>目前服药情况</strong></td>
+					<td colspan="5">
+					<div th:if="${doc.element('MDC_HypertensionMedicines') != null}">
+						<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="ta2">
+							<tr th:each="mdc:${doc.element('MDC_HypertensionMedicines').selectNodes('MDC_HypertensionMedicine')}">
+								<td width="20%" bgcolor="#f1f1f1"><strong>药物名称</strong></td>
+								<td width="30%" th:text="${mdc.elementText('MedicineName')}"></td>
+								<td th:text="'每日&nbsp;'+${mdc.elementText('MedicineFrequency')}+'&nbsp;次，每次剂量&nbsp;'+${mdc.elementText('MedicineDosage')}+${mdc.elementText('MedicineUnit')}"></td>
+							</tr>
+						</table>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td bgcolor="#CAE2F7"><strong>建卡日期</strong></td>
+					<td th:text="${doc.elementText('CreateDate')}"></td>
+					<td bgcolor="#CAE2F7"><strong>社区责任医师</strong></td>
+					<td th:if="${doc.element('ManaDoctorID') != null}" th:text="${doc.element('ManaDoctorID').attributeValue('display')}"></td>
+					<td bgcolor="#CAE2F7" width="16%"><strong>社区卫生服务中心名称</strong></td>
+					<td th:if="${doc.element('ManaUnitID') != null}" th:text="${doc.element('ManaUnitID').attributeValue('display')}"></td>
+				</tr>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

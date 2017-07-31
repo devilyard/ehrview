@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="自然流产"/>
+  <item key="2" text="人工流产"/>
+  <item key="21" text="负压吸引、钳刮术流产"/>
+  <item key="22" text="药物流产"/>
+  <item key="3" text="阴道自然分娩"/>
+  <item key="31" text="会阴切开"/>
+  <item key="32" text="会阴未切"/>
+  <item key="4" text="阴道手术助产"/>
+  <item key="41" text="产钳助产"/>
+  <item key="42" text="臀位助产"/>
+  <item key="43" text="胎头吸引"/>
+  <item key="49" text="其他阴道手术助产"/>
+  <item key="5" text="剖宫产"/>
+  <item key="9" text="其他"/>
+</dic>

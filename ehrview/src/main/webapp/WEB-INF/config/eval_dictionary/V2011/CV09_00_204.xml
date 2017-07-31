@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="行政处罚决定"/>
+  <item key="101" text="警告"/>
+  <item key="102" text="罚款"/>
+  <item key="103" text="没收违法所得"/>
+  <item key="104" text="没收收受的财物"/>
+  <item key="105" text="没收药品器械"/>
+  <item key="106" text="停业整顿"/>
+  <item key="107" text="暂扣或吊销卫生许可证"/>
+  <item key="108" text="吊销诊疗科目"/>
+  <item key="109" text="吊销执业证书"/>
+  <item key="199" text="其他行政处罚决定"/>
+  <item key="2" text="行政强制及其措施"/>
+  <item key="201" text="责令改正"/>
+  <item key="202" text="责令停止执业"/>
+  <item key="203" text="责令限期补办校验手续"/>
+  <item key="204" text="责令暂停执业活动"/>
+  <item key="205" text="限期整顿"/>
+  <item key="206" text="取缔"/>
+  <item key="207" text="封闭公共饮用水源、封存食品及相关物品或暂停销售的临时控制措施"/>
+  <item key="208" text="责令停止产生职业病危害的作业"/>
+  <item key="209" text="提请人民政府按有关规定贲令停建、关闭"/>
+  <item key="299" text="其他行政强制及其措施"/>
+  <item key="9" text="其他处理情况"/>
+  <item key="901" text="移送司法机关"/>
+  <item key="902" text="行政处分"/>
+  <item key="903" text="通报其他部门"/>
+  <item key="999" text="其他"/>
+</dic>

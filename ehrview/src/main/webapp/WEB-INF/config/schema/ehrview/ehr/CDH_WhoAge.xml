@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<entry id="CDH_WhoAge" table="CDH_WhoAge">
+			<item id="RECORDID" type="java.lang.Integer" length="32" pkey="true" />
+        	<item id="AGE" type="java.lang.Integer" length="10" />
+        	<item id="AGENOTE" type="java.lang.String" length="10" />
+        	<item id="SEXCODE" type="java.lang.String" length="1" />
+        	<item id="WEIGHTL" type="java.lang.String" length="16"  />
+        	<item id="WEIGHTM" type="java.lang.String" length="16"  />
+        	<item id="WEIGHTS" type="java.lang.String" length="16"  />
+        	<item id="WSD3NEG" type="java.lang.String" length="16"  />
+        	<item id="WSD2NEG" type="java.lang.String" length="16" />
+        	<item id="WSD1NEG" type="java.lang.String" length="16"  />
+        	<item id="WSD0" type="java.lang.String" length="16"  />
+        	<item id="WSD1" type="java.lang.String" length="16"   />
+        	<item id="WSD2" type="java.lang.String" length="16"  />
+        	<item id="WSD3" type="java.lang.String" length="16" />
+        	<item id="HEIGHTL" type="java.lang.String" length="16" />
+        	<item id="HEIGHTM" type="java.lang.String" length="16" />
+        	<item id="HEIGHTS" type="java.lang.String" length="16" />
+        	<item id="HEIGHTSD" type="java.lang.String" length="16" />
+        	<item id="HSD3NEG" type="java.lang.String" length="16" />
+        	<item id="HSD2NEG" type="java.lang.String" length="16" />
+        	<item id="HSD1NEG" type="java.lang.String" length="16" />
+        	<item id="HSD0" type="java.lang.String" length="16" />
+        	<item id="HSD1" type="java.lang.String" length="16" />
+        	<item id="HSD2" type="java.lang.String" length="16" />
+        	<item id="HSD3" type="java.lang.String" length="16" />
+</entry>

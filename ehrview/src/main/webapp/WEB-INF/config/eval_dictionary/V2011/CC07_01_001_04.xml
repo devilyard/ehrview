@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="健康档案"/>
+  <item key="2" text="社区门诊"/>
+  <item key="3" text="流行病学调查"/>
+  <item key="5" text="病房"/>
+  <item key="6" text="社区"/>
+  <item key="99" text="其他"/>
+</dic>

@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>产前随访服务记录表</title>
+</head>
+
+<body style="padding: 20px;">
+	<style type="text/css">
+.my table {
+	border-bottom: #ccc solid 1px;
+	border-left: #ccc solid 1px;
+	border-top: #ccc solid 1px;
+	text-align: left;
+}
+
+.my td {
+	border-right: #ccc solid 1px;
+	border-bottom: #ccc dotted 1px;
+	padding: 4px;
+}
+
+.red {
+	color: red;
+	font-weight: bold;
+}
+</style>
+	<div style="text-align: center; height: 40px; line-height: 40px; font-size: 16px; font-weight: bold;">产前随访服务记录表</div>
+	<table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
+		<tr>
+			<td width="500" height="30" align="left" style="padding-left: 10px">
+				<strong>姓名：</strong><u th:text="${personName}"></u>
+			</td>
+			<td align="right">
+				<strong>编号：</strong><u th:text="${doc.elementText('PregnantID')}"></u>
+			</td>
+		</tr>
+		<tr>
+			<td style="border-bottom: 4px #09F solid;" colspan="2"></td>
+		</tr>
+		<tr>
+			<td style="height: 1px;" colspan="2"></td>
+		</tr>
+		<tr>
+			<td height="10" style="border-top: 1px #09f solid;" colspan="2"></td>
+		</tr>
+	</table>
+	<div class="my">
+		<table width="95%" border="0" align="center" cellpadding="0"
+			cellspacing="0">
+			<!--
+     <tr>
+     <td width="16%" bgcolor="#CAE2F7">项    目</td>
+     <td align="center" width="84%">(无字段)</td>
+    </tr>
+    -->
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>随访日期</strong></td>
+				<td th:text="${doc.elementText('VisitDate')}"></td>
+				<td bgcolor="#CAE2F7"><strong>随访方式</strong></td>
+				<td><span th:if="${doc.element('VisitMode') != null}" th:text="${doc.element('VisitMode').attributeValue('display')}"></span></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>孕周(周)</strong></td>
+				<td>第<span th:text="${doc.elementText('CheckWeek')}"></span>周
+				</td>
+				<td bgcolor="#CAE2F7"><strong>胎动次数</strong></td>
+				<td>
+					<span th:if="${doc.elementText('QuickeningTimes')} != ''">
+						<span th:text="${doc.elementText('QuickeningTimes')}"></span>次
+					</span>
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>主 诉</strong></td>
+				<td colspan="3" th:text="${doc.elementText('SelfFeelSymptom')}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>异常描述</strong></td>
+				<td colspan="3" th:text="${doc.elementText('ExceptionDesc')}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>体 重</strong></td>
+				<td th:text="${doc.elementText('Weight')+'Kg'}"></td>
+				<td bgcolor="#CAE2F7"><strong>血 压</strong></td>
+				<td><span th:text="${doc.elementText('SBP')}"></span>/<span th:text="${doc.elementText('DBP')}"></span>mmHg</td>
+			</tr>
+			<tr>
+				<td rowspan="4" bgcolor="#CAE2F7"><strong>产科检查</strong></td>
+				<td><strong>宫底高度：</strong><span th:text="${doc.elementText('HeightFundusUterus') + 'cm'}"></span></td>
+				<td bgcolor="#CAE2F7"><strong>血红蛋白</strong></td>
+				<td>
+					<span th:if="${doc.elementText('Haemoglobin') != ''}">
+						<span th:text="${doc.elementText('Haemoglobin')}"></span>g/L
+					</span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>腹围：</strong><span th:text="${doc.elementText('AbdomenCircumFerence') + 'cm'}"></span></td>
+				<td bgcolor="#CAE2F7"><strong>尿蛋白</strong></td>
+				<td>
+					<span th:if="${doc.elementText('Albuminuria') != ''}" th:text="${doc.elementText('Albuminuria')}"></span>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>胎位：</strong><span th:if="${doc.element('FetalPosition') != null}" th:text="${doc.element('FetalPosition').attributeValue('display')}"></span></td>
+				<td bgcolor="#CAE2F7"><strong>血糖</strong></td>
+				<td>
+					<span th:if="${doc.elementText('BloodSugar') != ''}">
+						<span th:text="${doc.elementText('BloodSugar')}"></span>mmol/L
+					</span>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3"><strong>胎心率:</strong><span th:text="${doc.elementText('FetalHeartRate') + '次/分钟'}"></span></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>羊水垂直深度</strong></td>
+				<td>
+					<span th:if="${doc.elementText('AmnioticFluidDepth')} != ''">
+						<span th:text="${doc.elementText('AmnioticFluidDepth')}"></span>cm
+					</span>
+				</td>
+				<td bgcolor="#CAE2F7"><strong>羊水指数</strong></td>
+				<td><span th:text="${doc.elementText('AFI')}"></span></td>
+			</tr>
+			<!-- 			<tr> -->
+			<!-- 				<td bgcolor="#CAE2F7"><span class="red">*</span>&nbsp;其他辅助检查 ：</td> -->
+			<!-- 				<td>(无字段)</td> -->
+			<!-- 			</tr> -->
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>分类</strong></td>
+				<td th:if="${doc.element('Category') != null}" th:text="${doc.element('Category').attributeValue('display')}"></td>
+				<td bgcolor="#CAE2F7"><strong>处理建议</strong></td>
+				<td th:text="${doc.elementText('Suggestion')}"></td>
+			</tr>
+
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>指 导</strong></td>
+				<td colspan="3" th:text="${doc.elementText('Guide')}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>下次随访日期</strong></td>
+				<td colspan="3">
+					<span th:text="${doc.elementText('VisitPrecontractTime')}"></span>
+					<span th:text="${doc.elementText('NextDate')}"></span>
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>随访医生签名</strong></td>
+				<td colspan="3" th:text="${doc.elementText('DoctorID')}"></td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

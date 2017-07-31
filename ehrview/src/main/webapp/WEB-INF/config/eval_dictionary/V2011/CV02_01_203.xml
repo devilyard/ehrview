@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="1000元及以下"/>
+  <item key="2" text="1000～1999元"/>
+  <item key="3" text="2000～3999元"/>
+  <item key="4" text="4000～7999元"/>
+  <item key="5" text="8000元及以上"/>
+</dic>

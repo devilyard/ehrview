@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="01" text="乙型肝炎疫苗" comment="预防乙型肝炎"/>
+  <item key="02" text="结核疫苗" comment="预防结核病"/>
+  <item key="03" text="脊髓灰质炎疫苗" comment="预防脊髓灰质炎"/>
+  <item key="04" text="白喉百日咳破伤风疫苗" comment="预防自喉、百日咳、破伤风"/>
+  <item key="05" text="麻疹疫苗" comment="预防麻疹"/>
+  <item key="06" text="乙型脑炎疫茁" comment="预防乙型脑炎"/>
+  <item key="07" text="脑膜炎球菌疫苗" comment="预防脑膜炎球菌"/>
+  <item key="08" text="麻疹流行性腮腺炎疫苗" comment="预防麻疹、流行性腮腺炎"/>
+  <item key="09" text="麻疹风疹疫茁" comment="预防麻疹、风疹"/>
+  <item key="10" text="白喉破伤风疫苗" comment="预防白喉、破伤风"/>
+  <item key="11" text="麻疹流行性腮腺炎风疹疫苗" comment="预防麻疹、流行性腮腺炎风疹"/>
+  <item key="12" text="水痘疫苗" comment="预防水痘"/>
+  <item key="13" text="肺炎球菌疫苗" comment="预防肺炎球菌"/>
+  <item key="14" text="流行性感冒疫苗" comment="预防流行性感冒"/>
+  <item key="15" text="甲型肝炎疫苗" comment="预防甲型肝炎"/>
+  <item key="16" text="风疹疫茁" comment="预防风疹"/>
+  <item key="17" text="流行性腮腺炎疫苗" comment="预防流行性腮腺炎"/>
+  <item key="18" text="流感嗜血杆菌疫苗" comment="预防流感嗜血杆菌引起的脑膜炎等疾病"/>
+  <item key="19" text="甲型肝炎乙型肝炎疫苗" comment="预防甲型肝炎、乙型肝炎"/>
+  <item key="20" text="狂犬病疫苗" comment="预防狂犬病"/>
+  <item key="21" text="轮状病毒疫苗" comment="预防轮状病毒引起的腹泻"/>
+  <item key="22" text="霍乱疫苗" comment="预防雹乱"/>
+  <item key="23" text="钩端蜾旋体疫苗" comment="预防钩端螺旋体病"/>
+  <item key="24" text="肾综合征出血热疫茁" comment="预防肾综合征出血热"/>
+  <item key="25" text="炭疽疫苗" comment="预防炭疽"/>
+  <item key="26" text="黄热病疫苗" comment="预防黄热病"/>
+  <item key="27" text="伤寒疫苗(包含副伤寒)" comment="预防伤寒(包含副伤寒)"/>
+  <item key="28" text="气管炎疫苗" comment="预防气管炎"/>
+  <item key="29" text="白喉疫苗" comment="预防白喉"/>
+  <item key="30" text="破伤风疫苗" comment="预防破伤风"/>
+  <item key="31" text="百日咳疫苗" comment="预防百日咳"/>
+  <item key="32" text="淼林脑炎疫苗" comment="预防森林脑炎"/>
+  <item key="33" text="布氏菌疫苗" comment="预防布病"/>
+  <item key="34" text="鼠疫疫茁" comment="预防鼠疫"/>
+  <item key="35" text="痢疾疫苗" comment="预防痢疾"/>
+  <item key="36" text="人类乳头瘤病毒疫苗" comment="预防人类乳头瘤病毒引起的疾病"/>
+  <item key="37" text="疖病疫苗" comment="预防疖病"/>
+  <item key="38" text="四联疫苗" comment="预防相应的四种疾病(白喉、百日咳、破伤风+流感嗜血杆菌引起的脑膜炎或脊髓灰质炎或乙肝等1种不确定疫苗联合)"/>
+  <item key="39" text="五联疫苗" comment="预防相应的五种疾病(白喉、百日咳、破伤风+2种不确定疫苗联合)"/>
+  <item key="40" text="六联疫苗" comment="预防相应的六种疾病(白喉、百日咳、破伤风+3种不确定疫苗联合)"/>
+  <item key="41" text="狂犬病被动免疫制剂" comment="预防狂犬病被动免疫制剂"/>
+  <item key="42" text="破伤风被动免疫制剂" comment="预防破伤风被动免疫制剂"/>
+  <item key="43" text="结核菌素" comment="测量卡介苗免疫效果制剂"/>
+  <item key="44" text="锡克试验毒素" comment="测量白喉免疫效果制剂"/>
+  <item key="45" text="乙型肝炎被动免疫制剂" comment="预防乙型肝炎被动免疫制剂"/>
+  <item key="46" text="人免疫球蛋白" comment="预防某特定疾病用被动免疫制剂"/>
+  <item key="99" text="其他"/>
+</dic>

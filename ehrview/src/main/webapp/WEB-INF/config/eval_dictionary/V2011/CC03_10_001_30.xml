@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic id="CC03_10_001_30" version="1357354314268"> 
+  <item key="1" text="条状"/>  
+  <item key="2" text="软状"/>  
+  <item key="3" text="干结"/>  
+  <item key="4" text="稀水状"/>  
+  <item key="5" text="不祥"/>  
+  <item key="6" text="糊状" pyCode="hz"/>
+</dic>

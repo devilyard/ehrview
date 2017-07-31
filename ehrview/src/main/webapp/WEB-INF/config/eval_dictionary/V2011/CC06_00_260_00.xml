@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="仰卧位"/>
+  <item key="2" text="俯卧位"/>
+  <item key="3" text="左侧卧位"/>
+  <item key="4" text="右侧卧位"/>
+  <item key="5" text="截石位"/>
+  <item key="6" text="屈氏位"/>
+  <item key="9" text="其他"/>
+</dic>

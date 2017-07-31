@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="糖尿病" comment="符合我国现行的糖尿病诊断标准"/>
+  <item key="2" text="高血压" comment="符合我国现行的高血压诊断标准"/>
+  <item key="3" text="冠心病" comment="符合我国现行的冠心病诊断标准"/>
+  <item key="9" text="其他" comment="不同于以上的血吸虫病合并症"/>
+</dic>

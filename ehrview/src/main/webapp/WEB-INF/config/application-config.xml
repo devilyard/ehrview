@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<applications name="开发版">
+	<args>
+		<arg id="version">1.0</arg>
+		<arg id="system">windows 2003</arg>
+		<arg id="browser">chrome</arg>
+	</args>
+
+	<category id="SignsIndexInfo" name="个人体征信息">		
+		<app id="BloodPress" name="血压" />			
+		<app id="GlucoseHist" name="血糖" />
+		<app id="WHHist" name="BMI" />
+		<app id="Unusual" name="近期检验异常指标" />
+		<app id="WHOLine" name="儿童年龄别体重曲线图" />
+	</category>
+	
+	<category id="PastHistory" name="既往史" >		
+		<app id="DiseaseHistoryList" name="疾病史" />
+		<app id="OperationHistoryLis" name="手术史" />
+		<app id="TraumatismHistoryList" name="外伤史" />
+		<app id="HospitalHistoryList" name="住院史" />	
+		<app id="AllergyList" name="过敏史" />
+		<app id="FamilyHistoryList" name="家族史" />
+		<app id="VccinationList" name="接种史" />
+		<app id="ReproductiveList" name="生育史" />
+	</category>
+	
+	<category id="VisitRecord" name="随访信息" >		
+		<app id="HypertensionVisit" name="高血压随访" />			
+		<app id="DiabetesVisit" name="糖尿病随访" />
+		<app id="PsychosisVisit" name="精神病随访" />
+		<app id="PregnantVisitRecord" name="孕妇随访" />
+	</category>
+	
+	<category id="HealthcareRecords" name="公共卫生服务记录" >
+		<app id="HealthcareRecordsInfo" name="公共卫生服务记录"/>
+	</category>
+	
+	<category id="PhysiqueInspectList" name="体检记录"  >
+		<app id="PhysiqueInspectListInfo" name="体检记录" />
+	</category>
+	
+	<category id="Medical" name="诊疗历史" >		 
+		<app id="TreatmentRecord" name="住院" />		
+		<app id="ClinicRecord" name="门诊" />
+		<app id="MedicalRecord" name="用药"/>
+		<app id="ExamReport" name="检验" />
+		<app id="CheckReport" name="检查" />
+		<app id="OperationRecord" name="手术" />
+		<app id="TransfusionRecord" name="输血" />
+	</category>
+
+	<category id="PersonalInfoList" name="个人基本信息" >
+		<app id="PersonalInfo" name="个人基本信息"/>
+		<app id="Lifecycle" name="生命周期" />
+	</category>
+</applications>

@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>重性精神疾病患者个人信息补充表</title>
+</head>
+
+<body style="padding: 20px;">
+	<style type="text/css">
+.my table {
+	border-bottom: #ccc solid 1px;
+	border-left: #ccc solid 1px;
+	border-top: #ccc solid 1px;
+	text-align: left;
+	margin: 0px auto;
+}
+
+.my td {
+	border-right: #ccc solid 1px;
+	border-bottom: #ccc dotted 1px;
+	padding: 4px;
+}
+
+.red {
+	color: red;
+	font-weight: bold;
+}
+</style>
+	<div style="text-align: center; height: 40px; line-height: 40px; font-size: 16px; font-weight: bold;">重性精神疾病患者个人信息补充表</div>
+	<table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
+		<tr>
+			<td width="500" height="30" align="left" style="padding-left: 10px">
+				<strong>姓名：</strong><u th:text="${personName}"></u>
+			</td>
+			<td align="right">
+				<strong>编号：</strong><u th:text="${doc.elementText('PHRID')}"></u>
+			</td>
+		</tr>
+		<tr>
+			<td style="border-bottom: 4px #09F solid;" colspan="2"></td>
+		</tr>
+		<tr>
+			<td style="height: 1px;" colspan="2"></td>
+		</tr>
+		<tr>
+			<td height="10" style="border-top: 1px #09f solid;" colspan="2"></td>
+		</tr>
+	</table>
+	<div class="my">
+		<table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
+			<tr>
+				<td bgcolor="#CAE2F7" colspan="2" width="22%"><strong>监护人姓名</strong></td>
+				<td th:text="${doc.elementText('GuardianName')}"></td>
+				<td bgcolor="#CAE2F7" width="22%"><strong>与患者关系</strong></td>
+				<td><span th:if="${doc.element('GuardianRelation') != null}" th:text="${doc.element('GuardianRelation').attributeValue('display')}"></span></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7" colspan="2"><strong>监护人住址</strong></td>
+				<td th:text="${doc.elementText('GuardianAddress')}">&nbsp;</td>
+				<td bgcolor="#CAE2F7"><strong>监护人电话</strong></td>
+				<td th:text="${doc.elementText('GuardianPhone')}"></td>
+			</tr>
+			<!-- 			<tr> -->
+			<!-- 				<td bgcolor="#CAE2F7" colspan="2">辖区村（居）委会联系人、电话</td> -->
+			<!-- 				<td colspan="3">&nbsp;缺少相应字段</td> -->
+			<!-- 			</tr> -->
+			<tr>
+				<td bgcolor="#CAE2F7" colspan="2"><strong>初次发病时间</strong></td>
+				<td colspan="3" th:text="${doc.elementText('DiseasedTime')}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7" colspan="2"><strong>既往主要症状</strong></td>
+				<td colspan="3">
+					<span th:if="${doc.element('PastSymptom') != null}" th:text="${doc.element('PastSymptom').attributeValue('display')} + '&nbsp;' + ${doc.elementText('PastSymptomText')}"></span>
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7" rowspan="3"><strong>既往治疗情况</strong></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7" align="center" width="10%"><strong>门诊</strong></td>
+				<td colspan="3"><span th:if="${doc.element('PastClinic') != null}" th:text="${doc.element('PastClinic').attributeValue('display')}"></span></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7" align="center"><strong>住院</strong></td>
+				<td colspan="3">
+					<span th:if="${doc.element('PastHospitalization') != null}" th:text="${doc.element('PastHospitalization').attributeValue('display')}"></span>&nbsp;
+					<u th:text="${doc.elementText('PastHospitalizationText')} "></u>
+					<span th:if="${doc.elementText('PastHospitalizationText') != ''}">&nbsp;<strong>次</strong></span>
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7" colspan="2"><strong>目前诊断情况</strong></td>
+				<td colspan="3"><strong>诊断</strong>&nbsp;
+					<u style="margin-right: 5px;" th:text="${doc.elementText('RecentDiagnosis')}"></u> ，<strong>确诊医院</strong>
+					<u style="margin-right: 5px;" th:text="${doc.elementText('RecentDiagnoseHospital')}"></u> ，<strong>确诊日期</strong>
+					<u style="margin-right: 5px;">
+						<span th:if="${doc.elementText('RecentDiagnoseTime').length() >= 4}" th:text="${doc.elementText('RecentDiagnoseTime').substring(0,4)} + '年'"></span>
+						<span th:if="${doc.elementText('RecentDiagnoseTime').length() >= 7}" th:text="${doc.elementText('RecentDiagnoseTime').substring(5,7)} + '月'"></span>
+						<span th:if="${doc.elementText('RecentDiagnoseTime').length() >= 10}" th:text="${doc.elementText('RecentDiagnoseTime').substring(8,10)} + '日'"></span>
+					</u>
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7" colspan="2"><strong>最近一次治疗效果</strong></td>
+				<td colspan="3">
+					<span th:if="${doc.element('RecentTreatResult') != null}" th:text="${doc.element('RecentTreatResult').attributeValue('display')}"></span>
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7" colspan="2"><strong>患病对家庭社会的影响</strong></td>
+				<td colspan="3">
+					<span th:if="${doc.elementText('LightAffray') != ''}">
+						<strong>轻度滋事次数</strong>
+						<u style="margin-right: 5px;" th:text="${doc.elementText('LightAffray')} "></u>
+						<strong>次</strong>&nbsp;,
+					</span> 
+					<span th:if="${doc.elementText('CauseTrouble') != ''}">
+						<strong>肇事次数</strong>
+						<u style="margin-right: 5px;" th:text=" ${doc.elementText('LightAffray')} "></u>
+						<strong>次</strong>&nbsp;,
+					</span> 
+					<span th:if="${doc.elementText('CauseAccident') != ''}">
+						<strong>肇祸次数</strong>
+						<u style="margin-right: 5px;" th:text="${doc.elementText('LightAffray')} "></u>
+						<strong>次</strong>&nbsp;,
+					</span> 
+					<span th:if="${doc.elementText('SelfHurt') != ''}">
+						<strong>自伤次数</strong>
+						<u style="margin-right: 5px;" th:text=" ${doc.elementText('LightAffray')} "></u>
+						<strong>次</strong>&nbsp;,
+					</span> 
+					<span th:if="${doc.elementText('Suicide') != ''}">
+						<strong>自杀未遂次数</strong>
+						<u style="margin-right: 5px;" th:text=" ${doc.elementText('LightAffray')} "></u>
+						<strong>次</strong>
+					</span>
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7" colspan="2"><strong>关锁情况</strong></td>
+				<td colspan="3">
+					<span th:if="${doc.element('CloseDoor') != null}" th:text="${doc.element('CloseDoor').attributeValue('display')}"></span>
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7" colspan="2"><strong>填表日期</strong></td>
+				<td th:text="${doc.elementText('CreateDate')}"></td>
+				<td bgcolor="#CAE2F7"><strong>医生签字</strong></td>
+				<td th:text="${doc.elementText('CreateUser')}"></td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

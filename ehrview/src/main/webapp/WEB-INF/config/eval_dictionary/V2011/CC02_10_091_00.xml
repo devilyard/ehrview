@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="从未住院"/>
+  <item key="2" text="目前正在住院"/>
+  <item key="3" text="既往住院,现未住院"/>
+</dic>

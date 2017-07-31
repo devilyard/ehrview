@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<entry id="MHC_PregnantDeliveryInfo" alias="MHC孕妇分娩信息记录(MHC_PregnantDeliveryInfo)" hasDoc="true">
+  <item id="DCID" alias="记录号" type="string" length="16" generator="assigned" pkey="true"/>
+  <item id="MPIID" alias="主索引标识" type="string" length="32"/>
+  <item id="SourceID" alias="来源标识" type="string" length="50"/>
+  <item id="RecordClassifying" alias="记录分类" type="string" length="50"/>
+  <item id="RecordTitle" alias="记录名称" type="string" length="50"/>
+  <item id="EffectiveTime" alias="记录时间" type="timestamp"/>
+  <item id="EffectiveFlag" alias="有效标志" type="string" length="1"/>
+  <item id="VersionNumber" alias="版本" type="string" length="10"/>
+  <item id="AuthorOrganization" alias="创建机构" type="string" length="16"/>
+  <item id="Author" alias="创建人" type="string" length="32"/>
+  <item id="SystemTime" alias="创建时间" type="timestamp"/>
+  <item id="UploadTime" alias="上传时间" type="timestamp"/>
+  <item id="UpdateTime" alias="更新时间" type="timestamp"/>
+  <!--<item id="VisitID" alias="随访编号" type="string" length="32"/>-->
+  <item id="PregnantID" alias="孕妇档案编号" type="string" length="30"/>
+  <item id="PHRID" alias="健康档案号" type="string" length="30"/>
+  <item id="ManaUnitID" alias="管辖机构" type="string" length="16"/>
+  
+  <item id="DeliveryDate" alias="分娩时间" type="timestamp"/>
+  <item id="DeliveryMethod" alias="分娩方式" type="string" length="16"/>
+  <item id="BirthHos" alias="分娩医院" type="string" length="150"/>
+  <item id="DeliveryDoctor" alias="接生医生" type="string" length="32"/>
+  <!--<item id="InputOrganCode" alias="建档机构编码" type="string" length="16"/>-->
+  
+</entry>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="11" text="户籍（本区）"/>
+  <item key="12" text="户籍（非本区）"/>
+  <item key="21" text="非户籍（本市流动）"/>
+  <item key="22" text="非户籍（本省流动）"/>
+  <item key="23" text="非户籍（外省流动）"/>
+</dic>

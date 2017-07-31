@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="父亲"/>
+  <item key="2" text="母亲"/>
+  <item key="3" text="兄弟姐妹"/>
+  <item key="4" text="祖父母,外祖父母"/>
+</dic>

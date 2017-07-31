@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="混凝沉淀"/>
+  <item key="2" text="过滤"/>
+  <item key="3" text="消毒"/>
+  <item key="4" text="深度处理"/>
+  <item key="5" text="特殊处理"/>
+</dic>

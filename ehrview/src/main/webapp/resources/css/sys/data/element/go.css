@@ -1,0 +1,51 @@
+.data-item{
+	font-size:12px;
+	cursor: pointer;
+	padding: 2px;
+	height: 50px;
+	width: 800px;
+}
+
+.data-group-item-icon{
+	width:30px; 
+	height: 100%;
+	float:left;
+	background: url("images/zhu.png") repeat-x top;
+}
+
+.data-element-item-icon{
+	width:30px; 
+	height: 100%;
+	float:left;
+	background: url("images/yuan.png") repeat-x top;
+}
+
+.data-item-body{
+	float: left;
+}
+
+.data-item-body span{
+	display: inline-block;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	height: 15px;
+}
+
+.data-item-over{
+	background: #ff6c00;
+}
+
+.data-item-selected{
+	background: #003399;
+}
+
+.data-group-item{
+	background: url("images/bg2.png") repeat-x top;
+	height: 100%;
+}
+
+.data-element-item{
+	background: url("images/bg1.png") repeat-x top;
+	height: 100%;
+}

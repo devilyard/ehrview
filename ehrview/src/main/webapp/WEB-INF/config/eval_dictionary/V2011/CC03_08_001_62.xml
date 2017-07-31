@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="正常"/>
+  <item key="2" text="出血"/>
+  <item key="3" text="脐疝"/>
+  <item key="4" text="炎症"/>
+  <item key="5" text="其他"/>
+</dic>

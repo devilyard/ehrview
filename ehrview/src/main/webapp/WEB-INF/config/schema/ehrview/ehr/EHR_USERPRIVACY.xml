@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<entry id="EHR_UserPrivacy" alias="EHR用户密码信息(EHR_UserPrivacy)">
+	<item id="ID" alias="ID" type="string" length="10" not-null="1" generator="assigned" pkey="true"/>
+	<item id="MPIID" alias="主索引标识" type="string" length="32"/>
+	<item id="Password" alias="密码" type="string" length="50"/>
+	<item id="EffectiveFlag" alias="有效标志" type="string" length="1"/>
+	<item id="CreateTime" alias="创建时间" type="date"/>
+	<item id="CreateUser" alias="创建人" length="32"/>
+	<item id="UpdateTime" alias="修改时间" type="date"/>
+	<item id="UpdateUser" alias="修改人" length="32"/>
+</entry>

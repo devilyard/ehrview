@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic lastModi="2009-10-16 9:53:18" class="XMLDictionary" searchKey="mCode" filename="E:\bsoft\tomcat-6.0.18\webapps\HZEHR\WEB-INF\classes\config\dictionary/jobtitle.xml"> 
+  <item key="0" text="国家机关、党群组织、企业、事业单位负责人" mCode="1"/>  
+  <item key="1/2" text="专业技术人员" mCode="2"/>  
+  <item key="3" text="办事人员和有关人员" mCode="3"/>  
+  <item key="4" text="商业、服务业人员" mCode="4"/>  
+  <item key="5" text=" 农、林、牧、渔、水利业生产人员" mCode="5"/>  
+  <item key="9-9" text="生产、运输设备操作人员及有关人员" mCode="6"/>  
+  <item key="X" text="军人" mCode="7"/>  
+  <item key="Y" text="不便分类的其他从业人员" mCode="8"/>  
+</dic>

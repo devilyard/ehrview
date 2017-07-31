@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<entry id="Ipt_Record_Doc" alias="住院就诊记录表(Ipt_Record_Doc)">
+  <item id="DocID" alias="文档号" length="16" not-null="1" generator="assigned" pkey="true"/>
+  <item id="DCID" alias="记录号" type="string" length="16"/>
+  <item id="DocFormat" alias="文档格式" type="string" length="2" not-null="1"/>
+  <item id="DocContent" alias="文档内容"/>
+</entry>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="正常"/>
+  <item key="2" text="缺齿"/>
+  <item key="3" text="龋齿"/>
+  <item key="4" text="义齿"/>
+</dic>

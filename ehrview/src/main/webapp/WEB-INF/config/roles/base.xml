@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<role name="系统用户">
+	<accredit>
+		<apps acType="whitelist">
+			<app id="MYPAGE" acType="blacklist">
+				<module id="MYPAGE04"/>
+			</app>
+		</apps>
+		<service acType="whitelist">
+			<service id="logon"/>
+			<service id="schemaLoader"/>
+			<service id="simpleSave"/>
+			<service id="simpleLoad"/>
+			<service id="simpleQuery"/>
+			<service id="simpleRemove"/>
+			<others/>
+		</service>
+	</accredit>
+</role>

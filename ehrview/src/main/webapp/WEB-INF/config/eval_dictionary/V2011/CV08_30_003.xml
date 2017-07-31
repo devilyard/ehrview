@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="01" text="综合卫生"/>
+  <item key="02" text="食品安全协调"/>
+  <item key="03" text="生活饮用水卫生"/>
+  <item key="04" text="医疗机构执法人员"/>
+  <item key="05" text="职业卫生"/>
+  <item key="06" text="公共场所卫生"/>
+  <item key="07" text="放射防护"/>
+  <item key="08" text="学校卫生"/>
+  <item key="09" text="传染病管理"/>
+  <item key="99" text="其他"/>
+</dic>

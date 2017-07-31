@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<entry id="EMR_AdmissionRecord" alias="EMR入院记录(EMR_AdmissionRecord)">
+  <item id="DCID" alias="记录号" type="string" length="16" generator="assigned" pkey="true"/>
+  <item id="VisitID" alias="就诊标识" type="string" length="16"/>
+  <item id="MPIID" alias="主索引标识" type="string" length="32"/>
+  <item id="PatientType" alias="患者类型" type="string" length="2"/>
+  <item id="ZoneID" alias="分区标识" type="string" length="1"/>
+  <item id="StatisticDate" alias="统计日期" type="date"/>
+  <item id="AuthorOrganization" alias="创建机构" length="16"/>
+  <item id="WardAreaNm" alias="病区名称" length="50"/>
+  <item id="DeptName" alias="科室名称" length="50"/>
+  <item id="AdmissionDateTime" alias="入院日期时间" type="date"/>
+  <item id="ChiefComplaint" alias="主诉" length="100"/>
+  <item id="PresentHistory" alias="现病史" length="2000"/>
+  <item id="GeneraHealthStatusSign" alias="一般健康状况标志" type="string" length="1"/>
+  <item id="DiseasesHistory" alias="疾病史（含外伤）" length="2000"/>
+  <item id="InfectivitySign" alias="患者传染性标志" type="string" length="1"/>
+  <item id="InfectionHistory" alias="传染病史" length="2000"/>
+  <item id="PreventiveInoculationHistory" alias="预防接种史" length="100"/>
+  <item id="OperationHistory" alias="手术史" length="2000"/>
+  <item id="BloodTransHistory" alias="输血史" length="100"/>
+  <item id="AllergicHistory" alias="过敏史" length="100"/>
+  <item id="PersonalHistory" alias="个人史" length="2000"/>
+  <item id="SystemReview" alias="系统回顾" length="2000"/>
+  <item id="ObstericalHistory" alias="婚育史" length="2000"/>
+  <item id="MenstrualHistory" alias="月经史" length="100"/>
+  <item id="FamilyHistory" alias="家族史" length="2000"/>
+  <item id="Temperatrue" alias="体格检查--体温（℃）" length="4" precision="1"/>
+  <item id="PulseRate" alias="体格检查-- 脉率（次/min）" length="3"/>
+  <item id="BeathingRate" alias="体格检查--呼吸频率" length="3"/>
+  <item id="SystolicPressure" alias="体格检查 -- 收缩压（mmHg）" length="3"/>
+  <item id="DiastolicPressure" alias="体格检查 -- 舒张压（mmHg）" length="3"/>
+  <item id="Height" alias="体格检查--身高（cm）" length="5" precision="1"/>
+  <item id="Weight" alias="体格检查--体重（kg）" length="5" precision="2"/>
+  <item id="SpecialistCase" alias="专科情况" length="2000"/>
+  <item id="AssistExamResult" alias="辅助检查结果" length="2000"/>
+  <item id="ChineseFourObservationDescript" alias="中医&quot;四诊&quot;观察结果描述" length="2000"/>
+  <item id="DifferentiationTypeCode" alias="辨证分型代码" length="7"/>
+  <item id="DifferentiationTypeName" alias="辩证分型名称" length="50"/>
+  <item id="TherapeuticPrinciple" alias="治则治法" length="100"/>
+  <item id="ConfirmDiagnose" alias="确定诊断" length="100"/>
+  <item id="ConfirmDiagnoseDateTime" alias="确定诊断日期时间" type="date"/>
+  <item id="ReceptionDoctor" alias="接诊医生签名" length="50"/>
+  <item id="HospizationDoctor" alias="住院医师签名" length="50"/>
+  <item id="AttendingDoctor" alias="主治医师签名" length="50"/>
+  <item id="ChiefDoctorSign" alias="主任医师签名" length="50"/>
+</entry>

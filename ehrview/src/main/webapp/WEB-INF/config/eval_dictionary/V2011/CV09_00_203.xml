@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="01" text="公共场所"/>
+  <item key="02" text="生活饮用水"/>
+  <item key="03" text="职业卫生"/>
+  <item key="04" text="放射卫生"/>
+  <item key="05" text="学校卫生"/>
+  <item key="06" text="医疗机构"/>
+  <item key="07" text="传染病防治"/>
+  <item key="08" text="采供血卫生"/>
+  <item key="09" text="非法行医"/>
+</dic>

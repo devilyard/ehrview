@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="在卫生监督检查中发现"/>
+  <item key="2" text="卫生机构监测报告"/>
+  <item key="3" text="社会举报"/>
+  <item key="4" text="上级卫生行政机关交办"/>
+  <item key="5" text="下级卫生行政机关报请"/>
+  <item key="6" text="有关部门移送"/>
+</dic>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="正常"/>
+  <item key="2" text="可疑(左耳)"/>
+  <item key="3" text="可疑(右耳)"/>
+  <item key="4" text="可疑(两耳)"/>
+  <item key="5" text="未查"/>
+</dic>

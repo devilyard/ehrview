@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="对工作不满意"/>
+  <item key="2" text="身体不适感"/>
+  <item key="3" text="注意力不集中"/>
+  <item key="4" text="疲倦感"/>
+  <item key="5" text="焦虑"/>
+  <item key="6" text="抑郁"/>
+  <item key="7" text="失眠"/>
+  <item key="8" text="易发脾气"/>
+  <item key="9" text="兴奋增强"/>
+  <item key="10" text="感情淡漠"/>
+</dic>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dic>
+	<item key="330" text="浙江省">
+		<item key="3301" text="杭州市">
+			<item key="330101000" text="市辖区"/>
+			<item key="330102000" text="上城区"/>
+			<item key="330103000" text="下城区"/>
+			<item key="330104000" text="江干区"/>
+			<item key="330105000" text="拱墅区"/>
+			<item key="330106000" text="西湖区"/>
+			<item key="330108000" text="滨江区"/>
+			<item key="330109000" text="萧山区"/>
+			<item key="330110000" text="余杭区"/>
+			<item key="330122000" text="桐庐县"/>
+			<item key="330127000" text="淳安县"/>
+			<item key="330183000" text="建德市"/>
+			<item key="330182000" text="富阳市"/>
+			<item key="330185000" text="临安市"/>
+		</item>
+	</item>
+</dic>

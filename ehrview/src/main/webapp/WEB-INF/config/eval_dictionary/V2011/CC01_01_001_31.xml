@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="03" text="药物过敏史"/>
+  <item key="04" text="外伤"/>
+  <item key="05" text="疾病史"/>
+  <item key="06" text="手术史"/>
+  <item key="07" text="输血情况"/>
+  <item key="08" text="家族疾病史-父亲"/>
+  <item key="09" text="家族疾病史-母亲"/>
+  <item key="10" text="家族疾病史-兄弟姐妹"/>
+  <item key="11" text="家族疾病史-子女"/>
+  <item key="12" text="家族遗传病史"/>
+  <item key="14" text="残疾状况"/>
+</dic>

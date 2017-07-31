@@ -1,0 +1,39 @@
+﻿@charset "utf-8";
+/* CSS Document */
+	
+body{ 
+	font: 12px/1.8 '微软雅黑','宋体',tahoma, Srial, helvetica, sans-serif; 
+	text-align:left;
+	background-color: #eeeeee;
+    } 
+
+
+.portlet-title{ line-height:14px;background:url(../img/arrow.png) no-repeat left center;padding-left:17px; font-size:14px;margin-bottom:10px;font-weight:bold; color:#333;}
+.portlet-title,.tab{position:relative;}
+.pho{width:79px; height:79px; float:left;background:url(../img/pho.png) no-repeat 0 0;margin-right:10px;}
+.infos{background-color:#4793d1;padding:10px;margin-bottom:10px;}
+.info{padding:0 10px 0 5px;height:70px;}
+.info li{ list-style:none; line-height:1.6em; font-size:14px; color:#fff;font-weight:bold;}
+.info .ka{color:#fdd874; font-size:18px; }
+.xinxi{ background-color:#fff;}
+.xinxi td{ height:28px; line-height:18px; padding:0 5px; border-bottom:1px solid #e8e8e6;border-right:1px solid #e8e8e6;}
+.allico{background: none repeat scroll 0 0 #EEEEEE;border-radius: 3px;display: inline-block;height: 26px;margin: 15px 0 0 5px;text-align: center;width: 26px;}
+.allico:hover{ background:#4392d3;}
+.allico img{margin-top:1px;}
+.tu{ padding:0 0 15px 0;}
+.tu,.smzq_content,.ggws_list,.mb_list,.visit_list{ background-color:#fff; }
+.smzq_content{padding:10px;}
+
+.tb_list{background-color:#fff;}
+.tb_list th{ height:30px; line-height:30px; font-weight:bold; background-color:#f5f4f2; color:#333; text-align:left;padding:0 5px 0 10px;}
+.tb_list td{height:28px; line-height:28px; border-bottom:1px solid #e8e8e6;padding:0 5px 0 10px;}
+.blue{ color:#0075dc;}
+.ggws_list,.visit_list{padding:0 15px;margin-top:5px;}
+.ggws_list li{color:#727375;line-height:18px; border-bottom:1px solid #e8e8e6;padding:9px 0; overflow:hidden;zoom:1;}
+.ggws_list li.none,.visit_list li.none{ border:none;}
+.visit_list li{color:#0;line-height:18px; border-bottom:1px solid #e8e8e6;padding:9px 0; overflow:hidden;zoom:1;}
+.tip{ width:30px; height:18px;float:right;margin:-10px 10px 0 10px;_margin:-28px 10px 0 10px;}
+.tb_list,.mb_list,.tj_list{table-layout:fixed;margin:0 auto;}
+.mb_list td,.tb_list td{overflow:hidden;text-overflow:ellipsis;word-break:keep-all;white-space:nowrap;}
+.content{ background:#fff;}
+.grey{ width:100%;border:0;background-color:#e8e8e6;height:1px; color:#e8e8e6;}

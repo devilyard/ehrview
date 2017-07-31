@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="个人卫生"/>
+  <item key="2" text="心理"/>
+  <item key="3" text="营养"/>
+  <item key="4" text="母乳喂养"/>
+  <item key="5" text="新生儿护理与喂养"/>
+</dic>

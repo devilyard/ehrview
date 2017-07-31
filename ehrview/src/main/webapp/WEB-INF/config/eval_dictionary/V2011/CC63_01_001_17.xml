@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="0" text="正常发药"/>
+  <item key="1" text="发一次药(胰岛素类)"/>
+  <item key="2" text="不发药（自备药)"/>
+  <item key="3" text="病区发"/>
+</dic>

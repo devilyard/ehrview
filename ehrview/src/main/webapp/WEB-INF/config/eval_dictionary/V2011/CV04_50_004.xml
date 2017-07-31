@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="01" text="rtM204I"/>
+  <item key="02" text="rtM204V"/>
+  <item key="03" text="rtL180M"/>
+  <item key="04" text="rtN236T"/>
+  <item key="05" text="rtA181V"/>
+  <item key="06" text="rtA181T"/>
+  <item key="07" text="rtT184A"/>
+  <item key="08" text="rtT184G"/>
+  <item key="09" text="rtT184I"/>
+  <item key="10" text="rtT184S"/>
+  <item key="11" text="rts202G"/>
+  <item key="12" text="rts202I"/>
+  <item key="99" text="其他"/>
+</dic>

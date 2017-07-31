@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic id="CC08_02_001_11" version="1358331325390"> 
+  <item key="1" text="生活劳动能力"/>  
+  <item key="2" text="职业训练"/>  
+  <item key="3" text="学习能力"/>  
+  <item key="4" text="社会交往"/>  
+  <item key="5" text="其他" pyCode="qt"/>
+</dic>

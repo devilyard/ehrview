@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic id="CC03_06_001_15" version="1358323142453"> 
+  <item key="1" text="医院" pyCode="yy"/>  
+  <item key="2" text="其他" pyCode="qt"/>
+</dic>

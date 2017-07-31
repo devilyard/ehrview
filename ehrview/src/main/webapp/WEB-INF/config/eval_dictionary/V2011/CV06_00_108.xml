@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="吸黏液"/>
+  <item key="2" text="气管插管"/>
+  <item key="3" text="正压给氧"/>
+  <item key="4" text="窒息复苏"/>
+  <item key="5" text="呼吸机辅助呼吸"/>
+  <item key="6" text="药物"/>
+  <item key="9" text="其他"/>
+</dic>

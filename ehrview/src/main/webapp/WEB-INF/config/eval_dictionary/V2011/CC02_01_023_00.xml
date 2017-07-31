@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="贫困,在当地贫困线标准以下"/>
+  <item key="2" text="非贫困"/>
+  <item key="3" text="不详"/>
+</dic>

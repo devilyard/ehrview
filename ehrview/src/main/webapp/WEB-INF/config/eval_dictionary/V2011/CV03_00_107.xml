@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="荤素均衡"/>
+  <item key="2" text="荤食为主"/>
+  <item key="3" text="素食为主"/>
+  <item key="4" text="嗜盐"/>
+  <item key="5" text="嗜油"/>
+  <item key="6" text="嗜糖"/>
+</dic>

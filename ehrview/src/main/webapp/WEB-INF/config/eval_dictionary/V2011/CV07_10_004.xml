@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="01" text="现金" comment="支付现金"/>
+  <item key="02" text="支票" comment="以支票支付"/>
+  <item key="03" text="汇款存款" comment="以汇款、存款支付"/>
+  <item key="04" text="内部转账" comment="以内部转账方式支付"/>
+  <item key="05" text="单位记账" comment="以单位记账方式支付"/>
+  <item key="06" text="账户金" comment="以账户金支付"/>
+  <item key="07" text="统筹金" comment="以统筹金支付"/>
+  <item key="08" text="银行卡" comment="以电子现金(IC卡)支付"/>
+  <item key="99" text="其他" comment="其他无法按上述类别归类的支付方式"/>
+</dic>

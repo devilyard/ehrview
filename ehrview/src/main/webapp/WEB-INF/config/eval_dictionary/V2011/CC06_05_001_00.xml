@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="继续随访"/>
+  <item key="2" text="暂时失访"/>
+  <item key="9" text="终止管理"/>
+</dic>

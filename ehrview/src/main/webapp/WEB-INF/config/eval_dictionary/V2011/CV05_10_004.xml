@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="01" text="一级"/>
+  <item key="02" text="二级"/>
+  <item key="03" text="三级"/>
+  <item key="04" text="四级"/>
+  <item key="05" text="五级"/>
+  <item key="06" text="六级"/>
+  <item key="07" text="七级"/>
+  <item key="08" text="八级"/>
+  <item key="09" text="九级"/>
+  <item key="10" text="十级"/>
+</dic>

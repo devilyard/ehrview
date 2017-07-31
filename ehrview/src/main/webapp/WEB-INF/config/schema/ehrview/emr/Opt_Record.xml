@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<entry id="Opt_Record" alias="门诊就诊记录表(Opt_Record)" hasDoc="true" >
+  <item id="DCID" alias="记录号" type="string" length="16" generator="assigned" pkey="true"/>
+  <item id="MPIID" alias="主索引标识" type="string" length="32"/>
+  <item id="SourceID" alias="来源标识" length="50"/>
+  <item id="RecordClassifying" alias="记录分类" length="50"/>
+  <item id="RecordTitle" alias="记录名称" length="50"/>
+  <item id="EffectiveTime" alias="记录时间" type="date"/>
+  <item id="EffectiveFlag" alias="有效标志" type="string" length="1"/>
+  <item id="VersionNumber" alias="版本" length="10"/>
+  <item id="AuthorOrganization" alias="创建机构代码" length="22"/>
+  <item id="AuthorOrganization_text" alias="创建机构" length="50"/>
+  <item id="Author" alias="创建人" length="32"/>
+  <item id="SystemTime" alias="创建时间" type="date"/>
+  <item id="UploadTime" alias="上传时间" type="date"/>
+  <item id="UpdateTime" alias="更新时间" type="date"/>
+  <item id="JZLSH" alias="就诊流水号" length="32"/>
+  <item id="GHLSH" alias="挂号流水号" length="32"/>
+  <item id="SFYY" alias="是否预约" length="2"/>
+  <item id="MZLB" alias="门诊类别" type="string" length="32"/>
+  <item id="JZRQ" alias="就诊日期" type="date"/>
+  <item id="ZDMC" alias="诊断名称" type="string" length="100"/>
+  <item id="JZKSBM" alias="科室代码" type="string" length="15"/>
+  <item id="JZKSMC" alias="科室名称" type="string" length="100"/>
+</entry>

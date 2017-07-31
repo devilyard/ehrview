@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="心律齐"/>
+  <item key="2" text="心律不齐"/>
+  <item key="3" text="心律绝对不齐"/>
+</dic>

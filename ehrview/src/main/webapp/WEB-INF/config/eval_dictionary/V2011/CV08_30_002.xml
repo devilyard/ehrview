@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="卫生监督员"/>
+  <item key="11" text="实际从事卫生监督工作的卫生监督员"/>
+  <item key="12" text="从事行政、后勤等管理工作的卫生监督员"/>
+  <item key="13" text="有卫生专业技术职称的卫生监督员"/>
+  <item key="14" text="有其他专业技术职称的卫生监督员"/>
+  <item key="2" text="离退休人员"/>
+  <item key="3" text="年内离退休人员"/>
+</dic>

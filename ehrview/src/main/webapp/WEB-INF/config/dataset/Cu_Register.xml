@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<BasicDataset>
+	<DataSet code="HDSD00.01.02" displayName="健康体检" codeSystem="WS365-2011" codeSystemName="城乡居民健康档案基本数据集"/>
+	<HDSD00.01.001 dataelementName="城乡居民健康档案编号" value="" datatype="N17"/>
+	<HDSD00.01.002 dataelementName="本人姓名" value="" datatype="A1..50"/>
+	<HDSD00.01.043 dataelementName="健康体检表编号" value="" datatype="AN1..20"/>
+	<HDSD00.01.044 dataelementName="责任医师" value="" datatype="A1..50"/>
+	<HDSD00.01.045 dataelementName="检查（测）日期" value="" datatype="D8"/>
+	<HDSD00.01.046 dataelementName="症状代码" code="" datatype="AN1..5" dic="ICD_10" displayName="紧张性头痛" codeSystem="2.16.156.10011.2.3.3.11" codeSystemName="ICD-10"/>
+	<HDSD00.01.047 dataelementName="症状名称" value="" datatype="AN1..50"/>
+	<HDSD00.01.048 dataelementName="体温（℃）" value="" datatype="N4,1"/>
+	<HDSD00.01.049 dataelementName="脉率（次/min）" value="" datatype="N2..3"/>
+	<HDSD00.01.050 dataelementName="呼吸频率（次/min）" value="" datatype="N1..3"/>
+	<HDSD00.01.051 dataelementName="左侧收缩压（mmHg）" value="" datatype="N2,3"/>
+	<HDSD00.01.052 dataelementName="左侧舒张压（mmHg）" value="" datatype="N2,3"/>
+	<HDSD00.01.053 dataelementName="右侧收缩压（mmHg）" value="" datatype="N2,3"/>
+	<HDSD00.01.054 dataelementName="右侧舒张压（mmHg）" value="" datatype="N2,3"/>
+	<HDSD00.01.055 dataelementName="身高（cm）" value="" datatype="N4..5,1"/>
+	<HDSD00.01.056 dataelementName="体重（kg）" value="" datatype="N3..5,1"/>
+	<HDSD00.01.057 dataelementName="腰围（cm）" value="" datatype="N4..5,1"/>
+	<HDSD00.01.058 dataelementName="体重质数" value="" datatype="N5,2"/>
+	<HDSD00.01.059 dataelementName="老年人健康状态自我评估代码" code="" datatype="N1" dic="CV04_01_013" displayName="满意" codeSystem="2.16.156.10011.2.3.1.53" codeSystemName="老年人健康状态自我评估代码表"/>
+	<HDSD00.01.060 dataelementName="老年人生活自理能力自我评估代码" code="" datatype="N1" dic="CV04_01_014" displayName="可自理" codeSystem="2.16.156.10011.2.3.1.54" codeSystemName="老年人生活自理能力自我评估代码表"/>
+	<HDSD00.01.061 dataelementName="老年人认知功能粗筛结果代码" code="" datatype="N1" dic="CC05_10_041_00" displayName="粗筛阴性" codeSystem="2.16.156.10011.2.3.2.3" codeSystemName="认知功能粗筛代码表"/>
+	<HDSD00.01.062 dataelementName="老年人认知功能评分" value="" datatype="N1..3"/>
+	<HDSD00.01.063 dataelementName="老年人情感状态粗筛结果代码" code="" datatype="N1" dic="CC05_10_041_00" displayName="粗筛阴性" codeSystem="2.16.156.10011.2.3.2.4" codeSystemName="情感状态粗筛代码表"/>
+	<HDSD00.01.064 dataelementName="老年人抑郁评分" value="" datatype="N1..2"/>
+	<HDSD00.01.065 dataelementName="运动频率代码" code="" datatype="N1" dic="CV03_00_111" displayName="每天" codeSystem="2.16.156.10011.2.3.1.23" codeSystemName="身体活动频率代码表"/>
+	<HDSD00.01.066 dataelementName="运动时长（min）" value="" datatype="N1..3"/>
+	<HDSD00.01.067 dataelementName="坚持运动时间（月）" value="" datatype="N1..2"/>
+	<HDSD00.01.068 dataelementName="运动方式说明" value="" datatype="AN1..100"/>
+	<HDSD00.01.069 dataelementName="饮食习惯代码" code="" datatype="N1" dic="CV03_00_107" displayName="荤素均衡" codeSystem="2.16.156.10011.2.3.1.19" codeSystemName="饮食习惯代码表"/>
+	<HDSD00.01.070 dataelementName="吸烟状况代码" code="" datatype="N1" dic="CC03_00_073_00" displayName="过去吸，已戒烟" codeSystem="2.16.156.10011.2.3.2.5" codeSystemName="吸烟状况代码表"/>
+	<HDSD00.01.071 dataelementName="日吸烟量（支）" value="" datatype="N1..3"/>
+	<HDSD00.01.072 dataelementName="开始吸烟年龄（岁）" value="" datatype="N1..2"/>
+	<HDSD00.01.073 dataelementName="戒烟年龄（岁）" value="" datatype="N1..2"/>
+	<HDSD00.01.074 dataelementName="饮酒频率代码" code="" datatype="N1" dic="CV03_00_104" displayName="偶尔" codeSystem="2.16.156.10011.2.3.1.16" codeSystemName="饮酒频率代码表"/>
+	<HDSD00.01.075 dataelementName="日饮酒量（两）" value="" datatype="N1..3"/>
+	<HDSD00.01.076 dataelementName="戒酒标志" value="" datatype="T/F"/>
+	<HDSD00.01.077 dataelementName="戒酒年龄（岁）" value="" datatype="N1..2"/>
+	<HDSD00.01.078 dataelementName="开始饮酒年龄（岁）" value="" datatype="N1..2"/>
+	<HDSD00.01.079 dataelementName="醉酒标志" value="" datatype="T/F"/>
+	<HDSD00.01.080 dataelementName="饮酒种类代码" code="" datatype="N1" dic="CV03_00_105" displayName="白酒" codeSystem="2.16.156.10011.2.3.1.17" codeSystemName="饮酒种类代码表"/>
+	<HDSD00.01.081 dataelementName="职业暴露标志" value="" datatype="T/F"/>
+	<HDSD00.01.082 dataelementName="有危害因素接触职业描述" value="" datatype="AN1..100"/>
+	<HDSD00.01.083 dataelementName="从事有危害因素职业时长（a）" value="" datatype="N1..2"/>
+	<HDSD00.01.084 dataelementName="职业暴露危险因素种类代码" code="" datatype="N1" dic="CV03_00_203" displayName="化学有害因素" codeSystem="2.16.156.10011.2.3.1.31" codeSystemName="职业病危害因素类别代码表"/>
+	<HDSD00.01.085 dataelementName="职业暴露危险因素名称" value="" datatype="AN1..50"/>
+	<HDSD00.01.086 dataelementName="职业防护措施标志" value="" datatype="T/F"/>
+	<HDSD00.01.087 dataelementName="口唇外观检查结果代码" code="" datatype="N1" dic="CV04_10_007" displayName="其他" codeSystem="2.16.156.10011.2.3.1.61" codeSystemName="口唇外观代码表"/>
+	<HDSD00.01.088 dataelementName="齿列类别代码" code="" datatype="N1" dic="CV04_10_010" displayName="正常" codeSystem="2.16.156.10011.2.3.1.64" codeSystemName="齿列类别代码表"/>
+	<HDSD00.01.089 dataelementName="齿列描述" value="完整" datatype="AN1..100"/>
+	<HDSD00.01.090 dataelementName="咽部检查结果代码" code="" datatype="N1" dic="CC04_10_214_00" displayName="无充血" codeSystem="2.16.156.10011.2.3.2.6" codeSystemName="咽部检查结果代码表"/>
+	<HDSD00.01.091 dataelementName="左眼裸眼远视力值" value="" datatype="N3,1"/>
+	<HDSD00.01.092 dataelementName="右眼裸眼远视力值" value="" datatype="N3,1"/>
+	<HDSD00.01.093 dataelementName="左眼矫正远视力值" value="" datatype="N3,1"/>
+	<HDSD00.01.094 dataelementName="右眼矫正远视力值" value="" datatype="N3,1"/>
+	<HDSD00.01.095 dataelementName="听力检测结果代码" code="" datatype="N1" dic="CC04_10_190_00" displayName="听见" codeSystem="2.16.156.10011.2.3.2.7" codeSystemName="听力检测结果代码表"/>
+	<HDSD00.01.096 dataelementName="运动功能状态代码" code="" datatype="N1" dic="CC05_10_106_00" displayName="可顺利完成" codeSystem="2.16.156.10011.2.3.2.8" codeSystemName="运动功能状态代码表"/>
+	<HDSD00.01.097 dataelementName="眼底检查结果异常标志" value="" datatype="T/F"/>
+	<HDSD00.01.098 dataelementName="眼底检查结果异常描述" value="" datatype="AN1..100"/>
+	<HDSD00.01.099 dataelementName="皮肤检查结果代码" code="" datatype="N1" dic="CV04_10_004" displayName="未见异常" codeSystem="2.16.156.10011.2.3.1.58" codeSystemName="皮肤检查结果代码表"/>
+	<HDSD00.01.100 dataelementName="巩膜检查结果代码" code="" datatype="N1" dic="CV04_10_006" displayName="正常" codeSystem="2.16.156.10011.2.3.1.60" codeSystemName="巩膜检查结果代码表"/>
+	<HDSD00.01.101 dataelementName="淋巴结检查结果代码" code="" datatype="N1" dic="CV04_10_011" displayName="未触及" codeSystem="2.16.156.10011.2.3.1.65" codeSystemName="淋巴结检查结果代码表"/>
+	<HDSD00.01.102 dataelementName="桶状胸标志" value="" datatype="T/F"/>
+	<HDSD00.01.103 dataelementName="肺部异常呼吸音标志" value="" datatype="T/F"/>
+	<HDSD00.01.104 dataelementName="肺部异常呼吸音描述" value="" datatype="AN1..100"/>
+	<HDSD00.01.105 dataelementName="肺部罗音标志" value="" datatype="T/F"/>
+	<HDSD00.01.106 dataelementName="肺部罗音描述" value="无" datatype="AN1..100"/>
+	<HDSD00.01.107 dataelementName="心率（次/min）" value="" datatype="N2..3"/>
+	<HDSD00.01.108 dataelementName="心率类别代码" code="" datatype="N1" dic="CC04_10_205_00" displayName="心率齐" codeSystem="2.16.156.10011.2.3.2.9" codeSystemName="心律类别代码表"/>
+	<HDSD00.01.109 dataelementName="心脏杂音标志" value="" datatype="T/F"/>
+	<HDSD00.01.110 dataelementName="心脏杂音描述" value="" datatype="AN1..100"/>
+	<HDSD00.01.111 dataelementName="腹部压痛标志" value="" datatype="T/F"/>
+	<HDSD00.01.112 dataelementName="腹部压痛描述" value="" datatype="AN1..100"/>
+	<HDSD00.01.113 dataelementName="腹部包块标志" value="" datatype="T/F"/>
+	<HDSD00.01.114 dataelementName="腹部包块描述" value="" datatype="AN1..100"/>
+	<HDSD00.01.115 dataelementName="肝大标志" value="" datatype="T/F"/>
+	<HDSD00.01.116 dataelementName="肝大描述" value="" datatype="AN1..100"/>
+	<HDSD00.01.117 dataelementName="脾大标志" value="" datatype="T/F"/>
+	<HDSD00.01.118 dataelementName="脾大描述" value="" datatype="AN1..100"/>
+	<HDSD00.01.119 dataelementName="腹部移动性浊音标志" value="" datatype="T/F"/>
+	<HDSD00.01.120 dataelementName="腹部移动性浊音描述" value="" datatype="AN1..100"/>
+	<HDSD00.01.121 dataelementName="下肢水肿检查结果代码" code="" datatype="N1" dic="CV04_10_014" displayName="无下肢水肿" codeSystem="2.16.156.10011.2.3.1.68" codeSystemName="下肢水肿检查结果代码表"/>
+	<HDSD00.01.122 dataelementName="足背动脉搏动代码" code="" datatype="N1" dic="CV04_10_015" displayName="未触及" codeSystem="2.16.156.10011.2.3.1.69" codeSystemName="足背动脉搏动代码表"/>
+	<HDSD00.01.123 dataelementName="肛门指诊检查结果类别代码" code="" datatype="N1" dic="CV04_10_013" displayName="未及异常" codeSystem="2.16.156.10011.2.3.1.67" codeSystemName="肛门指诊检查结果代码表"/>
+	<HDSD00.01.124 dataelementName="乳腺检查结果代码" code="" datatype="N1" dic="CV04_10_012" displayName="未见异常" codeSystem="2.16.156.10011.2.3.1.66" codeSystemName="乳腺检查结果代码表"/>
+	<HDSD00.01.125 dataelementName="外阴异常标志" value="" datatype="T/F"/>
+	<HDSD00.01.126 dataelementName="外阴异常描述" value="" datatype="AN1..100"/>
+	<HDSD00.01.127 dataelementName="阴道异常标志" value="" datatype="T/F"/>
+	<HDSD00.01.128 dataelementName="阴道异常描述" value="" datatype="AN1..100"/>
+	<HDSD00.01.129 dataelementName="宫颈异常标志" value="" datatype="T/F"/>
+	<HDSD00.01.130 dataelementName="宫颈异常描述" value="" datatype="AN1..100"/>
+	<HDSD00.01.131 dataelementName="宫体异常标志" value="" datatype="T/F"/>
+	<HDSD00.01.132 dataelementName="宫体异常描述" value="" datatype="AN1..100"/>
+	<HDSD00.01.133 dataelementName="附件异常标志" value="" datatype="T/F"/>
+	<HDSD00.01.134 dataelementName="附件异常描述" value="" datatype="AN1..100"/>
+	<HDSD00.01.135 dataelementName="其他检查结果" value="" datatype="AN1..100"/>
+	<HDSD00.01.136 dataelementName="血红蛋白值（g/L）" value="" datatype="N1..3"/>
+	<HDSD00.01.137 dataelementName="白细胞计数值（G/L）" value="" datatype="N1..4,1"/>
+	<HDSD00.01.138 dataelementName="血小板计数值（G/L）" value="" datatype="N2..3"/>
+	<HDSD00.01.139 dataelementName="尿蛋白定性检测结果代码" code="" datatype="N1" dic="CV04_50_015" displayName="-" codeSystem="2.16.156.10011.2.3.1.95" codeSystemName="尿实验室定性检测结果代码表"/>
+	<HDSD00.01.140 dataelementName="尿蛋白定量检测值（mg/24h）" value="" datatype="N1..5,1"/>
+	<HDSD00.01.141 dataelementName="尿糖定性检测结果代码" code="" datatype="N1" dic="CV04_50_015" displayName="-" codeSystem="2.16.156.10011.2.3.1.95" codeSystemName="尿实验室定性检测结果代码表"/>
+	<HDSD00.01.142 dataelementName="尿糖定量检测值（mmol/L）" value="" datatype="N1..4,1"/>
+	<HDSD00.01.143 dataelementName="尿胴体定性检测结果代码" code="" datatype="N1" dic="CV04_50_015" displayName="-" codeSystem="2.16.156.10011.2.3.1.95" codeSystemName="尿实验室定性检测结果代码表"/>
+	<HDSD00.01.144 dataelementName="尿潜血检测结果代码" code="" datatype="N1" dic="CV04_50_015" displayName="-" codeSystem="2.16.156.10011.2.3.1.95" codeSystemName="尿实验室定性检测结果代码表"/>
+	<HDSD00.01.145 dataelementName="尿比重" value="" datatype="N1..5,3"/>
+	<HDSD00.01.146 dataelementName="尿液酸碱度" value="" datatype="N3..4,1"/>
+	<HDSD00.01.147 dataelementName="尿微量白蛋白（mg/dL）" value="" datatype="N5,1"/>
+	<HDSD00.01.148 dataelementName="空腹血糖值（mmol/L）" value="" datatype="N3..4,1"/>
+	<HDSD00.01.149 dataelementName="餐后2小时血糖值（mmol/L）" value="" datatype="N3..4,1"/>
+	<HDSD00.01.150 dataelementName="心电图异常标志" value="" datatype="T/F"/>
+	<HDSD00.01.151 dataelementName="心电图异常描述" value="" datatype="AN1..100"/>
+	<HDSD00.01.152 dataelementName="大便潜血标志" value="" datatype="T/F"/>
+	<HDSD00.01.153 dataelementName="糖化血红蛋白值（%）" value="" datatype="N4,1"/>
+	<HDSD00.01.154 dataelementName="乙型肝炎病毒表面抗原检测结果代码" code="" datatype="N1" dic="CC04_50_116_00" displayName="阴性" codeSystem="2.16.156.10011.2.3.2.10" codeSystemName="乙肝病毒定性检测结果分类代码表"/>
+	<HDSD00.01.155 dataelementName="乙型肝炎病毒e抗原检测结果代码" code="" datatype="N1" dic="CC04_50_116_00" displayName="阴性" codeSystem="2.16.156.10011.2.3.2.10" codeSystemName="乙肝病毒定性检测结果分类代码表"/>
+	<HDSD00.01.156 dataelementName="乙型肝炎病毒表面抗体检测结果代码" code="" datatype="N1" dic="CC04_50_116_00" displayName="阴性" codeSystem="2.16.156.10011.2.3.2.10" codeSystemName="乙肝病毒定性检测结果分类代码表"/>
+	<HDSD00.01.157 dataelementName="乙型肝炎病毒e抗体检测结果代码" code="" datatype="N1" dic="CC04_50_116_00" displayName="阴性" codeSystem="2.16.156.10011.2.3.2.10" codeSystemName="乙肝病毒定性检测结果分类代码表"/>
+	<HDSD00.01.158 dataelementName="乙型肝炎病毒核心抗体检测结果代码" code="" datatype="N1" dic="CC04_50_116_00" displayName="阴性" codeSystem="2.16.156.10011.2.3.2.10" codeSystemName="乙肝病毒定性检测结果分类代码表"/>
+	<HDSD00.01.159 dataelementName="血清谷丙转氨酶值（U/L）" value="" datatype="N1..3"/>
+	<HDSD00.01.160 dataelementName="血清谷草转氨酶值（U/L）" value="" datatype="N1..3"/>
+	<HDSD00.01.161 dataelementName="血蛋白浓度（g/L）" value="" datatype="N1..2"/>
+	<HDSD00.01.162 dataelementName="总胆红素值（μmol/L）" value="" datatype="N1..4,1"/>
+	<HDSD00.01.163 dataelementName="结合胆红素值（μmol/L）" value="" datatype="N1..5,1"/>
+	<HDSD00.01.164 dataelementName="血肌酐值（μmol/L）" value="" datatype="N1..3,1"/>
+	<HDSD00.01.165 dataelementName="血尿素氨检测值（mmol/L）" value="" datatype="N1..4,1"/>
+	<HDSD00.01.166 dataelementName="血钾浓度（mmol/L）" value="" datatype="N3..4,1"/>
+	<HDSD00.01.167 dataelementName="血钠浓度（mmol/L）" value="" datatype="N4"/>
+	<HDSD00.01.168 dataelementName="总胆固醇值（mmol/L）" value="" datatype="N1..5,2"/>
+	<HDSD00.01.169 dataelementName="甘油三酯值（mmol/L）" value="" datatype="N1..3,1"/>
+	<HDSD00.01.170 dataelementName="血清低密度脂蛋白胆固醇检测值（mmol/L）" value="" datatype="N1..5,2"/>
+	<HDSD00.01.171 dataelementName="血清高密度脂蛋白胆固醇检测值（mmol/L）" value="" datatype="N1..5,2"/>
+	<HDSD00.01.172 dataelementName="癌胚抗原浓度值（μg/L）" value="" datatype="N1..4,2"/>
+	<HDSD00.01.173 dataelementName="胸部X线检查异常标志" value="" datatype="T/F"/>
+	<HDSD00.01.174 dataelementName="胸部X线检查异常描述" value="" datatype="AN1..100"/>
+	<HDSD00.01.175 dataelementName="B超检查异常标志" value="" datatype="T/F"/>
+	<HDSD00.01.176 dataelementName="B超检查异常描述" value="" datatype="AN1..100"/>
+	<HDSD00.01.177 dataelementName="宫颈涂片异常标志" value="" datatype="T/F"/>
+	<HDSD00.01.178 dataelementName="宫颈涂片异常描述" value="" datatype="AN1..100"/>
+	<HDSD00.01.179 dataelementName="其他辅助检查" value="" datatype="AN1..100"/>
+	<HDSD00.01.180 dataelementName="中医体质分类代码" code="" datatype="N2" dic="CV05_01_005" displayName="平和质" codeSystem="2.16.156.10011.2.3.1.104" codeSystemName="中医体质分类代码表"/>
+	<HDSD00.01.181 dataelementName="中医体质分类判定结果代码" code="" datatype="N2" dic="CC05_01_073_00" displayName="是" codeSystem="2.16.156.10011.2.3.2.11" codeSystemName="中医体质分类判定结果代码表"/>
+	<HDSD00.01.182 dataelementName="现在主要健康问题代码" code="" datatype="AN1..5" dic="ICD_10" displayName="人类免疫缺陷病毒[HIV]病造成的传染病和寄生虫病" codeSystem="2.16.156.10011.2.3.3.11" codeSystemName="ICD-10"/>
+	<HDSD00.01.183 dataelementName="入院日期" value="" datatype="D8"/>
+	<HDSD00.01.184 dataelementName="入院原因" value="" datatype="AN1..100"/>
+	<HDSD00.01.185 dataelementName="出院日期" value="" datatype="D8"/>
+	<HDSD00.01.186 dataelementName="曾住院医疗机构名称" value="" datatype="AN1..70"/>
+	<HDSD00.01.187 dataelementName="曾住院病案号" value="" datatype="AN1..18"/>
+	<HDSD00.01.188 dataelementName="曾建立家庭病床医疗机构名称" value="" datatype="AN1..70"/>
+	<HDSD00.01.189 dataelementName="曾建立家庭病床病案号" value="" datatype="AN1..18"/>
+	<HDSD00.01.190 dataelementName="家庭病床建床日期" value="" datatype="D8"/>
+	<HDSD00.01.191 dataelementName="家庭病床建床原因" value="" datatype="AN1..100"/>
+	<HDSD00.01.192 dataelementName="家庭病床撤床日期" value="" datatype="D8"/>
+	<HDSD00.01.193 dataelementName="中药类别代码" code="" datatype="N1" dic="CV06_00_101" displayName="中成药" codeSystem="2.16.156.10011.2.3.1.157" codeSystemName="中药使用类别代码表"/>
+	<HDSD00.01.194 dataelementName="药物名称" value="" datatype="AN1..50"/>
+	<HDSD00.01.195 dataelementName="药物使用频率" value="" datatype="AN1..20"/>
+	<HDSD00.01.196 dataelementName="药物使用剂量单位" value="" datatype="AN1..6"/>
+	<HDSD00.01.197 dataelementName="药物使用次剂量" value="" datatype="N1..5,2"/>
+	<HDSD00.01.198 dataelementName="药物使用总剂量" value="" datatype="N1..12,2"/>
+	<HDSD00.01.199 dataelementName="药物使用途径代码" code="" datatype="N1..3" dic="CV06_00_102" displayName="口服" codeSystem="2.16.156.10011.2.3.1.158" codeSystemName="用药途径代码表"/>
+	<HDSD00.01.200 dataelementName="服药依从性代码" code="" datatype="N1" dic="CC06_00_027_00" displayName="规律" codeSystem="2.16.156.10011.2.3.2.12" codeSystemName="服药依从性代码表"/>
+	<HDSD00.01.201 dataelementName="疫苗名称代码" code="" datatype="N4" dic="CV08_50_001" displayName="乙型肝炎疫苗" codeSystem="2.16.156.10011.2.3.1.210" codeSystemName="疫苗名称代码表"/>
+	<HDSD00.01.202 dataelementName="疫苗批号" value="" datatype="AN1..30"/>
+	<HDSD00.01.203 dataelementName="疫苗接种日期" value="" datatype="D8"/>
+	<HDSD00.01.204 dataelementName="疫苗接种单位名称" value="" datatype="AN1..70"/>
+	<HDSD00.01.205 dataelementName="健康评价异常标志" value="" datatype="T/F"/>
+	<HDSD00.01.206 dataelementName="健康评价异常描述" value="" datatype="AN1..100"/>
+	<HDSD00.01.207 dataelementName="健康指导代码" code="" datatype="N1" dic="CC05_01_001_09" displayName="纳入慢性病患者健康管理" codeSystem="2.16.156.10011.2.3.2.13" codeSystemName="健康指导代码表"/>
+	<HDSD00.01.208 dataelementName="危险因素控制建议代码" code="" datatype="N1" dic="CV06_00_218" displayName="饮食" codeSystem="2.16.156.10011.2.3.1.194" codeSystemName="危险因素控制建议代码表"/>
+	<HDSD00.01.209 dataelementName="目标体重（kg）" value="" datatype="N3..5,1"/>
+	<HDSD00.01.210 dataelementName="建议接种疫苗名称代码" code="" datatype="N2" dic="CV08_50_001" displayName="乙型肝炎疫苗" codeSystem="2.16.156.10011.2.3.1.210" codeSystemName="疫苗名称代码表"/>
+</BasicDataset>

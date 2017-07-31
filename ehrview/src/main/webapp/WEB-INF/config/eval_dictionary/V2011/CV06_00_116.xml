@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="因症就诊" comment="因有结核病症状就医"/>
+  <item key="2" text="转诊" comment="综合性医院将可疑肺结核患者转往结核病定点医院诊治"/>
+  <item key="3" text="追踪" comment="对转诊未到位的疑似肺结核患者进行追踪"/>
+  <item key="4" text="因症推荐" comment="因有结核病症状推荐往结核病定点医院诊治"/>
+  <item key="5" text="接触者检查" comment="对与菌阳肺结核患者有密切接触者进行检查"/>
+  <item key="6" text="健康检查"/>
+  <item key="9" text="其他"/>
+</dic>

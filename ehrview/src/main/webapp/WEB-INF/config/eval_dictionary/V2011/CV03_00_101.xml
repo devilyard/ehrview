@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="现在每天吸"/>
+  <item key="2" text="现在吸，但不是每天吸"/>
+  <item key="3" text="过去吸，现在不吸"/>
+  <item key="4" text="从不吸"/>
+</dic>

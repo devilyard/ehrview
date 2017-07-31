@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="01" text="去医院确定治疗方案"/>
+  <item key="02" text="坚持按医嘱服药"/>
+  <item key="03" text="需要调整方案"/>
+  <item key="04" text="去医院进一步确诊"/>
+  <item key="05" text="定期测量血压"/>
+  <item key="06" text="增加测量血压频率"/>
+  <item key="07" text="接受技能指导"/>
+  <item key="08" text="阅读发放的宣传材料"/>
+  <item key="09" text="限制烟量或戒烟"/>
+  <item key="10" text="戒烟"/>
+  <item key="11" text="避免被动吸烟"/>
+  <item key="12" text="减少或不要饮酒"/>
+  <item key="13" text="限钠盐（＜1斤/3人*月）"/>
+  <item key="14" text="减少脂肪食品摄入"/>
+  <item key="15" text="增加鱼、禽、奶制品摄入"/>
+  <item key="16" text="增加新鲜水果蔬菜摄入"/>
+  <item key="17" text="减少谷类，面制品摄入"/>
+  <item key="18" text="开始低强度的运动"/>
+  <item key="19" text="接受技能指导"/>
+  <item key="20" text="逐步增加运动强度或延长运动时间"/>
+  <item key="21" text="逐步减少运动强度或缩短运动时间"/>
+  <item key="22" text="放松心情，调节睡眠，注意休息"/>
+</dic>

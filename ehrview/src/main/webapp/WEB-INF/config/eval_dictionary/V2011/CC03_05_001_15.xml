@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="治愈"/>
+  <item key="2" text="残疾"/>
+  <item key="3" text="死亡"/>
+</dic>

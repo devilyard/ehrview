@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<dic alias="疾病字典">
+<item key="jb" text="疾病诊断">
+  <item key="xcrb" text="性传染病">
+	<item key="xcrb01" text="梅毒" checkFlag="true"/>
+	<item key="xcrb02" text="淋病" checkFlag="true"/>
+	<item key="xcrb03" text="AIDS" checkFlag="true"/>
+	<item key="xcrb04" text="尖锐湿疣" checkFlag="true"/>
+ </item>
+  <item key="jsb" text="精神病">
+	<item key="jsb01" text="精神分裂" checkFlag="true"/>
+	<item key="jsb02" text="抑郁症" checkFlag="true"/>
+	<item key="jsb03" text="强迫证" checkFlag="true"/>
+	<item key="jsb04" text="偷窃癖" checkFlag="true"/>
+ </item>
+ <item key="zl" text="肿瘤">
+	<item key="zl01" text="胃癌" checkFlag="true"/>
+	<item key="zl02" text="肠癌" checkFlag="true"/>
+	<item key="zl03" text="白血病" checkFlag="true"/>
+ </item>
+</item>
+<item key="ss" text="手术">
+<item key="sslb" text="手术列表">
+	<item key="ss01" text="心脏搭桥术" checkFlag="true"/>
+	<item key="ss02" text="心脏切除术" checkFlag="true"/>
+	<item key="ss03" text="人工流产" checkFlag="true"/>
+	<item key="ss04" text="肝脏移植" checkFlag="true"/>
+	<item key="ss05" text="肾脏切除术" checkFlag="true"/>
+  </item>
+</item>
+</dic>

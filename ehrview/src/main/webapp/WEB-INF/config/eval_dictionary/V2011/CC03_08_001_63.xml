@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="正常"/>
+  <item key="2" text="脊柱侧歪"/>
+  <item key="3" text="O(X)型腿"/>
+  <item key="4" text="手（脚）镯"/>
+  <item key="5" text="短小肢"/>
+  <item key="6" text="多指（趾）"/>
+  <item key="7" text="并指（趾）"/>
+  <item key="8" text="髋关节脱位"/>
+  <item key="9" text="马蹄内翻足"/>
+  <item key="10" text="双侧不对称"/>
+  <item key="11" text="肌张力增高"/>
+  <item key="12" text="松弛"/>
+  <item key="13" text="其他"/>
+</dic>

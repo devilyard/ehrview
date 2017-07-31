@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="存活"/>
+  <item key="2" text="产时死亡"/>
+  <item key="3" text="产后死亡"/>
+</dic>

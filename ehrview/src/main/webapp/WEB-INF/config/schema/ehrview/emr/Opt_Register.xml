@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<entry id="Opt_Register" alias="挂号表(Opt_Register)" hasDoc="true" >
+  <item id="DCID" alias="记录号" type="string" length="16" not-null="1" generator="assigned" pkey="true"/>
+  <item id="MPIID" alias="主索引标识" type="string" length="32" not-null="1"/>
+  <item id="SourceID" alias="来源标识" length="50"/>
+  <item id="RecordClassifying" alias="记录分类" length="50"/>
+  <item id="RecordTitle" alias="记录名称" length="50"/>
+  <item id="EffectiveTime" alias="记录时间" type="date"/>
+  <item id="EffectiveFlag" alias="有效标志" type="string" length="1"/>
+  <item id="VersionNumber" alias="版本" length="10"/>
+  <item id="AuthorOrganization" alias="创建机构" length="16"/>
+  <item id="Author" alias="创建人" length="32"/>
+  <item id="SystemTime" alias="创建时间" type="date"/>
+  <item id="UploadTime" alias="上传时间" type="date"/>
+  <item id="UpdateTime" alias="更新时间" type="date"/>
+  <item id="JZLSH" alias="就诊流水号" length="32"/>
+  <item id="GHKSDM" alias="挂号科室代码" length="15"/>
+  <item id="KH" alias="卡号" length="32"/>
+  <item id="KLX" alias="卡类型" length="2"/>
+  <item id="GHRQ" alias="挂号日期" type="date"/>
+  <item id="GHLSH" alias="挂号流水号" length="32"/>
+  <item id="GHLB" alias="挂号类别" length="2"/>
+  <item id="BRLB" alias="病人类别" length="2"/>
+  <item id="THBZ" alias="退号标志" length="1"/>
+  <item id="GHFS" alias="挂号方式" length="2"/>
+  <item id="GHF" alias="挂号费" length="18" precision="2"/>
+  <item id="ZLF" alias="诊疗费" length="18" precision="2"/>
+  <item id="QIF" alias="其他费" length="18" precision="2"/>
+  <item id="WDBZ" alias="外地标志" length="2"/>
+  <item id="YYLSH" alias="预约流水号" length="32"/>
+</entry>

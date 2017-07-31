@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="遗传"/>
+  <item key="2" text="原发性疾病"/>
+  <item key="3" text="继发性疾病"/>
+  <item key="4" text="工伤"/>
+  <item key="5" text="交通事故"/>
+  <item key="6" text="外伤"/>
+  <item key="7" text="中毒"/>
+  <item key="8" text="发育畸形"/>
+  <item key="9" text="白内容障"/>
+  <item key="10" text="唐氏综合症"/>
+  <item key="11" text="传染性疾病"/>
+  <item key="12" text="自闭症"/>
+  <item key="13" text="肿瘤"/>
+  <item key="14" text="精神分裂症"/>
+  <item key="15" text="其他原因"/>
+  <item key="16" text="原因未明"/>
+</dic>

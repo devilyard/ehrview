@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="地表水"/>
+  <item key="11" text="江河"/>
+  <item key="12" text="湖泊"/>
+  <item key="13" text="水库"/>
+  <item key="14" text="窖水"/>
+  <item key="19" text="其他"/>
+  <item key="2" text="地下水"/>
+  <item key="21" text="浅层"/>
+  <item key="22" text="深层"/>
+  <item key="23" text="泉水"/>
+  <item key="29" text="其他"/>
+</dic>

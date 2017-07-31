@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="行政(公务员)编制"/>
+  <item key="2" text="事业编制"/>
+  <item key="21" text="参照公务员管理的事业编制"/>
+  <item key="22" text="一般事业编制"/>
+  <item key="23" text="工勤技能及其他编制"/>
+</dic>

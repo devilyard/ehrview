@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="稳定"/>
+  <item key="2" text="好转"/>
+  <item key="3" text="恶化"/>
+</dic>

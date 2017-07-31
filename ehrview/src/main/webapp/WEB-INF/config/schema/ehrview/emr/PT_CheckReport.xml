@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<entry id="PT_CheckReport" alias="PT检查报告(PT_CheckReport)">
+  <item id="DCID" alias="记录号" type="string" length="16" not-null="1" generator="assigned" pkey="true"/>
+  <item id="MPIID" alias="个人索引号" type="string" length="32" not-null="1"/>
+  <item id="SystemTime" alias="创建时间" type="date" not-null="1"/>
+  <item id="EffectiveTime" alias="记录时间" type="date" not-null="1"/>
+  <item id="SourceID" alias="来源标识" length="50" not-null="1"/>
+  <item id="RecordClassifying" alias="记录分类" length="16" not-null="1"/>
+  <item id="RecordTitle" alias="记录名称" length="50" not-null="1"/>
+  <item id="EffectiveFlag" alias="有效标志" type="string" length="1" not-null="1"/>
+  <item id="VersionNumber" alias="版本" length="10" not-null="1"/>
+  <item id="AuthorOrganization" alias="创建机构" length="16" not-null="1"/>
+  <item id="Author" alias="创建人" length="32" not-null="1"/>
+  <item id="UploadTime" alias="上传时间" type="date" not-null="1"/>
+  <item id="UpdateTime" alias="更新时间" type="date" not-null="1"/>
+  <item id="MedicalInstitutions" alias="医疗机构名称" length="50" not-null="1"/>
+  <item id="MedicalOrgnationCode" alias="医疗机构组织机构代码" length="10" not-null="1"/>
+  <item id="ClinicFlag" alias="门诊住院标志" type="string" length="1" not-null="1"/>
+  <item id="CheckNo" alias="检查流水号" length="33" not-null="1"/>
+  <item id="VisitID" alias="就诊流水号" length="32"/>
+  <item id="CheckReportUnit" alias="检查报告单—机构(科室)" length="70" not-null="1"/>
+  <item id="CheckReportObj" alias="检查报告结果-客观所见" length="2000"/>
+  <item id="CheckReportSbj" alias="检查报告结果-主观提示" length="200"/>
+  <item id="CheckItmCode" alias="检查项目代码" length="10"/>
+  <item id="CheckItmNm" alias="检查项目名称" length="60" not-null="1"/>
+  <item id="CheckDate" alias="检查日期" type="date" not-null="1"/>
+  <item id="CheckType" alias="检查类型" type="string" length="2"/>
+  <item id="CheckReportDate" alias="检查报告日期" type="date" not-null="1"/>
+  <item id="CheckReportRemk" alias="检查报告备注" length="100"/>
+  <item id="ConfirmDate" alias="审核日期" type="date" not-null="1"/>
+</entry>

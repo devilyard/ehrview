@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="未取得卫生许可证，扭自营业的"/>
+  <item key="2" text="卫生质量不符合国家卫生标准和要求，而继续营业的"/>
+  <item key="3" text="未获得健康合格证，从事直接为顾客服务的"/>
+  <item key="4" text="拒绝卫生监督的"/>
+  <item key="9" text="其他违法行为"/>
+</dic>

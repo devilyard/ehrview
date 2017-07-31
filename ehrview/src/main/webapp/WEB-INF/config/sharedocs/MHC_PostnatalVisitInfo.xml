@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClinicalDocument xmlns="urn:hl7-org:v3" xmlns:mif="urn:hl7-org:v3/mif" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 ..\sdschemas\CDA.xsd">
+
+	<realmCode code="CN"/>
+	<typeId root="2.16.840.1.113883.1.3" extension="POCD_MT000040"/>
+	<templateId root="2.16.156.10011.2.1.1.7"/>
+	<!--表单编号 -->
+	<id root="2.16.156.10011.1.1.1.2" datacode="DE01.00.008.00" extension="" datatype="not-null"/>
+    <!--文档类别代码 -->
+    <code code="HSDB02.03" codeSystem="2.16.156.10011.2.4" codeSystemName="卫生信息共享文档规范编码体系"/>
+    <title>产后访视</title>
+    <!--文档生效时间 [1..1]-->
+    <effectiveTime datacode="DE06.00.024.00" value="" datatype="D8"/>
+    <!--文档密级  默认值 [1..1] -->
+    <confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25" codeSystemName="Confidentiality" displayName="正常访问保密级别"/>
+    <!--文档语言 [1..1]  默认值 code="zh-CN" 含义：中文字符编码-->
+    <languageCode code="zh-CN"/>
+	<setId/>
+	<versionNumber/>
+	
+	<!--文档记录对象（）[1]  -->
+	<recordTarget contextControlCode="OP">
+		<patientRole>
+			<!--健康档案标识号-->
+			<id root="2.16.156.10011.1.2" datacode="DE01.00.009.00" extension="" datatype="N17"/>
+			<patient>
+				<!--患者身份证号-->
+				<id root="2.16.156.10011.1.3" datacode="DE02.01.030.00" extension="" datatype="AN18"/>
+				<name datacode="DE02.01.039.00" datatype="A1..50"></name>
+			</patient>
+		</patientRole>
+	</recordTarget>
+	
+	<!--文档创作者  [1..*] -->
+	<author typeCode="AUT" contextControlCode="OP">
+		<!-- 本次随访日期 -->
+		<time xsi:type="TS" datacode="DE06.00.024.00" value="" datatype="D8"/>
+		<assignedAuthor classCode="ASSIGNED">
+			<id root="2.16.156.10011.1.7" extension="234234234"/>
+			<!--随访医生-->
+			<assignedPerson>
+				<name datacode="DE02.01.039.00" datatype="A1..50"></name>
+			</assignedPerson>
+			<representedOrganization>
+				<id root="2.16.156.10011.1.5" extension="0187565656"/>
+				<name>苏州市立医院</name> 
+				<addr>苏州市沧浪区道前街26号</addr>			
+			</representedOrganization>
+		</assignedAuthor>
+	</author>
+	
+	<!--文档管理机构信息[1..1] -->
+	<custodian typeCode="CST">
+		<assignedCustodian classCode="ASSIGNED">
+			<representedCustodianOrganization classCode="ORG" determinerCode="INSTANCE">
+				<id root="2.16.156.10011.1.6" extension="32290176-8"/>
+				<name>苏州市卫生和计划生育委员会</name>
+				<telecom value="0512-65226855"/>
+				<addr>苏州市平泷路188号</addr>
+			</representedCustodianOrganization>
+		</assignedCustodian>
+	</custodian>
+
+	<relatedDocument typeCode="RPLC">
+		<parentDocument classCode="DOCCLIN" moodCode="EVN">
+			<id root="2.16.156.10011.1.1.1.2" extension="D2011000000"/>
+			<setId/>
+			<versionNumber value="1"/>
+		</parentDocument>
+	</relatedDocument>
+
+	<component>
+		<structuredBody>
+
+			<!-- 主要健康问题章节-->
+			<component>
+				<section>
+                     <code code="11450-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="PROBLEM LIST"/>
+					<text/>
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="DE04.01.121.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="健康状况详细描述"/>
+							<value xsi:type="ST" datacode="DE04.01.121.00" datatype="AN1..100"></value>
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="DE04.01.122.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="心理状况详细描述"/>
+							<value xsi:type="ST" datacode="DE04.01.122.00" datatype="AN1..100"></value>
+						</observation>
+					</entry>
+				</section>
+			</component>
+			
+			<!-- 生命体征章节 -->
+			<component>
+				<section>
+					<code code="8716-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="VITAL SIGNS"/>
+					<text/>
+					<entry>
+						<organizer classCode="BATTERY" moodCode="EVN">
+							<code displayName="血压"/>
+							<statusCode/>
+							<component>
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="DE04.10.174.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="收缩压"/>
+									<value xsi:type="PQ" datacode="DE04.10.174.00" datatype="N2..3" value="" unit="mmHg"></value>
+								</observation>
+							</component>
+							<component>
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="DE04.10.176.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="舒张压"/>
+									<value xsi:type="PQ" datacode="DE04.10.176.00" datatype="N2..3" value="" unit="mmHg"/>
+								</observation>
+							</component>
+						</organizer>
+					</entry>
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="DE04.10.186.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="体温"/>
+							<value xsi:type="PQ" datacode="DE04.10.186.00" datatype="N4,1" value="" unit="℃"/>
+						</observation>
+					</entry>
+				</section>
+			</component>
+
+			<!-- 乳腺章节-->
+			<component>
+				<section>
+					<code code="10193-1" displayName="Breasts" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+					<text/>
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="DE04.10.159.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="乳腺检查结果代码"><qualifier><name displayName="左侧"></name></qualifier></code>
+							<value xsi:type="CD" datacode="DE04.10.159.00" datatype="N1" code="" dic="CV04_10_012" codeSystem="2.16.156.10011.2.3.1.66" codeSystemName="乳腺检查结果代码表" displayName="未见异常"></value>
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="DE04.10.159.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="乳腺检查结果代码"><qualifier><name displayName="右侧"></name></qualifier></code>
+							<value xsi:type="CD" datacode="DE04.10.159.00" datatype="N1" code="" dic="CV04_10_012" codeSystem="2.16.156.10011.2.3.1.66" codeSystemName="乳腺检查结果代码表" displayName="未见异常"/>
+						</observation>
+					</entry>
+				</section>
+			</component>
+
+			<!-- 生殖器章节 -->
+			<component>
+				<section>
+					<code code="11400-9" codeSystem="2.16.840.1.113883.6.1" displayName="GENITALIA" codeSystemName="LOINC"/>
+					<text/>
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="DE04.10.244.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="恶露异常标志"/>
+							<value xsi:type="BL" datacode="DE04.10.244.00" value="" datatype="T/F"/>
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="DE04.10.025.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="恶露状况"/>
+									<value xsi:type="ST" datacode="DE04.10.025.00" datatype="AN1..100"></value>
+								</observation>
+							</entryRelationship>
+						</observation>
+					</entry>
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="DE04.10.072.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="宫体异常标志"/>
+							<value xsi:type="BL" datacode="DE04.10.072.00" value="" datatype="T/F"/>
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="DE04.10.073.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="宫体异常描述"/>
+									<value xsi:type="ST" datacode="DE04.10.073.00" datatype="AN1..100"></value>
+								</observation>
+							</entryRelationship>
+						</observation>
+					</entry>
+
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="DE05.01.039.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="伤口愈合状况代码"/>
+							<value xsi:type="CD" datacode="DE05.01.039.00" datatype="N1" code="" dic="CV05_01_011" codeSystem="2.16.156.10011.2.3.1.110" codeSystemName="伤口愈合状况代码表" displayName="未见异常"/>
+						</observation>
+					</entry>
+				</section>
+			</component>
+
+			<!-- 健康评估章节 -->
+			<component>
+				<section>
+					<code code="51848-0" displayName="Assessment note" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+                    <text/>
+					<entry> 
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="DE05.10.125.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="孕产妇健康评估异常标志"/>
+							<value xsi:type="BL" datacode="DE05.10.125.00" value="" datatype="T/F"/>
+							<entryRelationship typeCode="COMP">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code=" DE05.10.126.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="孕产妇健康评估异常结果描述"/>
+									<value xsi:type="ST" datacode="DE05.10.126.00" datatype="AN1..100"></value>
+								</observation>
+							</entryRelationship>
+						</observation>
+					</entry>
+				</section>
+			</component>
+
+			<!-- 健康指导章节 -->
+			<component>
+				<section>
+					<code code="69730-0" codeSystem="2.16.840.1.113883.6.1" displayName="Instructions" codeSystemName="LOINC"/>
+					<text/>
+					<entry>
+						<observation classCode="OBS" moodCode="DEF" >
+							<code code="DE06.00.051.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="健康指导"></code>
+							<value datacode="DE06.00.051.00" datatype="N1" code="" dic="CV06_00_219" codeSystem="2.16.156.10011.2.3.1.195" codeSystemName="孕产妇健康指导类别代码表" xsi:type="CD"/>
+						</observation>
+					</entry>
+				</section>
+			</component>
+
+            <!-- 转诊建议章节-->
+			<component>
+				<section>  
+					<code code="18776-1" codeSystem="2.16.840.1.113883.6.1" displayName="referal" codeSystemName="LOINC"/>
+					<text/>
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="DE06.00.174.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="转诊标志"/>
+							<value xsi:type="BL" datacode="DE06.00.174.00" value="" datatype="T/F"></value>
+							<entryRelationship typeCode="CAUS" negationInd="false">
+								<act classCode="INFRM" moodCode="APT" negationInd="false">
+									<code code="DE06.00.177.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="转诊原因"/>
+									<text datacode="DE06.00.177.00" datatype="AN1..100"></text>
+									<performer>
+										<time/>
+										<assignedEntity>
+											<id/>
+											<representedOrganization>
+												<name datacode="DE08.10.026.00" datatype="AN1..50"></name>
+												<asOrganizationPartOf>
+													<wholeOrganization>
+														<name datacode="DE08.10.013.00" datatype="AN1..70"></name>
+													</wholeOrganization>
+												</asOrganizationPartOf>
+											</representedOrganization>
+										</assignedEntity>
+									</performer>
+								</act>
+							</entryRelationship>
+						</observation>
+					</entry>
+				</section>
+			</component>
+
+			<!-- 下次随访安排章节 -->
+			<component>
+				<section>
+					<code displayName="下次随访安排"/>
+					<text/>
+					<entry>
+						<observation classCode="OBS" moodCode="DEF">
+							<code code="DE06.00.109.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录" displayName="下次随访日期"/>
+							<value xsi:type="TS" datacode="DE06.00.109.00" value="" datatype="D8"/>
+						</observation>
+					</entry>
+				</section>
+			</component>
+		</structuredBody>
+	</component>
+</ClinicalDocument>

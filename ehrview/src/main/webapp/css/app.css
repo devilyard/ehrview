@@ -1,0 +1,539 @@
+/* app css stylesheet */
+.container {
+	width: 100%;
+}
+
+.bs-docs-example {
+	position: relative;
+	margin: 15px 0;
+	padding: 0px 0px 0px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+
+.new-example {
+	border: 1px solid #dddddd;
+	overflow: auto;
+	min-height: 50px;
+	background-color: #ffffff;
+}
+
+.modal-body {
+	overflow: auto;
+	font-weight: normal;
+	font-size: 12px;
+	max-height: 550px;
+}
+
+.l-mainContent {
+	/* overflow: auto; */
+	
+}
+
+.content {
+	overflow: auto;
+	min-height: 130px;
+	/* max-height: 320px; */
+	margin: auto;
+	padding-top: 20px;
+	height: 100%;
+}
+
+.noTab .content {
+	padding-top: 0px;
+}
+
+.tab-content {
+	overflow: auto;
+	margin: auto;
+}
+
+.modal-content {
+	width: 950px;
+}
+
+.modal {
+	margin: 10px 0 0 -450px;
+	overflow-y: hidden;
+	overflow: hidden;
+}
+
+.autoScrll {
+	overflow: auto;
+}
+
+.tab-content-border {
+	border: 1px solid #dddddd;
+}
+
+.portlet-foot {
+	padding: 5px;
+	width: 100%;
+}
+
+.addMod {
+	width: 100%;
+	overflow: auto;
+}
+
+.addButton {
+	text-align: center;
+	padding: 10px 10px 10px 10px;
+	cursor: pointer;
+	color: #4b8df8;
+	font-size: 20px;
+}
+
+.clickT {
+	cursor: pointer;
+}
+
+.clickT:hover {
+	background-color: #eee;
+}
+
+.addContent {
+	height: 200
+}
+
+.apps {
+	display: none;
+}
+
+.appsList {
+	width: 200px;
+}
+
+.close {
+	position: absolute;
+	color: #ff0000;
+	top: -5px;
+	right: 5px;
+	float: right;
+	font-size: 36px;
+	opacity: 1;
+}
+
+.portlet-title .close {
+	top: -5px;
+	right: 5px;
+	font-size: 16px;
+}
+
+.nav-tabs .close {
+	top: 0px;
+	right: 0px;
+	font-size: 12px;
+}
+
+.privacyClose {
+	color: #ff0000;
+	cursor: pointer;
+	font-size: 12px;
+}
+
+.nav {
+	margin-bottom: 0px;
+	margin-left: 0;
+	list-style: none;
+}
+
+.nav-tabs {
+	border-bottom: 1px solid #ddd;
+}
+
+.popUpNav {
+	height: 100%
+}
+
+.popUpAbsolute {
+	position: absolute;
+	left: 150px;
+	top: 20px;
+}
+
+.mrT {
+	padding: 5px;
+}
+
+.nav-tabs {
+	border-bottom: 0px solid #dddddd;
+}
+
+.chartView {
+	margin: 15px;
+	min-height: 250px;
+}
+
+.smzqItem {
+	min-height: 160px;
+}
+
+.layoutBanner {
+	position: relative;
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	overflow: auto;
+}
+
+.layoutBanner li {
+	list-style: none;
+}
+
+.layoutBanner ul li {
+	float: left;
+}
+
+.l-layoutTextButton {
+	font-size: 50px;
+	text-align: center;
+}
+
+.navPadding {
+	margin: 5px 5px 5px 5px;
+}
+
+.ltH4 {
+	width: 100%;
+	font-family: "微软雅黑";
+	font-size: 35;
+	text-align: center;
+}
+
+.layoutMain {
+	float: right;
+	margin: 10px;
+	overflow: inherit;
+	border: 1px solid #bbbbbb;
+	cursor: pointer;
+	width: 90%;
+	height: 300px;
+	width: 400px;
+	background-color: #eeeeee;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	overflow: auto;
+}
+
+.layoutCC {
+	float: left;
+}
+
+.inputLable {
+	text-align: right;
+	font-size: 20px;
+}
+
+.layoutselTitle {
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 20px;
+	text-align: center;
+}
+
+.backButton {
+	float: right;
+	margin-right: 10px;
+}
+
+.addBodyPadding20 {
+	padding-top: 20px;
+}
+
+.btnToolBar {
+	margin-bottom: 20px;
+}
+
+.ExpBtn {
+	margin-top: 20px;
+}
+
+.layoutToolBarClose {
+	position: absolute;
+	z-index: 999;
+	top: 150px;
+	width: 14px;
+	overflow: hidden;
+	border-radius: 0px 6px 6px 0px;
+	height: 50px;
+	border-style: solid;
+	border-width: 1px 1px 1px 0px;
+	border-color: #4b8df8;
+	background-color: #fff;
+	padding-top: 12px;
+	color: #4b8df8;
+}
+
+.layoutToolBarShow {
+	position: absolute;
+	z-index: 999;
+	top: 150px;
+	overflow: auto;
+	border-radius: 0px 6px 6px 0px;
+	border-style: solid;
+	border-width: 1px 1px 1px 0px;
+	border-color: #4b8df8;
+	background-color: #fff;
+	padding-top: 12px;
+	color: #4b8df8;
+	padding-bottom: 5px;
+	padding-right: 10px;
+}
+
+.layoutToolBarShow .bSpan {
+	position: absolute;
+	right: 2px;
+	top: 2px;
+	cursor: pointer;
+}
+
+.layoutToolBarClose .bSpan {
+	position: absolute;
+	left: 0px;
+	top: 15px;
+	cursor: pointer;
+}
+
+.layoutToolBarClose .bSpan {
+	cursor: pointer;
+}
+
+.layoutToolBarShow ul {
+	margin-left: 10px;
+}
+
+.seachForm {
+	border-style: solid;
+	border-width: 0px 1px 0px 0px;
+	padding-right: 8px;
+	border-color: #dddddd;
+}
+
+.listView {
+	overflow: auto;
+}
+
+.listView table td {
+	text-align: center;
+	cursor: pointer;
+}
+
+.privacy .panel-body {
+	padding: 5px;
+}
+
+.panelTrim {
+	margin-bottom: 0 !important;	
+}
+
+.buttonsTool {
+	vertical-align: middle;
+	height: 80px;
+	line-height: 80px;
+}
+
+.addItem {
+	cursor: pointer;
+}
+
+.rolePanel>.panel-body {
+	height: 320px;
+}
+
+.addName {
+	width: 100px;
+}
+
+.privacyMod {
+	width: 500px;
+}
+
+#gerontic #middleAge #adolescence #boyhood #childhood #babyhood>ul {
+	overflow: hidden
+}
+
+#gerontic #middleAge #adolescence #boyhood #childhood #babyhood>ul>li {
+	border-top: 1px dotted black;
+	margin-top: -1px;
+}
+
+hr.examplethree {
+	border: 0;
+	height: 0;
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.toTop {
+	position: fixed;
+	_position: absolute;
+	bottom: 5px;
+	width: 40px;
+	height: 40px;
+	right: 60px;
+}
+
+.visitManaInfo {
+	text-align: right;
+	padding-right: 10px;
+}
+
+.pageBar {
+	float: right;
+	padding-right: 20px;
+	height: 22px;
+}
+
+.ggws_list .title {
+	color: #000000;
+}
+
+.well {
+	padding: 0;
+}
+
+.mb-frame {
+	color: #468847;
+	background-color: #dff0d8;
+	border: 1px solid;
+	border-color: #d6e9c6;
+	border-radius: 4px;
+	width: 350px;
+	position: fixed;
+	_position: absolute;
+	top: -100px;
+	left: 50%;
+	margin: 0 0 0 -175px;
+	z-index: 9999999;
+}
+
+.mb-error {
+	color: #b94a48;
+	background-color: #f2dede;
+	border-color: #eed3d7;
+}
+
+.mb-warn {
+	color: #c09853;
+	background-color: #fcf8e3;
+	border-color: #fbeed5;
+}
+
+.mb-title {
+	padding-left: 5px;
+	float: left;
+}
+
+.mb-close {
+	float: right;
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+.mb-close:hover {
+	text-decoration: none;
+}
+
+.clearfloat:after {
+	clear: both;
+	content: '.';
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
+
+.mb-content {
+	text-align: center;
+	margin: 10px auto 20px auto;
+}
+
+.list {
+	height: 300px;
+	overflow: auto;
+}
+
+.chart {
+	height: 330px;
+	overflow: auto;
+}
+
+.summary {
+	height: 200px;
+	overflow: auto;
+}
+
+.visit {
+	height: 200px;
+	overflow: auto;
+}
+
+.physique {
+	height: 175px;
+	overflow: auto;
+}
+
+.nav>li>a {
+	padding: 5px 10px;
+	background: #e9e9e9;
+}
+
+.mod-height {
+	height: 100%;
+}
+
+.bg {
+	height: 42px;
+	margin: 0;
+}
+
+.listView th, .content th, .table th {
+	background: #cecece;
+}
+
+.listView tr:hover th, .content tr:hover th, .table tr:hover th {
+	background-color: #cecece !important;
+}
+
+.listView  td, .content td, .table td {
+	word-wrap: break-word;
+	word-break: break-all;
+}
+
+.running-mask {
+	position: absolute;
+	background-color: #cecece;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.3;
+	display: none;
+}
+
+.running-mask-msg {
+	position: absolute;
+	top: 50%;
+	color: #0000ff;
+	padding: 12px 5px 10px 30px;
+	width: auto;
+	height: 16px;
+	display: none;
+}
+
+#cboxLoadedContent {
+	margin-top: 28px;
+}
+
+#cboxClose {
+	top: -2px !important;
+}
+
+.modal-dialog {
+	width: 500px;
+}
+
+.layoutSelected {
+	background: #ddd;
+}

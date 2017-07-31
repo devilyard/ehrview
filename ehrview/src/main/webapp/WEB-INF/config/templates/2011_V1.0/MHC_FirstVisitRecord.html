@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>第1次产前随访服务记录表</title>
+</head>
+
+<body style="padding: 20px;font-size: 12px"
+	th:with="firstRecord=${doc.element('MHC_FIRSTVISITRECORD')}">
+<style type="text/css">
+.my table {
+	border-bottom: #ccc solid 1px;
+	border-left: #ccc solid 1px;
+	border-top: #ccc solid 1px;
+	text-align: left;
+}
+
+.my td {
+	border-right: #ccc solid 1px;
+	border-bottom: #ccc dotted 1px;
+	padding: 4px;
+}
+
+.red {
+	color: red;
+	font-weight: bold;
+}
+</style>
+	<div
+		style="text-align: center; height: 40px; line-height: 40px; font-size: 16px; font-weight: bold;">第1次产前随访服务记录表</div>
+	<table width="95%" border="0" align="center" cellpadding="0"
+		cellspacing="0">
+		<tr>
+			<td width="500" height="30" align="left" style="padding-left: 10px"><strong>姓名：</strong><u
+				th:text="${personName}"></u></td>
+			<td align="right"><strong>编号：</strong>
+				<u th:text="${doc.elementText('PregnantID')}"></u></td>
+		</tr>
+				<tr>
+			<td style="border-bottom: 4px #09F solid;" colspan="2"></td>
+		</tr>
+		<tr>
+			<td style="height: 1px;" colspan="2"></td>
+		</tr>
+		<tr>
+			<td height="10" style="border-top: 1px #09f solid;" colspan="2"></td>
+		</tr>
+		
+	</table>
+	<div class="my">
+		<table width="95%" border="0" align="center" cellpadding="0"
+			cellspacing="0">
+			<tr>
+				<td bgcolor="#CAE2F7" width="15%"><strong>填表日期</strong></td>
+				<td th:text="${doc.elementText('CreateDate')}"></td>
+				<td bgcolor="#CAE2F7" width="15%"><strong>填表孕周</strong></td>
+				<td><span th:text="${doc.elementText('GestationalWeeks')}"></span>周</td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>丈夫姓名</strong></td>
+				<td><span th:if="${partner_personName != 'false'}"><span th:text="${partner_personName}"></span></span></td>
+				<td bgcolor="#CAE2F7"><strong>出生日期</strong></td>
+				<td><span th:if="${partner_birthday != null}"><span th:text="${#dates.format(partner_birthday,'yyyy-MM-dd')}"></span></span></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>身份证件类别</strong></td>
+				<td><span>身份证</span></td>
+				<td bgcolor="#CAE2F7"><strong>身份证件号码</strong></td>
+				<td colspan="3"><span th:if="${partner_idCard != null}"><span th:text="${partner_idCard}"></span></span></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>孕 次</strong></td>
+				<td th:text="${doc.elementText('Gravidity') + '次'}"></td>
+				<td bgcolor="#CAE2F7"><strong>产 次</strong></td>
+				<td th:text="${doc.elementText('Parity') + '次'}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>末次月经</strong></td>
+				<td th:text="${doc.elementText('LastMenstrualPeriod')}"></td>
+				<td bgcolor="#CAE2F7"><strong>预 产 期</strong></td>
+				<td th:text="${doc.elementText('DateOfPrenatal')}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>既往史</strong></td>
+				<td th:text="${doc.elementText('PastHistory')}"></td>
+				<td bgcolor="#CAE2F7"><strong>家族史</strong></td>
+				<td th:text="${doc.elementText('FamilyHistory')}"></td>
+			</tr>
+			<tr>
+
+				<td bgcolor="#CAE2F7"><strong>妇科手术史</strong></td>
+				<td colspan="3" th:text="${doc.elementText('OperationHistory')}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>孕产史</strong></td>
+				<td th:text="${doc.elementText('UnusualBone')}"></td>
+				<td bgcolor="#CAE2F7"><strong>孕妇年龄</strong></td>
+				<td  th:if="${birthday != null}" th:text="${(doc.elementText('CreateDate')).substring(0,4) - (#dates.format(birthday,'yyyy-MM-dd')).substring(0,4)}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>身 高</strong></td>
+				<td th:text="${doc.elementText('Height')+'cm'}"></td>
+				<td bgcolor="#CAE2F7"><strong>体重</strong></td>
+				<td th:text="${doc.elementText('Weight')+'Kg'}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>体质指数</strong></td>
+				<td th:text="${firstRecord.elementText('BMI')}"></td>
+				<td bgcolor="#CAE2F7"><strong>血压</strong></td>
+				<td><span th:text="${doc.elementText('SBP')}"></span>/<span th:text="${doc.elementText('DBP')}"></span>mmHg</td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>下次随访日期</strong></td>
+				<td
+					th:text="${firstRecord.elementText('VisitPrecontractTime')}"></td>
+				<td bgcolor="#CAE2F7"><strong>随访医生签名</strong></td>
+				<td th:text="${firstRecord.elementText('VisitDoctorCode')}"></td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

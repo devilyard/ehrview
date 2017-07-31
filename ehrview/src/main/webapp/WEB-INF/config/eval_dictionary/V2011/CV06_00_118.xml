@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="治疗失败" comment="因为出现免疫学、临床和病毒学失败而停止治疗，实际上，在没有更好的二线方案可以使用的情况下，即使是治疗失败，仍然要维持一线治疗"/>
+  <item key="2" text="药物相互作用" comment="因为治疗其他疾病的药物与ARV药物存在相互作用"/>
+  <item key="3" text="副反应" comment="不可耐受的药物副作用"/>
+  <item key="4" text="患者决定/要求" comment="除其他原因外，患者自己不愿意治疗"/>
+  <item key="5" text="经济原因" comment="患者因为无力负担治疗相关的其他费用，如实验室检查的费用等"/>
+  <item key="6" text="依从困难" comment="因为患者特殊的职业、作息时间或其他原因，确实无法保证服药的依从性而停药"/>
+  <item key="9" text="其他"/>
+</dic>

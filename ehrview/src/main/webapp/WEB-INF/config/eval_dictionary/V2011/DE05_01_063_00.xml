@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="外照射急性放射病"/>
+  <item key="2" text="外照射亚急性放射病"/>
+  <item key="3" text="外照射慢性放射病"/>
+  <item key="4" text="内照射放射病"/>
+  <item key="5" text="放射性皮肤疾病"/>
+  <item key="6" text="放射性肿瘤"/>
+  <item key="7" text="放射性骨损伤"/>
+  <item key="8" text="放射性甲状腺疾病"/>
+  <item key="9" text="放射性性腺疾病"/>
+  <item key="10" text="放射复合伤"/>
+  <item key="11" text="根据《职业性放射性疾病诊断标准（总则）》可以诊断的其他放射性损伤"/>
+</dic>

@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClinicalDocument xmlns="urn:hl7-org:v3" xmlns:mif="urn:hl7-org:v3/mif" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 ..\sdschemas\CDA.xsd">
+
+	<realmCode code="CN"/>
+	<typeId root="2.16.840.1.113883.1.3" extension="POCD_MT000040"/>
+	<templateId root="2.16.156.10011.2.1.1.9"/>
+	<!-- 预防接种卡编号 -->
+	<id root="2.16.156.10011.1.1.1.3" datacode="DE01.00.008.00" extension="" datatype="not-null"/>
+	<code code="HSDB03.01" codeSystem="2.16.156.10011.2.4" codeSystemName="卫生信息共享文档规范编码体系"/>
+	<title>预防接种报告</title>
+	<effectiveTime xsi:type="TS" datacode="DE09.00.031.00" value="" datatype="D8"/>
+	<confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25" codeSystemName="Confidentiality" displayName="正常访问保密级别"/>
+	<languageCode code="zh-CN"/>
+	<setId/>
+	<versionNumber/>
+	
+	<recordTarget typeCode="RCT" contextControlCode="OP">
+		<patientRole classCode="PAT">
+			<!--健康档案标识号-->
+			<id root="2.16.156.10011.1.2" datacode="DE01.00.009.00" extension="" datatype="N17"/>
+					
+			<addr use="H">
+				<houseNumber datacode="DE02.01.009.06" datatype="AN1..70"></houseNumber>
+				<streetName datacode="DE02.01.009.05" datatype="AN1..70"></streetName>
+				<township datacode="DE02.01.009.04" datatype="AN1..70"></township>
+				<county datacode="DE02.01.009.03" datatype="AN1..70"></county>
+				<city datacode="DE02.01.009.02" datatype="AN1..70"></city>
+				<state datacode="DE02.01.009.01" datatype="AN1..70"></state>
+				<postalCode datacode="DE02.01.047.00"></postalCode>
+			</addr>
+			<telecom datacode="DE02.01.010.00" datatype="AN1..20" value=""/>
+			<patient classCode="PSN" determinerCode="INSTANCE">
+				<name datacode="DE02.01.039.00" datatype="A1..50"></name>
+				<administrativeGenderCode datacode="DE02.01.040.00" datatype="N1" code="" dic="GB_T2261_1" codeSystem="2.16.156.10011.2.3.3.4" codeSystemName="生理性别代码表(GB/T 2261.1)"/>
+				<birthTime value="20080101"/>
+
+				<!--监护人（姓名、电话、与本人的关系）-->
+				<guardian>
+					<code datacode="DE02.01.020.00" code="" dic="GB_T4761" displayName="父亲" codeSystem="2.16.156.10011.2.3.3.8" codeSystemName="家庭关系代码表(GB/T 4761)"/>
+					<telecom datacode="DE02.01.010.00" datatype="AN1..20" value=""></telecom>
+					<guardianPerson>
+						<name datacode="DE02.01.039.00" datatype="A1..50"></name>
+					</guardianPerson>
+				</guardian>
+				
+				<!-- 户籍信息 -->
+				<household>
+					<place>
+						<addr>
+							<houseNumber datacode="DE02.01.009.06" datatype="AN1..70"></houseNumber>
+							<streetName datacode="DE02.01.009.05" datatype="AN1..70"></streetName>
+							<township datacode="DE02.01.009.04" datatype="AN1..70"></township>
+							<county datacode="DE02.01.009.03" datatype="AN1..70"></county>
+							<city datacode="DE02.01.009.02" datatype="AN1..70"></city>
+							<state datacode="DE02.01.009.01" datatype="AN1..70"></state>
+						</addr>
+					</place>
+				</household>
+			</patient>
+		</patientRole>
+	</recordTarget>
+	
+	<author typeCode="AUT" contextControlCode="OP">
+		<!-- 建卡日期 -->
+		<time xsi:type="TS" datacode="DE09.00.031.00" value="" datatype="D8"/>
+		<assignedAuthor classCode="ASSIGNED">
+			<id root="2.16.156.10011.1.7" extension="234234234"/>
+			<!-- 建卡人姓名 -->
+			<assignedPerson>
+				<name datacode="DE02.01.039.00" datatype="A1..50"></name>
+			</assignedPerson>
+			<representedOrganization>
+				<id root="2.16.156.10011.1.5" extension="0187565656"/>
+				<name>苏州市立医院</name>
+				<addr>苏州市沧浪区道前街26号</addr>			
+			</representedOrganization>
+		</assignedAuthor>
+	</author>
+	
+	<custodian typeCode="CST">
+		<assignedCustodian classCode="ASSIGNED">
+			<representedCustodianOrganization classCode="ORG" determinerCode="INSTANCE">
+				<id root="2.16.156.10011.1.6" extension="32290176-8"/>
+				<name>苏州市卫生和计划生育委员会</name>
+				<telecom value="0512-65226855"/>
+				<addr>苏州市平泷路188号</addr>
+			</representedCustodianOrganization>
+		</assignedCustodian>
+	</custodian>
+
+	<relatedDocument typeCode="RPLC">
+		<parentDocument classCode="DOCCLIN" moodCode="EVN">
+			<id root="2.16.156.10011.1.1.1.3" extension="D2011000000"/>
+			<setId/>
+			<versionNumber value="1"/>
+		</parentDocument>
+	</relatedDocument>
+
+	<component>
+		<structuredBody>
+
+			<!-- 搬迁信息章节 -->
+			<component>
+				<section>
+					<code displayName="搬迁信息"/>
+					<text/>
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<code/>
+							<effectiveTime>
+								<!--迁入时间-->
+								<low datacode="DE02.01.029.00" value="" datatype="D8"/>
+								<!--迁出时间-->
+								<high datacode="DE02.01.027.00" value="" datatype="D8"/>
+							</effectiveTime>
+							<entryRelationship typeCode="CAUS" inversionInd="false">
+								<observation classCode="OBS" moodCode="EVN">
+									<code code="DE02.01.028.00" codeSystem="2.16.156.10011.2.2.1"/>
+									<value xsi:type="ST" datacode="DE02.01.028.00" datatype="A1..100"></value>
+								</observation>
+							</entryRelationship>
+						</observation>
+					</entry>
+				</section>
+			</component>
+			
+			<!-- 既往史章节（新生儿过往史信息） -->
+			<component>
+				<section>
+					<code code="11348-0" displayName="HISTORY OF PAST ILLNESS" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+					<text/>
+					<!-- 传染病史 -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="DE02.10.008.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录"/>
+							<value xsi:type="ST" datacode="DE02.10.008.00" datatype="A1..100"></value>
+						</observation>
+					</entry>
+				</section>
+			</component>
+			
+			<!-- 手术操作章节（接种信息） -->
+			<component>
+				<section>
+					<code code="47519-4" displayName="HISTORY OF PROCEDURES" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
+					<text/>
+					<!-- 接种信息 -->
+					<entry>
+						<procedure classCode="PROC" moodCode="EVN">
+							<code/>
+							<!-- 接种日期 -->
+							<effectiveTime datacode="DE06.00.145.00" value="" datatype="D8"></effectiveTime>
+							<!-- 接种剂次 -->
+							<priorityCode><originalText datacode="DE06.00.053.00" datatype="N1"></originalText></priorityCode>
+							<!-- 接种部位 -->
+							<targetSiteCode><originalText datacode="DE06.00.052.00" datatype="A1..100"></originalText></targetSiteCode>
+							<!-- 接种医生 -->
+							<performer typeCode="PRF">
+								<assignedEntity classCode="ASSIGNED">
+								    <!-- 接种医生编号 -->
+									<id root="2.16.156.10011.1.7" extension="123543"/>
+									<assignedPerson classCode="PSN" determinerCode="INSTANCE">
+										<!-- 接种医生名称 -->	
+										<name datacode="DE02.01.039.00" datatype="A1..50"></name>
+									</assignedPerson>
+									<representedOrganization classCode="ORG" determinerCode="INSTANCE">
+										<!-- 接种机构编号 -->
+									    <id></id>
+										<!-- 接种机构名称 -->
+										<name datacode="DE08.50.015.00" datatype="A1..70"></name>
+									</representedOrganization>
+								</assignedEntity>
+							</performer>
+							<entryRelationship typeCode="COMP">
+								<!-- 疫苗异常反应史 --> 
+									<observation classCode="OBS" moodCode="EVN">
+										<code code=" DE04.01.103.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录"/>
+										<value xsi:type="ST" datacode="DE04.01.103.00" datatype="AN1..1000"></value>
+									</observation>
+							</entryRelationship>
+							<!-- 接种禁忌 -->
+							<entryRelationship typeCode="COMP">
+									<observation classCode="OBS" moodCode="EVN">
+										<code code=" DE06.00.054.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录"/>
+										<value xsi:type="ST" datacode="DE06.00.054.00" datatype="AN1..1000"></value>
+									</observation>
+							</entryRelationship>
+						</procedure>
+					</entry>
+					<!-- 疫苗信息 -->
+					<entry>
+						<substanceAdministration classCode="SBADM" moodCode="EVN">
+							<id/>
+							<code/>
+							<!-- 疫苗有效期 -->							
+							<effectiveTime value="20120103" />
+							<consumable typeCode="CSM">
+								<manufacturedProduct classCode="MANU">
+									<!-- 疫苗批号 -->						
+									<id datacode="DE08.50.017.00" datatype="AN1..30" extension=""/>
+									<manufacturedLabeledDrug>
+										<code/>
+										<name>疫苗名称</name>
+									</manufacturedLabeledDrug>
+									<manufacturerOrganization classCode="ORG" determinerCode="INSTANCE">
+										<!-- 疫苗生产厂商编号 -->			
+										<id/>
+		                                <!-- 疫苗生产厂商名称 -->
+										<name/>
+									</manufacturerOrganization>									
+								</manufacturedProduct>
+							</consumable>
+						</substanceAdministration>
+					</entry>
+				</section>
+			</component>
+
+			<!-- 接种不良反应章节 -->
+			<component>
+				<section>
+					<code displayName="接种不良反应" />
+					<text/>
+
+					<!-- 引起不良反应的可疑疫苗名称代码 -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="DE08.50.018.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录"/>
+							<value xsi:type="CD" datacode="DE08.50.018.00" datatype="N4" code="" dic="CV08_50_001" codeSystem="2.16.156.10011.2.3.1.210" codeSystemName="疫苗名称代码表"></value>
+						</observation>
+					</entry>
+					
+					<!-- 不良反应诊断代码 -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="DE05.01.052.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录"/>
+							<value xsi:type="CD" datacode="DE05.01.052.00" datatype="N4" code="" dic="CV05_01_032" codeSystem="2.16.156.10011.2.3.1.131" codeSystemName="预防接种后不良反应临床诊断代码表"></value>
+						</observation>
+					</entry>
+					
+					<!-- 不良反应发生日期 -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="DE06.00.151.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录"/>
+							<value xsi:type="TS" datacode="DE06.00.151.00" value="" datatype="D8"></value>
+						</observation>
+					</entry>
+					
+					<!-- 不良反应处理结果 -->
+					<entry>
+						<observation classCode="OBS" moodCode="EVN">
+							<code code="DE06.00.150.00" codeSystem="2.16.156.10011.2.2.1" codeSystemName="卫生信息数据元目录"/>
+							<value xsi:type="ST" datacode="DE06.00.150.00" datatype="AN1..1000"></value>
+						</observation>
+					</entry>
+				</section>
+			</component>
+		</structuredBody>
+	</component>
+</ClinicalDocument>

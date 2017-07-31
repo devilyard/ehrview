@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="MHC_FirstVisitRecord" table="MHC_FirstVisitRecord">
+			<id name="DCID" type="java.lang.String">
+            	<column name="DCID"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="MPIID" type="java.lang.String" length="32" />
+        	<property name="SourceID" type="java.lang.String" length="50" />
+        	<property name="RecordClassifying" type="java.lang.String" length="50" />
+        	<property name="RecordTitle" type="java.lang.String" length="50" />
+        	<property name="EffectiveTime" type="timestamp"  />
+        	<property name="EffectiveFlag" type="java.lang.String" length="1" />
+        	<property name="VersionNumber" type="java.lang.String" length="10" />
+        	<property name="AuthorOrganization" type="java.lang.String" length="16" />
+        	<property name="Author" type="java.lang.String" length="32" />
+        	<property name="SystemTime" type="timestamp"  />
+        	<property name="UploadTime" type="timestamp"  />
+        	<property name="UpdateTime" type="timestamp"  />
+        	<property name="PregnantID" type="java.lang.String" length="30" />
+        	<property name="PHRID" type="java.lang.String" length="16" />
+        	<property name="ManaUnitID" type="java.lang.String" length="16" />
+        	<property name="VisitID" type="java.lang.String" length="16" />
+        	<property name="CreateUnitID" type="java.lang.String" length="16" />
+        	<property name="LastMenstrualPeriod" type="java.util.Date"  />
+        	<property name="DateOfPrenatal" type="java.util.Date"  />
+</class>
+</hibernate-mapping>

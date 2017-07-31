@@ -1,0 +1,375 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>病案首页</title>
+</head>
+
+<body style="padding-top: 20px; font-size: 12px;">
+<style type="text/css">
+
+
+.my table {
+	text-align: left;
+	margin-bottom: 20px;
+}
+
+.my td {
+	padding-left: 6px;
+	line-height: 24px;
+	border-bottom: #eee solid 1px;
+}
+
+.two table {
+	border-bottom: #ccc solid 1px;
+	border-left: #ccc solid 1px;
+	border-top: #ccc solid 1px;
+	text-align: left;
+	margin-bottom: 20px;
+}
+
+.two td {
+	height: 24px;
+	border-right: #ccc solid 1px;
+	padding: 0 4px;
+	border-bottom: #ccc dotted 1px;
+}
+
+</style>
+	<table width="100%" border="0" align="center" cellpadding="0"
+		cellspacing="0">
+		<tr>
+			<td colspan="3" align="center"
+				style="font-size: 24px; line-height: 120%;"    th:text="${'住院病案首页'}"></td>
+		</tr>
+		<tr>
+			<td width="45%" align="left"><strong>医疗付款方式：</strong><u
+				 th:if="${doc.element('MedicalPayment') != null}" th:text="${doc.element('MedicalPayment').attribute('localText').getValue()}"></u></td>
+			<td width="35%" align="center" valign="bottom">
+<!-- 			第<u -->
+<!-- 				style="margin: 0 10px; padding: 0 5px;"></u>次住院 -->
+			</td>
+			<td align="right" valign="bottom">病案号：<u
+				 th:if="${doc.element('MedicalRecordID') != null}" th:text="${doc.element('MedicalRecordID').getText()}"></u></td>
+		</tr>
+		<tr>
+			<td colspan="3" height="5" style="border-bottom: 2px #ccc solid;"></td>
+		</tr>
+	</table>
+	<div class="my">
+		<table width="100%" border="0" align="center" cellpadding="0"
+			cellspacing="0">
+			<tr>
+				<td colspan="3" height="24" style="padding-top: 10px;"><strong>姓名：</strong><u
+					 th:if="${doc.element('XM') != null}" th:text="${doc.element('XM').getText()}"></u> <strong
+					style="margin-left: 60px;">性别：</strong><u
+					 th:if="${doc.element('Sex') != null}" th:text="${doc.element('Sex').attributeValue('localText')}"></u>
+					<strong style="margin-left: 60px;">出生：</strong><u
+					 th:if="${doc.element('CSRQSJ') != null}" th:text="${doc.element('CSRQSJ').getText()}"></u> <strong
+					style="margin-left: 60px;">年龄：</strong><u
+					 th:if="${doc.element('NL') != null}" th:text="${doc.element('NL').getText()}"></u> <strong
+					style="margin-left: 60px;">婚姻：</strong><u
+					 th:if="${doc.element('HYZKDM')!= null}" th:text="${doc.element('HYZKDM').attributeValue('localText')}"></u>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3" height="24"><strong>职业：</strong><u
+					 th:if="${doc.element('ZYLBDM') != null}" th:text="${doc.element('ZYLBDM').attributeValue('localText')}"></u><strong
+					style="margin-left: 60px;">出生地：</strong><u
+					th:text="${doc.element('City').getText()+ doc.element('County').getText()}"></u><strong
+					style="margin-left: 60px;">民族：</strong><u
+					th:text="${nationCode_text}"></u><strong style="margin-left: 45px;">国籍：</strong><u
+					 th:if="${doc.element('GJ') != null}" th:text="${doc.element('GJ').attributeValue('localText')}"></u><strong
+					style="margin-left: 50px;">身份证：</strong><u th:text="${idCard}"></u></td>
+			</tr>
+			<tr>
+				<td colspan="3" height="24"><strong>工作单位及地址：</strong><u
+					 th:if="${doc.element('GZDWDZ') != null}" th:text="${doc.element('GZDWDZ').getText()}"></u><strong
+					style="margin-left: 123px;">电话:</strong><u
+					 th:if="${doc.element('PatientPhone') != null}" th:text="${doc.element('PatientPhone').getText()}"></u><strong
+					style="margin-left: 130px;">邮政编码：</strong><u
+					 th:if="${doc.element('RegisteredPermanentResidencePo') != null}" th:text="${doc.element('RegisteredPermanentResidencePo').getText()}"></u></td>
+			</tr>
+			<tr>
+				<td colspan="3" height="24"><strong>户口地址：</strong><u
+					 th:if="${doc.element('RegisteredPermanentResidenceCi') != null}" th:text="${doc.element('RegisteredPermanentResidenceCi').getText()+ doc.element('RegisteredPermanentResidenceTo').getText()}"></u><strong
+					style="margin-left: 85px;">邮政编码：</strong><u
+					 th:if="${doc.element('RegisteredPermanentResidencePo') != null}" th:text="${doc.element('RegisteredPermanentResidencePo').getText()}"></u></td>
+			</tr>
+			<tr>
+				<td colspan="3" height="24"><strong>联系人姓名：</strong><u
+					 th:if="${doc.element('LXRXM') != null}" th:text="${doc.element('LXRXM').getText()}"></u><strong
+					style="margin-left: 60px;">关系：</strong><u
+					 th:if="${doc.element('LXRYHZGX') != null}" th:text="${doc.element('LXRYHZGX').attributeValue('localText')}"></u><strong
+					style="margin-left: 60px;">住址：</strong><u
+					 th:if="${doc.element('LXRDZ') != null}" th:text="${doc.element('LXRDZ').getText()}"></u><strong
+					style="margin-left: 60px;">电话：</strong><u
+					 th:if="${doc.element('LXRDH') != null}" th:text="${doc.element('LXRDH').getText()}"></u></td>
+			</tr>
+			<tr>
+				<td colspan="3" height="24"><strong>入院日期：</strong><u
+					 th:if="${doc.element('AdmissionDateTime') != null}" th:text="${doc.element('AdmissionDateTime').getText()}"></u><strong
+					style="margin-left: 60px;">入院科别：</strong><u
+					 th:if="${doc.element('AdmissionDeptName') != null and doc.element('AdmissionDeptName') != null} " th:text="${doc.element('AdmissionDeptName').getText()}"></u><strong
+					style="margin-left: 60px;">住院号：</strong><u
+					 th:if="${doc.element('HospizationID') != null}" th:text="${doc.element('HospizationID').getText()}"></u><strong
+					style="margin-left: 60px;">转科科别：</strong><u
+					 th:if="${doc.element('TransferredDeptName') != null}" th:text="${doc.element('TransferredDeptName').getText()}"></u></td>
+			</tr>
+			<tr>
+				<td colspan="3" height="24"><strong>出院日期：</strong><u
+					 th:if="${doc.element('DischargeDateTime') != null}" th:text="${doc.element('DischargeDateTime').getText()}"></u><strong
+					style="margin-left: 60px;">出院科别：</strong><u
+					 th:if="${doc.element('DischargeDepartment') != null}" th:text="${doc.element('DischargeDepartment').getText()}"></u><strong
+					style="margin-left: 60px;">住院号：</strong><u
+					 th:if="${doc.element('HospizationID') != null}" th:text="${doc.element('HospizationID').getText()}"></u><strong
+					style="margin-left: 60px;">实际住院：</strong><u
+					 th:if="${doc.element('ActualHospitalizationDays') != null}" th:text="${doc.element('ActualHospitalizationDays').getText() + '天'}"></u></td>
+			</tr>
+			<tr>
+				<td colspan="3" height="24"><strong>门（急）诊诊断：</strong><u
+					 th:if="${doc.element('ClinicDiagnosis') != null}" th:text="${doc.element('ClinicDiagnosis').getText()}"></u><strong
+					style="margin-left: 60px;">入院时情况：</strong><u
+					 th:if="${doc.element('ZYZJBZTDM') != null}" th:text="${doc.element('ZYZJBZTDM').attributeValue('display')}"></u></td>
+			</tr>
+			<tr>
+				<td colspan="3" height="24"><strong>入院诊断：</strong><u
+					 th:if="${doc.element('ClinicDiagnosis') != null}" th:text="${doc.element('ClinicDiagnosis').getText()}"></u>
+					 <!--<strong
+					style="margin-left: 60px;">入院后确认日期：</strong><u
+					 th:if="${doc.element('AdmissionDateTime') != null}" th:text="${doc.element('AdmissionDateTime').getText()}"></u>-->
+					 </td>
+			</tr>
+		</table>
+	</div>
+	<div class="two">
+		<table width="100%" border="0" align="center" cellpadding="0"
+			cellspacing="0">
+			<tr>
+				<td bgcolor="#CAE2F7" rowspan="2" align="center"><strong>出院诊断
+				</strong></td>
+				<td bgcolor="#CAE2F7" rowspan="2" align="center"><strong>疾病名称
+				</strong></td>
+				<td bgcolor="#CAE2F7" colspan="5" align="center"><strong>出院情况
+				</strong></td>
+				<td bgcolor="#CAE2F7" rowspan="2" width="12%" align="center"><strong>ICD10
+				</strong></td>
+			</tr>
+			<tr bgcolor="#CAE2F7">
+				<td width="8%"><strong>1.治愈</strong></td>
+				<td width="8%"><strong>2.好转</strong></td>
+				<td width="8%"><strong>3.未愈</strong></td>
+				<td width="8%"><strong>4.死亡</strong></td>
+				<td width="8%"><strong>5.其他</strong></td>
+			</tr>
+			<tr>
+				<td><strong>出院主诊断</strong></td>
+				<td  th:if="${doc.element('MasterDiseaseName') != null}" th:text="${doc.element('MasterDiseaseName').getText()}"></td>
+				<td  th:if="${doc.element('MasterDischargePrognosisCondit') != null}" th:text="${doc.element('MasterDischargePrognosisCondit').attributeValue('localText')}">&nbsp;</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<div th:if="${doc.element('Ipt_LeaveDiagnosis_news') != null}">
+			<tr th:each="opt:${doc.element('Ipt_LeaveDiagnosis_news').selectNodes('Ipt_LeaveDiagnosis_new')}">
+				<td><strong>其他诊断</strong></td>
+				<td th:text="${opt.elementText('CYZDQTZDJBMC')}">&nbsp;</td>
+				<td th:text="${opt.elementText('CYZDQTZDCYQK')}"></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>&nbsp;</td>
+				<td></td>
+			</tr>
+			</div>
+			<!--<tr>
+				<td><strong>医院感染名称</strong></td>
+				<td  th:if="${doc.element('YYGRMC') != null}" th:text="${doc.element('YYGRMC').getText()}"></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>&nbsp;</td>
+			</tr>-->
+			<tr>
+				<td colspan="8"><strong>病理诊断：</strong><span
+					 th:if="${doc.element('PathologyDiseaseName') != null}" th:text="${doc.element('PathologyDiseaseName').getText()}"></span></td>
+			</tr>
+			<tr>
+				<td colspan="8"><strong>操作、中毒的外部原因：</strong><span
+					 th:if="${doc.element('OutsideReasonOfInjuryAndPoison') != null}" th:text="${doc.element('OutsideReasonOfInjuryAndPoison').getText()}"></span></td>
+			</tr>
+			<tr>
+				<td colspan="8"><strong>药物过敏：</strong><u
+					 th:if="${doc.element('AllergicDrug') != null}" th:text="${doc.element('AllergicDrug').attributeValue('localText')}">
+				</u> 
+				<!--<strong style="margin-left: 200px;">HBsAg</strong><u
+					 th:if="${doc.element('HBsAgJCJG') != null}" th:text="${doc.element('HBsAgJCJG').attribute('localText').getValue()}"></u>
+					<strong>HVC-Ab</strong><u
+					 th:if="${doc.element('HCBABJCJG') != null}" th:text="${doc.element('HCBABJCJG').attribute('localText').getValue()}"></u>
+					<strong>HIV-Ab</strong><u
+					 th:if="${doc.element('HIVABJCJG') != null}" th:text="${doc.element('HIVABJCJG').attribute('localText').getValue()}"></u>-->
+					 </td>
+			</tr>
+			<tr>
+				<td colspan="8"><strong>诊断符合情况：</strong><strong
+					style="margin-left: 60px;">门诊与出院</strong><u
+					 th:if="${doc.element('DiagCoinAdmssionVsDischarge') != null}" th:text="${doc.element('DiagCoinAdmssionVsDischarge').attributeValue('display')}"></u><strong
+					style="margin-left: 60px;">入院与出院</strong><u
+					 th:if="${doc.element('DiagCoinAdmssionVsDischarge') != null}" th:text="${doc.element('DiagCoinAdmssionVsDischarge').attributeValue('display')}"></u>&nbsp;&nbsp;&nbsp;&nbsp;<strong
+					style="margin-left: 60px;">术前与术后</strong><u
+					 th:if="${doc.element('DiagCoinPreoperativeVsPost') != null}" th:text="${doc.element('DiagCoinPreoperativeVsPost').attributeValue('display')}"></u>&nbsp;&nbsp;&nbsp;&nbsp;<strong
+					style="margin-left: 50px;">临床与病理</strong><u
+					 th:if="${doc.element('DiagCoinClinicalVsPathologica') != null}" th:text="${doc.element('DiagCoinClinicalVsPathologica').attributeValue('display')}"></u><br /> <strong
+					style="margin-left: 143px;">放射与病理</strong><u
+					 th:if="${doc.element('DiagCoinRadiologyVspathology') != null}" th:text="${doc.element('DiagCoinRadiologyVspathology').attributeValue('display')}"></u><span
+					style="margin-left: 60px;">0.未做 1.符合 2.不符合 3.不肯定</span> <strong
+					style="margin-left: 60px;">抢救：</strong><u
+					 th:if="${doc.element('SalvageConditionSalvageTimes') != null}" th:text="${doc.element('SalvageConditionSalvageTimes').getText()}"></u>次 <strong
+					style="margin-left: 60px;">成功：</strong><u
+					 th:if="${doc.element('SalvageConditionSuccessTimes') != null}" th:text="${doc.element('SalvageConditionSuccessTimes').getText()}"></u>次</td>
+			</tr>
+			<tr>
+				<td colspan="8"><strong>科主任：</strong><u
+					 th:if="${doc.element('DeptManager') != null}" th:text="${doc.element('DeptManager').getText()}"></u><strong
+					style="margin-left: 80px;">主（副主）任医生：</strong><u
+					 th:if="${doc.element('ChiefDoctorSign') != null}" th:text="${doc.element('ChiefDoctorSign').getText()}"></u><strong
+					style="margin-left: 80px;">主治医师：</strong><u
+					 th:if="${doc.element('AttendingDoctor') != null}" th:text="${doc.element('AttendingDoctor').getText()}"></u><strong
+					style="margin-left: 80px;">住院医师：</strong><u
+					 th:if="${doc.element('HospizationDoctor') != null}" th:text="${doc.element('HospizationDoctor').getText()}"></u></td>
+			</tr>
+			<tr>
+				<td colspan="8"><strong>进修医生：</strong><u
+					 th:if="${doc.element('RefresherDoctors') != null}" th:text="${doc.element('RefresherDoctors').getText()}"></u><strong
+					style="margin-left: 70px;">研究生实习医生：</strong><u
+					 th:if="${doc.element('RefresherDoctors') != null}" th:text="${doc.element('RefresherDoctors').getText()}"></u><strong
+					style="margin-left: 115px;">实习医生：</strong><u
+					 th:if="${doc.element('InternDoctor') != null}" th:text="${doc.element('InternDoctor').getText()}"></u><strong
+					style="margin-left: 115px;">编码员：</strong><u
+					 th:if="${doc.element('QualityControlDoctor') != null}" th:text="${doc.element('QualityControlDoctor').getText()}"></u></td>
+			</tr>
+			<tr>
+				<td colspan="8"><span style="border-bottom: none;"><strong>病案质量：</strong><u
+						 th:if="${doc.element('MedicalRecordQuality') != null}" th:text="${doc.element('MedicalRecordQuality').attributeValue('display')}"></u> 1.甲 2.乙 3.丙<strong
+						style="margin-left: 70px;">质控医师：</strong><u
+						 th:if="${doc.element('QualityControlDoctor') != null}" th:text="${doc.element('QualityControlDoctor').getText()}"></u><strong
+						style="margin-left: 78px;">质控护士：</strong><u
+						 th:if="${doc.element('QualityControlSign') != null}" th:text="${doc.element('QualityControlSign').getText()}"></u><strong
+						style="margin-left: 90px;">日期：</strong><u
+						 th:if="${doc.element('QualityControlDate') != null}" th:text="${doc.element('QualityControlDate').getText()}"></u></span></td>
+			</tr>
+			<!--<tr>
+				<td colspan="8" class="linenone"><strong>X线号：</strong><u
+					 th:if="${doc.element('XXH') != null}" th:text="${doc.element('XXH').getText()}"></u><strong
+					style="margin-left: 115px;">CT号：</strong><u
+					 th:if="${doc.element('CTH') != null}" th:text="${doc.element('CTH').getText()}"></u><strong
+					style="margin-left: 72px;">磁核共振号：</strong><u
+					 th:if="${doc.element('CGZH') != null}" th:text="${doc.element('CGZH').getText()}"></u><strong
+					style="margin-left: 75px;">病理切片号：</strong><u
+					 th:if="${doc.element('BLQPH') != null}" th:text="${doc.element('BLQPH').getText()}"></u></td>
+			</tr>-->
+		</table>
+	</div>
+	<div class="my">
+		<table width="100%" border="0" align="center" cellpadding="0"
+			cellspacing="0" style="border-bottom: 1px solid #ccc;">
+			<tr>
+				<td colspan="5" height="36" style="border-bottom: 1px solid #ccc;"><strong>病区：</strong><u
+					 th:if="${doc.element('AdmissionSickroom') != null}" th:text="${doc.element('AdmissionSickroom').getText()}"></u> <strong
+					style="margin-left: 20px;">姓名：</strong><u 
+					 th:if="${doc.element('XM') != null}" th:text="${doc.element('XM').getText()}"></u> <strong
+					style="margin-left: 20px;">病案号：</strong><u
+					 th:if="${doc.element('MedicalRecordID') != null}" th:text="${doc.element('MedicalRecordID').getText()}"></u> <strong
+					style="margin-left: 20px;">年龄：</strong><u
+					 th:if="${doc.element('NL') != null}" th:text="${doc.element('NL').getText()}"></u><strong
+					style="margin-left: 20px;">出院日期：</strong><u
+					 th:if="${doc.element('DischargeDateTime') != null}" th:text="${doc.element('DischargeDateTime').getText()}"></u>
+				</td>
+			</tr>
+			<tr>
+				<td height="24"><strong>住院费用总计（元）：</strong><u><strong
+						style="color: #F00"  th:if="${doc.element('HospizationTotalCost') != null}" th:text="${doc.element('HospizationTotalCost').getText()}"></strong></u></td>
+				<td><strong>床位费：</strong><u><strong style="color: #F00"
+						 th:if="${doc.element('CWF') != null}" th:text="${doc.element('CWF').getText()}"></strong></u></td>
+				<td><strong>护理费：</strong><u><strong style="color: #F00"
+						 th:if="${doc.element('HLF') != null}" th:text="${doc.element('HLF').getText()}"></strong></u></td>
+				<td><strong>西药费：</strong><u><strong style="color: #F00"
+						 th:if="${doc.element('XYF') != null}" th:text="${doc.element('XYF').getText()}"></strong></u></td>
+				<td><strong>中成药费：</strong><u><strong style="color: #F00"
+						 th:if="${doc.element('ZCY1') != null}" th:text="${doc.element('ZCY1').getText()}"></strong></u></td>
+			</tr>
+			<tr>
+				<td height="24"><strong>中草药费：</strong><u><strong
+						style="color: #F00"  th:if="${doc.element('ZCY2') != null}" th:text="${doc.element('ZCY2').getText()}"></strong></u></td>
+				<td><strong>放射费：</strong><u><strong style="color: #F00"
+						 th:if="${doc.element('FSF') != null}" th:text="${doc.element('FSF').getText()}"></strong></u></td>
+				<td><strong>化验费：</strong><u><strong style="color: #F00"
+						 th:if="${doc.element('BZHYF') != null}" th:text="${doc.element('BZHYF').getText()}"></strong></u></td>
+				<td><strong>输氧费：</strong><u><strong style="color: #F00"
+						 th:if="${doc.element('BZSYF') != null}" th:text="${doc.element('BZSYF').getText()}"></strong></u></td>
+				<td><strong>输血费：</strong><u><strong style="color: #F00"
+						 th:if="${doc.element('BZSXF') != null}" th:text="${doc.element('BZSXF').getText()}"></strong></u></td>
+			</tr>
+			<tr>
+				<td height="24"><strong>诊疗费：</strong><u><strong
+						style="color: #F00"  th:if="${doc.element('BZZLF') != null}" th:text="${doc.element('BZZLF').getText()}"></strong></u></td>
+				<td><strong>治疗费：</strong><u><strong style="color: #F00"></strong></u></td>
+				<td><strong>麻醉费：</strong><u><strong style="color: #F00"
+						 th:if="${doc.element('BZMZF') != null}" th:text="${doc.element('BZMZF').getText()}"></strong></u></td>
+				<td><strong>手术费：</strong><u><strong style="color: #F00"
+						 th:if="${doc.element('BZSSF') != null}" th:text="${doc.element('BZSSF').getText()}"></strong></u></td>
+				<td><strong>接生费：</strong><u><strong style="color: #F00"
+						 th:if="${doc.element('BZJSF') != null}" th:text="${doc.element('BZJSF').getText()}"></strong></u></td>
+			</tr>
+			<tr>
+				<td class="linenone"><strong>检查费：</strong><u><strong
+						style="color: #F00"  th:if="${doc.element('BZJCF') != null}" th:text="${doc.element('BZJCF').getText()}"></strong></u></td>
+				<td class="linenone"><strong>婴儿费：</strong><u><strong
+						style="color: #F00"  th:if="${doc.element('BZYEF') != null}" th:text="${doc.element('BZYEF').getText()}"></strong></u></td>
+				<td class="linenone"><strong>陪床费：</strong><u><strong
+						style="color: #F00"  th:if="${doc.element('BZPCF') != null}" th:text="${doc.element('BZPCF').getText()}"></strong></u></td>
+				<td class="linenone"><strong>其他费：</strong><u><strong
+						style="color: #F00"  th:if="${doc.element('BZQTFY') != null}" th:text="${doc.element('BZQTFY').getText()}"></strong></u></td>
+			</tr>
+		</table>
+	</div>
+
+	<div class="two">
+		<table width="100%" border="0" align="center" cellpadding="0"
+			cellspacing="0">
+			<tr>
+				<td><strong>尸检：</strong><u
+					 th:if="${doc.element('BZSJ') != null}" th:text="${doc.element('BZSJ').getText()}"></u> 1.是 2.否<strong
+					style="margin-left: 160px;">手术、治疗、检查、诊断为本院第一例：</strong><u
+					 th:if="${doc.element('BZSSZLJCZDWBYDYL') != null}" th:text="${doc.element('BZSSZLJCZDWBYDYL').getText()}"></u> 1.是 2.否
+				</td>
+			</tr>
+			<tr>
+				<td><strong>随诊：</strong><u
+					 th:if="${doc.element('SZ') != null}" th:text="${doc.element('SZ').getText()}"></u>1.是 2.否<strong
+					style="margin-left: 165px;">随诊期限：</strong><u
+					 th:if="${doc.element('SZQX') != null}" th:text="${doc.element('SZQX').getText()}"></u> <strong
+					style="margin-left: 140px;">示教病例：</strong><u
+					 th:if="${doc.element('BZSJBL') != null}" th:text="${doc.element('BZSJBL').getText()}"></u> 1.是 2.否</td>
+			</tr>
+			<tr>
+				<td><strong>血型：</strong><u
+					 th:if="${doc.element('ABOXX') != null}" th:text="${doc.element('ABOXX').attribute('localText').getValue()}"></u>
+					1.A 2.B 3.AB 4.O 5.未检<strong style="margin-left: 78px;">Rh：</strong><u
+					 th:if="${doc.element('RHXX') != null}" th:text="${doc.element('RHXX').attribute('localText').getValue()}"></u>1.阴
+					2.阳 3.未检<strong style="margin-left: 150px;">有无输血：</strong><u></u>
+					1.是 2.无</td>
+			</tr>
+			<tr>
+				<td><strong>输血品种：</strong>1.红血胞<u></u>U 2.血小板<u></u>U
+					3.血浆<u></u>ml 4.全血<u></u>ml 5.其他<u></u>ml</td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

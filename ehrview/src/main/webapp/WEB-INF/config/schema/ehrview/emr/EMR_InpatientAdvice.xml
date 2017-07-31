@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<entry id="EMR_InpatientAdvice" alias="6301住院医嘱单(EMR_Advice)">
+  <item id="AdviceID" alias="医嘱单序号" type="string" length="16" generator="assigned" pkey="true"/>
+  <item id="VisitID" alias="就诊标识" type="string" length="16"/>
+  <item id="PatientType" alias="患者类型" type="string" length="2"/>
+  <item id="MPIID" alias="主索引标识" type="string" length="32"/>
+  <item id="SourceID" alias="来源标识" type="string" length="50"/>
+  <item id="ZoneID" alias="分区标识" type="string" length="1"/>
+  <item id="StatisticDate" alias="统计日期" type="timestamp"/>
+  <item id="AuthorOrganization" alias="创建机构" type="string" length="16"/>
+  <item id="PatientDept" alias="病人科室" length="18"/>
+  <item id="DeptName" alias="科室名称" type="string" length="50"/>
+  <item id="PatientWardArea" alias="病人病区" length="18"/>
+  <item id="WardAreaNm" alias="病区名称" type="string" length="50"/>
+  <item id="AdviceTypeCode" alias="医嘱类别代码" type="string" length="1"/>
+  <item id="AdviceOpenDateTime" alias="医嘱开立日期时间" type="timestamp"/>
+  <item id="AdviceOpenerSign" alias="医嘱开立者签名" type="string" length="50"/>
+  <item id="AdviceOpenDept" alias="医嘱开立科室" type="string" length="50"/>
+  <item id="AdvicePlanStartTime" alias="医嘱计划开始时间" type="timestamp"/>
+  <item id="AdvicePlanEndTime" alias="医嘱计划结束时间" type="timestamp"/>
+  <item id="AdviceItemType" alias="医嘱项目类型" type="string" length="4"/>
+  <item id="AdviceItem" alias="医嘱项目" type="string" length="100"/>
+  <item id="ElectronicRequestNoteID" alias="电子申请单编号" type="string" length="20"/>
+  <item id="CostItem" alias="收费项目" type="string" length="200"/>
+  <item id="AdviceNote" alias="医嘱嘱托" type="string" length="100"/>
+  <item id="AdviceAuditSign" alias="医嘱审核人签名" type="string" length="50"/>
+  <item id="ReviewDateTime" alias="审核日期时间" type="timestamp"/>
+  <item id="CheckNurse" alias="核对护士签名" type="string" length="50"/>
+  <item id="NurseCheckTime" alias="护士核对时间" type="timestamp"/>
+  <item id="AdviceExecutiveDepartment" alias="医嘱执行科室" type="string" length="50"/>
+  <item id="AdviceExecutiveStatus" alias="医嘱执行状态" type="string" length="50"/>
+  <item id="AdviceStopDateTime" alias="医嘱停止日期时间" type="timestamp"/>
+  <item id="StopAdviceDoctor" alias="停止医嘱者签名" type="string" length="50"/>
+  <item id="AdviceCancelDateTime" alias="医嘱取消日期时间" type="timestamp"/>
+  <item id="MedicalAdviceCancelDoctor" alias="取消医嘱者签名" type="string" length="50"/>
+  <item id="StopAdviceCheckNurse" alias="停嘱核对护士签名" type="string" length="50"/>
+  <item id="StopAdviceCheckDate" alias="停嘱核对日期时间" type="timestamp"/>
+  <item id="AdviceGroupID" alias="医嘱组号" length="18"/>
+  <item id="ArrangeOrder" alias="排列顺序" length="4"/>
+  <item id="ItemID" alias="项目ID" length="18"/>
+  <item id="ItemPrice" alias="项目单价" length="10" precision="4"/>
+  <item id="OnceDosage" alias="一次剂量" type="double" length="10" precision="3"/>
+  <item id="DosageUnit" alias="剂量单位" type="string" length="20"/>
+  <item id="OnceTotalNumber" alias="一次总数量" length="10" precision="2"/>
+  <item id="TotalNumberUnit" alias="总量单位" type="string" length="20"/>
+  <item id="UsageFrequency" alias="使用频次(用法)" length="18"/>
+  <item id="AdministrationRoute" alias="给药途径(用法)" length="3"/>
+  <item id="MedicineDays" alias="用药天数(用法)" length="4"/>
+  <item id="FirstDayFrequency" alias="首日次数(执行)" length="6"/>
+  <item id="ExecuteTimePoint" alias="执行时点(执行)" type="string" length="100"/>
+  <item id="VenaDroppingSpeed" alias="静滴滴速(执行)" length="4"/>
+  <item id="DroppingSpeedUnit" alias="滴速单位(执行)" type="string" length="20"/>
+  <item id="SkinTestSign" alias="皮试标志(执行)" length="1"/>
+  <item id="HerbalMedicineDecoction" alias="草药煎法" length="8"/>
+  <item id="MedicineProperty" alias="用药属性" length="8"/>
+  <item id="DispensingProperty" alias="发药属性" length="1"/>
+  <item id="BackEnterAdvice" alias="补录医嘱" length="1"/>
+  <item id="AdviceStatus" alias="医嘱状态" length="8"/>
+  <item id="ExecuteStatus" alias="执行状态" length="8"/>
+  <item id="PrintStatus" alias="打印状态" length="8"/>
+  <item id="ReformingSign" alias="重整标志" length="1"/>
+  <item id="DrugstoreSpec" alias="药房规格" type="string" length="20"/>
+  <item id="DrugstoreUnit" alias="药房单位" type="string" length="10"/>
+  <item id="DrugstorePacking" alias="药房包装" length="8"/>
+  <item id="DrugProductionPlace" alias="药品产地" length="18"/>
+  <item id="SelfChargeDiscretion" alias="自负判别(质控)" length="8"/>
+  <item id="MedicalInsuranceType" alias="医保类型(质控)" length="8"/>
+</entry>

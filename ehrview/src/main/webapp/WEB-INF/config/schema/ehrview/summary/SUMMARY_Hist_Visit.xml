@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<entry id="SUMMARY_Hist_Visit" alias="公共卫生服务记录">
+  <item id="DCID" alias="记录号" type="string" length="16" not-null="1" generator="assigned" pkey="true"/>
+  <item id="MPIID" alias="主索引标识" type="string" length="32" not-null="1"/>
+  <item id="SRCEntryName" alias="数据来源" length="50"/>
+  <item id="SRCID" alias="源标识号" length="50"/>
+  <item id="VisitID" alias="随访序号" length="16"/>
+  <item id="PHRID" alias="健康档案号" length="16"/>
+  <item id="ManaUnitID" alias="管辖机构" length="16"/>
+  <item id="SystemTime" alias="创建日期" type="date"/>
+  <item id="AuthorOrganization" alias="创建机构" length="16"/>
+  <item id="AuthorOrganization_Text" alias="创建机构代码" length="16"/>
+  <item id="VersionNumber" alias="版本" length="10"/>
+  <item id="UploadTime" alias="上传时间" type="date"/>
+</entry>

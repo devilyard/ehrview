@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<BasicDataset>
+	<DataSet code="HDSD00.01.10" displayName="职业病报告" codeSystem="WS365-2011" codeSystemName="城乡居民健康档案基本数据集"/>
+	<HDSD00.01.001 dataelementName="城乡居民健康档案编号" value=""/>
+	<HDSD00.01.002 dataelementName="本人姓名" value=""/>
+	<HDSD00.01.422 dataelementName="职业病报告卡编号" value=""/>
+	<HDSD00.01.003 dataelementName="性别代码" code="" dic="GB_T2261_1" displayName="男性" codeSystem="2.16.156.10011.2.3.3.4" codeSystemName="生理性别代码表(GB/T 2261.1)"/>
+	<HDSD00.01.004 dataelementName="出生日期" value=""/>
+	<HDSD00.01.005 dataelementName="身份证件类别代码" code="" dic="CV02_01_101" displayName="居民身份证" codeSystem="2.16.156.10011.2.3.1.1" codeSystemName="身份证件类别代码表"/>
+	<HDSD00.01.006 dataelementName="身份证件号码" value=""/>
+	<HDSD00.01.423 dataelementName="行政区划代码" code="" dic="GB_T2260" displayName="云南省曲靖市宣威市东山镇" codeSystem="2.16.156.10011.2.3.3.2" codeSystemName="中华人民共和国县级及县级以上行政区划代码表(GB/T 2260)"/>
+	<HDSD00.01.225 dataelementName="现住地址-省（自治区、直辖市）" value=""/>
+	<HDSD00.01.226 dataelementName="现住地址-市（地区、州）" value=""/>
+	<HDSD00.01.227 dataelementName="现住地址-县（区）" value=""/>
+	<HDSD00.01.228 dataelementName="现住地址-乡（镇、街道办事处）" value=""/>
+	<HDSD00.01.229 dataelementName="现住地址-村（街、路、弄等）" value=""/>
+	<HDSD00.01.230 dataelementName="现住地址-门牌号码" value=""/>
+	<HDSD00.01.376 dataelementName="户籍地址-省（自治区、直辖市）" value=""/>
+	<HDSD00.01.377 dataelementName="户籍地址-市（地区、州）" value=""/>
+	<HDSD00.01.378 dataelementName="户籍地址-县（区）" value=""/>
+	<HDSD00.01.379 dataelementName="户籍地址-乡（镇、街道办事处）" value=""/>
+	<HDSD00.01.380 dataelementName="户籍地址-村（街、路、弄等）" value=""/>
+	<HDSD00.01.381 dataelementName="户籍地址-门牌号码" value=""/>
+	<HDSD00.01.400 dataelementName="工作单位地址-省（自治区、直辖市）" value=""/>
+	<HDSD00.01.401 dataelementName="工作单位地址-市（地区、州）" value=""/>
+	<HDSD00.01.402 dataelementName="工作单位地址-县（区）" value=""/>
+	<HDSD00.01.403 dataelementName="工作单位地址-乡（镇、街道办事处）" value=""/>
+	<HDSD00.01.404 dataelementName="工作单位地址-村（街、路、弄等）" value=""/>
+	<HDSD00.01.405 dataelementName="工作单位地址-门牌号码" value=""/>
+	<HDSD00.01.424 dataelementName="邮政编码" value=""/>
+	<HDSD00.01.008 dataelementName="本人电话号码" value=""/>
+	<HDSD00.01.374 dataelementName="家人电话号码" value=""/>
+	<HDSD00.01.375 dataelementName="工作单位电话号码" value=""/>
+	<HDSD00.01.015 dataelementName="学历代码" code="" dic="GB_T4658" displayName="博士研究生肄业" codeSystem="2.16.156.10011.2.3.3.6" codeSystemName="学历代码表(GB/T 4658)"/>
+	<HDSD00.01.007 dataelementName="工作单位名称" value=""/>
+	<HDSD00.01.425 dataelementName="从事职业工种描述" value=""/>
+	<HDSD00.01.426 dataelementName="受照史" value=""/>
+	<HDSD00.01.427 dataelementName="职业照射种类代码" code="" dic="CV03_00_201" displayName="其他" codeSystem="2.16.156.10011.2.3.1.29" codeSystemName="职业照射种类代码表"/>
+	<HDSD00.01.428 dataelementName="开始从事放射工作日期" value=""/>
+	<HDSD00.01.429 dataelementName="开始接尘日期" value=""/>
+	<HDSD00.01.430 dataelementName="实际接害工龄（a）" value=""/>
+	<HDSD00.01.431 dataelementName="放射工龄（a）" value=""/>
+	<HDSD00.01.432 dataelementName="累积受照时长（h/a）" value=""/>
+	<HDSD00.01.433 dataelementName="受照日期" value=""/>
+	<HDSD00.01.408 dataelementName="首次出现症状日期" value=""/>
+	<HDSD00.01.434 dataelementName="受照剂量（Gy）" value=""/>
+	<HDSD00.01.435 dataelementName="受照类型代码" dic="CC03_00_060_00" code="" codeSystem="2.16.156.10011.2.3.2.23" displayName="慢性照射" codeSystemName="受照类型代码表"/>
+	<HDSD00.01.436 dataelementName="受照原因代码" code="" dic="CV03_00_202" displayName="管理不善" codeSystem="2.16.156.10011.2.3.1.30" codeSystemName="受照原因代码表"/>
+	<HDSD00.01.437 dataelementName="职业病种类代码" code="" dic="DE05_01_063_00" displayName="外照射慢性放射病" codeSystem="2.16.156.10011.2.3.4.2" codeSystemName="职业病种类代码表"/>
+	<HDSD00.01.438 dataelementName="尘肺类别代码" code="" dic="DE05_01_007_00" displayName="陶工尘肺" codeSystem="2.16.156.10011.2.3.4.3" codeSystemName="尘肺类别代码表"/>
+	<HDSD00.01.439 dataelementName="尘肺期别代码" code="" dic="CC05_01_008_00" codeSystem="2.16.156.10011.2.3.2.24" displayName="I期" codeSystemName="尘肺期别代码表"/>
+	<HDSD00.01.440 dataelementName="职业病名称代码" code="" dic="ICD_10" displayName="暴露于非特指类型辐射下" codeSystem="2.16.156.10011.2.3.3.11" codeSystemName="ICD-10"/>
+	<HDSD00.01.441 dataelementName="职业病伤残等级代码" code="" dic="CV05_10_004" displayName="四级" codeSystem="2.16.156.10011.2.3.1.142" codeSystemName="劳动能力评定分级代码表"/>
+	<HDSD00.01.442 dataelementName="职业病转归代码" code="" dic="CV05_10_010" displayName="治愈" codeSystem="2.16.156.10011.2.3.1.148" codeSystemName="病情转归代码表"/>
+	<HDSD00.01.443 dataelementName="职业性放射性疾病代码" code="" displayName="急性放射性皮肤损伤" codeSystem="2.16.156.10011.2.3.3.9" codeSystemName="职业性放射性疾病名称代码表"/>
+	<HDSD00.01.444 dataelementName="放射性疾病的分度代码" code="" dic="CV05_01_033" displayName="轻度" codeSystem="2.16.156.10011.2.3.1.132" codeSystemName="放射性疾病的分度代码表"/>
+	<HDSD00.01.445 dataelementName="放射性疾病的分期代码" code="" dic="CV05_01_034" displayName="恢复期" codeSystem="2.16.156.10011.2.3.1.133" codeSystemName="放射性疾病的分期代码表"/>
+	<HDSD00.01.446 dataelementName="尘肺合并肺结核的标志" value=""/>
+	<HDSD00.01.447 dataelementName="职业性放射性疾病处理类别代码" code="" dic="CV06_00_205" displayName="暂时调离放射性工作定期复查" codeSystem="2.16.156.10011.2.3.1.181" codeSystemName="职业性放射性疾病处理情况代码表"/>
+	<HDSD00.01.448 dataelementName="死亡日期时间" value=""/>
+	<HDSD00.01.449 dataelementName="根本死因代码" code="" dic="ICD_10" displayName="恶性肿瘤" codeSystem="2.16.156.10011.2.3.3.11" codeSystemName="ICD-10"/>
+	<HDSD00.01.450 dataelementName="诊断机构名称" value=""/>
+	<HDSD00.01.451 dataelementName="诊断日期时间" value=""/>
+	<HDSD00.01.452 dataelementName="诊断医师姓名" value=""/>
+	<HDSD00.01.419 dataelementName="填报机构名称" value=""/>
+	<HDSD00.01.453 dataelementName="填报人姓名" value=""/>
+	<HDSD00.01.454 dataelementName="填报日期时间" value=""/>
+</BasicDataset>

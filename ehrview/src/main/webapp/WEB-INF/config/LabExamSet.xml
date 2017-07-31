@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LabExams>
+	<LabExam entryName="EMR_InpatientRecordHomes">
+		<maskFields>
+			<maskField name="MasterDiseaseName" begin="0" direct="+" roles="system" maskDic="diseases"/>
+			<maskField name="ClinicDiagnosis" begin="0" direct="+" roles="system" maskDic="diseases"/>
+		</maskFields>
+	</LabExam>
+</LabExams>

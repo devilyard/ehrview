@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<entry id="SYS_MESSAGE" alias="消息" sort="READFLAG,SENDDATE desc">
+  <item id="ID" alias="ID" type="int" not-null="1" generator="auto" pkey="true" display="0"/>
+  <item id="SENDER" alias="发送者" type="string" length="50" colspan="3" fixed ="true">
+  	<dic id="messageUser"/>
+  </item>
+  <item id="RECEIVER_USERS" alias="接受者(用户)" type="string" length="50" colspan="2">
+  	<dic id="messageUser"/>
+  </item>
+  <item id="RECEIVER_ROLES" alias="接受者(角色)" type="string" length="50" colspan="3">
+  	<dic id="rolelist" render="TreeCheck" parentKey="base"/>
+  </item>
+  <item id="RECEIVER_UNITS" alias="接受者(部门)" type="string" length="50" colspan="3">
+  	<dic id="manageUnit" render="TreeCheck" />
+  </item>
+  <item id="SUBJECT" alias="标题" type="string" length="50" queryable="true" colspan="3" width="150" not-null="1"/>
+  <item id="CONTENT" alias="内容" type="text" expand="true" colspan="3" height="100" xtype="textarea"/>
+  <item id="SENDDATE" alias="发送日期" type="timestamp" queryable="true" display="1" width="150"/>
+  <item id="PERIOD" alias="有效期" type="date" colspan="3"/>
+  <item id="READFLAG" alias="阅读标记" type="int" display="1"/>
+  <item id="BACKLOG" alias="待办件" type="string" colspan="3" display="0"/>
+  <item id="DELFLAG" alias="用户删除标志" type="int" display="0"/>
+  <item id="SYS_DELFLAG" alias="管理员删除标志" type="int" display="0"/>
+</entry>

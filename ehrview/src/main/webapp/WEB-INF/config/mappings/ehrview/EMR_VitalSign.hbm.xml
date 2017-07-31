@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="EMR_VitalSign" table="EMR_VitalSign">
+			<id name="DCID" type="java.lang.String">
+            	<column name="DCID"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="VisitID" type="java.lang.String" length="16" />
+        	<property name="PatientType" type="java.lang.String" length="2" />
+        	<property name="MPIID" type="java.lang.String" length="32" />
+        	<property name="ZoneID" type="java.lang.String" length="1" />
+        	<property name="StatisticDate" type="java.util.Date"  />
+        	<property name="AuthorOrganization" type="java.lang.String" length="16" />
+        	<property name="VSRID" type="java.lang.String" length="16" />
+        	<property name="TemperatureRecordDateTime" type="timestamp"  />
+        	<property name="Temperature" type="java.lang.String" length="10" />
+        	<property name="PulseRate" type="java.lang.String" length="10" />
+        	<property name="PacemakerHeartRate" type="java.lang.String" length="10" />
+        	<property name="BreathingRate" type="java.lang.String" length="10" />
+        	<property name="RespiratorIsUseSign" type="java.lang.String" length="1" />
+        	<property name="SystolicPressure" type="java.lang.String" length="10" />
+        	<property name="DiastolicPressure" type="java.lang.String" length="10" />
+        	<property name="Weight" type="java.lang.String" length="10" />
+        	<property name="AbdomenCircumference" type="java.lang.String" length="10" />
+        	<property name="NurseSign" type="java.lang.String" length="50" />
+        	<property name="SignDateTime" type="java.util.Date"  />
+        	<property name="EffectiveTime" type="timestamp"  />
+        	<property name="EffectiveFlag" type="java.lang.String" length="1" />
+</class>
+</hibernate-mapping>

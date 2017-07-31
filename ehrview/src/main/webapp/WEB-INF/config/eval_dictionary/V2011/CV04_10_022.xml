@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="01" text="无"/>
+  <item key="02" text="颅骨软化"/>
+  <item key="03" text="方颅"/>
+  <item key="04" text="枕秃"/>
+  <item key="05" text="肋串珠"/>
+  <item key="06" text="肋外翻"/>
+  <item key="07" text="肋软骨沟"/>
+  <item key="08" text="鸡胸"/>
+  <item key="09" text="手镯征"/>
+  <item key="10" text="“O”型腿"/>
+  <item key="11" text="“X”型腿"/>
+  <item key="99" text="其他"/>
+</dic>

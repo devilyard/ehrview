@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="一级手术"/>
+  <item key="2" text="二级手术"/>
+  <item key="3" text="三级手术"/>
+  <item key="4" text="四级手术"/>
+</dic>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="缺铁性贫血(轻度)"/>
+  <item key="2" text="缺铁性贫血(中度)"/>
+  <item key="3" text="缺铁性贫血(重度)"/>
+  <item key="19" text="缺铁性贫血(极重度)"/>
+  <item key="4" text="佝偻病"/>
+  <item key="5" text="佝偻病疑似"/>
+  <item key="6" text="后遗症期佝偻病"/>
+  <item key="7" text="体重低下"/>
+  <item key="8" text="生长迟缓"/>
+  <item key="9" text="消瘦"/>
+  <item key="10" text="严重慢性营养不良"/>
+  <item key="11" text="超重"/>
+  <item key="12" text="轻度肥胖"/>
+  <item key="13" text="中度肥胖"/>
+  <item key="14" text="重度肥胖"/>
+  <item key="15" text="铅中毒"/>
+  <item key="16" text="锌缺乏症"/>
+  <item key="17" text="先天性心脏病"/>
+  <item key="18" text="脑瘫"/>
+  <item key="21" text="甲状腺功能低下"/>
+  <item key="20" text="其他"/>
+</dic>

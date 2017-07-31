@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="上"/>
+  <item key="2" text="中"/>
+  <item key="21" text="中上"/>
+  <item key="22" text="中偏上"/>
+  <item key="23" text="中偏下"/>
+  <item key="24" text="中下"/>
+  <item key="3" text="下"/>
+</dic>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="01" text="少年儿童健康体检"/>
+  <item key="02" text="企退人员健康体检"/>
+  <item key="03" text="老年人健康体检"/>
+  <item key="04" text="其他城镇居民医疗保险参保人员健康体检"/>
+  <item key="05" text="妇女健康促进工程"/>
+  <item key="06" text="农民健康体检"/>
+  <item key="99" text="其他"/>
+</dic>

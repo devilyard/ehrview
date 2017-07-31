@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="0-Ⅰ期"/>
+  <item key="2" text="Ⅱ期"/>
+  <item key="3" text="Ⅲ期"/>
+  <item key="4" text="Ⅳ期"/>
+  <item key="5" text="无法判定"/>
+</dic>

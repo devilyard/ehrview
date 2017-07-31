@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="正常"/>
+  <item key="2" text="呼吸音粗"/>
+  <item key="3" text="湿罗音"/>
+  <item key="4" text="干罗音"/>
+  <item key="5" text="哮鸣音"/>
+  <item key="6" text="呼吸增快"/>
+  <item key="7" text="其他"/>
+</dic>

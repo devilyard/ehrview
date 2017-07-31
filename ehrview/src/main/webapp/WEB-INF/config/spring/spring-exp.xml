@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+	<bean id="EXP.REF" class="ctd.util.exp.standard.REF" />
+	<bean id="exp_set_base" class="ctd.util.exp.ExpressionSet">
+		<property name="name" value="base" />
+		<property name="expressions">
+			<list>
+				<bean class="ctd.util.exp.standard.IF" />
+				<bean class="ctd.util.exp.standard.SUBSTR" />
+				<bean class="ctd.util.exp.standard.AND" />
+				<bean class="ctd.util.exp.standard.OR" />
+				<bean class="ctd.util.exp.standard.SUM" />
+				<bean class="ctd.util.exp.standard.DEC" />
+				<bean class="ctd.util.exp.standard.MUL" />
+				<bean class="ctd.util.exp.standard.DIV" />
+				<bean class="ctd.util.exp.standard.NUM" />
+				<bean class="ctd.util.exp.standard.INT" />
+				<bean class="ctd.util.exp.standard.STR" />
+				<bean class="ctd.util.exp.standard.DATE" />
+				<ref bean="EXP.REF" />
+				<bean class="ctd.util.exp.standard.IN" />
+				<bean class="ctd.util.exp.standard.LIKE" />
+				<bean class="ctd.util.exp.standard.NE" />
+				<bean class="ctd.util.exp.standard.EQ" />
+				<bean class="ctd.util.exp.standard.GT" />
+				<bean class="ctd.util.exp.standard.GE" />
+				<bean class="ctd.util.exp.standard.LT" />
+				<bean class="ctd.util.exp.standard.LE" />
+				<bean class="ctd.util.exp.standard.CONCAT" />
+				<bean class="ctd.util.exp.standard.PY" />
+				<bean class="ctd.util.exp.standard.LENGTH" />
+				<bean class="ctd.util.exp.standard.ISNULL" />
+				<bean class="ctd.util.exp.standard.TOCHAR" />
+				<bean class="ctd.util.exp.standard.CONVERT" />
+				<bean class="ctd.util.exp.standard.GetValueByKeyFromMap" />
+				<bean class="com.bsoft.ehr.exp.HAS"/>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="expRunner" class="ctd.util.exp.ExpRunner">
+		<property name="expressionSets">
+			<list>
+				<ref bean="exp_set_base" />
+			</list>
+		</property>
+	</bean>
+	<bean id="EXP.CAND" class="com.bsoft.mpi.exp.solr.CAND" />
+	<bean id="EXP.CEQ" class="com.bsoft.mpi.exp.solr.CEQ" />
+	<bean id="EXP.CLIKE" class="com.bsoft.mpi.exp.solr.CLIKE" />
+	<bean id="EXP.COR" class="com.bsoft.mpi.exp.solr.COR" />
+	<bean id="EXP.CREF" class="com.bsoft.mpi.exp.solr.CREF" />
+	<bean id="EXP.CSTR" class="com.bsoft.mpi.exp.solr.CSTR" />
+	<bean id="EXP.CNE" class="com.bsoft.mpi.exp.solr.CNE" />
+	<bean id="EXP.CISNULL" class="com.bsoft.mpi.exp.solr.CISNULL" />
+	<bean id="cExpRunner" class="com.bsoft.mpi.exp.CExpRunner" parent="expRunner">
+		<property name="expressions">
+			<map>
+				<entry>
+					<key>
+						<value>and</value>
+					</key>
+					<ref bean="EXP.CAND" />
+				</entry>
+				<entry>
+					<key>
+						<value>eq</value>
+					</key>
+					<ref bean="EXP.CEQ" />
+				</entry>
+				<entry>
+					<key>
+						<value>or</value>
+					</key>
+					<ref bean="EXP.COR" />
+				</entry>
+				<entry>
+					<key>
+						<value>s</value>
+					</key>
+					<ref bean="EXP.CSTR" />
+				</entry>
+				<entry>
+					<key>
+						<value>like</value>
+					</key>
+					<ref bean="EXP.CLIKE" />
+				</entry>
+				<entry>
+					<key>
+						<value>$</value>
+					</key>
+					<ref bean="EXP.REF" />
+				</entry>
+				<entry>
+					<key>
+						<value>ne</value>
+					</key>
+					<ref bean="EXP.CNE" />
+				</entry>
+				<entry>
+					<key>
+						<value>isNull</value>
+					</key>
+					<ref bean="EXP.CISNULL" />
+				</entry>
+			</map>
+		</property>
+	</bean>
+</beans>

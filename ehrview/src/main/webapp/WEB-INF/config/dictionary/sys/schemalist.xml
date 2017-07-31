@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dic class="CustomDictionary">
+	<arg name="class">ctd.configure.SchemaConfig</arg>
+	<arg name="method">dic</arg>
+</dic>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="上肢"/>
+  <item key="11" text="左上肢"/>
+  <item key="12" text="右上肢"/>
+  <item key="13" text="双侧双上肢"/>
+  <item key="2" text="下肢"/>
+  <item key="21" text="左下肢"/>
+  <item key="22" text="右下肢"/>
+  <item key="23" text="双下肢"/>
+  <item key="3" text="乳房"/>
+  <item key="31" text="左侧乳房"/>
+  <item key="32" text="右侧乳房"/>
+  <item key="33" text="双侧乳房"/>
+  <item key="4" text="外生殖器"/>
+  <item key="9" text="其他"/>
+</dic>

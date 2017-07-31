@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="＜1000"/>
+  <item key="2" text="1000～2000"/>
+  <item key="3" text="2000～4000"/>
+  <item key="4" text="4000～8000"/>
+  <item key="5" text="8000及以上"/>
+</dic>

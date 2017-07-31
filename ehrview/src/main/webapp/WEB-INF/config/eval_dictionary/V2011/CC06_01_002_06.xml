@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="01" text="高血压核实"/>
+  <item key="02" text="孕妇建档"/>
+  <item key="03" text="孕妇随访"/>
+  <item key="04" text="糖尿病随访"/>
+  <item key="05" text="体检"/>
+</dic>

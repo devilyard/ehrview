@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="Pt_Operation" table="Pt_Operation">
+			<id name="DCID" type="java.lang.String">
+            	<column name="DCID"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="MPIID" type="java.lang.String" length="32" />
+        	<property name="SourceID" type="java.lang.String" length="50" />
+        	<property name="RecordClassifying" type="java.lang.String" length="50" />
+        	<property name="RecordTitle" type="java.lang.String" length="50" />
+        	<property name="EffectiveTime" type="date"  />
+        	<property name="EffectiveFlag" type="java.lang.String" length="1" />
+        	<property name="VersionNumber" type="java.lang.String" length="10" />
+        	<property name="AuthorOrganization" type="java.lang.String" length="22" />
+        	<property name="AuthorOrganization_text" type="java.lang.String" length="50" />
+        	<property name="Author" type="java.lang.String" length="32" />
+        	<property name="SystemTime" type="date"  />
+        	<property name="UploadTime" type="date"  />
+        	<property name="UpdateTime" type="date"  />
+        	<property name="JZLSH" type="java.lang.String" length="32" />
+        	<property name="SSJLLSH" type="java.lang.String" length="32" />
+        	<property name="MZZYBZ_TEXT" type="java.lang.String" length="16" />
+        	<property name="MZZYBZ" type="java.lang.String" length="2" />
+        	<property name="SSKSSJ" type="date"  />
+        	<property name="SSJSSJ" type="date"  />
+        	<property name="SSQZD" type="java.lang.String" length="20" />
+        	<property name="SSHZD" type="java.lang.String" length="20" />
+        	<property name="SSDM" type="java.lang.String" length="20" />
+        	<property name="SSMC" type="java.lang.String" length="100" />
+        	<property name="SSBWDM" type="java.lang.String" length="20" />
+        	<property name="SSBWMC" type="java.lang.String" length="100" />
+</class>
+</hibernate-mapping>

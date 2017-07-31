@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<entry id="MDC_HypertensionVisit" alias="MDC高血压随访(MDC_HypertensionVisit)" hasDoc="true">
+  <item id="DCID" alias="记录号" type="string" length="16" not-null="1" generator="assigned" pkey="true"/>
+  <item id="MPIID" alias="主索引标识" type="string" length="32" not-null="1"/>
+  <item id="SourceID" alias="来源标识" type="string" length="50" not-null="1"/>
+  <item id="RecordClassifying" alias="记录分类" type="string" length="50" not-null="1"/>
+  <item id="RecordTitle" alias="记录名称" type="string" length="50" not-null="1"/>
+  <item id="EffectiveTime" alias="记录时间" type="timestamp" not-null="1"/>
+  <item id="EffectiveFlag" alias="有效标志" type="string" length="1" not-null="1"/>
+  <item id="VersionNumber" alias="版本" type="string" length="10" not-null="1"/>
+  <item id="AuthorOrganization" alias="创建机构" type="string" length="16" not-null="1"/>
+  <item id="Author" alias="创建人" type="string" length="32" not-null="1"/>
+  <item id="SystemTime" alias="创建时间" type="timestamp" not-null="1"/>
+  <item id="UploadTime" alias="上传时间" type="timestamp" not-null="1"/>
+  <item id="UpdateTime" alias="更新时间" type="timestamp" not-null="1"/>
+  <item id="VisitID" alias="随访标识" type="string" length="16" not-null="1"/>
+  <item id="VisitWay" alias="随访方式" type="string" length="1"/>
+  <item id="VisitWay_Text" alias="随访方式名称" type="string" length="16"/>
+  <item id="PHRID" alias="健康档案号" type="string" length="16"/>
+  <item id="ManaUnitID" alias="管辖机构" type="string" length="16"/>
+  <item id="VisitDoctor" alias="随访医生" type="string" length="50"/>
+  <item id="VisitUnit" alias="随访机构" type="string" length="20"/>
+  <item id="VisitDate" alias="随访时间" type="timestamp"/>
+</entry>

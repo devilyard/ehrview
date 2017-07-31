@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<entry id="dept" alias="部门类型">
+  <item id="id" alias="ID" type="int" not-null="1" generator="auto" pkey="true" hidden="true"/>
+  <item id="catalog" alias="部门类别" type="string"/>
+  <item id="location" alias="部门位置" type="string" /> 
+</entry>

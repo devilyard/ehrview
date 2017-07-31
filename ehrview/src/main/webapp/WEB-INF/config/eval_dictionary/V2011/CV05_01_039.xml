@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="01" text="痢疾"/>
+  <item key="02" text="败血症"/>
+  <item key="03" text="麻疹"/>
+  <item key="04" text="结核"/>
+  <item key="05" text="其他传染病和寄生虫病"/>
+  <item key="06" text="白血病"/>
+  <item key="07" text="其他肿瘤"/>
+  <item key="08" text="脑膜炎"/>
+  <item key="09" text="其他神经系统疾病"/>
+  <item key="10" text="肺炎"/>
+  <item key="11" text="其他呼吸系统疾病"/>
+  <item key="12" text="腹泻"/>
+  <item key="13" text="其他消化系统疾病"/>
+  <item key="14" text="先天性心脏病"/>
+  <item key="15" text="神经管畸形"/>
+  <item key="16" text="先天愚型"/>
+  <item key="17" text="其他先天异常"/>
+  <item key="18" text="早产或低出生体重"/>
+  <item key="19" text="出生窒息"/>
+  <item key="20" text="新生儿破伤风"/>
+  <item key="21" text="新生儿硬肿症"/>
+  <item key="22" text="颅内出血"/>
+  <item key="23" text="其他新生儿病"/>
+  <item key="24" text="溺水"/>
+  <item key="25" text="交通意外"/>
+  <item key="26" text="意外窒息"/>
+  <item key="27" text="意外中毒"/>
+  <item key="28" text="意外跌落"/>
+  <item key="29" text="其他意外"/>
+  <item key="30" text="内分泌、营养及代谢疾病"/>
+  <item key="31" text="血液及造血器官疾病"/>
+  <item key="32" text="循环系统疾病"/>
+  <item key="33" text="泌尿系统疾病"/>
+  <item key="34" text="诊断不明"/>
+  <item key="99" text="其他"/>
+</dic>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<role name="系统管理员" type="post" parent="base" version="1325744663419" id="system" filename="E:\tomcat6.0\webapps\SSSS\WEB-INF\config\roles\system.xml">
+  <accredit>
+    <apps acType="whitelist">
+      <others/>
+    </apps>
+    <service acType="whitelist"></service>
+    <storage acType="whitelist">
+      <others acValue="1111"/>
+    </storage>
+  </accredit>
+</role>

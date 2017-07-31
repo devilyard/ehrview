@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<entry id="EMR_InpatientRecordHome" alias="EMR住院病案首页(EMR_InpatientRecordHome)" >
+  <item id="DCID" alias="记录号" type="string" length="16" generator="assigned" pkey="true"/>
+  <item id="VisitID" alias="就诊标识" type="string" length="16"/>
+  <item id="PatientType" alias="患者类型" type="string" length="2"/>
+  <item id="MPIID" alias="主索引标识" type="string" length="32"/>
+  <item id="ZoneID" alias="分区标识" type="string" length="1"/>
+  <item id="StatisticDate" alias="统计日期" type="date"/>
+  <item id="MedicalInstitutions" alias="医疗机构名称" length="50"/>
+  <item id="MedicalOrgnationCode" alias="医疗机构组织机构代码" length="10"/>
+  <item id="MedicalCostPayTypeCode" alias="医疗费用支付方式代码" length="3"/>
+  <item id="HospizationTimes" alias="住院次数" length="2"/>
+  <item id="HealthCardID" alias="居民健康卡号" length="32"/>
+  <item id="HealthInsuranceCardID" alias="医保卡号" length="32"/>
+  <item id="ClinicID" alias="门（急）诊号" length="32"/>
+  <item id="HospizationID" alias="住院号" length="10"/>
+  <item id="MedicalRecordID" alias="病案号" length="18"/>
+  <item id="Name" alias="患者姓名" length="50"/>
+  <item id="Sex" alias="性别" length="1"/>
+  <item id="BirthDateTime" alias="出生日期" type="date"/>
+  <item id="Age" alias="年龄" length="3"/>
+  <item id="Nationality" alias="国籍" length="3"/>
+  <item id="MonthsAge" alias="月龄" length="8"/>
+  <item id="NeonatalBirthWeight" alias="新生儿出生体重" length="5"/>
+  <item id="NeonatalAdmissionWeight" alias="新生儿入院体重" length="5"/>
+  <item id="Province" alias="出生地-省（区、市）" length="70"/>
+  <item id="City" alias="出生地-市" length="70"/>
+  <item id="County" alias="出生地-县" length="70"/>
+  <item id="OriginProvince" alias="籍贯-省（区、市）" length="70"/>
+  <item id="OriginCity" alias="籍贯-市" length="70"/>
+  <item id="EthnicGroup" alias="民族" length="2"/>
+  <item id="IDCardCode" alias="患者身份证件类别代码" length="2"/>
+  <item id="IDCard" alias="患者身份证件号码" length="18"/>
+  <item id="OccupationCategoryCode" alias="职业类别代码" length="2"/>
+  <item id="MaritalStatus" alias="婚姻状况代码" length="2"/>
+  <item id="AdmissionWay" alias="入院途径" length="1"/>
+  <item id="AdmissionDateTime" alias="入院日期时间" type="date"/>
+  <item id="AdmissionDeptName" alias="入院科室" length="50"/>
+  <item id="AdmissionSickroom" alias="入院病房" length="20"/>
+  <item id="TransferredDeptName" alias="转科科室名称" length="50"/>
+  <item id="DischargeDateTime" alias="出院日期时间" type="date"/>
+  <item id="DischargeDepartment" alias="出院科室" length="50"/>
+  <item id="DischargeSickRoom" alias="出院病房" length="20"/>
+  <item id="ActualHospitalizationDays" alias="实际住院天数" length="4"/>
+  <item id="ClinicDiagnosis" alias="门（急）诊诊断" length="100"/>
+  <item id="ClinicWesternDiagnosisCode" alias="门（急）诊诊断（西医诊断）-疾病编码" length="7"/>
+  <item id="MasterDiseaseName" alias="出院诊断-主要诊断-疾病名称" length="100"/>
+  <item id="MasterDiseaseCode" alias="出院诊断-主要诊断-疾病编码" length="7"/>
+  <item id="MasterAdmissionCondition" alias="出院诊断-主要诊断-入院病情" length="1"/>
+  <item id="MasterDischargePrognosisCondit" alias="出院诊断-主要诊断-出院情况" length="1"/>
+  <item id="OutsideReasonOfInjuryAndPoison" alias="损伤中毒的外部原因" length="100"/>
+  <item id="OutsideReasonOfInjuryAndPoCode" alias="损伤中毒的外部原因-疾病编码" length="7"/>
+  <item id="PathologyDiseaseName" alias="病理诊断-疾病名称" length="100"/>
+  <item id="PathologyDiseaseCode" alias="病理诊断-疾病编码" length="7"/>
+  <item id="PathologyID" alias="病理号" length="18"/>
+  <item id="AllergicDrug" alias="过敏药物" length="100"/>
+  <item id="AutopsySign" alias="死亡患者尸检标志" type="string" length="1"/>
+  <item id="ABOBloodCode" alias="ABO血型代码" length="1"/>
+  <item id="RhBloodCode" alias="Rh（D）血型代码" length="1"/>
+  <item id="DeptManager" alias="科主任签名" length="50"/>
+  <item id="ChiefDoctorSign" alias="主任（副主任）医师签名" length="50"/>
+  <item id="AttendingDoctor" alias="主治医师签名" length="50"/>
+  <item id="HospizationDoctor" alias="住院医师签名" length="50"/>
+  <item id="ResponsibilityNurse" alias="责任护士签名" length="50"/>
+  <item id="RefresherDoctors" alias="进修医师签名" length="50"/>
+  <item id="InternDoctor" alias="实习医师签名" length="50"/>
+  <item id="MedicalRecordCoderSign" alias="病案编码员签名" length="50"/>
+  <item id="MedicalRecordQuality" alias="病案质量" length="1"/>
+  <item id="QualityControlDoctor" alias="质控医师签名" length="50"/>
+  <item id="QualityControlSign" alias="质控护士签名" length="50"/>
+  <item id="QualityControlDate" alias="质控日期" type="date"/>
+  <item id="DischargeMethods" alias="离院方式" length="1"/>
+  <item id="PrepareAcceptHospitalName" alias="拟接受医疗机构名称" length="70"/>
+  <item id="Day31InpatientMk" alias="出院 31 天内再住院标志" type="string" length="1"/>
+  <item id="Day31InpatientAim" alias="出院 31 天内再住院目的" length="100"/>
+  <item id="StuporTimeBeforeAdmission" alias="颅脑损伤患者入院前昏迷时间" length="10"/>
+  <item id="StuporTimeAfterAdmission" alias="颅脑损伤患者入院后昏迷时间" length="10"/>
+  <item id="HospizationTotalCost" alias="住院总费用（元）" length="10" precision="2"/>
+  <item id="HospizationTotalPersonalCost" alias="住院总费用-自付金额（元）" length="10" precision="2"/>
+  <item id="DiagCoinOutpatientVsDischarge" alias="诊断符合情况-门诊和出院" length="1"/>
+  <item id="DiagCoinAdmssionVsDischarge" alias="诊断符合情况-入院和出院" length="1"/>
+  <item id="DiagCoinPreoperativeVsPost" alias="诊断符合情况-术前和术后" length="1"/>
+  <item id="DiagCoinClinicalVsPathologica" alias="诊断符合情况-临床和病理" length="1"/>
+  <item id="DiagCoinRadiologyVspathology" alias="诊断符合情况-放射和病理" length="1"/>
+  <item id="SalvageConditionSalvageTimes" alias="抢救情况-抢救次数" length="2"/>
+  <item id="SalvageConditionSuccessTimes" alias="抢救情况-成功次数" length="2"/>
+  <item id="ClinicalPathManagement" alias="临床路径管理" length="1"/>
+</entry>

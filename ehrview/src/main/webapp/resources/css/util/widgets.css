@@ -1,0 +1,8 @@
+@CHARSET "UTF-8";
+.x-form-imagefiled{
+	background-image:url(images/func.gif);
+	background-repeat:no-repeat;
+	background-color::#c0c0c0;
+	width:200px;
+	height:200px;
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="0级" comment="无符合以下1～5级中的任何行为"/>
+  <item key="2" text="1级" comment="口头威胁，喊叫，但没有打砸行为"/>
+  <item key="3" text="2级" comment="打砸行为，局限在家里，针对财物，能被劝说制止"/>
+  <item key="4" text="3级" comment="明显打砸行为，不分场合，针对财物，不能接受劝说而停止"/>
+  <item key="5" text="4级" comment="持续的打砸行为，不分场合，针对财物或人，不能接受劝说而停止"/>
+  <item key="6" text="5级" comment="持管制性危险武器的针对人的任何暴力行为，或者纵火、爆炸等行为，无论在家里还是公共场合"/>
+</dic>

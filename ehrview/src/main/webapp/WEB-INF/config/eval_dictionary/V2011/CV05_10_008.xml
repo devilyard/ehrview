@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="正常" comment="与患血吸虫病前相比，患者的劳动能力没有受到影响"/>
+  <item key="2" text="减弱" comment="与患血吸虫病前相比，患者的劳动能力稍微受到影响"/>
+  <item key="3" text="减半" comment="与患血吸虫病前相比，患者的劳动能力减为以前的一半"/>
+  <item key="4" text="丧失" comment="与患血吸虫病前相比，患者完全丧失劳动能力"/>
+</dic>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="01" text="新生儿窒息"/>
+  <item key="02" text="新生儿吸入综合征"/>
+  <item key="03" text="新生儿肺透明膜病"/>
+  <item key="04" text="新生儿湿肺"/>
+  <item key="05" text="新生儿肺炎"/>
+  <item key="06" text="缺氧缺血性脑病"/>
+  <item key="07" text="新生儿颅内出血"/>
+  <item key="08" text="新生儿硬肿症"/>
+  <item key="09" text="新生儿黄疸"/>
+  <item key="10" text="新生儿溶血病"/>
+  <item key="11" text="新生儿破伤风"/>
+  <item key="12" text="新生儿败血症"/>
+  <item key="13" text="新生儿产伤"/>
+  <item key="99" text="其他"/>
+</dic>

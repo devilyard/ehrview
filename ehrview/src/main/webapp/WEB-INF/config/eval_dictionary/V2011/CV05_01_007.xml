@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="01" text="左枕前(LOA)"/>
+  <item key="02" text="右枕前(ROA)"/>
+  <item key="03" text="左枕后(LOP)"/>
+  <item key="04" text="右枕后(RPP)"/>
+  <item key="05" text="左枕横(LOT)"/>
+  <item key="06" text="右枕横(ROT)"/>
+  <item key="07" text="左颏前(LMA)"/>
+  <item key="08" text="右颏前(RMA)"/>
+  <item key="09" text="左颏后(LMP)"/>
+  <item key="10" text="右颏后(RMP)"/>
+  <item key="11" text="左颏横(LMT)"/>
+  <item key="12" text="右颏横(RMT)"/>
+  <item key="13" text="左骶前(LSA)"/>
+  <item key="14" text="右骶前(RSA)"/>
+  <item key="15" text="左骶后(LSP)"/>
+  <item key="16" text="右骶后(RSP)"/>
+  <item key="17" text="左骶横(LST)"/>
+  <item key="18" text="右骶横(RST)"/>
+  <item key="19" text="左肩前(LScA)"/>
+  <item key="20" text="右肩前(RScA)"/>
+  <item key="21" text="左肩后(LScP)"/>
+  <item key="22" text="右肩后(RScP)"/>
+  <item key="99" text="不详"/>
+</dic>

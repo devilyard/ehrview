@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="01" text="缺血性卒中"/>
+  <item key="02" text="脑出血"/>
+  <item key="03" text="蛛网膜下腔出血"/>
+  <item key="04" text="短暂性脑缺血发作"/>
+  <item key="05" text="其他脑血管疾病"/>
+  <item key="06" text="糖尿病肾病"/>
+  <item key="07" text="肾功能衰竭"/>
+  <item key="08" text="急性肾炎"/>
+  <item key="09" text="慢性肾炎"/>
+  <item key="10" text="其他肾脏疾病"/>
+  <item key="11" text="心肌梗死"/>
+  <item key="12" text="心绞痛"/>
+  <item key="13" text="冠状动脉血运重建"/>
+  <item key="14" text="充血性心力衰竭"/>
+  <item key="15" text="心前区疼痛"/>
+  <item key="16" text="其他心脏疾病"/>
+  <item key="17" text="夹层动脉瘤"/>
+  <item key="18" text="动脉闭塞性疾病"/>
+  <item key="19" text="其他血管疾病"/>
+  <item key="20" text="神经系统疾病"/>
+  <item key="99" text="其他系统疾病"/>
+</dic>

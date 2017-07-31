@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dic> 
+	<item key="1" text="修改" mCode="1" pyCode="sg"/>  
+	<item key="2" text="恢复" mCode="2" pyCode="hf"/> 
+	<item key="3" text="合并" mCode="3" pyCode="hb"/>    
+</dic>

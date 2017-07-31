@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="正常"/>
+  <item key="2" text="膨隆"/>
+  <item key="3" text="凹陷"/>
+  <item key="9" text="共他"/>
+</dic>

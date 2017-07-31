@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="0301" text="无药物过敏史"/>
+  <item key="0302" text="青霉素"/>
+  <item key="0303" text="磺胺"/>
+  <item key="0304" text="链霉素"/>
+  <item key="0305" text="其他"/>
+</dic>

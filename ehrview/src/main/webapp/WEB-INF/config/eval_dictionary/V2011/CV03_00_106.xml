@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="01" text="谷类" comment="米、面等"/>
+  <item key="02" text="杂粮" comment="小米、玉米、高粱等"/>
+  <item key="03" text="薯类" comment="红薯、山药、芋头、土豆等"/>
+  <item key="04" text="蛋类"/>
+  <item key="05" text="鱼虾类"/>
+  <item key="06" text="畜肉类"/>
+  <item key="07" text="禽肉类"/>
+  <item key="08" text="奶类及其制品"/>
+  <item key="09" text="豆类及其制品"/>
+  <item key="10" text="蔬菜"/>
+  <item key="11" text="水果"/>
+</dic>

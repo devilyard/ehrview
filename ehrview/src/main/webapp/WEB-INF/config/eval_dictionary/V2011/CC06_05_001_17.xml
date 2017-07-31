@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="9" text="无症状"/>
+  <item key="1" text="头痛头晕"/>
+  <item key="2" text="恶心呕吐"/>
+  <item key="3" text="眼花耳鸣"/>
+  <item key="4" text="呼吸困难"/>
+  <item key="5" text="心悸胸闷"/>
+  <item key="6" text="鼻衄出血不止"/>
+  <item key="7" text="四肢发麻"/>
+  <item key="8" text="下肢水肿 10其他"/>
+</dic>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="涂阳" comment="痰涂片找抗酸杆菌阳性"/>
+  <item key="2" text="涂阴" comment="痰涂片未找到抗酸杆菌"/>
+  <item key="3" text="涂阴重症" comment="痰涂片未找到抗酸杆菌但胸片显示肺部病兆广泛且有空洞"/>
+  <item key="4" text="仅培阳" comment="痰涂片未找到抗酸杆菌但痰培养阳性"/>
+  <item key="5" text="耒查" comment="未进行痰检"/>
+  <item key="6" text="胸膜炎"/>
+  <item key="7" text="其他肺外结核"/>
+</dic>

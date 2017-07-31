@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="01" text="轻松"/>
+  <item key="02" text="尚可"/>
+  <item key="03" text="有压力"/>
+  <item key="04" text="压力较大"/>
+  <item key="05" text="拒绝回答"/>
+</dic>

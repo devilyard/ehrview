@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="从不"/>
+  <item key="2" text="偶尔"/>
+  <item key="21" text="1d/月～3d/月"/>
+  <item key="22" text="少于1d/月"/>
+  <item key="3" text="经常"/>
+  <item key="31" text="5d/周～6d/周"/>
+  <item key="32" text="3d/周～4d/周"/>
+  <item key="33" text="1d/周～2d/周"/>
+  <item key="4" text="每天"/>
+</dic>

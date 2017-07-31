@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="总资产"/>
+  <item key="11" text="流动资产"/>
+  <item key="12" text="对外投资"/>
+  <item key="13" text="固定资产"/>
+  <item key="14" text="无形资产"/>
+  <item key="2" text="负债"/>
+  <item key="3" text="净资产"/>
+  <item key="31" text="事业基金"/>
+  <item key="32" text="固定基金"/>
+  <item key="33" text="专用基金"/>
+</dic>

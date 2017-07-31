@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="Ipt_MedicalRecordPage_View_Doc" table="Ipt_MedicalRecordPage_View_Doc">
+			<id name="DocID" type="java.lang.String">
+            	<column name="DocID"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="DCID" type="java.lang.String" length="16" />
+        	<property name="DocFormat" type="java.lang.String" length="2" />
+        	<property name="DocContent" type="binary"  />
+        	<property name="HtmlContent" type="binary"  />
+</class>
+</hibernate-mapping>

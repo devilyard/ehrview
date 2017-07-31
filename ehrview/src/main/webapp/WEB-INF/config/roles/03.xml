@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<role name="中心主任" type="post" parent="base" id="system">
+</role>

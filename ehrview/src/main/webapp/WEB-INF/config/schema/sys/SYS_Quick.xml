@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry id="SYS_Quick" alias="便捷配置">
+    <item id="id" alias="id" type="int" not-null="true" pkey="true" generator="auto" length="50" />
+	<item id="userId" alias="人员编号" type="string" length="50">
+	    <set type="exp" run="server">['$','%user.userId']</set>
+	</item>
+	<item id="moduleId" alias="模块编号" type="string" length="20" not-null="1" />
+	<item id="appId" alias="app编号" type="string" length="20" not-null="1" />
+	<item id="catalogId" alias="分类编号" type="string" length="20" />
+	<item id="lastModifyDate" alias="最后修改日期" type="date"
+		defaultValue="%server.date.date" display="1">
+		<set type="exp" run="server">['$','%server.date.date']</set>
+	</item>
+</entry>

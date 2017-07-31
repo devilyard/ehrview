@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="未发现医学上不宜结婚的异常情况和疾病"/>
+  <item key="2" text="患有在传染期内的指定传染病"/>
+  <item key="3" text="患有在发病期内的有关精神病"/>
+  <item key="4" text="患有不宜生育的严重遗传性疾病或其他重要器官疾病"/>
+  <item key="9" text="患有其他医学上认为不宜结婚的疾病"/>
+</dic>

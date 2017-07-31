@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="H" comment="异烟肼"/>
+  <item key="2" text="S" comment="链霉素"/>
+  <item key="3" text="R" comment="利福平"/>
+  <item key="4" text="E" comment="乙胺丁醇"/>
+  <item key="5" text="其他"/>
+</dic>

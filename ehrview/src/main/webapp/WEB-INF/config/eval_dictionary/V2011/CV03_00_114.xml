@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="200mL以下" comment="每日不包括一日三餐中的汤水，牛奶等的饮水累计量在200mL以下"/>
+  <item key="2" text="200mL～500mL" comment="每日不包括一日三餐中的汤水，牛奶等的饮水累计量在200mL～500mL"/>
+  <item key="3" text="500mL～1000mL" comment="每日不包括一日三餐中的汤水，牛奶等的饮水累计量在500mL～1000mL"/>
+  <item key="4" text="1000mL以上" comment="每日不包括一日三餐中的汤水，牛奶等的饮水累计量在1000mL以上"/>
+</dic>

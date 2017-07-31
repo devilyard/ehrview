@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry entityName="SYS_BrowsingHist" alias="历史信息">
+	<item id="BHID" alias="记录号" type="string" length="16" not-null="1" generator="assigned" pkey="true" display="0"/>
+	<item id="userId" alias="登录名" type="string" length="20" not-null="1" display="0"/>
+	<item id="roleList" alias="角色列表" type="string" length="20" not-null="1" display="0"/>
+	<item id="cardNo" alias="卡号" type="string" length="32" width="100"/>
+	<item id="personName" alias="姓名" type="string" not-null="1" length="32" width="80"/>
+	<item id="idCard" alias="身份证号" type="string" length="18" width="150"/>
+	<item id="sexCode_text" alias="性别" type="string" length="4" width="52"/>
+	<item id="birthday" alias="出生日期" type="date" width="90"/>
+	<item id="mpiId" alias="主索引标识" type="string" length="32" not-null="1" display="0"/>
+	<item id="systemTime" alias="访问时间" type="timestamp" not-null="1" width="160"/>
+	<item id="organizationcode" alias="访问者机构代码" type="string" width="102" queryable="true"/>
+	<item id="docid" alias="访问者工号" type="string" width="102" queryable="true"/>
+	<item id="docidcard" alias="访问者身份证" type="string" width="102" queryable="true"/>
+	<item id="docname" alias="访问者姓名" type="string" width="102" queryable="true"/>
+	<item id="datasource" alias="访问者来源" type="string" width="102" queryable="true"/>
+</entry>

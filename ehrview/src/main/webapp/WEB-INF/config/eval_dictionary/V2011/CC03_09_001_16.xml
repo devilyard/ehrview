@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="病理尸检"/>
+  <item key="2" text="临床"/>
+  <item key="3" text="死后推断"/>
+</dic>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="违反供、管水人员健康管理的有关规定"/>
+  <item key="2" text="新、改、扩建项目未经卫生行政部门参加选址、设计审查和竣工验收擅自供水"/>
+  <item key="3" text="未取得卫生许可证擅自供水"/>
+  <item key="4" text="生产或者销售无卫生许可批件的涉水产品"/>
+  <item key="5" text="生活饮用水不符合卫生标准"/>
+  <item key="9" text="其他违法行为"/>
+</dic>

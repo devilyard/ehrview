@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="早产儿（孕周37周以下）"/>
+  <item key="2" text="足月小样儿、低体重儿（体重小于2500克）"/>
+  <item key="3" text="新生儿病理性黄疸"/>
+  <item key="4" text="新生儿窒息（Apgar评分7分以下）"/>
+  <item key="5" text="产伤"/>
+  <item key="6" text="新生儿缺血缺氧性脑病"/>
+  <item key="7" text="颅内出血"/>
+  <item key="8" text="脑瘫"/>
+  <item key="9" text="有抽搐史"/>
+  <item key="10" text="颅内感染史"/>
+  <item key="11" text="新生儿重症监护室中住院超过24小时"/>
+  <item key="12" text="永久性听力障碍家族史"/>
+  <item key="13" text="巨细胞病毒、风疹病毒、疱疹病毒、梅毒、弓形体等引起的宫内感染"/>
+  <item key="14" text="先天缺陷、畸形"/>
+  <item key="15" text="母亲孕期曾使用过耳毒性药物"/>
+  <item key="16" text="家族有遗传病史"/>
+  <item key="17" text="其他"/>
+</dic>

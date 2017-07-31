@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="满意"/>
+  <item key="2" text="基本满意"/>
+  <item key="3" text="说不清楚"/>
+  <item key="4" text="不太满意"/>
+  <item key="5" text="不满意"/>
+</dic>

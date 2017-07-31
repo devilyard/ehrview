@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="3303" text="3月龄"/>
+  <item key="330301" text="大的声音会惊动"/>
+  <item key="330302" text="大的声音会惊醒"/>
+  <item key="330303" text="会寻找声音来源"/>
+  <item key="330304" text="哭闹时，一打招呼就会停止哭声"/>
+  <item key="330305" text="哄他(她)时会笑"/>
+  <item key="330306" text="跟他(她)说话时，会发生”啊”、”呜”的声音"/>
+  <item key="3306" text="6月龄"/>
+  <item key="330601" text="寻找声源"/>
+  <item key="330602" text="喜欢发出声响的玩具"/>
+  <item key="330603" text="能分辨父母及所熟悉的人的声音"/>
+  <item key="330604" text="能发出笑声"/>
+  <item key="330605" text="高兴时会发出“咯咯”的笑声"/>
+  <item key="330606" text="冲着人发出声音"/>
+  <item key="3309" text="9月龄"/>
+  <item key="330901" text="被叫名字时会回头"/>
+  <item key="330902" text="喜欢蒙住眼睛说“吧”的游戏"/>
+  <item key="330903" text="被批评或说“不行”，“别动”等时，会住手或哭出声"/>
+  <item key="330904" text="冲着玩具发出声音"/>
+  <item key="330905" text="会发出/ma/  、/pa/、 ba/ 等声音"/>
+  <item key="330906" text="会发出/kia/ 、 dadada/、 bababa/ 等声音"/>
+  <item key="3312" text="12月龄"/>
+  <item key="331201" text="能理解“给我”、“睡觉觉”、“过来”等词的意思"/>
+  <item key="331202" text="对说“拜拜”有反应"/>
+  <item key="331203" text="会模仿大人的说话"/>
+  <item key="331204" text="常常说丁些没有意义的话"/>
+  <item key="331205" text="能说1个或2个有意义的词如/man mai/(吃饭)、/mama/(妈妈)等"/>
+  <item key="331206" text="能模仿词的某个部分"/>
+  <item key="3318" text="18月龄"/>
+  <item key="331801" text="喜欢别人给她(他)讲图画"/>
+  <item key="331802" text="会用手指着画册里自己认识的东西"/>
+  <item key="331803" text="能理解简单的命令，如“把书拿来”、“把垃圾扔掉”等"/>
+  <item key="331804" text="能说1个或2个有意义的词"/>
+  <item key="331805" text="能说3个以上有意义的词"/>
+  <item key="331806" text="能说出画中所认识的物体的名"/>
+</dic>

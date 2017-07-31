@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="合理"/>
+  <item key="2" text="基本合理"/>
+  <item key="3" text="不合理"/>
+</dic>

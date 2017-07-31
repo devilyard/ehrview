@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="01" text="达到停药标准"/>
+  <item key="02" text="疗程结束"/>
+  <item key="03" text="治疗失败" comment="治疗无应答或疗效未达到预期治疗目的"/>
+  <item key="04" text="耐药"/>
+  <item key="05" text="不能耐受药物副作用"/>
+  <item key="06" text="经济原因"/>
+  <item key="07" text="患者或监护人的决定"/>
+  <item key="99" text="其他"/>
+</dic>

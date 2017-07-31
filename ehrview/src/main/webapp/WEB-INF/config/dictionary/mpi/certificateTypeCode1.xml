@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dic>
+	<item key="01" text="居民身份证" mCode="01" pyCode="jmsfz" />
+	<item key="02" text="港澳居民身份证" mCode="02" pyCode="gajmsfz" />
+	<item key="03" text="居民户口簿" mCode="03" pyCode="jmhkb" />
+	<item key="04" text="护照" mCode="04" pyCode="hz" />
+	<item key="05" text="军官证" mCode="05" pyCode="jgz" />
+	<item key="06" text="文职干部证" mCode="06" pyCode="wzgbz" />
+	<item key="07" text="士兵证" mCode="07" pyCode="sbz" />
+	<item key="08" text="驾驶证" mCode="08" pyCode="jsz" />
+	<item key="09" text="残疾证" mCode="09" pyCode="cjz" />
+	<item key="10" text="医疗保险证" mCode="10" pyCode="ylbxz" />
+	<item key="11" text="出生证明" mCode="11" pyCode="cszb" />
+	<item key="12" text="家庭标识" mCode="12" pyCode="jtbs" />
+	<item key="13" text="住院病历" mCode="13" pyCode="zybl" />
+	<item key="14" text="住院床位" mCode="14" pyCode="zycw" />
+	<item key="15" text="门诊病历" mCode="15" pyCode="mzbl" />
+	<item key="16" text="死亡证明" mCode="16" pyCode="swzm" />
+	<item key="99" text="其他标示" mCode="99" pyCode="qtbs" />
+</dic>

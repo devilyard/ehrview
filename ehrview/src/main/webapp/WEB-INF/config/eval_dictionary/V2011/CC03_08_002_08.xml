@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="平和质（A型）"/>
+  <item key="2" text="气虚质（B型）"/>
+  <item key="3" text="阳虚质（C型）"/>
+  <item key="4" text="阴虚质（D型）"/>
+  <item key="5" text="痰湿质（E型）"/>
+  <item key="6" text="湿热质（F型）"/>
+  <item key="7" text="血瘀质（G型）"/>
+  <item key="8" text="气郁质（H型）"/>
+  <item key="9" text="特禀质（I型）"/>
+</dic>

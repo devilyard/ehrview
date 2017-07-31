@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="Ipt_Record" table="Ipt_Record">
+			<id name="DCID" type="java.lang.String">
+            	<column name="DCID"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="MPIID" type="java.lang.String" length="32" />
+        	<property name="SourceID" type="java.lang.String" length="50" />
+        	<property name="RecordClassifying" type="java.lang.String" length="50" />
+        	<property name="RecordTitle" type="java.lang.String" length="50" />
+        	<property name="EffectiveTime" type="date"  />
+        	<property name="EffectiveFlag" type="java.lang.String" length="1" />
+        	<property name="VersionNumber" type="java.lang.String" length="10" />
+        	<property name="AuthorOrganization" type="java.lang.String" length="16" />
+        	<property name="AuthorOrganization_Text" type="java.lang.String" length="50" />
+        	<property name="Author" type="java.lang.String" length="32" />
+        	<property name="SystemTime" type="date"  />
+        	<property name="UploadTime" type="date"  />
+        	<property name="UpdateTime" type="date"  />
+        	<property name="JZLSH" type="java.lang.String" length="32" />
+        	<property name="BZBAH" type="java.lang.String" length="18" />
+        	<property name="ZYJZLX" type="java.lang.String" length="3" />
+        	<property name="RYSJ" type="date"  />
+        	<property name="CYSJ" type="date"  />
+        	<property name="ICD10" type="java.lang.String" length="32" />
+        	<property name="ICD10_Text" type="java.lang.String" length="100" />
+        	<property name="CYKSBM" type="java.lang.String" length="15" />
+        	<property name="CYKSBM_Text" type="java.lang.String" length="50" />
+</class>
+</hibernate-mapping>

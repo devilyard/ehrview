@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="巨脾型" comment="符合WS261血吸虫病诊断标准中有关晚期血吸虫病的巨脾型临床表现"/>
+  <item key="2" text="水型" comment="符台WS261血吸虫病诊断标准中有关晚期血吸虫病的腹水型临床表观"/>
+  <item key="3" text="结肠增殖型" comment="符合wS261血吸虫病诊断标准中有关晚期血吸虫病的结肠增殖型临床表现"/>
+  <item key="4" text="侏儒型" comment="符合S261血吸虫病诊断标准中有关晚期血吸虫病的侏儒型临床表现"/>
+  <item key="9" text="其他" comment="不同于以上的晚期血吸虫病临床表现"/>
+</dic>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dictionaries>
+	<!-- system dictionary -->
+	<dic id="unitType" alias="部门类型" file="sys/unitType.xml" />
+	<dic id="manageUnit" alias="部门" file="sys/manageUnit.xml" />
+	<dic id="user" alias="部门" file="sys/user.xml" />
+	<!--  -->
+	<dic id="mpiViewNav" alias="MPI导航" lock="true" />
+</dictionaries>

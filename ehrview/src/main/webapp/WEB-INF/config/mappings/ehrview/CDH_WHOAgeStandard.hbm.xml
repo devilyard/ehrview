@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="CDH_WHOAgeStandard" table="CDH_WHOAgeStandard">
+			<id name="RECORDID" type="java.lang.Integer">
+            	<column name="RECORDID"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="AGE" type="java.lang.Integer" length="10" />
+        	<property name="AGENOTE" type="java.lang.String" length="10" />
+        	<property name="SEXCODE" type="java.lang.String" length="1" />
+        	<property name="WEIGHTL" type="java.lang.String" length="16"  />
+        	<property name="WEIGHTM" type="java.lang.String" length="16"  />
+        	<property name="WEIGHTS" type="java.lang.String" length="16"  />
+        	<property name="WSD3NEG" type="java.lang.String" length="16"  />
+        	<property name="WSD2NEG" type="java.lang.String" length="16" />
+        	<property name="WSD1NEG" type="java.lang.String" length="16"  />
+        	<property name="WSD0" type="java.lang.String" length="16"  />
+        	<property name="WSD1" type="java.lang.String" length="16"   />
+        	<property name="WSD2" type="java.lang.String" length="16"  />
+        	<property name="WSD3" type="java.lang.String" length="16" />
+        	<property name="HEIGHTL" type="java.lang.String" length="16" />
+        	<property name="HEIGHTM" type="java.lang.String" length="16" />
+        	<property name="HEIGHTS" type="java.lang.String" length="16" />
+        	<property name="HEIGHTSD" type="java.lang.String" length="16" />
+        	<property name="HSD3NEG" type="java.lang.String" length="16" />
+        	<property name="HSD2NEG" type="java.lang.String" length="16" />
+        	<property name="HSD1NEG" type="java.lang.String" length="16" />
+        	<property name="HSD0" type="java.lang.String" length="16" />
+        	<property name="HSD1" type="java.lang.String" length="16" />
+        	<property name="HSD2" type="java.lang.String" length="16" />
+        	<property name="HSD3" type="java.lang.String" length="16" />
+</class>
+</hibernate-mapping>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<entry id="Opt_Recipe" alias="门诊处方记录表(Opt_Recipe)" hasDoc="true">
+  <item id="DCID" alias="记录号" type="string" length="16" not-null="1" generator="assigned" pkey="true"/>
+  <item id="MPIID" alias="主索引标识" type="string" length="32" not-null="1"/>
+  <item id="SourceID" alias="来源标识" length="50"/>
+  <item id="RecordClassifying" alias="记录分类" length="50"/>
+  <item id="RecordTitle" alias="记录名称" length="50"/>
+  <item id="EffectiveTime" alias="记录时间" type="date"/>
+  <item id="EffectiveFlag" alias="有效标志" type="string" length="1"/>
+  <item id="VersionNumber" alias="版本" length="10"/>
+  <item id="AuthorOrganization" alias="创建机构" length="16"/>
+  <item id="Author" alias="创建人" length="32"/>
+  <item id="SystemTime" alias="创建时间" type="date"/>
+  <item id="UploadTime" alias="上传时间" type="date"/>
+  <item id="UpdateTime" alias="更新时间" type="date"/>
+  <item id="JZLSH" alias="就诊流水号" length="32"/>
+  <item id="CFID" alias="处方ID" length="32"/>
+  <item id="CFLY" alias="处方来源" length="2"/>
+  <item id="CFZT" alias="处方状态" length="1"/>
+  <item id="CFLB" alias="处方类别代码" length="1"/>
+  <item id="KFSJ" alias="开方时间" type="date"/>
+  <item id="FYSJ" alias="发药时间" type="date"/>
+  <item id="CFMXHM" alias="处方明细号码" length="32"/>
+</entry>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="职业卫生技术服务"/>
+  <item key="101" text="建设项目职业病危害评价"/>
+  <item key="102" text="职业病危害因素检测与评价"/>
+  <item key="103" text="化学品毒性鉴定"/>
+  <item key="104" text="放射卫生防护检测与评价"/>
+  <item key="105" text="放射防护器材和含放射性产品捡测"/>
+  <item key="106" text="职业病防护设施与职业病防护用品的效果评价"/>
+  <item key="107" text="个人剂量监测"/>
+  <item key="2" text="职业健康检查"/>
+  <item key="3" text="职业病诊断"/>
+</dic>

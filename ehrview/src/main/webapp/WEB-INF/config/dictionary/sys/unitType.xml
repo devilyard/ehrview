@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dic id="unitType">
+  <item key="R" text="市卫生局" roles="system,director"/>
+  <item key="S" text="区卫生局" roles="system,director,chief"/> 
+  <item key="B" text="社区卫生服务中心(站)" roles="product,develop"/>   
+  <item key="Q" text="卫生社会团体" roles="teamlead,teamer"/>
+  <item key="P" text="其他卫生机构" roles="teamlead,teamer"/> 
+</dic>

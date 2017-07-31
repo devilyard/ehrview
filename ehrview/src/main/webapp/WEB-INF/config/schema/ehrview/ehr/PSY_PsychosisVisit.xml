@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<entry id="PSY_PsychosisVisit" alias="PSY肿瘤随访信息(PSY_PsychosisVisit)" hasDoc="true">
+  <item id="DCID" alias="记录号" type="string" length="16" generator="assigned" pkey="true"/>
+  <item id="MPIID" alias="主索引标识" type="string" length="32"/>
+  <item id="SourceID" alias="来源标识" type="string" length="50"/>
+  <item id="RecordClassifying" alias="记录分类" type="string" length="50"/>
+  <item id="RecordTitle" alias="记录名称" type="string" length="50"/>
+  <item id="EffectiveTime" alias="记录时间" type="timestamp"/>
+  <item id="EffectiveFlag" alias="有效标志" type="string" length="1"/>
+  <item id="VersionNumber" alias="版本" type="string" length="10"/>
+  <item id="AuthorOrganization" alias="创建机构" type="string" length="16"/>
+  <item id="Author" alias="创建人" type="string" length="32"/>
+  <item id="SystemTime" alias="创建时间" type="timestamp"/>
+  <item id="UploadTime" alias="上传时间" type="timestamp"/>
+  <item id="UpdateTime" alias="更新时间" type="timestamp"/>
+  <item id="VisitID" alias="随访id" type="string" length="16"/>
+  <item id="PHRID" alias="健康档案号" type="string" length="16"/>
+  <item id="ManaUnitID" alias="管辖机构" type="string" length="16"/>
+  <item id="Symptom" alias="目前症状代码" type="string" length="50"/>
+  <item id="Symptom_Text" alias="目前症状" type="string" length="100"/>
+  <item id="VisitDoctor" alias="随访医生" type="string" length="50"/>
+  <item id="VisitUnit" alias="随访机构" type="string" length="20"/>
+  <item id="VisitDate" alias="随访时间" type="timestamp"/>
+</entry>

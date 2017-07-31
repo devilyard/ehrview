@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic> 
+  <item key="1" text="A型" mCode="1"/>  
+  <item key="2" text="B型" mCode="2"/>  
+  <item key="3" text="O型" mCode="3" pyCode="Ox"/>  
+  <item key="4" text="AB型" mCode="4" pyCode="ABx"/>  
+  <item key="5" text="不详" mCode="5" pyCode="bx"/>
+</dic>

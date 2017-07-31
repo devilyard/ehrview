@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="01" text="无脑畸形"/>
+  <item key="02" text="脊柱裂"/>
+  <item key="03" text="脑膨出"/>
+  <item key="04" text="先天性脑积水^"/>
+  <item key="05" text="腭裂"/>
+  <item key="06" text="唇裂"/>
+  <item key="07" text="唇裂合并腭裂"/>
+  <item key="08" text="小耳(包括无耳)"/>
+  <item key="09" text="外耳其他畸形(小耳，无耳除外)"/>
+  <item key="10" text="食道闭锁或狭窄"/>
+  <item key="11" text="直肠肛门闭锁或狭窄(包括无肛)"/>
+  <item key="12" text="尿道下裂"/>
+  <item key="13" text="膀胱外翻"/>
+  <item key="14" text="马蹄内翻足一左侧"/>
+  <item key="15" text="马蹄内翻足一右侧"/>
+  <item key="16" text="多指(趾)一左侧"/>
+  <item key="17" text="多指(趾)一右侧"/>
+  <item key="18" text="并指(趾)一左侧"/>
+  <item key="19" text="并指(趾)一右侧"/>
+  <item key="20" text="肢体短缩一左上肢"/>
+  <item key="21" text="肢体短缩一右上肢"/>
+  <item key="22" text="肢体短缩—左下肢"/>
+  <item key="23" text="肢体短缩一右下肢"/>
+  <item key="24" text="先天性膈疝"/>
+  <item key="25" text="脐膨出"/>
+  <item key="26" text="腹裂"/>
+  <item key="27" text="联体双胎"/>
+  <item key="28" text="唐氏综合征(21三体综合征)"/>
+  <item key="29" text="先天性心脏病"/>
+  <item key="99" text="其他"/>
+</dic>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="甲" comment="指建设项目职业病危害评价资质等级甲级、建设项日职业病危害评价放射防护资质甲级、化学品毒性鉴定资质等级甲级"/>
+  <item key="2" text="乙" comment="指建设项目职业病危害评价资质乙级、建设项日职业病危害评价放射防护资质乙级、化学品毒性鉴定资质等级乙级"/>
+  <item key="3" text="丙" comment="化学品毒性鉴定资质等级丙级"/>
+  <item key="4" text="丁" comment="化学品毒性鉴定资质等级丁级"/>
+</dic>

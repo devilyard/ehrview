@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="01" text="厅局级"/>
+  <item key="02" text="副厅局级"/>
+  <item key="03" text="处级"/>
+  <item key="04" text="副处级"/>
+  <item key="05" text="科级"/>
+  <item key="06" text="副科级"/>
+  <item key="07" text="副科级以下"/>
+  <item key="08" text="未定级"/>
+</dic>

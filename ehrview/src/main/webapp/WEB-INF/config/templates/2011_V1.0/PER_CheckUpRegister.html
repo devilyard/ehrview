@@ -1,0 +1,311 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>体检报告</title>
+<style type="text/css">
+.tijian {
+	padding-bottom: 10px;
+}
+
+.tjxm {
+	border-bottom: 1px dotted #dddddd;
+}
+
+.tijian th {
+	border-bottom: 1px solid #000;
+	height: 26px;
+	line-height: 26px;
+	text-align: left;
+	font-weight: bold;
+	padding-left: 20px;
+}
+
+.tijian td {
+	height: 24px;
+	line-height: 24px;
+	padding: 0 2px;
+	padding-left: 20px;
+}
+
+.right {
+	margin-left: 20px;
+}
+</style>
+</head>
+
+<body style="font-size: 12px; padding-left: 20px;background:#FFF">
+	<div align="center"
+		style=" height:40px;font-size:24px; line-height:120%;">
+		<span style="font-size:24px;" th:text="${doc.elementText('CheckupOrganization')}"></span>
+		体检报告
+	</div>
+	<div style="width:880px; margin:20px auto;">
+		<table width="100%" border="0" align="center" cellpadding="0"
+			cellspacing="0" class="tijian">
+			<tr>
+				<td width="25%" align="left"> <strong>姓&nbsp;&nbsp;&nbsp;名：</strong> <u><span th:text="${doc.elementText('Name')}"></span></u> 
+				</td>
+				<td width="25%" align="left"> <strong>姓别：</strong> <u><span th:text="${doc.elementText('Sex')}"></span></u> 
+				</td>
+				<td width="25%" align="left">
+					<strong>年龄：</strong>
+					<u>
+						<span th:text="${doc.elementText('Age')}"></span>
+					</u>
+				</td>
+				<td align="left">
+					<strong>体检编号：</strong>
+					<u>
+						<span th:text="${doc.elementText('CheckupID')}"></span>
+					</u>
+				</td>
+			</tr>
+		</table>
+		<table width="100%" border="0"  cellpadding="0" cellspacing="0" th:each="each1:${doc.selectNodes('PER_CheckupSummary')}">
+			<tr>
+				<td align="left">
+					<hr style="width: 100%;margin-bottom:0;border-top:3px solid #000000;"></hr>
+					<strong style="font-size:16px;"><span th:text="${each1.element('CheckupOffice').attributeValue('display')}"></span></strong> 
+					<hr style="width: 100%;margin-bottom:0;margin-top:0;border-top:3px solid #000000;"></hr>
+				</td>
+			</tr>
+			<tbody th:with="co=${each1.elementText('CheckupOffice')}"><!-- 格式1 -->
+				<tr th:if="${co.startsWith('01') || co.startsWith('02')}">
+					<td>
+						<table width="100%" border="0" cellspacing="0" cellpadding="0"
+							class="tijian">
+							<tr class="tijian">
+								<th>项目名称</th>
+								<th>检查结果</th>
+								<th>单位</th>
+								<th>参考范围</th>
+								<th>提示</th>
+							</tr>
+							<tr class="tijian tjxm" th:each="each2:${each1.selectNodes('PER_CheckupDetail')}">
+								<td>
+									<span th:text="${each2.elementText('CheckupProjectName')}"></span>
+								</td>
+								<td>
+									<span th:text="${each2.elementText('CheckupOutcome')}"></span>
+								</td>
+								<td>
+									<span th:text="${each2.elementText('CheckupUnit')}"></span>
+								</td>
+								<td>
+									<span th:text="${each2.elementText('ReferenceLower')}"></span>
+									<span th:if="${each2.elementText('ReferenceUpper').length() != 0}" th:text="${'-' + each2.elementText('ReferenceUpper')}"></span>
+								</td>
+								<td>
+									<span style="color:red;" th:text="${each2.elementText('IfException')}"></span>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</tbody>
+			<tbody th:with="co=${each1.elementText('CheckupOffice')}"><!-- 格式2 -->
+				<tr th:if="${co.equals('03') || co.equals('0301') || co.equals('0302') || co.equals('0305')}">
+					<td>
+						<table width="100%" border="0" cellspacing="0" cellpadding="0"
+							class="tijian">
+							<tr class="tijian">
+								<th width="25%">项目名称</th>
+								<th>检查结果</th>
+							</tr>
+							<tr class="tijian tjxm" th:each="each2:${each1.selectNodes('PER_CheckupDetail')}">
+								<td>
+									<span th:text="${each2.elementText('CheckupProjectName')}"></span>
+								</td>
+								<td>
+									<span th:text="${each2.elementText('CheckupOutcome')}"></span>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</tbody>
+			<tbody th:with="co=${each1.elementText('CheckupOffice')}"><!-- 格式3，胃镜室的比较特殊 -->
+				<tr th:if="${co.equals('0303')}">
+					<td>
+						<table width="100%" border="0" cellspacing="0" cellpadding="0" class="tijian">
+							<tr class="tijian tjxm" style="border-bottom:0;" th:each="each2:${each1.selectNodes('PER_CheckupDetail')}">
+								<td style="padding-left:0;" colspan="2">
+									<div style="padding-left:20px;"><span th:text="${each2.elementText('CheckupProjectName') + ':'}"></span></div>
+									<div style="padding-left:40px;">
+										<span th:if="${each2.elementText('CheckupOutcome').length() > 0}" th:each='line:${each2.elementText("CheckupOutcome").split("\n")}'>
+											<span th:text="${line}"></span><br/>
+										</span>
+									</div>
+								</td>
+							</tr>
+							<tr style="margin:0;border-top:1px solid #000000;border-bottom:1px solid #000000;">
+								<td style="width:50%">
+									<span>活检部位：<span th:text="${each1.elementText('CheckPoint')}"></span></span>
+								</td>
+								<td>
+									<span>HP：<span th:text="${each1.elementText('HP')}"></span></span>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</tbody>
+			<tbody th:with="co=${each1.elementText('CheckupOffice')}"><!-- 格式3，胃镜活检的比较特殊 -->
+				<tr th:if="${co.equals('0304')}">
+					<td>
+						<table width="100%" border="0" cellspacing="0" cellpadding="0" class="tijian">
+							<tr class="tijian tjxm" style="border-bottom:0;">
+								<td style="padding-left:0;">
+									<div style="padding-left:20px;"><span>标本名称：<span th:text="${each1.elementText('SampleName')}"></span></span></div>
+									<div style="padding-left:20px;">
+										<div style="float:left;width:60px;">
+											<span>临床诊断：</span>
+										</div>
+										<div style="float:left;width:580px;">
+											<span th:text="${each1.elementText('ClinicalDiagnosis')}"></span>
+										</div>
+										<div style="clear:both;height=0;"></div>
+									</div>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</tbody>
+			<tfoot th:with="co=${each1.elementText('CheckupOffice')}">
+				<tr th:if="${!(co.equals('0303') || co.equals('0304'))}">
+					<td>
+						<table width="100%" border="0" align="left" cellpadding="0"
+							cellspacing="0">
+							<tr>
+								<td style="padding-left:20px;width:80%;" height="24" align="left">
+									<div style="float:left;width: 40px;"><span>小结：</span></div>
+									<div style="float:left;width: 600px;"><span th:text="${each1.elementText('CheckupSummary')}"></span></div>
+									<div style="clear:both;height:0;"></div>
+								</td>
+								<td height="24" align="left">
+									小结医生：
+									<span th:text="${each1.elementText('CheckupDoctor')}"></span>
+								</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td align="left">
+									小结日期：
+									<span th:text="${each1.elementText('SummaryDate')}"></span>
+								</td>
+							</tr>
+						</table>
+						<br />
+					</td>
+				</tr>
+			</tfoot>
+			<tfoot th:with="co=${each1.elementText('CheckupOffice')}"><!-- 胃镜室 -->
+				<tr th:if="${co.equals('0303')}">
+					<td>
+						<table width="100%" border="0" align="left" cellpadding="0"
+							cellspacing="0">
+							<tr>
+								<td style="padding-left:20px;width:80%;" height="24" align="left">
+									<div style="float:left;width: 60px;"><span>内镜诊断：</span></div>
+									<div style="float:left;width: 600px;"><span th:text="${each1.elementText('CheckupSummary')}"></span></div>
+									<div style="clear:both;height:0;"></div>
+								</td>
+								<td height="24" align="left">
+									小结医生：
+									<span th:text="${each1.elementText('CheckupDoctor')}"></span>
+								</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td align="left">
+									小结日期：
+									<span th:text="${each1.elementText('SummaryDate')}"></span>
+								</td>
+							</tr>
+						</table>
+						<br />
+					</td>
+				</tr>
+			</tfoot>
+			<tfoot th:with="co=${each1.elementText('CheckupOffice')}"><!-- 胃镜活检 -->
+				<tr th:if="${co.equals('0304')}">
+					<td>
+						<table width="100%" border="0" align="left" cellpadding="0"
+							cellspacing="0">
+							<tr>
+								<td style="padding-left:20px;width:80%;" height="24" align="left">
+									<div style="float:left;width: 60px;"><span>病理诊断：</span></div>
+									<div style="float:left;width: 600px;">
+										<span th:text="${each1.elementText('CheckupSummary')}"></span>
+										<span th:if="${each1.elementText('HP').length() > 0}" th:text="${','}"></span>
+										<strong th:text="${'HP(' + each1.elementText('HP') + ')'}"></strong>
+									</div>
+									<div style="clear:both;height:0;"></div>
+								</td>
+								<td height="24" align="left">
+									小结医生：
+									<span th:text="${each1.elementText('CheckupDoctor')}"></span>
+								</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td align="left">
+									小结日期：
+									<span th:text="${each1.elementText('SummaryDate')}"></span>
+								</td>
+							</tr>
+						</table>
+						<br />
+					</td>
+				</tr>
+			</tfoot>
+		</table>
+		<div>
+			<table width="100%" border="0" align="left" cellpadding="0"
+				cellspacing="0">
+				<tr>
+					<td style="font-size:16px;" width="28%" height="24" align="left">
+						<hr style="width: 100%;margin-bottom:0;border-top:3px solid #000000;"></hr>
+						<strong>总检结论</strong>
+						<span style="padding-left: 140px;">总检医生：</span>
+						<span th:text="${doc.elementText('TotalCheckupDoc')}"></span>
+						<span style="padding-left: 140px;">总检日期：</span>
+						<span th:text="${doc.elementText('TotalCheckupDate')}"></span>
+						<hr style="width: 100%;margin-bottom:0;border-top:3px solid #000000;margin-top: 0;"></hr>
+					</td>
+				</tr>
+				<tr>
+					<td style="padding-left: 20px;padding-right: 40px " height="30" colspan="3" align="left">
+						<div style="float:left;width:50px;"><strong style="font-size:14px;">综述：</strong></div>
+						<div style="float:left;width:760px;">
+							<span th:each='line:${doc.elementText("CheckupOutcome").split("\n")}'>
+								<span th:text="${line}"></span><br/>
+							</span>
+						</div>
+						<div style="clear:both;height:0;"></div>
+					</td>
+				</tr>
+				<tr style="padding-bottom: 10px">
+					<td style="padding-left: 20px; padding-right: 40px;" height="30" colspan="3" align="left">
+						<div style="float:left;width:50px;"><strong style="font-size:14px;">建议：</strong></div>
+						<div style="float:left;width:760px;">
+							<span th:each='line:${doc.elementText("CheckupAdvice").split("\n")}'>
+								<span th:text="${line}"></span><br/>
+							</span>
+						</div>
+						<div style="clear:both;height:0;"></div>
+					</td>
+				</tr>
+				<tr>
+					<td height="30" colspan="3" align="left">
+						<span class="red" style="color: red;">*</span>
+						<strong>本系统提供的检验体检数据来源于各医院，仅供方便查询参考使用，不具法律效力，如有疑问请以各医院纸质报告为准。</strong>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</body>
+</html>

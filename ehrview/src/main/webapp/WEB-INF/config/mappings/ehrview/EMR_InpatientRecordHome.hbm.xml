@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="EMR_InpatientRecordHome" table="EMR_InpatientRecordHome">
+			<id name="DCID" type="java.lang.String">
+            	<column name="DCID"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="VisitID" type="java.lang.String" length="16" />
+        	<property name="EffectiveFlag" type="java.lang.String" length="1" />
+        	<property name="PatientType" type="java.lang.String" length="2" />
+        	<property name="MPIID" type="java.lang.String" length="32" />
+        	<property name="ZoneID" type="java.lang.String" length="1" />
+        	<property name="StatisticDate" type="java.util.Date"  />
+        	<property name="MedicalInstitutions" type="java.lang.String" length="50" />
+        	<property name="MedicalOrgnationCode" type="java.lang.String" length="10" />
+        	<property name="MedicalCostPayTypeCode" type="java.lang.String" length="3" />
+        	<property name="HospizationTimes" type="java.lang.String" length="2" />
+        	<property name="HealthCardID" type="java.lang.String" length="32" />
+        	<property name="HealthInsuranceCardID" type="java.lang.String" length="32" />
+        	<property name="ClinicID" type="java.lang.String" length="32" />
+        	<property name="HospizationID" type="java.lang.String" length="10" />
+        	<property name="MedicalRecordID" type="java.lang.String" length="18" />
+        	<property name="Name" type="java.lang.String" length="50" />
+        	<property name="Sex" type="java.lang.String" length="1" />
+        	<property name="BirthDateTime" type="java.util.Date"  />
+        	<property name="Age" type="java.lang.String" length="3" />
+        	<property name="Nationality" type="java.lang.String" length="3" />
+        	<property name="MonthsAge" type="java.lang.String" length="8" />
+        	<property name="NeonatalBirthWeight" type="java.lang.String" length="5" />
+        	<property name="NeonatalAdmissionWeight" type="java.lang.String" length="5" />
+        	<property name="Province" type="java.lang.String" length="70" />
+        	<property name="City" type="java.lang.String" length="70" />
+        	<property name="County" type="java.lang.String" length="70" />
+        	<property name="OriginProvince" type="java.lang.String" length="70" />
+        	<property name="OriginCity" type="java.lang.String" length="70" />
+        	<property name="EthnicGroup" type="java.lang.String" length="2" />
+        	<property name="IDCardCode" type="java.lang.String" length="2" />
+        	<property name="IDCard" type="java.lang.String" length="18" />
+        	<property name="OccupationCategoryCode" type="java.lang.String" length="2" />
+        	<property name="MaritalStatus" type="java.lang.String" length="2" />
+        	<property name="AdmissionWay" type="java.lang.String" length="1" />
+        	<property name="AdmissionDateTime" type="java.util.Date"  />
+        	<property name="AdmissionDeptName" type="java.lang.String" length="50" />
+        	<property name="AdmissionSickroom" type="java.lang.String" length="20" />
+        	<property name="TransferredDeptName" type="java.lang.String" length="50" />
+        	<property name="DischargeDateTime" type="java.util.Date"  />
+        	<property name="DischargeDepartment" type="java.lang.String" length="50" />
+        	<property name="DischargeSickRoom" type="java.lang.String" length="20" />
+        	<property name="ActualHospitalizationDays" type="java.lang.String" length="4" />
+        	<property name="ClinicDiagnosis" type="java.lang.String" length="100" />
+        	<property name="ClinicWesternDiagnosisCode" type="java.lang.String" length="7" />
+        	<property name="MasterDiseaseName" type="java.lang.String" length="100" />
+        	<property name="MasterDiseaseCode" type="java.lang.String" length="7" />
+        	<property name="MasterAdmissionCondition" type="java.lang.String" length="1" />
+        	<property name="MasterDischargePrognosisCondit" type="java.lang.String" length="1" />
+        	<property name="OutsideReasonOfInjuryAndPoison" type="java.lang.String" length="100" />
+        	<property name="OutsideReasonOfInjuryAndPoCode" type="java.lang.String" length="7" />
+        	<property name="PathologyDiseaseName" type="java.lang.String" length="100" />
+        	<property name="PathologyDiseaseCode" type="java.lang.String" length="7" />
+        	<property name="PathologyID" type="java.lang.String" length="18" />
+        	<property name="AllergicDrug" type="java.lang.String" length="100" />
+        	<property name="AutopsySign" type="java.lang.String" length="1" />
+        	<property name="ABOBloodCode" type="java.lang.String" length="1" />
+        	<property name="RhBloodCode" type="java.lang.String" length="1" />
+        	<property name="DeptManager" type="java.lang.String" length="50" />
+        	<property name="ChiefDoctorSign" type="java.lang.String" length="50" />
+        	<property name="AttendingDoctor" type="java.lang.String" length="50" />
+        	<property name="HospizationDoctor" type="java.lang.String" length="50" />
+        	<property name="ResponsibilityNurse" type="java.lang.String" length="50" />
+        	<property name="RefresherDoctors" type="java.lang.String" length="50" />
+        	<property name="InternDoctor" type="java.lang.String" length="50" />
+        	<property name="MedicalRecordCoderSign" type="java.lang.String" length="50" />
+        	<property name="MedicalRecordQuality" type="java.lang.String" length="1" />
+        	<property name="QualityControlDoctor" type="java.lang.String" length="50" />
+        	<property name="QualityControlSign" type="java.lang.String" length="50" />
+        	<property name="QualityControlDate" type="java.util.Date"  />
+        	<property name="DischargeMethods" type="java.lang.String" length="1" />
+        	<property name="PrepareAcceptHospitalName" type="java.lang.String" length="70" />
+        	<property name="Day31InpatientMk" type="java.lang.String" length="1" />
+        	<property name="Day31InpatientAim" type="java.lang.String" length="100" />
+        	<property name="StuporTimeBeforeAdmission" type="java.lang.String" length="10" />
+        	<property name="StuporTimeAfterAdmission" type="java.lang.String" length="10" />
+        	<property name="HospizationTotalCost" type="java.lang.String" length="10" />
+        	<property name="HospizationTotalPersonalCost" type="java.lang.String" length="10" />
+        	<property name="DiagCoinOutpatientVsDischarge" type="java.lang.String" length="1" />
+        	<property name="DiagCoinAdmssionVsDischarge" type="java.lang.String" length="1" />
+        	<property name="DiagCoinPreoperativeVsPost" type="java.lang.String" length="1" />
+        	<property name="DiagCoinClinicalVsPathologica" type="java.lang.String" length="1" />
+        	<property name="DiagCoinRadiologyVspathology" type="java.lang.String" length="1" />
+        	<property name="SalvageConditionSalvageTimes" type="java.lang.String" length="2" />
+        	<property name="SalvageConditionSuccessTimes" type="java.lang.String" length="2" />
+        	<property name="ClinicalPathManagement" type="java.lang.String" length="1" />
+        	<property name="VersionNumber" type="java.lang.String" length="10" />
+</class>
+</hibernate-mapping>

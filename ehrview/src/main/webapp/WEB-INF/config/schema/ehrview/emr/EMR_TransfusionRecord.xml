@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<entry id="EMR_TransfusionRecord" alias="5506输血记录(EMR_TransfusionRecord)">
+  <item id="DCID" alias="记录号" type="string" length="16" generator="assigned" pkey="true"/>
+  <item id="VisitID" alias="就诊标识" type="string" length="16"/>
+  <item id="PatientType" alias="患者类型" type="string" length="2"/>
+  <item id="MPIID" alias="主索引标识" type="string" length="32"/>
+  <item id="ZoneID" alias="分区标识" type="string" length="1"/>
+  <item id="StatisticDate" alias="统计日期" type="timestamp"/>
+  <item id="AuthorOrganization" alias="创建机构" type="string" length="16"/>
+  <item id="DeptName" alias="科室名称" type="string" length="50"/>
+  <item id="WardAreaNm" alias="病区名称" type="string" length="50"/>
+  <item id="ABOBloodCode" alias="ABO 血型代码" type="string" length="1"/>
+  <item id="ABOBloodCode_Text" alias="ABO 血型" type="string" length="32"/>
+  <item id="RhBloodCode" alias="Rh（D）血型代码" type="string" length="1"/>
+  <item id="RhBloodCode_Text" alias="Rh（D）血型" type="string" length="32"/>
+  <item id="BloodTransfusionSign" alias="输血史标识代码" type="string" length="1"/>
+  <item id="ClinicalDiagnosis" alias="临床诊断" type="string" length="100"/>
+  <item id="DiagnoseCode" alias="疾病诊断代码" type="string" length="7"/>
+  <item id="TransfusionProperties" alias="输血性质" type="string" length="1"/>
+  <item id="RequestBlood" alias="申请血型" type="string" length="30"/>
+  <item id="TransfusionIndications" alias="输血指征" type="string" length="200"/>
+  <item id="BloodExaminationResults" alias="辅助检查结果" type="string" length="200"/>
+  <item id="BloodTransfusionProcessRecord" alias="输血过程记录" type="string" length="2000"/>
+  <item id="TransfusionBreedCode" alias="输血品种代码" type="string" length="1"/>
+  <item id="BloodTransfusionVolume" alias="输血量" length="4"/>
+  <item id="BloodTransfusionMeasurementUni" alias="输血量计量单位" type="string" length="10"/>
+  <item id="TransfusionReactionSign" alias="输血反应标志" type="string" length="1"/>
+  <item id="TransfusionRectionType" alias="输血反应类型" type="string" length="1"/>
+  <item id="TransfusionRectionType_Text" alias="输血反应" type="string" length="32"/>
+  <item id="BloodTransfusionTimes" alias="输血次数" length="2"/>
+  <item id="BloodTransfusionDateTime" alias="输血日期时间" type="timestamp"/>
+  <item id="TransfusionReason" alias="输血原因" type="string" length="100"/>
+  <item id="DoctorSign" alias="医师签名" type="string" length="50"/>
+  <item id="SignDateTime" alias="签名日期时间" type="timestamp"/>
+</entry>

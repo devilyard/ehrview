@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="红细胞"/>
+  <item key="2" text="血小板"/>
+  <item key="3" text="血浆"/>
+  <item key="4" text="全血"/>
+  <item key="5" text="自体血回输"/>
+  <item key="6" text="其他"/>
+</dic>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="01" text="-"/>
+  <item key="02" text="±"/>
+  <item key="03" text="+"/>
+  <item key="04" text="++"/>
+  <item key="05" text="+++"/>
+  <item key="06" text="++++"/>
+  <item key="07" text="++++以上"/>
+</dic>

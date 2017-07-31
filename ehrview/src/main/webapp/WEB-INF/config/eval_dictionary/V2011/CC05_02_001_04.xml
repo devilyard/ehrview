@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="完全正常"/>
+  <item key="2" text="有不同程度的功能下降"/>
+  <item key="3" text="有明显障碍"/>
+</dic>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="0" text="无"/>
+  <item key="1" text="左心室肥厚"/>
+  <item key="2" text="动脉壁增厚"/>
+  <item key="3" text="血清肌酐轻度升高"/>
+  <item key="4" text="微量白蛋白尿"/>
+</dic>

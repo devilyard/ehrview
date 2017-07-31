@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="氨化消毒"/>
+  <item key="2" text="二氧化氯消毒"/>
+  <item key="3" text="臭氧消毒"/>
+  <item key="4" text="紫外线消毒"/>
+  <item key="9" text="其他"/>
+</dic>

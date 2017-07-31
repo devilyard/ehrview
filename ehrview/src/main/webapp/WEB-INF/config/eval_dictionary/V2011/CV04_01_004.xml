@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="非故意" comment="偶然或者意外发生的情况导致受伤"/>
+  <item key="2" text="自残/自杀(自杀或自杀企图)" comment="患者自己完成，并知道会产生受伤或死亡结果的某种积极或者消极的行动直接或间接引起的受伤"/>
+  <item key="3" text="故意(暴力、攻击)" comment="受到别人故意的攻击或者暴力"/>
+  <item key="4" text="不清楚" comment="不能确定意图或者患者不回答该问题，或者还需要进一步深人了解"/>
+</dic>

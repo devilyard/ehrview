@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="正常"/>
+  <item key="2" text="颅骨缺损"/>
+  <item key="3" text="头颅血肿"/>
+  <item key="4" text="头围增大"/>
+  <item key="5" text="小头"/>
+  <item key="6" text="颅逢增宽"/>
+  <item key="7" text="囟门饱满"/>
+  <item key="8" text="囟门凹陷"/>
+  <item key="9" text="方颅"/>
+  <item key="10" text="马鞍头"/>
+  <item key="11" text="囟门晚闭"/>
+  <item key="12" text="乒乓头"/>
+  <item key="13" text="其他"/>
+</dic>

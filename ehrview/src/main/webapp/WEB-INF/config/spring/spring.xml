@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+	<bean class="ctd.util.AppContextHolder">
+       <property name="devMode" value="true" />
+	</bean>
+	<bean class="ctd.resource.ResourceCenter"/>
+	
+	<import resource="spring-exp.xml"/>
+	<import resource="spring-context.xml"/>
+	<import resource="spring-freemarker.xml"/>
+	<import resource="spring-ehrview.xml"/>
+	<import resource="spring-hibernate.xml"/>
+	<import resource="spring-rpc.xml"/>
+	<import resource="spring-mvc.xml"/>
+	<import resource="spring-redis.xml"/>
+
+	<bean id="serviceExecutor" class="ctd.service.core.ServiceExecutor" />
+	<bean id="appConfigLocator" class="ctd.service.core.AppConfigLocator"/>
+	<bean id="moduleConfigLocator" class="ctd.service.core.ModuleConfigLocator"/>
+	<bean id="catalogConfigLocator" class="ctd.service.core.CatalogConfigLocator"/>
+	<bean id="reportSchemaLoader" class="ctd.service.core.ReportSchemaLoader"/>
+	<bean id="simpleReport" class="ctd.service.dao.SimpleReport"/>
+	<bean id="logon" class="com.bsoft.ehr.controller.support.logon.EHRViewAspectLogon"/>
+	<bean id="ssologon" class="ctd.sso.SSOLogon"/>
+	<bean id="logonOut" class="ctd.service.core.LogonOut"/>
+	<bean id="passwordChanger" class="ctd.service.core.PasswordChanger"/>
+	<bean id="reloadContext" class="ctd.service.core.ReloadContext"/>
+	<bean id="simpleSave" class="ctd.service.dao.SimpleSave"/>
+	<bean id="simpleLoad" class="ctd.service.dao.SimpleLoad"/>
+	<bean id="simpleRemove" class="ctd.service.dao.SimpleRemove"/>
+	<bean id="simpleQuery" class="ctd.service.dao.SimpleQuery"/>
+	<bean id="roleLocator" class="ctd.service.core.RoleLocator"/>
+	<bean id="onlineHandler" class="ctd.service.core.OnlineHandler"/>
+	<bean id="serviceInfoHandler" class="ctd.service.core.ServiceInfoHandler"/>
+	<bean id="dictionaryUtil" class="ctd.service.core.DictionaryUtil"/>
+	<bean id="getNotifyInfo" class="ctd.service.core.GetNotifyInfo"/>
+	<bean id="message" class="ctd.message.Message"/>
+	<bean id="configuration" class="ctd.service.core.Configuration">
+	   <property name="transactionSupport">
+	       <value>true</value>
+	   </property>
+    </bean>
+     <!-- 配置管理service -->
+    <bean id="userService" class="ctd.configure.UserConfig" />
+    <bean id="manageService" class="ctd.configure.ManageUnitConfig" />
+    <bean id="domainConfig" class="ctd.configure.DomainConfig" />
+    <bean id="appConfig" class="ctd.configure.ApplicationConfig" />
+    <bean id="personnelService" class="ctd.configure.PersonnelService">
+       <property name="picPath" value="photo/"></property>
+       <property name="tempPath" value="temp/"></property>
+    </bean>
+    <bean id="organizationService" class="ctd.configure.OrganizationService" />
+    <bean id="roleConfig" class="ctd.configure.RoleConfig"/>
+    <bean id="organizTypeService" class="ctd.configure.OrganizTypeService"/>
+    <bean id="quickService" class="ctd.configure.QuickConfig"/>
+    <bean id="settingService" class="ctd.configure.SettingService">
+        <property name="index" value="welcome.jshtml"></property>
+    </bean>
+    <!-- ****************** -->
+    <bean id="labExamSetService" class="com.bsoft.ehr.service.ssdev.LabExamSetService" />
+    
+    <bean id="tableDocUploadService" class="com.bsoft.ehr.service.TableDocUploadService" >
+		<property name="docs">
+            <map>
+                <entry key="EHR_HealthRecord_Doc" value="EHR_HealthRecord.xls" />
+                <entry key="Birth_Certificate_Doc" value="Birth_Certificate.xls" />
+                <entry key="MHC_BabyVisitRecord_Doc" value="MHC_BabyVisitInfo.xls" />
+                <entry key="CDH_CheckUp_Doc" value="CDH_CheckUp.xls" />
+<!--                 <entry key="OccupationDisease_Report_Doc" value="OccupationDisease_Report.xls" /> -->
+                <entry key="MHC_VisitRecord_Doc" value="MHC_VisitRecord.xls" />
+                <entry key="MHC_PostnatalVisitInfo_Doc" value="MHC_PostnatalVisitInfo.xls" />
+                <entry key="MHC_Postnatal42DayRecord_Doc" value="MHC_Postnatal42DayRecord.xls" />
+                <entry key="Vaccination_Report_Doc" value="Vaccination_Report.xls" />
+                <entry key="InfectiousDisease_Report_Doc" value="InfectiousDisease_Report.xls" />
+                <entry key="Death_Certificate_Doc" value="Death_Certificate.xls" />
+                <entry key="MDC_HypertensionVisit_Doc" value="MDC_HypertensionVisit.xls" />
+                <entry key="MDC_DiabetesVisit_Doc" value="MDC_DiabetesVisit.xls" />
+                <entry key="PSY_PsychosisRecord_Doc" value="PSY_PsychosisRecord.xls" />
+<!--                 <entry key="FoodborneDiseases_Report_Doc" value="FoodborneDiseases_Report.xls" /> -->
+                <entry key="Cu_Register_Doc" value="Cu_Register.xls" />
+                <entry key="Opt_Record_Doc" value="Opt_Record.xls" />
+                <entry key="Ipt_Record_Doc" value="Ipt_Record.xls" />
+                <entry key="EMR_ConsultationRecord_Doc" value="EMR_ConsultationRecord.xls" />
+                <entry key="EMR_ReferralRecord_Doc" value="EMR_ReferralRecord.xls" />
+                <entry key="MHC_FirstVisitRecord_Doc" value="MHC_FirstVisitRecord.xls" />
+                <entry key="PSY_PsychosisVisit_Doc" value="PSY_PsychosisVisit.xls" />
+                
+                <entry key="EHR_HealthRecord" value="EHR_HealthRecord.xml" />
+                <entry key="Birth_Certificate" value="Birth_Certificate.xml" />
+                <entry key="MHC_BabyVisitRecord" value="MHC_BabyVisitInfo.xml" />
+                <entry key="CDH_CheckUp" value="CDH_CheckUp.xml" />
+                <entry key="OccupationDisease_Report" value="OccupationDisease_Report.xml" />
+                <entry key="MHC_VisitRecord" value="MHC_VisitRecord.xml" />
+                <entry key="MHC_PostnatalVisitInfo" value="MHC_PostnatalVisitInfo.xml" />
+                <entry key="MHC_Postnatal42DayRecord" value="MHC_Postnatal42DayRecord.xml" />
+                <entry key="Vaccination_Report" value="Vaccination_Report.xml" />
+                <entry key="InfectiousDisease_Report" value="InfectiousDisease_Report.xml" />
+                <entry key="Death_Certificate" value="Death_Certificate.xml" />
+                <entry key="MDC_HypertensionVisit" value="MDC_HypertensionVisit.xml" />
+                <entry key="MDC_DiabetesVisit" value="MDC_DiabetesVisit.xml" />
+                <entry key="PSY_PsychosisRecord" value="PSY_PsychosisRecord.xml" />
+                <entry key="FoodborneDiseases_Report" value="FoodborneDiseases_Report.xml" />
+                <entry key="Cu_Register" value="Cu_Register.xml" />
+                <entry key="Opt_Record" value="Opt_Record.xml" />
+                <entry key="Ipt_Record" value="Ipt_Record.xml" />
+                <entry key="EMR_ConsultationRecord" value="EMR_ConsultationRecord.xml" />
+                <entry key="EMR_ReferralRecord" value="EMR_ReferralRecord.xml" />
+                <entry key="MHC_FirstVisitRecord" value="MHC_FirstVisitRecord.xml" />
+                <entry key="PSY_PsychosisVisit" value="PSY_PsychosisVisit.xml" />
+            </map>
+        </property>
+      	<property name="serviceDao" ref="serviceDao"/>
+      	<property name="communityServiceDao" ref="communityServiceDao"/>
+      	<property name="baseDao" ref="baseDao"/> 
+	</bean>
+</beans>

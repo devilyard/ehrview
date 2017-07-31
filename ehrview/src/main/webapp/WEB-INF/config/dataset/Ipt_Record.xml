@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<BasicDataset>
+	<DataSet code="HDSD00.01.16" displayName="住院摘要信息" codeSystem="WS365-2011" codeSystemName="城乡居民健康档案基本数据集"/>
+	<HDSD00.01.001 dataelementName="城乡居民健康档案编号" value="" datatype="N17"/>
+	<HDSD00.01.002 dataelementName="本人姓名" value="" datatype="A1..50"/>
+	<HDSD00.01.571 dataelementName="病案号" value="" datatype="AN1..18"/>
+	<HDSD00.01.003 dataelementName="性别代码" code="" datatype="N1" dic="GB_T2261_1" displayName="男性" codeSystem="2.16.156.10011.2.3.3.4" codeSystemName="生理性别代码表(GB/T 2261.1)"/>
+	<HDSD00.01.004 dataelementName="出生日期" value="" datatype="D8"/>
+	<HDSD00.01.005 dataelementName="身份证件类别代码" code="" datatype="N2" dic="CV02_01_101" displayName="居民身份证" codeSystem="2.16.156.10011.2.3.1.1" codeSystemName="身份证件类别代码表"/>
+	<HDSD00.01.006 dataelementName="身份证件号码" value="" datatype="AN18"/>
+	<HDSD00.01.017 dataelementName="婚姻状况代码" code="" datatype="N2" dic="GB_T2261_2" displayName="再婚" codeSystem="2.16.156.10011.2.3.3.5" codeSystemName="婚姻状况代码表(GB/T 2261.2)"/>
+	<HDSD00.01.572 dataelementName="住院机构名称" value="" datatype="AN1..70"/>
+	<HDSD00.01.573 dataelementName="住院机构代码" code="" datatype="AN10" dic="WS_218" displayName="云南省第一人民医院" codeSystem="2.16.156.10011.2.3.4.1" codeSystemName="卫生机构分类代码表(WS 218-2002)"/>
+	<HDSD00.01.574 dataelementName="入院科室名称" value="" datatype="AN1..50"/>
+	<HDSD00.01.575 dataelementName="入院日期时间" value="" datatype="D8"/>
+	<HDSD00.01.576 dataelementName="住院原因代码" code="" datatype="N1" dic="CV06_00_212" displayName="病伤" codeSystem="2.16.156.10011.2.3.1.188" codeSystemName="住院原因代码表"/>
+	<HDSD00.01.046 dataelementName="症状代码" code="" datatype="AN1..5" dic="ICD_10" displayName="紧张性头痛" codeSystem="2.16.156.10011.2.3.3.11" codeSystemName="ICD-10"/>
+	<HDSD00.01.047 dataelementName="症状名称" value="" datatype="AN1..50"/>
+	<HDSD00.01.456 dataelementName="发病日期时间" value="" datatype="D8"/>
+	<HDSD00.01.542 dataelementName="症状持续时间（min）" value="" datatype="N1..3"/>
+	<HDSD00.01.543 dataelementName="检查（检验）类别" value="" datatype="AN1..100"/>
+	<HDSD00.01.544 dataelementName="检查（检验）项目名称" value="" datatype="AN1..80"/>
+	<HDSD00.01.548 dataelementName="检查（检验）项目代码" value="" datatype="AN1..20"/>
+	<HDSD00.01.545 dataelementName="检查（检验）结果代码" code="" datatype="N1" dic="DE04_30_015_06" displayName="正常" codeSystem="2.16.156.10011.2.3.2.38" codeSystemName="检查/检验结果代码表"/>
+	<HDSD00.01.546 dataelementName="检查（检验）定量结果" value="" datatype="N1..10"/>
+	<HDSD00.01.547 dataelementName="检查（检验）计量单位" value="" datatype="A1..20"/>
+	<HDSD00.01.577 dataelementName="入院诊断名称" value="" datatype="AN1..50"/>
+	<HDSD00.01.578 dataelementName="入院诊断代码" code="" datatype="AN1..5" dic="ICD_10" displayName="甲状腺恶性肿瘤" codeSystem="2.16.156.10011.2.3.3.11" codeSystemName="ICD-10"/>
+	<HDSD00.01.579 dataelementName="会诊记录编号" value="" datatype="AN1..20"/>
+	<HDSD00.01.580 dataelementName="会诊所在医疗机构名称" value="" datatype="AN1..70"/>
+	<HDSD00.01.581 dataelementName="会诊所在医疗机构代码" code="" datatype="AN10" dic="WS_218" displayName="云南省第二人民医院" codeSystem="2.16.156.10011.2.3.4.1" codeSystemName="卫生机构分类代码表(WS 218-2002)"/>
+	<HDSD00.01.582 dataelementName="会诊日期" value="" datatype="D8"/>
+	<HDSD00.01.583 dataelementName="会诊原因" value="" datatype="AN1..200"/>
+	<HDSD00.01.584 dataelementName="会诊意见" value="" datatype="AN1..200"/>
+	<HDSD00.01.585 dataelementName="会诊医师姓名" value="" datatype="A1..50"/>
+	<HDSD00.01.044 dataelementName="责任医师姓名" value="" datatype="A1..50"/>
+	<HDSD00.01.516 dataelementName="确诊日期" value="" datatype="D8"/>
+	<HDSD00.01.586 dataelementName="住院者传染病标志" value="" datatype="T/F"/>
+	<HDSD00.01.587 dataelementName="住院者疾病状态代码" code="" datatype="N1" dic="CV05_01_001" displayName="严重" codeSystem="2.16.156.10011.2.3.1.100" codeSystemName="住院者疾病状态代码表"/>
+	<HDSD00.01.193 dataelementName="中药类别代码" code="" datatype="N1" dic="CV06_00_101" displayName="中成药" codeSystem="2.16.156.10011.2.3.1.157" codeSystemName="中药使用类别代码表"/>
+	<HDSD00.01.194 dataelementName="药物名称" value="" datatype="AN1..50"/>
+	<HDSD00.01.195 dataelementName="药物使用频率" value="" datatype="AN1..20"/>
+	<HDSD00.01.196 dataelementName="药物使用剂量单位" value="" datatype="AN1..6"/>
+	<HDSD00.01.197 dataelementName="药物使用次剂量" value="" datatype="N1..5,2"/>
+	<HDSD00.01.198 dataelementName="药物使用总剂量" value="" datatype="N1..12,2"/>
+	<HDSD00.01.199 dataelementName="药物使用途径代码" datatype="N1..3" code="" dic="CV06_00_102" displayName="口服" codeSystem="2.16.156.10011.2.3.1.158" codeSystemName="用药途径代码表"/>
+	<HDSD00.01.553 dataelementName="药物类型" value="" datatype="AN1..100"/>
+	<HDSD00.01.554 dataelementName="药物剂型代码" code="" datatype="N2" dic="CV08_50_002" displayName="丸剂" codeSystem="2.16.156.10011.2.3.1.211" codeSystemName="药物剂型代码表"/>
+	<HDSD00.01.555 dataelementName="用药天数" value="" datatype="N1..5"/>
+	<HDSD00.01.588 dataelementName="用药停止日期时间" value="" datatype="D8"/>
+	<HDSD00.01.556 dataelementName="手术（操作）名称" value="" datatype="AN1..80"/>
+	<HDSD00.01.557 dataelementName="手术（操作）代码" code="" datatype="AN1..5" dic="ICD_9" displayName="左前胸" codeSystem="2.16.156.10011.2.3.3.12" codeSystemName="手术(操作)代码表(ICD-9-CM)"/>
+	<HDSD00.01.026 dataelementName="手术/操作日期时间" value="" datatype="D8"/>
+	<HDSD00.01.589 dataelementName="麻醉方法名称" value="" datatype="A1..50"/>
+	<HDSD00.01.590 dataelementName="麻醉方法代码" code="" datatype="N1..2" dic="CV06_00_103" displayName="全身麻醉" codeSystem="2.16.156.10011.2.3.1.159" codeSystemName="麻醉方法代码表"/>
+	<HDSD00.01.558 dataelementName="其他医学处置" value="" datatype="AN1..200"/>
+	<HDSD00.01.281 dataelementName="转诊标志" value="" datatype="T/F"/>
+	<HDSD00.01.282 dataelementName="转入医疗机构名称" value="" datatype="AN1..70"/>
+	<HDSD00.01.283 dataelementName="转入机构科室名称" value="" datatype="AN1..50"/>
+	<HDSD00.01.284 dataelementName="转诊原因" value="" datatype="AN1..70"/>
+	<HDSD00.01.559 dataelementName="转出医疗机构名称" value="" datatype="AN1..70"/>
+	<HDSD00.01.560 dataelementName="转出医疗机构代码" code="" datatype="AN10" dic="WS_218" displayName="云南省第一人民医院" codeSystem="2.16.156.10011.2.3.4.1" codeSystemName="卫生机构分类代码表(WS 218-2002)"/>
+	<HDSD00.01.561 dataelementName="转入医疗机构名称" value="" datatype="AN1..70"/>
+	<HDSD00.01.562 dataelementName="转入医疗机构代码" code="" datatype="AN10" dic="WS_218" displayName="云南省第二人民医院" codeSystem="2.16.156.10011.2.3.4.1" codeSystemName="卫生机构分类代码表(WS 218-2002)"/>
+	<HDSD00.01.563 dataelementName="转诊标志" value="" datatype="T/F"/>
+	<HDSD00.01.564 dataelementName="转诊日期" value="" datatype="D8"/>
+	<HDSD00.01.565 dataelementName="治疗方案" value="" datatype="AN1..200"/>
+	<HDSD00.01.533 dataelementName="康复措施指导" value="" datatype="AN1..100"/>
+	<HDSD00.01.591 dataelementName="出院诊断名称" value="" datatype="AN1..50"/>
+	<HDSD00.01.592 dataelementName="出院诊断代码" code="" datatype="AN1..5" dic="ICD_10" displayName="急性出血后贫血" codeSystem="2.16.156.10011.2.3.3.11" codeSystemName="ICD-10"/>
+	<HDSD00.01.593 dataelementName="治疗结果代码" code="" datatype="N1" dic="CV05_10_010" displayName="治愈" codeSystem="2.16.156.10011.2.3.1.148" codeSystemName="病情转归代码表"/>
+	<HDSD00.01.185 dataelementName="出院日期" value="" datatype="D8"/>
+	<HDSD00.01.448 dataelementName="死亡日期时间" value="" datatype="D8"/>
+	<HDSD00.01.449 dataelementName="根本死因代码" code="" datatype="AN1..5" dic="ICD_10" displayName="泌尿器官良性肿瘤" codeSystem="2.16.156.10011.2.3.3.11" codeSystemName="ICD-10"/>
+	<HDSD00.01.594 dataelementName="住院费用分类名称" value="" datatype="A1..20"/>
+	<HDSD00.01.595 dataelementName="住院费用分类代码" code="" datatype="N2" dic="CV07_10_003" codeSystem="2.16.156.10011.2.3.1.269" codeSystemName="医疗付费方式代码表"/>
+	<HDSD00.01.596 dataelementName="住院费用金额（元）" value="" datatype="AN1..10,2"/>
+	<HDSD00.01.569 dataelementName="医疗付款方式代码" code="" datatype="N1..2" dic="CV07_10_003" displayName="城镇职工基本医疗保险" codeSystem="2.16.156.10011.2.3.1.197" codeSystemName="医疗费用来源类别代码表"/>
+	<HDSD00.01.597 dataelementName="住院费用结算方式代码" code="" datatype="N2" dic="CV07_10_004" displayName="现金" codeSystem="2.16.156.10011.2.3.1.198" codeSystemName="医疗费用结算方式代码表"/>
+</BasicDataset>

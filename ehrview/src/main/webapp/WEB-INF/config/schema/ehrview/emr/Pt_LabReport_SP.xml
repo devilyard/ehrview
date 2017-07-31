@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<entry id="Pt_LabReport_SP" alias="检验报告(Pt_LabReport_SP)" hasDoc="true">
+	<item id="DCID" alias="记录号" type="string" length="16" not-null="1" generator="assigned" pkey="true"/>
+	<item id="MPIID" alias="主索引标识" type="string" length="32" not-null="1"/>
+	<item id="SourceID" alias="来源标识" length="50"/>
+	<item id="RecordClassifying" alias="记录分类" length="50"/>
+	<item id="RecordTitle" alias="记录名称" length="50"/>
+	<item id="EffectiveTime" alias="记录时间" type="date"/>
+	<item id="EffectiveFlag" alias="有效标志" type="string" length="1"/>
+	<item id="VersionNumber" alias="版本" length="10"/>
+	<item id="AuthorOrganization" alias="创建机构" length="16"/>
+	<item id="AuthorOrganization_TEXT" alias="创建机构中文" length="50"/>
+	<item id="Author" alias="创建人" length="32"/>
+	<item id="SystemTime" alias="创建时间" type="date"/>
+	<item id="UploadTime" alias="上传时间" type="date"/>
+	<item id="UpdateTime" alias="更新时间" type="date"/>
+	<item id="JZLSH" alias="就诊流水号" length="32"/>
+	<item id="JYBGDH" alias="检验报告单号" length="32"/>
+	<item id="BRBSLB" alias="病人标识类别代码" length="2"/>
+	<item id="BGRQ" alias="审核日期" type="date"/>
+	<item id="JYRQ" alias="检验日期" type="date"/>
+	<item id="JYBGDJG" alias="检验报告单机构（科室）" type="string" length="50" />
+	<item id="JYBGDMC" alias="检验报告单—项目名称（检查目的）" type="string" length="200"/>
+	<item id="BRBSLB_TEXT" alias="病人标识类别名称" length="16"/>
+  	<item id="EVENTID" alias="记录随机号" type="string" length="32"/>
+  	<item id="NAME" alias="姓名" type="string" length="100"/>
+  	<item id="TXDM" alias="条形代码" type="string" length="32"/>
+</entry>

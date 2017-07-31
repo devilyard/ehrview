@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="优良"/>
+  <item key="2" text="尚可"/>
+  <item key="3" text="不良"/>
+  <item key="4" text="未评价"/>
+  <item key="5" text="新病人"/>
+</dic>

@@ -1,0 +1,274 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>新生儿家庭访视记录表</title>
+
+</head>
+
+<body style="padding: 20px;">
+	<style type="text/css">
+* {
+	font-family: "微软雅黑","宋体"; font-size:12px;
+	font-size: 12px;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	color: #232323
+}
+
+table {
+	margin: 0px auto
+}
+table {
+border-collapse:collapse;
+}
+.my table {
+	border-bottom: #ccc solid 1px;
+	border-left: #ccc solid 1px;
+	border-top: #ccc solid 1px;
+	text-align: left;
+}
+
+.my td {
+	border-right: #ccc solid 1px;
+	border-bottom: #ccc dotted 1px;
+	padding: 4px;
+}
+
+.my div {
+	border-bottom: dotted #fff 1px;
+	min-height: 20px;
+}
+
+.red {
+	color: red;
+	font-weight: bold;
+}
+
+u {
+	border-bottom: 1px #666 dotted;
+	text-decoration: none;
+	margin-right: 20px;
+	padding-left: 5px;
+}
+</style>
+	<div style="text-align: center; height: 40px; line-height: 40px; font-size: 16px; font-weight: bold;">新生儿家庭访视记录表</div>
+	<table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
+		<tr>
+			<td width="500" height="30" align="left" style="padding-left: 10px">
+				<strong>姓名：</strong>
+				<u style="margin-right: 100px;" th:text="${personName}"></u>
+			</td>
+			<td align="right">
+				<strong>编号：</strong>
+				<u th:text="${doc.elementText('PregnantID')}"></u>
+			</td>
+		</tr>
+		<tr>
+			<td style="border-bottom: 4px #09F solid;" colspan="2"></td>
+		</tr>
+		<tr>
+			<td style="height: 1px;" colspan="2"></td>
+		</tr>
+		<tr>
+			<td height="10" style="border-top: 1px #09f solid;" colspan="2"></td>
+		</tr>
+	</table>
+	<div class="my">
+		<table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
+			<tr>
+				<td bgcolor="#CAE2F7" width="15%"><strong>性  别</strong></td>
+				<td width="35%"><span style="margin-right: 100px;" th:text="${sexCode_text}"></span></td>
+				<td bgcolor="#CAE2F7" width="15%"><strong>出生日期</strong></td>
+				<td th:text="${doc.elementText('BabyBirth')}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>身份证号</strong></td>
+				<td th:text="${idCard}"></td>
+				<td bgcolor="#CAE2F7"><strong>家庭住址</strong></td>
+				<td>&nbsp;<span th:text="${doc.elementText('BabyAddress')}"></span></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>父亲姓名</strong></td>
+				<td>&nbsp;<span th:text="${doc.elementText('FatherName')}"></span></td>
+				<td bgcolor="#CAE2F7"><strong>职业</strong></td>
+				<td>&nbsp;<span th:text="${doc.element('FatherJob').attributeValue('display')}"></span></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>联系电话</strong></td>
+				<td>&nbsp;<span th:text="${doc.elementText('FatherPhone')}"></span></td>
+				<td bgcolor="#CAE2F7"><strong>出生日期</strong></td>
+				<td>&nbsp;<span th:text="${doc.elementText('FatherBirth')}"></span></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>母亲姓名</strong></td>
+				<td>&nbsp;<span th:text="${doc.elementText('MotherName')}"></span></td>
+				<td bgcolor="#CAE2F7"><strong>职业</strong></td>
+				<td>&nbsp;<span	th:text="${doc.element('MotherJob').attributeValue('display')}"></span></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>联系电话</strong></td>
+				<td>&nbsp;<span th:text="${doc.elementText('MotherPhone')}"></span></td>
+				<td bgcolor="#CAE2F7"><strong>出生日期</strong></td>
+				<td>&nbsp;<span th:text="${doc.elementText('MotherBirth')}"></span></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>出生孕周</strong></td>
+				<td><span th:text="${doc.elementText('Gestation')}"></span></td>
+				<td bgcolor="#CAE2F7"><strong>母亲妊娠期患病情况</strong></td>
+				<td>
+					<span th:if="${doc.element('PregnancyDisease').attributeValue('display') != null}" th:text="${doc.element('PregnancyDisease').attributeValue('display') + '&nbsp;&nbsp;'}"></span>
+					<span th:text="${doc.elementText('OtherDisease')}"></span>	
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>助产机构名称</strong></td>
+				<td>&nbsp;<span th:text="${doc.elementText('DeliveryUnit')}"></span></td>
+				<td bgcolor="#CAE2F7"><strong>出生情况</strong></td>
+				<td>
+					<span th:if="${doc.element('BirthStatus').attributeValue('display') != null}" th:text="${doc.element('BirthStatus').attributeValue('display')} + '&nbsp;&nbsp;'"></span>
+					<span th:text="${doc.elementText('OtherStatus')}"></span>	
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>新生儿窒息</strong></td>
+				<td><span th:text="${doc.element('Asphyxia').attributeValue('display')}"></span>
+				</td>
+				<td bgcolor="#CAE2F7"><strong>是否有畸型</strong></td>
+				<td><span th:text="${doc.element('MalforMation').attributeValue('display')}"></span></td>
+			</tr>
+			<!-- 			<tr> -->
+			<!-- 				<td bgcolor="#CAE2F7">Apgar评分</td> -->
+			<!-- 				<td colspan="3"><span -->
+			<!-- 					 th:if="${doc.element('FatherName') != null}" th:text="${doc.element('FatherName')}"></span></td> -->
+			<!-- 			</tr> -->
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>新生儿听力筛查</strong></td>
+				<td><span th:text="${doc.element('HearingTest').attributeValue('display')}"></span></td>
+				<!-- 				<td bgcolor="#CAE2F7">新生儿疾病筛查</td> -->
+				<!-- 				<td><span th:if="${doc.element('MalforMation').attributeValue('display') != null}" -->
+				<!-- 					th:text="${doc.element('MalforMation').attributeValue('display')}"></span></td> -->
+				<td bgcolor="#CAE2F7"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>新生儿出生体重</strong></td>
+				<td><span th:text="${doc.elementText('Weight')}"></span></td>
+				<td bgcolor="#CAE2F7"><strong>目前体重</strong></td>
+				<td><span th:text="${doc.elementText('Weight')}"></span></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>出生身长</strong></td>
+				<td><span th:text="${doc.elementText('Length')}"></span></td>
+				<td bgcolor="#CAE2F7"><strong>喂养方式</strong></td>
+				<td><span th:text="${doc.element('FeedWay').attributeValue('display')}"></span></td>
+			</tr>
+			<!-- 			<tr> -->
+			<!-- 				<td bgcolor="#CAE2F7"><span class="red">*</span>&nbsp;吃奶量</td> -->
+			<!-- 				<td><span  th:if="${doc.element('FatherName') != null}" th:text="${doc.element('FatherName')}"></span></td> -->
+			<!-- 				<td bgcolor="#CAE2F7"><span class="red">*</span>&nbsp;吃奶次数</td> -->
+			<!-- 				<td><span  th:if="${doc.element('FatherName') != null}" th:text="${doc.element('FatherName')}"></span></td> -->
+			<!-- 			</tr> -->
+			<!-- 			<tr> -->
+			<!-- 				<td bgcolor="#CAE2F7"><span class="red">*</span>&nbsp;呕吐</td> -->
+			<!-- 				<td><span  th:if="${doc.element('FatherName') != null}" th:text="${doc.element('FatherName')}"></span></td> -->
+			<!-- 				<td bgcolor="#CAE2F7"><span class="red">*</span>&nbsp;大便</td> -->
+			<!-- 				<td><span  th:if="${doc.element('FatherName') != null}" th:text="${doc.element('FatherName')}"></span></td> -->
+			<!-- 			</tr> -->
+			<tr>
+				<td bgcolor="#CAE2F7"><strong><span class="red">*</span>&nbsp;大便次数</strong></td>
+				<td><span th:text="${doc.elementText('StoolTimes')}"></span></td>
+				<td bgcolor="#CAE2F7"><strong>体温</strong></td>
+				<td th:text="${doc.elementText('Temperature')}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>脉率</strong></td>
+				<td th:text="${doc.elementText('Pulse')}"></td>
+				<td bgcolor="#CAE2F7"><strong>呼吸频率</strong></td>
+				<td th:text="${doc.elementText('RespiratoryFrequency')}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>面色</strong></td>
+				<td th:text="${doc.element('Face').attributeValue('display')}"></td>
+				<!-- 				<td bgcolor="#CAE2F7"><strong>黄疸部位</strong></td> -->
+				<!-- 				<td>这是什么字段？？</td> -->
+				<td bgcolor="#CAE2F7"><strong></strong></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>前囟</strong></td>
+				<td><span th:if="${doc.elementText('BregmaTransverse') != null}" th:text="${doc.element('BregmaTransverse').attributeValue('display')}"></span></td>
+				<td bgcolor="#CAE2F7"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>眼外观</strong></td>
+				<td th:if="${doc.element('Eye') != null}" th:text="${doc.element('Eye').attributeValue('display')}"></td>
+				<td bgcolor="#CAE2F7"><strong>四肢活动度</strong></td>
+				<td th:if="${doc.element('Limbs') != null}" th:text="${doc.element('Limbs').attributeValue('display')}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>耳外观</strong></td>
+				<td th:if="${doc.element('Ear') != null}" th:text="${doc.element('Ear').attributeValue('display')}"></td>
+				<td bgcolor="#CAE2F7"><strong>颈部包块</strong></td>
+				<td th:if="${doc.element('Neck') != null}" th:text="${doc.element('Neck').attributeValue('display')}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>鼻</strong></td>
+				<td th:if="${doc.element('Nose') != null}" th:text="${doc.element('Nose').attributeValue('display')}"></td>
+				<td bgcolor="#CAE2F7"><strong>皮肤</strong></td>
+				<td th:if="${doc.element('Skin') != null}" th:text="${doc.element('Skin').attributeValue('display')}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>口 腔</strong></td>
+				<td th:if="${doc.element('Mouse') != null}" th:text="${doc.element('Mouse').attributeValue('display')}"></td>
+				<td bgcolor="#CAE2F7"><strong>肛门</strong></td>
+				<td th:if="${doc.element('Anal') != null}" th:text="${doc.element('Anal').attributeValue('display')}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>心肺听诊</strong></td>
+				<td th:if="${doc.element('Heartlung') != null}" th:text="${doc.element('Heartlung').attributeValue('display')}"></td>
+				<td bgcolor="#CAE2F7"><strong>外生殖器</strong></td>
+				<td th:if="${doc.element('Genitalia') != null}" th:text="${doc.element('Genitalia').attributeValue('display')}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>腹部触诊</strong></td>
+				<td th:if="${doc.element('Abdominal') != null}" th:text="${doc.element('Abdominal').attributeValue('display')}"></td>
+				<td bgcolor="#CAE2F7"><strong>脊柱</strong></td>
+				<td th:if="${doc.element('Spine') != null}" th:text="${doc.element('Spine').attributeValue('display')}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>脐带</strong></td>
+				<td th:if="${doc.element('Umbilical') != null}" th:text="${doc.element('Umbilical').attributeValue('display')}"></td>
+				<td bgcolor="#CAE2F7"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>转诊建议</strong></td>
+				<td th:text="${doc.elementText('Referral')}"></td>
+				<td bgcolor="#CAE2F7"><strong>原因</strong></td>
+				<td th:text="${doc.elementText('ReferralReason')}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>机构及科室</strong></td>
+				<td th:text="${doc.elementText('ReferralUnit')}"></td>
+				<td bgcolor="#CAE2F7"><strong>指导</strong></td>
+				<td th:text="${doc.elementText('Guide')}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>本次访视日期</strong></td>
+				<td th:text="${doc.elementText('VisitDate')}"></td>
+				<td bgcolor="#CAE2F7"><strong>下次随访地点</strong></td>
+				<td th:text="${doc.elementText('NextvisitAddress')}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>下次访视日期</strong></td>
+				<td th:text="${doc.elementText('NextvisitDate')}"></td>
+				<td bgcolor="#CAE2F7"><strong>随访医生签名</strong></td>
+				<td th:text="${doc.elementText('VisitDoctor')}"></td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="3次以上"/>
+  <item key="2" text="3次"/>
+  <item key="3" text="2次"/>
+  <item key="4" text="1次"/>
+</dic>

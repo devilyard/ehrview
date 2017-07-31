@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<applications title="Bsoft-EHRView2.1">
+	<args></args>
+
+	<app id="index" title="首页" type="index">
+		<properties>
+			<p name="entryName">SYS_HomePage</p>
+		</properties>
+		<module id="WELCOME01" title="个人信息" script="app.viewport.NotifyList" iconCls="S02"/>
+		<module id="WELCOME03" title="浏览历史" script="app.biz.ehrview.BrowsingList" iconCls="S02">
+			<initArgs>
+				<arg name="entryName">SYS_BrowsingHist</arg>
+				<arg name="listServiceId">browsingHistoryListService</arg>
+				<arg name="getSessionIdService">sessionIdService</arg>
+			</initArgs>
+		</module>
+	</app>
+
+	<app id="search" title="健康档案">
+		<catalog id="EHRView" title="健康档案">
+			<module id="EHRView_01" title="健康档案检索" script="app.biz.ehrview.EHRSearch">
+				<initArgs>
+					<arg name="entryName">MPI_DemographicInfo</arg>
+					<arg name="listServiceId">mpiListService</arg>
+					<arg name="setMPILevelService">setMPILevelService</arg>
+					<arg name="getSessionIdService">sessionIdService</arg>
+				</initArgs>
+				<action id="ehrview" name="浏览EHRView" iconCls="read" />
+				<action id="setToSpecial" name="设为特殊人群" iconCls="common_treat" />
+				<action id="setToNormal" name="设为普通人群" iconCls="common_treat" />
+				<action id="sharedoc" name="共享文档" iconCls="read"/> 
+				<action id="dataset" name="数据集" iconCls="read"/>  
+			</module>
+			<!-- <module id="REG_02" title="按区域检索" script="app.modules.config.ManageUnitConfigPanel" iconCls="RD02">
+				<initArgs>
+					<arg name="dicId">adminDivision</arg>
+					<arg name="entryName">MPI_DemographicInfo</arg>  
+					<arg name="listServiceId">mpiListService</arg>
+					<arg name="setMPILevelService">setMPILevelService</arg>
+					<arg name="getSessionIdService">sessionIdService</arg>
+				</initArgs>
+				<action id="ehrview" name="浏览EHRView" iconCls="read" />
+				<action id="setToSpecial" name="设为特殊人群" iconCls="common_treat" />
+				<action id="setToNormal" name="设为普通人群" iconCls="common_treat" />
+			</module>  -->
+		</catalog>
+	</app>
+
+	<app id="config" title="设置管理">
+		<catalog id="EHRViewConfig" title="设置管理">
+			<module id="LayoutConfig_01" title="布局配置"
+				script="app.biz.ehrview.LayoutConfig">
+			</module>
+			<module id="LayoutConfig_02" title="规则配置"
+				script="app.biz.ehrview.RuleConfig">
+			</module>
+			<module id="LayoutConfig_03" title="隐私数据配置"
+				script="app.biz.ehrview.PrivacyConfig">
+			</module>
+			<!--<module id="LayoutConfig_04" title="检验检查配置" script="app.biz.ehrview.LabExamSet">
+				<initArgs>
+					<arg name="entryName">LabExam_Set</arg>
+				</initArgs>
+				<action id="create" name="新增" iconCls="read"/> 
+				<action id="update" name="修改" iconCls="read"/> 
+				<action id="remove" name="删除" iconCls="read"/> 
+			</module>
+			<module id="LayoutConfig_05" title="模板配置" script="app.biz.ehrview.Template">
+				<initArgs>
+					<arg name="entryName">Template</arg>
+				</initArgs>
+				<action id="create" name="新增" iconCls="read"/> 
+				<action id="change" name="修改" iconCls="read"/> 
+				<action id="remove" name="删除" iconCls="read"/> 
+			</module>-->
+		</catalog>
+	</app>
+</applications>

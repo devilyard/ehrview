@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="EMR_PrescriptionDrug" table="EMR_PrescriptionDrug">
+			<id name="DCID" type="java.lang.String">
+            	<column name="DCID"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="VisitID" type="java.lang.String" length="16" />
+        	<property name="PatientType" type="java.lang.String" length="2" />
+        	<property name="MPIID" type="java.lang.String" length="32" />
+        	<property name="SourceID" type="java.lang.String" length="50" />
+        	<property name="ZoneID" type="java.lang.String" length="1" />
+        	<property name="StatisticDate" type="timestamp"  />
+        	<property name="EffectiveFlag" type="java.lang.String" length="1" />
+        	<property name="EffectiveTime" type="timestamp"  />
+        	<property name="RecordClassifying" type="java.lang.String" length="50" />
+        	<property name="RecordTitle" type="java.lang.String" length="50" />
+        	<property name="VersionNumber" type="java.lang.String" length="10" />
+        	<property name="AuthorOrganization" type="java.lang.String" length="16" />
+        	<property name="AuthorOrganizationName" type="java.lang.String" length="100"/>
+        	<property name="Author" type="java.lang.String" length="32" />
+        	<property name="SystemTime" type="timestamp"  />
+        	<property name="Authenticator" type="java.lang.String" length="32" />
+        	<property name="AuthenticatorTime" type="timestamp"  />
+        	<property name="UploadTime" type="timestamp"  />
+        	<property name="UpdateTime" type="timestamp"  />
+        	<property name="PrescriptionDate" type="timestamp" not-null="true" />
+        	<property name="PrescriptionDrugID" type="java.lang.String" length="20" not-null="true"/>
+        	<property name="PrescriptionRecordID" type="java.lang.String" length="20" not-null="true"/>
+        	<property name="DrugsNumber" type="java.lang.Integer" not-null="true"/>
+        	<property name="DrugName" type="java.lang.String" length="50" not-null="true"/>
+        	<property name="DrugSpecifications" type="java.lang.String" length="20" not-null="true"/>
+        	<property name="PharmaceuticalDosageFormCode" type="java.lang.String" length="4"/>
+        	<property name="DrugUseDose" type="java.lang.Float"/>
+        	<property name="DrugUseDoseUnit" type="java.lang.String" length="6"/>
+        	<property name="DrugUsingRate" type="java.lang.String" length="20"/>
+        	<property name="DrugUsePathway" type="java.lang.String" length="18"/>
+        	<property name="DrugUseTotalDose" type="java.lang.String" length="20"/>
+        	<property name="DrugUseDays" type="java.lang.Integer" />
+        	<property name="DrugSendNumber" type="java.lang.Float" not-null="true"/>
+        	<property name="DrugUnit" type="java.lang.String" length="20" not-null="true"/>
+        	<property name="RecipeMarkInfo" type="java.lang.String" length="50"/>
+</class>
+</hibernate-mapping>

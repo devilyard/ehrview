@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="裸眼可辨"/>
+  <item key="2" text="裸眼不可辨"/>
+  <item key="3" text="戴镜可辨"/>
+  <item key="4" text="戴镜不可辨"/>
+  <item key="5" text="老光"/>
+  <item key="6" text="白内障"/>
+</dic>

@@ -1,0 +1,679 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:ssdev="http://www.bsoft.com.cn/schema/ssdev"
+	xmlns:ehr="http://www.bsoft.com.cn/schema/ehr"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.bsoft.com.cn/schema/ssdev
+	http://www.bsoft.com.cn/schema/ssdev/ssdev.xsd
+	http://www.bsoft.com.cn/schema/ehr
+	http://www.bsoft.com.cn/schema/ehr/ehr.xsd">
+	
+	<ssdev:applicationDomain name="ehr22" registryAddress="zookeeper://127.0.0.1:2181"
+		rpcServerWorkUrl="hessian://127.0.0.1:8080/ehrview/rpc/" enableLogger="false"/>
+		
+	<!-- MPI -->
+	<ssdev:reference id="mpi.mpiProvider" interface="com.bsoft.mpi.server.rpc.IMPIProvider" />
+	
+	<!-- 双检MPI
+	<ssdev:reference id="BSIDSM.mpiService" interface="com.bsoft.mpi.server.rpc.IMPIProvider" />
+	 -->
+	
+	<bean id="redisInitDao" class="com.bsoft.ehr.redis.dao.RedisInitDao">
+		<property name="redisTemplate" ref="redisTemplate"/>
+	</bean>
+	
+	
+	<bean id="serviceDao" class="com.bsoft.xds.support.dao.DefaultDAOProxy">
+		<property name="dao" ref="serviceDaoInstance"/>
+	</bean>
+	<bean id="serviceDaoInstance" class="com.bsoft.xds.support.dao.DefaultDAO">
+		<property name="sessionFactory" ref="mySessionFactory" />
+	</bean>
+	
+	<bean id="communityServiceDao" class="com.bsoft.xds.support.dao.DefaultDAO">
+		<property name="sessionFactory" ref="communitySessionFactory" />
+	</bean>
+	<bean id="baseDao" class="com.bsoft.ehr.dao.BaseDao" />
+	<bean id="baseService" class="com.bsoft.ehr.service.BaseService" >
+		<property name="baseDao" ref="baseDao"/> 
+	</bean>
+	
+	<bean id="gzipDocumentCompressor" class="com.bsoft.xds.support.instance.GZIPDocumentCompressor"/>
+	<bean id="unzipDocumentCompressor" class="com.bsoft.xds.support.instance.UNZIPDocumentCompressor"/>
+	<bean id="bsxmlTemplateFormater" class="com.bsoft.xds.support.instance.BSXMLTemplateFormater" >
+		<property name="acceptableVersion" value="2011_V1.0"/>
+	</bean>
+	<bean id="commonThymeleafTemplateFormater" class="com.bsoft.xds.support.instance.CommonThymeleafTemplateFormater">
+		<property name="acceptableVersion" value="2011_V1.0"/>
+		<property name="sourceFormat" value="02"/>
+		<property name="destFormat" value="11"/>
+		<property name="templateEngine" ref="htmlTemplateEngine"/>
+	</bean>
+	<bean id="commonThymeleafTemplateFormater2012" class="com.bsoft.xds.support.instance.CommonThymeleafTemplateFormater">
+		<property name="acceptableVersion" value="V2012"/>
+		<property name="sourceFormat" value="02"/>
+		<property name="destFormat" value="11"/>
+		<property name="templateEngine" ref="htmlTemplateEngine"/>
+	</bean>
+	
+	<ehr:service id="commonDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.CommonDocumentEntryRetrieveService">
+		<ehr:property name="dao" ref="serviceDao"/>
+		<ehr:property name="maxLimit" value="100"/>
+		<ehr:property name="maxPeriodDays" value="30"/>
+		<ehr:property name="templateFormaters">
+			<ehr:list>
+				<ehr:ref bean="commonThymeleafTemplateFormater"/>
+				<ehr:ref bean="commonThymeleafTemplateFormater2012"/>
+			</ehr:list>
+		</ehr:property>
+		<ehr:property name="documentDecompressors">
+			<ehr:list>
+				<ehr:ref bean="unzipDocumentCompressor"/>	
+				<ehr:ref bean="gzipDocumentCompressor"/>
+			</ehr:list>
+		</ehr:property>
+	</ehr:service>
+	<ehr:service id="commonDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.CommonDocumentEntrySubmitService">
+		<ehr:property name="dao" ref="serviceDao"/>
+		<ehr:property name="documentCompressors">
+			<ehr:list>
+				<ehr:ref bean="unzipDocumentCompressor"/>
+				<ehr:ref bean="gzipDocumentCompressor"/>
+			</ehr:list>
+		</ehr:property>
+	</ehr:service>
+	
+	<!--高血压管理-->
+	<ehr:service id="hypertensionRecordDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.hypertension.HypertensionRecordDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="MDC_HypertensionRecord"/>
+	</ehr:service>
+	<ehr:service id="hypertensionRecordDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.hypertension.HypertensionRecordDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<ehr:property name="recordClassifying" value="MDC_HypertensionRecord"/>
+	</ehr:service>
+	
+	<!--糖尿病管理-->
+	<ehr:service id="diabetesRecordDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.diabetes.DiabetesRecordDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="MDC_DiabetesRecord"/>
+	</ehr:service>
+	<ehr:service id="diabetesRecordDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.diabetes.DiabetesRecordDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<ehr:property name="recordClassifying" value="MDC_DiabetesRecord"/>
+	</ehr:service>
+	
+	<!--精神病管理-->
+	<ehr:service id="psychosisRecordDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.psychosis.PsychosisRecordDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="PSY_PsychosisRecord"/>
+	</ehr:service>
+	<ehr:service id="psychosisRecordDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.psychosis.PsychosisRecordDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<ehr:property name="recordClassifying" value="PSY_PsychosisRecord"/>
+	</ehr:service>
+	
+	<!--健康档案管理-->
+	<bean id="healthRecordThymeleafTemplateFormatter" class="com.bsoft.xds.support.instance.healthRecord.HealthRecordThymeleafTemplateFormatter" parent="commonThymeleafTemplateFormater"/>
+	<ehr:service id="healthRecordDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.healthRecord.HealthRecordDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="EHR_HealthRecord"/>
+		<ehr:property name="templateFormaters">
+			<ehr:list>
+				<ehr:ref bean="healthRecordThymeleafTemplateFormatter"/>	
+			</ehr:list>
+		</ehr:property>
+	</ehr:service>
+	<ehr:service id="healthRecordDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.healthRecord.HealthRecordDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<ehr:property name="recordClassifying" value="EHR_HealthRecord"/>
+	</ehr:service>
+	
+	<!--健康档案-既往史管理-->
+	<ehr:service id="pastHistoryDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.healthRecord.PastHistoryDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="EHR_PastHistory"/>
+	</ehr:service>
+	<ehr:service id="pastHistoryDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.healthRecord.PastHistoryDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<ehr:property name="recordClassifying" value="EHR_PastHistory"/>
+	</ehr:service>
+	
+	<!--健康档案-家庭档案管理-->
+	<ehr:service id="familyRecordDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.healthRecord.FamilyRecordDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="EHR_FamilyRecord"/>
+	</ehr:service>
+	<ehr:service id="familyRecordDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.healthRecord.FamilyRecordDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<ehr:property name="recordClassifying" value="EHR_FamilyRecord"/>
+	</ehr:service>
+	
+	<!--预防接种管理-->
+	<ehr:service id="vaccinateRecordDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.vaccinate.VaccinateRecordDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="PIV_VaccinateRecord"/>
+	</ehr:service>
+	<ehr:service id="vaccinateRecordDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.vaccinate.VaccinateRecordDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<ehr:property name="recordClassifying" value="PIV_VaccinateRecord"/>
+	</ehr:service>
+	<ehr:service id="vaccinateListDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.vaccinate.VaccinateListDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="PIV_VaccinateList"/>
+	</ehr:service>
+	<ehr:service id="vaccinateListDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.vaccinate.VaccinateListDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<ehr:property name="recordClassifying" value="PIV_VaccinateList"/>
+	</ehr:service>
+	
+	<!--儿童保健:体弱儿档案-->
+	<bean id="debilityChildrenThymeleafTemplateFormater" class="com.bsoft.xds.support.instance.children.DebilityChildrenRecordThymeleafTemplateFormatter" parent="commonThymeleafTemplateFormater"/>
+	<ehr:service id="debilityChildrenDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.children.DebilityChildrenDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="CDH_DebilityChildren"/>
+		<!-- <ehr:property name="templateFormaters">
+			<ehr:list>
+				<ehr:ref bean="debilityChildrenThymeleafTemplateFormater"/>	
+			</ehr:list>
+		</ehr:property> -->
+	</ehr:service>
+	<ehr:service id="debilityChildrenDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.children.DebilityChildrenDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<ehr:property name="recordClassifying" value="CDH_DebilityChildren"/>
+	</ehr:service>
+	
+	<!--儿童保健:体弱儿随访-->
+	<ehr:service id="debilityChildrenVisitDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.children.DebilityChildrenVisitDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="CDH_DebilityChildrenVisit"/>
+	</ehr:service>
+	<ehr:service id="debilityChildrenVisitDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.children.DebilityChildrenVisitDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<ehr:property name="recordClassifying" value="CDH_DebilityChildrenVisit"/>
+	</ehr:service>
+	
+	<!--儿童保健:儿童保健卡-->
+	<bean id="childrenHealthCardThymeleafTemplateFormatter" class="com.bsoft.xds.support.instance.children.ChildrenHealthCardThymeleafTemplateFormatter" parent="commonThymeleafTemplateFormater"/>
+	<ehr:service id="healthCardDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.children.HealthCardDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="CDH_HealthCard"/>
+		<ehr:property name="templateFormaters">
+			<ehr:list>
+				<ehr:ref bean="childrenHealthCardThymeleafTemplateFormatter"/>	
+			</ehr:list>
+		</ehr:property>
+	</ehr:service>
+	<ehr:service id="healthCardDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.children.HealthCardDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<ehr:property name="recordClassifying" value="CDH_HealthCard"/>
+	</ehr:service>
+	
+	<!--儿童保健:周岁小结-->
+	<ehr:service id="oneYearSummaryDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.children.OneYearSummaryDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="CDH_OneYearSummary"/>
+	</ehr:service>
+	<ehr:service id="oneYearSummaryDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.children.OneYearSummaryDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<ehr:property name="recordClassifying" value="CDH_OneYearSummary"/>
+	</ehr:service>
+	
+	<!--儿童保健:意外伤害-->
+	<ehr:service id="accidentDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.children.AccidentDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="CDH_Accident"/>
+	</ehr:service>
+	<ehr:service id="accidentDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.children.AccidentDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<ehr:property name="recordClassifying" value="CDH_Accident"/>
+	</ehr:service>
+	
+	<!--儿童保健:儿童缺陷登记-->
+	<ehr:service id="defectRegisterDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.children.DefectRegisterDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="CDH_DefectRegister"/>
+	</ehr:service>
+	<ehr:service id="defectRegisterDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.children.DefectRegisterDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<ehr:property name="recordClassifying" value="CDH_DefectRegister"/>
+	</ehr:service>
+	
+	<!--儿童保健:儿童产时记录-->
+	<ehr:service id="deliveryRecordDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.children.DeliveryRecordDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="CDH_DeliveryRecord"/>
+	</ehr:service>
+	<ehr:service id="deliveryRecordDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.children.DeliveryRecordDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<ehr:property name="recordClassifying" value="CDH_DeliveryRecord"/>
+	</ehr:service>
+	
+	<!--儿童保健:儿童体检-->
+	<bean id="checkUpThymeleafTemplateFormatter" class="com.bsoft.xds.support.instance.children.CheckUpThymeleafTemplateFormatter" parent="commonThymeleafTemplateFormater"/>
+	<ehr:service id="checkUpDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.children.CheckUpDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="CDH_CheckUp"/>
+		<ehr:property name="templateFormaters">
+			<ehr:list>
+				<ehr:ref bean="checkUpThymeleafTemplateFormatter"/>	
+			</ehr:list>
+		</ehr:property>
+	</ehr:service>
+	<ehr:service id="checkUpDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.children.CheckUpDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<ehr:property name="recordClassifying" value="CDH_CheckUp"/>
+	</ehr:service>
+	
+	<!--儿童保健:儿童死亡登记-->
+	<ehr:service id="deadRegisterDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.children.DeadRegisterDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="CDH_DeadRegister"/>
+	</ehr:service>
+	<ehr:service id="deadRegisterDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.children.DeadRegisterDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<ehr:property name="recordClassifying" value="CDH_DeadRegister"/>
+	</ehr:service>
+	
+	<!--儿童保健:儿童询问-->
+	<ehr:service id="inquireDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.children.InquireDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="CDH_Inquire"/>
+	</ehr:service>
+	<ehr:service id="inquireDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.children.InquireDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<ehr:property name="recordClassifying" value="CDH_Inquire"/>
+	</ehr:service>
+	
+	<!--儿童保健:儿童疑似残疾报告卡-->
+	<ehr:service id="disabilityMonitorDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.children.DisabilityMonitorDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="CDH_DisabilityMonitor"/>
+	</ehr:service>
+	<ehr:service id="disabilityMonitorDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.children.DisabilityMonitorDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<ehr:property name="recordClassifying" value="CDH_DisabilityMonitor"/>
+	</ehr:service>
+	
+	<!--孕产妇健康管理:孕妇档案-->
+	<bean id="pregnantRecordThymeleafTemplateFormatter" class="com.bsoft.xds.support.instance.pregnant.PregnantRecordThymeleafTemplateFormatter" parent="commonThymeleafTemplateFormater"/>
+	<ehr:service id="pregnantRecordDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.pregnant.PregnantRecordDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="MHC_PregnantRecord"/>
+		<ehr:property name="templateFormaters">
+			<ehr:list>
+				<ehr:ref bean="pregnantRecordThymeleafTemplateFormatter"/>	
+			</ehr:list>
+		</ehr:property>
+	</ehr:service>
+	<ehr:service id="pregnantRecordDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.pregnant.PregnantRecordDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<ehr:property name="recordClassifying" value="MHC_PregnantRecord"/>
+	</ehr:service>
+	
+	<!--孕产妇健康管理:产后42天检查-->
+	<ehr:service id="postnatal42DayDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.pregnant.Postnatal42DayDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="MHC_Postnatal42DayRecord"/>
+	</ehr:service>
+	<ehr:service id="postnatal42DayDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.pregnant.Postnatal42DayDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<ehr:property name="recordClassifying" value="MHC_Postnatal42DayRecord"/>
+	</ehr:service>
+	
+	<!--孕产妇健康管理:孕妇特殊情况-->
+	<ehr:service id="pregnantSpecialDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.pregnant.PregnantSpecialDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="MHC_PregnantSpecial"/>
+	</ehr:service>
+	<ehr:service id="pregnantSpecialDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.pregnant.PregnantSpecialDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<ehr:property name="recordClassifying" value="MHC_PregnantSpecial"/>
+	</ehr:service>
+	
+	<!--孕产妇健康管理:新生儿基本信息-->
+	
+	<ehr:service id="babyVisitInfoDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.pregnant.BabyVisitInfoDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="MHC_BabyVisitInfo"/>
+	</ehr:service>
+	<ehr:service id="babyVisitInfoDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.pregnant.BabyVisitInfoDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<ehr:property name="recordClassifying" value="MHC_BabyVisitInfo"/>
+	</ehr:service>
+	
+	<!--孕产妇健康管理:新生儿随访记录-->
+	<bean id="babyVisitRecordTemplateFormatter" class="com.bsoft.xds.support.instance.pregnant.BabyVisitRecordTemplateFormatter" parent="commonThymeleafTemplateFormater"/>
+	<ehr:service id="babyVisitRecordDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.pregnant.BabyVisitRecordDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="MHC_BabyVisitRecord"/>
+		<!-- <ehr:property name="templateFormaters">
+			<ehr:list>
+				<ehr:ref bean="babyVisitRecordTemplateFormatter"/>	
+			</ehr:list>
+		</ehr:property> -->
+	</ehr:service>
+	<ehr:service id="babyVisitRecordDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.pregnant.BabyVisitRecordDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<ehr:property name="recordClassifying" value="MHC_BabyVisitRecord"/>
+	</ehr:service>
+	
+	<!--孕产妇健康管理:孕妇随访记录-->
+	<ehr:service id="pregnantFirstVisitRecordDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.pregnant.PregnantFirstVisitRecordDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="MHC_FirstVisitRecord"/>
+	</ehr:service>
+	
+	<!--孕产妇健康管理:孕妇随访记录-->
+	<ehr:service id="pregnantVisitRecordDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.pregnant.PregnantVisitRecordDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="MHC_VisitRecord"/>
+	</ehr:service>
+	<ehr:service id="pregnantVisitRecordDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.pregnant.PregnantVisitRecordDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<ehr:property name="recordClassifying" value="MHC_VisitRecord"/>
+	</ehr:service>
+	
+	<!--孕产妇健康管理：产后访视信息-->
+	<ehr:service id="postnatalVisitInfoDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.pregnant.PostnatalVisitInfoDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="MHC_PostnatalVisitInfo"/>
+	</ehr:service>
+	<ehr:service id="postnatalVisitInfoDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.pregnant.PostnatalVisitInfoDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<ehr:property name="recordClassifying" value="MHC_PostnatalVisitInfo"/>
+	</ehr:service>
+	
+	<!--孕产妇健康管理：孕妇指标-->
+	<ehr:service id="pregnantWomanIndexDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.pregnant.PregnantWomanIndexDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="MHC_PregnantWomanIndex"/>
+	</ehr:service>
+	<ehr:service id="pregnantWomanIndexDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.pregnant.PregnantWomanIndexDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<ehr:property name="recordClassifying" value="MHC_PregnantWomanIndex"/>
+	</ehr:service>
+	
+	<!--孕产妇健康管理:高危因素-->
+	<ehr:service id="highRiskVisitReasonDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.pregnant.HighRiskVisitReasonDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="MHC_HighRiskVisitReason"/>
+	</ehr:service>
+	<ehr:service id="highRiskVisitReasonDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.pregnant.HighRiskVisitReasonDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<ehr:property name="recordClassifying" value="MHC_HighRiskVisitReason"/>
+	</ehr:service>
+	
+	
+	<!--孕产妇健康管理:孕妇死亡报告-->
+	<ehr:service id="pregnantDeathReportDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.pregnant.PregnantDeathReportDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="MHC_PregnantDeathReport"/>
+	</ehr:service>
+	<ehr:service id="pregnantDeathReportDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.pregnant.PregnantDeathReportDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<ehr:property name="recordClassifying" value="MHC_PregnantDeathReport"/>
+	</ehr:service>
+	
+	<!--孕产妇健康管理:孕产妇分娩信息-->
+	<ehr:service id="pregnantDeliveryInfoDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.pregnant.PregnantDeliveryInfoDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="MHC_PregnantDeliveryInfo"/>
+	</ehr:service>
+	<ehr:service id="pregnantDeliveryInfoDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.pregnant.PregnantDeliveryInfoDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<ehr:property name="recordClassifying" value="MHC_PregnantDeliveryInfo"/>
+	</ehr:service>
+	
+	<!--孕产妇健康管理:产前检查信息记录-->
+	<ehr:service id="pregnantScreenResultDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.pregnant.PregnantScreenResultDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="MHC_PregnantScreenResult"/>
+	</ehr:service>
+	<ehr:service id="pregnantScreenResultDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.pregnant.PregnantScreenResultDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<ehr:property name="recordClassifying" value="MHC_PregnantScreenResult"/>
+	</ehr:service>
+	
+	
+	
+	<!--老年人健康管理:老年人随访-->
+	<ehr:service id="oldPeopleVisitDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.oldPeople.OldPeopleVisitDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="MDC_OldPeopleVisit"/>
+	</ehr:service>
+	<ehr:service id="oldPeopleVisitDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.oldPeople.OldPeopleVisitDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<ehr:property name="recordClassifying" value="MDC_OldPeopleVisit"/>
+	</ehr:service>
+	
+	<!--老年人健康管理:老年人健康档案-->
+	<ehr:service id="oldPeopleRecordDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.oldPeople.OldPeopleRecordDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="MDC_OldPeopleRecord"/>
+	</ehr:service>
+	<ehr:service id="oldPeopleRecordDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.oldPeople.OldPeopleRecordDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<ehr:property name="recordClassifying" value="MDC_OldPeopleRecord"/>
+	</ehr:service>
+	
+	<!--高血压管理:高血压首诊测压-->
+	<ehr:service id="hypertensionFirstDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.hypertension.HypertensionFirstDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="MDC_HypertensionFirst"/>
+	</ehr:service>
+	<ehr:service id="hypertensionFirstDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.hypertension.HypertensionFirstDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<ehr:property name="recordClassifying" value="MDC_HypertensionFirst"/>
+	</ehr:service>
+	
+	<!--高血压管理:高血压门诊记录-->
+	<ehr:service id="hypertensionClinicRecordDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.hypertension.HypertensionClinicRecordDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="MDC_HypertensionClinicRecord"/>
+	</ehr:service>
+	<ehr:service id="hypertensionClinicRecordDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.hypertension.HypertensionClinicRecordDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<ehr:property name="recordClassifying" value="MDC_HypertensionClinicRecord"/>
+	</ehr:service>
+	
+	<!--高血压管理:高血压询问-->
+	<ehr:service id="hypertensionInquireDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.hypertension.HypertensionInquireDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="MDC_HypertensionInquire"/>
+	</ehr:service>
+	<ehr:service id="hypertensionInquireDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.hypertension.HypertensionInquireDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<ehr:property name="recordClassifying" value="MDC_HypertensionInquire"/>
+	</ehr:service>
+	
+	<!--高血压管理:高血压随访-->
+	<ehr:service id="hypertensionVisitDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.hypertension.HypertensionVisitDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="MDC_HypertensionVisit"/>
+	</ehr:service>
+	<ehr:service id="hypertensionVisitDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.hypertension.HypertensionVisitDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<ehr:property name="recordClassifying" value="MDC_HypertensionVisit"/>
+	</ehr:service>
+	
+	<!--糖尿病管理:糖尿病询问-->
+	<ehr:service id="diabetesInquireDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.diabetes.DiabetesInquireDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="MDC_DiabetesInquire"/>
+	</ehr:service>
+	<ehr:service id="diabetesInquireDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.diabetes.DiabetesInquireDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<ehr:property name="recordClassifying" value="MDC_DiabetesInquire"/>
+	</ehr:service>
+	
+	<!--糖尿病管理:糖尿病随访-->
+	<ehr:service id="diabetesVisitDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.diabetes.DiabetesVisitDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="MDC_DiabetesVisit"/>
+	</ehr:service>
+	<ehr:service id="diabetesVisitDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.diabetes.DiabetesVisitDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<ehr:property name="recordClassifying" value="MDC_DiabetesVisit"/>
+	</ehr:service>
+	
+	<!--精神病管理:精神病随访-->
+	<ehr:service id="psychosisVisitDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.psychosis.PsychosisVisitDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="PSY_PsychosisVisit"/>
+	</ehr:service>
+	<ehr:service id="psychosisVisitDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.psychosis.PsychosisVisitDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<ehr:property name="recordClassifying" value="PSY_PsychosisVisit"/>
+	</ehr:service>
+	
+	<!--精神病管理:精神病随访用药-->
+	<ehr:service id="psychosisVisitMedicineDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.psychosis.PsychosisVisitMedicineDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="PSY_PsychosisVisitMedicine"/>
+	</ehr:service>
+	<ehr:service id="psychosisVisitMedicineDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.psychosis.PsychosisVisitMedicineDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<ehr:property name="recordClassifying" value="PSY_PsychosisVisitMedicine"/>
+	</ehr:service>
+	
+	<!--社区体检录入:体检档案-->
+	<ehr:service id="checkUpRegisterDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.check.CheckUpRegisterDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="PER_CheckUpRegister"/>
+	</ehr:service>
+	<ehr:service id="checkUpRegisterDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.check.CheckUpRegisterDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<ehr:property name="recordClassifying" value="PER_CheckUpRegister"/>
+	</ehr:service>
+	
+	<!--医院体检录入:体检档案-->
+	<ehr:service id="cuRegisterDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.check.CuRegisterDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="Cu_Register"/>
+	</ehr:service>
+	<ehr:service id="cuRegisterDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.check.CuRegisterDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<ehr:property name="recordClassifying" value="Cu_Register"/>
+	</ehr:service>
+	
+	
+	<!--肿瘤管理:肿瘤档案-->
+	<ehr:service id="tumourRecordDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.tumour.TumourRecordDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="MDC_TumourRecord"/>
+	</ehr:service>
+	<ehr:service id="tumourRecordDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.tumour.TumourRecordDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<ehr:property name="recordClassifying" value="MDC_TumourRecord"/>
+	</ehr:service>
+	
+	<!--肿瘤管理:肿瘤随访-->
+	<ehr:service id="tumourVisitDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.tumour.TumourVisitDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="MDC_TumourVisit"/>
+	</ehr:service>
+	<ehr:service id="tumourVisitDocumentEntrySubmitService" class="com.bsoft.xds.support.instance.tumour.TumourVisitDocumentEntrySubmitService" parent="commonDocumentEntrySubmitService">
+		<ehr:property name="recordClassifying" value="MDC_TumourVisit"/>
+	</ehr:service>
+	
+	<!--门诊:门诊就诊记录-->
+	<ehr:service id="optRecordDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.opt.OptRecordDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="Opt_Record"/>
+	</ehr:service>
+	
+	<!--门诊:门诊处方用药记录-->
+	<ehr:service id="optRecipeDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.opt.OptRecipeDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="Opt_Recipe"/>
+		<ehr:property name="recordDocClassifying" value="Opt_Recipe_Doc"/>
+	</ehr:service>
+	
+	<!--门诊:门诊收费明细记录-->
+	<ehr:service id="optFeeDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.opt.OptFeeDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="Opt_Fee"/>
+	</ehr:service>
+	
+	<!--住院:病案首页记录-->
+	<ehr:service id="inpatientRecordHomeDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.ipt.InpatientRecordHomeDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="Ipt_MedicalRecordPage_View"/>
+		<ehr:property name="recordDocClassifying" value="Ipt_MedicalRecordPage_View_Doc"/>
+	</ehr:service>
+	
+	
+	<!--住院:医嘱明细记录-->
+	<ehr:service id="iptAdviceDetailDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.ipt.IptAdviceDetailDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="Ipt_AdviceDetail"/>
+	</ehr:service>
+	 
+	<!--住院:入院记录-->
+	<ehr:service id="iptAdmissionNoteDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.ipt.IptAdmissionNoteDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="Ipt_AdmissionNote"/>
+	</ehr:service>
+	
+	<!--住院:出院记录-->
+	<ehr:service id="iptLeaveRecordDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.ipt.IptLeaveRecordDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="Ipt_LeaveRecord"/>
+		<ehr:property name="recordDocClassifying" value="Ipt_LeaveRecord_Doc"/>
+	</ehr:service>
+	
+	<!--检查报告记录-->
+	<ehr:service id="ptCheckReportDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.pt.PtCheckReportDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="Pt_ExamReport"/>
+		<ehr:property name="recordDocClassifying" value="Pt_ExamReport_Doc"/>
+	</ehr:service>
+	
+	<!-- 双检检查
+	<ssdev:reference id="BSIDSM.baseInfoService" interface="com.bsoft.xds.support.instance.pt.ICheckReportDocumentEntryRetrieveService" />
+	 -->
+	
+	<!--检验报告记录-->
+	<bean id="examReportThymeleafTemplateFormater" class="com.bsoft.xds.support.instance.pt.ExamReportThymeleafTemplateFormater" parent="commonThymeleafTemplateFormater"/>
+	<ehr:service id="examReportDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.pt.ExamReportDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="Pt_LabReport"/>
+		<!-- <ehr:property name="templateFormaters">
+			<ehr:list>
+				<ehr:ref bean="examReportThymeleafTemplateFormater"/>	
+			</ehr:list>
+		</ehr:property> -->
+	</ehr:service>
+	
+	<!--输血记录-->
+	<ehr:service id="ptTransfusionDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.pt.PtTransfusionDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="Pt_Transfusion"/>
+		<ehr:property name="recordDocClassifying" value="Pt_Transfusion_Doc"/>
+	</ehr:service>
+	
+	<!--手术记录-->
+	<ehr:service id="ptOperationDocumentEntryRetrieveService" class="com.bsoft.xds.support.instance.pt.PtOperationDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="Pt_Operation"/>
+		<ehr:property name="recordDocClassifying" value="Pt_Operation_Doc"/>
+	</ehr:service>
+
+	<!--公共卫生服务记录-->
+	<ehr:service id="healthcareRetrieveService" class="com.bsoft.xds.support.instance.healthRecord.HealthcareRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="SUMMARY_Hist_Visit"/>
+	</ehr:service>
+	<!--近期检验异常指标-->
+	<ehr:service id="examDetailUnusualService" class="com.bsoft.xds.support.instance.healthRecord.ExamDetailUnusualService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="PT_ExamDetail_Unusual"/>
+	</ehr:service>
+	
+	<!--护理操作记录:生命体征-->
+	<ehr:service id="vitalSignRetrieveService" class="com.bsoft.xds.support.instance.ipt.VitalSignRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="EMR_VitalSign"/>
+		<ehr:property name="recordDocClassifying" value="EMR_NursingRecord_Doc"/>
+	</ehr:service>
+	
+	<!--护理操作记录:生命体征测量记录-->
+	<ehr:service id="vitalSignRecordRetrieveService" class="com.bsoft.xds.support.instance.ipt.VitalSignRecordRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="EMR_VitalSignRecord"/>
+		<ehr:property name="recordDocClassifying" value="EMR_NursingRecord_Doc"/>
+	</ehr:service>
+	
+	<!--体征_血压历史-->
+	<ehr:service id="bloodPressHistService" class="com.bsoft.xds.support.instance.summary.BloodPressHistService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="SUMMARY_Sym_BloodPressHist"/>
+	</ehr:service>
+	
+	<!--体征_血糖历史-->
+	<ehr:service id="glucoseHistService" class="com.bsoft.xds.support.instance.summary.GlucoseHistService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="SUMMARY_Sym_GlucoseHist"/>
+	</ehr:service>
+	
+	<!--体征_BMI历史-->
+	<ehr:service id="wHHistService" class="com.bsoft.xds.support.instance.summary.WHHistService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="SUMMARY_Sym_WHHist"/>
+	</ehr:service>
+	
+	<!--既往史_外伤史-->
+	<ehr:service id="traumatismService" class="com.bsoft.xds.support.instance.summary.TraumatismService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="SUMMARY_Hist_Traumatism"/>
+	</ehr:service>
+	
+	<!--既往史_住院史-->
+	<ehr:service id="hospitalHistoryService" class="com.bsoft.xds.support.instance.summary.HospitalHistoryService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="SUMMARY_HIST_HOSPITAL"/>
+	</ehr:service>
+	
+	<!--既往史_家族疾病史-->
+	<ehr:service id="familySickService" class="com.bsoft.xds.support.instance.summary.FamilySickService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="SUMMARY_Hist_FamilySick"/>
+	</ehr:service>
+	
+	<!--既往史_家族遗传史-->
+	<ehr:service id="familyHeredityService" class="com.bsoft.xds.support.instance.summary.FamilyHeredityService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="SUMMARY_Hist_FamilyHeredity"/>
+	</ehr:service>
+	
+	<!--既往史_手术史-->
+	<ehr:service id="operationService" class="com.bsoft.xds.support.instance.summary.OperationService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="SUMMARY_Hist_Operation"/>
+	</ehr:service>
+	
+	<!--既往史_接种史--> 
+	<ehr:service id="vaccinationService" class="com.bsoft.xds.support.instance.summary.VaccinationService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="SUMMARY_Hist_Vaccination"/>
+	</ehr:service>  
+	
+	<!--既往史_既往病史-->
+	<ehr:service id="sickService" class="com.bsoft.xds.support.instance.summary.SickService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="SUMMARY_Hist_Sick"/>
+	</ehr:service>
+	
+	<!--既往史_残疾状况-->
+	<ehr:service id="disabilityService" class="com.bsoft.xds.support.instance.summary.DisabilityService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="SUMMARY_Hist_Disability"/>
+	</ehr:service>
+	
+	<!--既往史_生育史-->
+	<ehr:service id="reproductiveService" class="com.bsoft.xds.support.instance.summary.ReproductiveService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="SUMMARY_Hist_Reproductive"/>
+	</ehr:service>
+	
+	<!--既往史_用药记录-->
+	<ehr:service id="drugService" class="com.bsoft.xds.support.instance.summary.DrugService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="SUMMARY_Hist_Drug"/>
+	</ehr:service>
+	
+	<!--既往史_输血史-->
+	<ehr:service id="transfusionService" class="com.bsoft.xds.support.instance.summary.TransfusionService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="SUMMARY_Hist_Transfusion"/>
+	</ehr:service>
+	
+	<!--既往史_过敏史-->
+	<ehr:service id="allergyService" class="com.bsoft.xds.support.instance.summary.AllergyService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="SUMMARY_Hist_Allergy"/>
+	</ehr:service>
+	
+	<!--生命周期-->
+	<ehr:service id="lifeCycleService" class="com.bsoft.xds.support.instance.summary.LifeCycleService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="PT_LifeCycle"/>
+	</ehr:service> 
+	
+	<!--检查实时-->
+	<ehr:service id="ptLabExamReportRealtime" class="com.bsoft.xds.support.instance.pt.PtLabExamReportDocumentEntryRealtimeRetrieveService" parent="commonDocumentEntryRetrieveService">
+	</ehr:service> 
+	
+	<!--APP检验检查接口-->
+	<ehr:service id="ptLabExamReport" class="com.bsoft.xds.support.instance.pt.app.AppPtLabExamReportService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="Pt_LabExamReport_View"/>
+	</ehr:service> 
+	
+	<!--互动平台接口-->
+	<ehr:service id="ptLabReport" class="com.bsoft.xds.support.instance.pt.hdpt.PtLabReportDocumentEntryRetrieveService" parent="commonDocumentEntryRetrieveService">
+		<ehr:property name="recordClassifying" value="Check_Record_Count_View"/>
+	</ehr:service> 
+	
+</beans>

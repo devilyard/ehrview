@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="EMR_VitalSignRecord" table="EMR_VitalSignRecord">
+			<id name="DCID" type="java.lang.String">
+            	<column name="DCID"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="VisitID" type="java.lang.String" length="16" />
+        	<property name="PatientType" type="java.lang.String" length="2" />
+        	<property name="MPIID" type="java.lang.String" length="32" />
+        	<property name="ZoneID" type="java.lang.String" length="1" />
+        	<property name="StatisticDate" type="java.util.Date"  />
+        	<property name="AuthorOrganization" type="java.lang.String" length="16" />
+        	<property name="HospizationID" type="java.lang.String" length="10" />
+        	<property name="Name" type="java.lang.String" length="50" />
+        	<property name="Sex" type="java.lang.String" length="1" />
+        	<property name="Age" type="java.lang.String" length="3" />
+        	<property name="AdmissionDateTime" type="java.util.Date"  />
+        	<property name="ActualHospitalizationDays" type="java.lang.String" length="4" />
+        	<property name="InDateTime" type="java.util.Date"  />
+        	<property name="DeptID" type="java.lang.String" length="18" />
+        	<property name="DeptName" type="java.lang.String" length="50" />
+        	<property name="WardAreaID" type="java.lang.String" length="10" />
+        	<property name="WardAreaNm" type="java.lang.String" length="50" />
+        	<property name="SickbedID" type="java.lang.String" length="10" />
+        	<property name="SickRoomID" type="java.lang.String" length="10" />
+        	<property name="ClinicalDiagnosis" type="java.lang.String" length="100" />
+        	<property name="DaysAfterOperationOrDelivery" type="java.lang.String" length="4"  />
+</class>
+</hibernate-mapping>

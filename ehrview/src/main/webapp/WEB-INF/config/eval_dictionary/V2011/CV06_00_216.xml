@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="谷类"/>
+  <item key="2" text="蛋肉类"/>
+  <item key="3" text="水果蔬菜类"/>
+  <item key="9" text="其他"/>
+</dic>

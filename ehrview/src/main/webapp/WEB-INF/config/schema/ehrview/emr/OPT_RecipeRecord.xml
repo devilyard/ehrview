@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<entry id="OPT_RecipeRecord" alias="门诊处方明细">
+  <item id="DCID" alias="记录号" type="string" not-null="1" generator="assigned" pkey="true"/>
+  <item id="MPIID" alias="个人索引号" type="string" length="32" not-null="1"/>
+  <item id="DIAGID" alias="就诊流水号" type="string" length="32" not-null="1"/>
+  <item id="CFID" alias="处方ID" length="32" not-null="1"/>
+  <item id="CFLB" alias="处方类别" type="string" length="1" not-null="1"/>
+  <item id="KFKSMC" alias="开方科室名称" length="50" not-null="1"/>
+  <item id="FYSJ" alias="发药时间" type="date" not-null="1"/>
+  <item id="TS" alias="帖数" length="4"/>
+  <item id="CFZT" alias="处方状态" type="string" length="1" not-null="1"/>
+  <item id="CREATEDATE" alias="创建时间" type="date" not-null="1"/>
+  <item id="CREATEUNIT" alias="创建机构" type="string" length="22" not-null="1"/>
+  <item id="VERSION" alias="版本" type="string" length="10" not-null="1"/>
+  <item id="CONTENT" alias="数据包" not-null="1"/>
+  <item id="UPLOADDATE" alias="上传时间" type="date" not-null="1"/>
+</entry>

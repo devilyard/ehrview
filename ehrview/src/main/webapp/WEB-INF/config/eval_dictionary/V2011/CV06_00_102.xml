@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="口服" comment="经口吞服药物"/>
+  <item key="2" text="直肠用药" comment="将药物经肛门塞人或注入直肠"/>
+  <item key="3" text="舌下用药" comment="将药物置于舌下/颊部的给药方法"/>
+  <item key="4" text="注射用药" comment="将药物经过表皮注人体内"/>
+  <item key="401" text="皮下注射" comment="将药物注射于皮下组织"/>
+  <item key="402" text="皮内注射" comment="将药物注射于皮内组织"/>
+  <item key="403" text="肌肉注射" comment="将药物注射于肌肉组织内"/>
+  <item key="404" text="静脉注射或静脉滴注" comment="将药物注人静脉血管内"/>
+  <item key="5" text="吸人用药" comment="将药物化为气雾状而后由呼吸道吸入"/>
+  <item key="6" text="局部用药" comment="主要发挥局部作用的给药方法"/>
+  <item key="601" text="椎管内用药" comment="将药物注人椎管内"/>
+  <item key="602" text="关节腔内用药" comment="将药物注人关节腔内"/>
+  <item key="603" text="胸膜腔用药" comment="将药物注人胸膜腔内"/>
+  <item key="604" text="腹腔用药" comment="将药物注人腹腔内"/>
+  <item key="605" text="阴道用药" comment="将药物置于阴道中"/>
+  <item key="606" text="气管内用药" comment="将药物注人气管内"/>
+  <item key="607" text="滴眼" comment="将药物经眼滴入"/>
+  <item key="608" text="滴鼻" comment="将药物经鼻滴入"/>
+  <item key="609" text="喷喉" comment="将药物喷于喉部黏膜表面"/>
+  <item key="610" text="含化" comment="将药物置于口腔内含化"/>
+  <item key="611" text="敷伤口" comment="将药物直接敷于伤口表面"/>
+  <item key="612" text="擦皮肤" comment="用药物擦拭皮肤"/>
+  <item key="699" text="其他局部用药途径" comment="其他局部用药途径"/>
+  <item key="9" text="其他用药途径" comment="增补的用药途径内容"/>
+</dic>

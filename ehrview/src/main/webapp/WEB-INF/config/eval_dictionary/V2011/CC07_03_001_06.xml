@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="8" text="无症状"/>
+  <item key="1" text="多饮"/>
+  <item key="2" text="多食"/>
+  <item key="3" text="多尿"/>
+  <item key="4" text="视力模糊"/>
+  <item key="5" text="感染"/>
+  <item key="6" text="下肢浮肿"/>
+  <item key="7" text="手脚麻木"/>
+  <item key="9" text="其他症状"/>
+</dic>

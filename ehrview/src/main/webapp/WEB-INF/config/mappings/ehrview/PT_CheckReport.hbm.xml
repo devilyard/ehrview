@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="PT_CheckReport" table="PT_CheckReport">
+			<id name="DCID" type="java.lang.String">
+            	<column name="DCID"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="MPIID" type="java.lang.String" length="32" />
+        	<property name="SystemTime" type="java.util.Date"  />
+        	<property name="EffectiveTime" type="java.util.Date"  />
+        	<property name="SourceID" type="java.lang.String" length="50" />
+        	<property name="RecordClassifying" type="java.lang.String" length="16" />
+        	<property name="RecordTitle" type="java.lang.String" length="50" />
+        	<property name="EffectiveFlag" type="java.lang.String" length="1" />
+        	<property name="VersionNumber" type="java.lang.String" length="10" />
+        	<property name="AuthorOrganization" type="java.lang.String" length="16" />
+        	<property name="Author" type="java.lang.String" length="32" />
+        	<property name="UploadTime" type="java.util.Date"  />
+        	<property name="UpdateTime" type="java.util.Date"  />
+        	<property name="MedicalInstitutions" type="java.lang.String" length="50" />
+        	<property name="MedicalOrgnationCode" type="java.lang.String" length="10" />
+        	<property name="ClinicFlag" type="java.lang.String" length="1" />
+        	<property name="CheckNo" type="java.lang.String" length="33" />
+        	<property name="VisitID" type="java.lang.String" length="32" />
+        	<property name="CheckReportUnit" type="java.lang.String" length="70" />
+        	<property name="CheckReportObj" type="java.lang.String" length="2000" />
+        	<property name="CheckReportSbj" type="java.lang.String" length="200" />
+        	<property name="CheckItmCode" type="java.lang.String" length="10" />
+        	<property name="CheckItmNm" type="java.lang.String" length="60" />
+        	<property name="CheckDate" type="java.util.Date"  />
+        	<property name="CheckType" type="java.lang.String" length="2" />
+        	<property name="CheckReportDate" type="java.util.Date"  />
+        	<property name="CheckReportRemk" type="java.lang.String" length="100" />
+        	<property name="ConfirmDate" type="java.util.Date"  />
+        	<property name="StudyUID" type="java.lang.String" length="128"/>
+</class>
+</hibernate-mapping>

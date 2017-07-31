@@ -1,0 +1,286 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>杭州市市属医院检验报告查询系统</title>
+<style type="text/css">
+li {
+	padding-right: 10px;
+	float: left;
+	display: inline;
+}
+
+.my table {
+	text-align: left;
+	margin-bottom: 20px;
+}
+
+.my td {
+	padding-left: 6px;
+	line-height: 24px;
+	border-bottom: #eee solid 1px;
+}
+
+.two table {
+	border-bottom: #ccc solid 1px;
+	border-left: #ccc solid 1px;
+	border-top: #ccc solid 1px;
+	text-align: left;
+	margin-bottom: 20px;
+}
+
+.two td {
+	height: 24px;
+	border-right: #ccc solid 1px;
+	padding: 0 4px;
+	border-bottom: #ccc dotted 1px;
+}
+
+u {
+	border-bottom: 1px #666 dotted;
+	text-decoration: none;
+	margin-right: 5px;
+	padding: 0 5px;
+}
+
+.jianyan {
+	padding-bottom: 10px;
+}
+
+.jianyan th {
+	border-bottom: 1px solid #000;
+	height: 26px;
+	line-height: 26px;
+	text-align: left;
+	font-weight: bold;
+}
+
+.jianyan td {
+	height: 24px;
+	line-height: 24px;
+	padding: 0 2px;
+}
+
+.right {
+	margin-left: 20px;
+}
+
+.red {
+	color: red;
+	font-weight: bold;
+}
+
+.bk {
+	background: #FFF
+}
+
+.riqi {
+	width: 100px;
+	float: left;
+	min-height: 500px;
+}
+
+.riqi a {
+	display: block;
+	height: 20px;
+	width: 90px;
+	line-height: 20px;
+	margin-top: 5px;
+	text-align: center;
+}
+
+.riqi a:hover {
+	color: #fff;
+	background: url(images/33_21.png) no-repeat;
+	line-height: 20px;
+}
+
+.tabs {
+	font-size: 14px;
+	height: 40px;
+	text-align: left;
+	color: #FFFFFF;
+	background: url(images/33_11.png) repeat-x;
+}
+
+.tabs li {
+	float: left;
+	display: block;
+}
+
+.tabs a {
+	display: block;
+	margin-top: 5px;
+	text-decoration: none;
+	width: 81px;
+	line-height: 35px;
+	height: 35px;
+	color: #333;
+	background: url(images/33_15.png) no-repeat;
+	text-align: center;
+}
+
+.tabs a:hover {
+	display: block;
+	color: #999;
+	background: url(images/33_17.png) repeat-x;
+}
+</style>
+</head>
+<body style=" font-size: 12px;">
+	<table border="0" cellpadding="0" cellspacing="0" width="865">
+		<tr>
+			<td style="padding-left:20px; border:1px #ccc solid; background:#FFF">
+				<div style="float: left;">
+					<table width="835" border="0" align="left" cellpadding="0"
+						cellspacing="0" style="margin-bottom:10px;">
+						<tr>
+							<td colspan="3" align="center"
+								style=" height:40px;font-size:24px; line-height:120%;"
+								th:text="${'检验报告单'}"></td>
+						</tr>
+						<tr>
+							<td align="left"><strong style="font-size:16px;"
+								th:if="${doc.element('JYBGDMC') != null}"
+								th:text="${doc.element('JYBGDMC').getText()}"></strong><br /> <strong
+								style="font-size:16px;"
+								th:if="${doc.element('BRBSLB') != null and doc.element('BRBSLB').attribute('localText') != null}"
+								th:text="${doc.element('BRBSLB').attribute('localText').getValue() }"></strong>
+							</td>
+							<td align="right" valign="bottom" style="font-size:16px;"><strong>NO：</strong><u
+								th:if="${doc.element('JYBGDH') != null}"
+								th:text="${doc.element('JYBGDH').getText()}"></u>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="3" height="5" style="border-bottom:2px #ccc solid;"></td>
+						</tr>
+					</table>
+				</div>
+				<div style="float: left;">
+					<table width="835" border="0" align="left" cellpadding="0"
+						cellspacing="0" class="jianyan">
+						<tr>
+							<td width="25%" align="left"><strong>姓&nbsp;&nbsp;&nbsp;名：</strong><u
+								th:text="${personName}"></u>
+							</td>
+							<td width="25%" align="left"><strong>性别：</strong><u
+								th:text="${sexCode_text}"></u>
+							</td>
+							<td width="25%" align="left"><strong> 年龄：</strong><u
+								th:text="${age}"></u>
+							</td>
+							<td align="left"><strong>样本类型：</strong><u
+								th:if="${doc.element('BBLBDM') != null and doc.element('BBLBDM').attribute('localText')!=null }"
+								th:text="${doc.element('BBLBDM').attribute('localText').getValue()}"></u>
+							</td>
+						</tr>
+						<tr>
+							<td align="left"><strong>门诊号：</strong><u
+								th:if="${doc.element('JZLSH') != null}"
+								th:text="${doc.element('JZLSH').getText()}"></u>
+							</td>
+							<td align="left"><strong>科室：</strong><u
+								th:if="${doc.element('SQKSDM') != null and doc.element('SQKSDM').attribute('localText')!=null}"
+								th:text="${doc.element('SQKSDM').attribute('localText').getValue()}"></u>
+							</td>
+							<td align="left"></td>
+							<td align="left"><strong></strong>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div style="float: left; border-bottom:2px solid #000;">
+					<div style="width:835px;float:left; text-align:left"
+						class="jianyan">
+						<table width="835" border="0" cellspacing="0" cellpadding="0">
+							<tr class="jianyan">
+								<th>&nbsp;</th>
+								<th>检验项目</th>
+								<th>结果</th>
+								
+								<th>参考范围</th>
+								<th>单位</th>
+							</tr>
+							<div th:if="${doc.element('Pt_LabDetails') != null}">
+							<tr class="jianyan" th:each="opt,iterStaus:${doc.element('Pt_LabDetails').selectNodes('Pt_LabDetail')}">
+								<td>
+									<strong th:text="${iterStaus.index+1}"></strong>
+								</td>
+								<td th:text="${opt.elementText('JYXMMC')}"></td>
+								<td th:text="${opt.elementText('JYJG')}"></td>
+								<td th:text="${opt.elementText('CKDX')}"></td>
+								<td th:text="${opt.elementText('JLDW')}"></td>
+							</tr>
+							</div>
+						</table>
+					</div>
+					<!--<div style="width:417px;float:left; text-align:left;"
+						class="jianyan">
+						<table width="417" border="0" cellspacing="0" cellpadding="0">
+							<tr class="jianyan">
+								<th>&nbsp;</th>
+								<th>检验项目</th>
+								<th>结果</th>
+								<th>&nbsp;</th>
+								<th>参考范围</th>
+								<th>单位</th>
+							</tr>
+							<tr class="jianyan" th:each="opt:${eles2}">
+								<td><strong th:text="${opt.INDEX}"></strong>
+								</td>
+								<td th:text="${opt.JYXMMC}"></td>
+								<td th:text="${opt.JYJG}"></td>
+								<td th:text="${opt.TS}"></td>
+								<td th:text="${opt.CKDX}"></td>
+								<td th:text="${opt.JLDW}"></td>
+							</tr>
+						</table>
+					</div>-->
+				</div>
+				<div style="float: left;">
+					<table width="835" border="0" align="left" cellpadding="0"
+						cellspacing="0">
+						<tr>
+							<td height="24" align="left"><strong>送检医生：</strong><span
+								th:if="${doc.element('SQYSXM') != null}"
+								th:text="${doc.element('SQYSXM').getText()}"></span>
+							</td>
+							<td align="left"><strong>检&nbsp; 验&nbsp;者：</strong><span
+								th:if="${doc.element('BGYSXM') != null}"
+								th:text="${doc.element('BGYSXM').getText()}"></span>
+							</td>
+							<td align="left"><strong>审核者：</strong><span
+								th:if="${doc.element('SHYSXM') != null}"
+								th:text="${doc.element('SHYSXM').getText()}"></span>
+							</td>
+						</tr>
+						<tr>
+							<td height="24" align="left"><strong>送检时间：</strong><span
+								th:if="${doc.element('SQRQ') != null}"
+								th:text="${doc.element('SQRQ').getText()}"></span>
+							</td>
+							<td height="24" align="left"><strong>检验时间：</strong><span
+								th:if="${doc.element('JYRQ') != null}"
+								th:text="${doc.element('JYRQ').getText()}"></span>
+							</td>
+							<td align="left"><strong>报告时间：</strong><span
+								th:if="${doc.element('BGRQ') != null}"
+								th:text="${doc.element('BGRQ').getText()}"></span>
+							</td>
+							<td align="left"></td>
+						</tr>
+						<tr>
+							<td height="30" colspan="3" align="left"><span class="red">*</span><strong>本系统提供的检验体检数据来源于各医院，仅供方便查询参考使用，不具法律效力，如有疑问请以各医院纸质报告为准。</strong>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</td>
+		</tr>
+	</table>
+
+
+</body>
+</html>

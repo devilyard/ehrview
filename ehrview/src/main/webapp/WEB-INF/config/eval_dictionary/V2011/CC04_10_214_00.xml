@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="无充血"/>
+  <item key="2" text="充血"/>
+  <item key="3" text="淋巴滤泡增生"/>
+</dic>

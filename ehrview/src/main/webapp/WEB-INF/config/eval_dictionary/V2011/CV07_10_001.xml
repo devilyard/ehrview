@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="01" text="西药" comment="使用西药的费用"/>
+  <item key="02" text="中成药" comment="使用中成药的费用"/>
+  <item key="03" text="中草药" comment="使用中草药的费用"/>
+  <item key="04" text="诊察费" comment="诊断及观察费用"/>
+  <item key="05" text="检查费" comment="不含化验费、放射费"/>
+  <item key="06" text="化验费" comment="化验检查费用"/>
+  <item key="07" text="放射费" comment="用于放射检查及治疗的费用"/>
+  <item key="08" text="治疗费" comment="各种治疗的费用"/>
+  <item key="09" text="手术费" comment="用于手术操作的费用"/>
+  <item key="99" text="其他" comment="无法按上述类别归类的费用"/>
+</dic>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="9" text="无"/>
+  <item key="1" text="限盐"/>
+  <item key="2" text="减少吸烟量或者戒烟"/>
+  <item key="3" text="减少饮酒量或戒酒"/>
+  <item key="4" text="减少膳食脂肪"/>
+  <item key="5" text="减轻体重"/>
+  <item key="6" text="有规律体育运动"/>
+  <item key="7" text="放松情绪"/>
+  <item key="8" text="其他措施"/>
+</dic>

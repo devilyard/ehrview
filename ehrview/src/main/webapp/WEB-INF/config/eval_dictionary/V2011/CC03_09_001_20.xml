@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="省（市）医院"/>
+  <item key="2" text="区县医院"/>
+  <item key="3" text="街道（乡镇）卫生院"/>
+  <item key="4" text="村（诊所）卫生室"/>
+  <item key="5" text="途中"/>
+  <item key="6" text="家中"/>
+</dic>

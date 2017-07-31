@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>常规检验报告</title>
+<style type="text/css">
+.jianyan {
+	padding-bottom: 10px;
+}
+
+.jyxm {
+	border-bottom: 1px dotted #dddddd;
+}
+
+.jianyan th {
+	border-bottom: 1px solid #000;
+	height: 26px;
+	line-height: 26px;
+	text-align: left;
+	font-weight: bold;
+}
+
+.jianyan td {
+	height: 24px;
+	line-height: 24px;
+	padding: 0 2px;
+}
+
+.red {
+	color: red;
+	font-weight: bold;
+}
+</style>
+</head>
+<body style="font-size:12px;">
+	<div style="font-family:微软雅黑, 宋体;padding:25px;list-style:none;color:#232323;text-decoration:none;">
+	<table border="0" cellpadding="0" cellspacing="0" width="880">
+		<tr>
+			<td style="padding-left:20px; border:1px #ccc solid; background:#FFF">
+				<div style="float: left;">
+					<table width="835" border="0" align="left" cellpadding="0"
+						cellspacing="0" style="margin-bottom:10px;">
+						<tr>
+							<td colspan="3" align="center" style=" height:40px;font-size:24px; line-height:120%;"
+								th:text="${doc.elementText('ReportOrg')} + '常规检验报告单'">
+							</td>
+						</tr>
+						<tr>
+							<td align="left"></td>
+							<td align="right" valign="bottom" style="font-size:16px;"><strong>NO：</strong>
+								<u th:text="${doc.elementText('ReportNO')}"></u>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="3" height="5" style="border-bottom:2px #ccc solid;"></td>
+						</tr>
+					</table>
+				</div>
+				<div style="float: left;">
+					<table width="835" border="0" align="left" cellpadding="0"
+						cellspacing="0" class="jianyan">
+						<tr>
+							<td width="25%" align="left"><strong>姓&nbsp;&nbsp;&nbsp;名：</strong>
+								<u th:text="${personName}"></u>
+							</td>
+							<td width="25%" align="left"><strong>性别：</strong>
+								<u th:text="${sexCode_text}"></u>
+							</td>
+							<td width="25%" align="left"><strong> 年龄：</strong>
+								<u th:text="${age}"></u>
+							</td>
+							<td align="left"></td>
+						</tr>
+						<tr>
+							<td align="left">
+								<strong th:if="${doc.elementText('ClinicID') != ''}" th:text="'门诊号：'">住院号：</strong>
+								<u th:text="${doc.elementText('ClinicID')}"></u>
+							</td>
+							<td align="left">
+								<strong th:if="${doc.elementText('HospizationID') != ''}" th:text="'住院号：'">住院号：</strong>
+								<u th:text="${doc.elementText('HospizationID')}"></u>
+							</td>
+							<td align="left"></td>
+							<td align="left"><strong></strong></td>
+						</tr>
+					</table>
+				</div>
+				<div style="float: left; border-bottom:2px solid #000;">
+					<div style="width:835px;float:left; text-align:left" class="jianyan">
+						<table width="835" border="0" cellspacing="0" cellpadding="0">
+							<tr class="jianyan">
+								<th width="5%">&nbsp;&nbsp;</th>
+								<th width="10%">检验日期</th>
+								<th width="10%">检验项目</th>
+								<th width="10%">样本类型</th>
+								<th width="10%">结果</th>
+								<th width="10%">单位</th>
+								<th width="5%">&nbsp;</th>
+								<th>参考范围</th>
+							</tr>
+							<tr class="jianyan jyxm" th:each="testResult:${doc.element('TestResults').elements()}">
+								<td><strong th:text="${testResultStat.count}"></strong></td>
+								<td th:text="${testResult.elementText('TestDate')}"></td>
+								<td th:text="${testResult.elementText('TestName')}"></td>
+								<td th:text="${testResult.element('SampleType_Result').attributeValue('display')}"></td>
+								<td th:text="${testResult.elementText('TestResult')}"></td>
+								<td th:text="${testResult.elementText('ResultUnit')}"></td>
+								<td th:text="${testResult.elementText('ResultMessage')}"></td>
+								<td th:text="${testResult.elementText('ReferenceRange')}"></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div style="float: left;">
+					<table width="835" border="0" align="left" cellpadding="0" cellspacing="0">
+						<tr>
+							<td height="24" align="left" width="25%"><strong>送检科室：</strong>
+								<span th:text="${doc.elementText('RequestDept')}"></span>
+							</td>
+							<td height="24" align="left" width="25%"><strong>送检医生：</strong>
+								<span th:text="${doc.elementText('RequestDoctor')}"></span>
+							</td>
+							<td height="24" align="left" width="25%"><strong>送检时间：</strong>
+								<span th:text="${doc.elementText('RequestTime')}"></span>
+							</td>
+							<td height="24" align="left" width="25%"><strong>报告科室：</strong>
+								<span th:text="${doc.elementText('ReportDept')}"></span>
+							</td>
+						</tr>
+						<tr>
+							<td height="24" align="left" width="25%"><strong>检&nbsp;&nbsp;验&nbsp;者：</strong>
+								<span th:text="${doc.elementText('Doctor')}"></span>
+							</td>
+							<td height="24" align="left" width="25%"><strong>报告时间：</strong>
+								<span th:text="${doc.elementText('ReportTime')}"></span>
+							</td>
+							<td height="24" align="left" width="25%"><strong>审&nbsp;&nbsp;核&nbsp;者：</strong>
+								<span th:text="${doc.elementText('ReviewDoctor')}"></span>
+							</td>
+							<td height="24" align="left" width="25%"><strong>审核时间：</strong>
+								<span th:text="${doc.elementText('ReportReviewTime')}"></span>
+							</td>
+						</tr>
+						<tr>
+							<td height="30" colspan="4" align="left"><span class="red">*</span><strong>本系统提供的检验体检数据来源于各医院，仅供方便查询参考使用，不具法律效力，如有疑问请以各医院纸质报告为准。</strong>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</td>
+		</tr>
+	</table>
+</div>
+
+</body>
+</html>

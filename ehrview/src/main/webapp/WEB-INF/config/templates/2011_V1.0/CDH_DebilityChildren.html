@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>体弱儿管理记录表</title>
+</head>
+
+<body style="padding: 20px; font-size: 12px;">
+	<style type="text/css">
+* {
+	font-family: "微软雅黑","宋体"; font-size:12px;
+	font-size: 12px;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	color: #232323
+}
+
+table {
+	margin: 0px auto
+}
+table {
+border-collapse:collapse;
+}
+.my table {
+	border-bottom: #ccc solid 1px;
+	border-left: #ccc solid 1px;
+	border-top: #ccc solid 1px;
+	text-align: left;
+}
+
+.my td {
+	border-right: #ccc solid 1px;
+	border-bottom: #ccc dotted 1px;
+	padding: 4px;
+}
+
+.my div {
+	border-bottom: dotted #fff 1px;
+	min-height: 20px;
+}
+
+.red {
+	color: red;
+	font-weight: bold;
+}
+
+u {
+	border-bottom: 1px #666 dotted;
+	text-decoration: none;
+	margin-right: 20px;
+	padding-left: 5px;
+}
+</style>
+	<div style="text-align: left; margin-bottom: 5px; font-size: 12px;">
+	<table width="95%" border="0" align="center" cellpadding="0"
+		cellspacing="0">
+		<tr>
+			<td align="center" colspan="2"
+				style="font-size: 24px; height: 40px; line-height: 50px; text-align: center">体弱儿管理记录表</td>
+		</tr>
+		<tr>
+			<td height="30" width="75%"></td>
+			<td align="right" style="padding-left: 6px; line-height: 24px;"><strong>编号：</strong> 
+				<u th:text="${doc.elementText('PHRID')}"></u>
+			</td>
+		</tr>
+		<tr>
+			<td style="border-bottom: 4px #09F solid;" colspan="2"></td>
+		</tr>
+		<tr>
+			<td style="height: 1px;" colspan="2"></td>
+		</tr>
+		<tr>
+			<td height="10" style="border-top: 1px #09f solid;" colspan="2"></td>
+		</tr>
+	</table>
+	</div>
+	<div class="my">
+		<table width="95%" border="0" align="center" cellpadding="0"
+			cellspacing="0">
+			<tr>
+				<td bgcolor="#CAE2F7" width="15%"><strong>儿童姓名</strong></td>
+				<td width="20%" th:text="${personName}"></td>
+				<td bgcolor="#CAE2F7" width="15%"><strong>性 别</strong></td>
+				<td width="20%" th:text="${sexCode_text}"></td>
+				<td bgcolor="#CAE2F7" width="15%"><strong>出生日期</strong></td>
+				<td th:text="${#dates.format(birthday,'yyyy-MM-dd')}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>母亲姓名</strong></td>
+				<td th:text="${motherName}"></td>
+				<td bgcolor="#CAE2F7"><strong>父亲姓名</strong></td>
+				<td th:text="${fatherName}"></td>
+				<td bgcolor="#CAE2F7"><strong>联系电话</strong></td>
+				<td th:text="${doc.elementText('PhoneNO')}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>现住地址</strong></td>
+				<td colspan="3" th:text="${address}"></td>
+				<td bgcolor="#CAE2F7"><strong>邮 编</strong></td>
+				<td th:text="${postalCode}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>建档日期</strong></td>
+				<td colspan="5" th:text="${doc.elementText('CreateDate')}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7" width="15%"><strong>管理范围</strong></td>
+				<td colspan="5" th:if="${doc.element('DebilityReason') != null}" th:text="${doc.element('DebilityReason').attributeValue('display')} + '&nbsp;' + ${doc.elementText('DebilityOtherReason')}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>原因</strong></td>
+				<td colspan="5" th:if="${doc.element('DeseaseReason') != null}" th:text="${doc.element('DeseaseReason').attributeValue('display')} + '&nbsp;' + ${doc.elementText('DeseaseOtherReason')}"></td>
+			</tr>
+		</table>
+		<table width="95%" border="0" align="center" cellpadding="0"
+			cellspacing="0">
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>随诊日期</strong></td>
+				<td bgcolor="#CAE2F7"><strong>月龄</strong></td>
+				<td bgcolor="#CAE2F7"><strong>主要症状</strong></td>
+				<td bgcolor="#CAE2F7"><strong>阳性体征</strong></td>
+				<td bgcolor="#CAE2F7"><strong>实验室检查结果</strong></td>
+				<td bgcolor="#CAE2F7" width="350"><strong>处理及指导</strong></td>
+				<td bgcolor="#CAE2F7"><strong>检查单位</strong></td>
+				<td bgcolor="#CAE2F7"><strong>检查医师签名</strong></td>
+			</tr>
+			<tr th:if="${visitData} != ''" th:each="vd:${visitData}">
+				<td th:text="${vd.elementText('VisitDate')}"></td>
+				<td th:text="${vd.elementText('VisitMonth')}"></td>
+				<td th:text="${vd.elementText('Symptoms')}"></td>
+				<td th:text="${vd.elementText('Signs')}"></td>
+				<td th:text="${vd.elementText('Results')}"></td>
+				<td th:text="${vd.elementText('Guidance')}"></td>
+				<td th:text="${vd.elementText('ExamineUnit')}"></td>
+				<td th:text="${vd.elementText('ExamineDoctor')}"></td>
+			</tr>
+			<tr th:if="${visitData} == ''">
+				<td>未查到随诊记录</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+		<table width="95%" border="0" align="center" cellpadding="0"
+			cellspacing="0">
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>转归</strong></td>
+				<td colspan="5" th:if="${doc.element('VestingCode') != null}" th:text="${doc.element('VestingCode').attributeValue('display')} + '&nbsp;' + ${doc.elementText('OtherVesting')}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7" width="15%"><strong>结案单位</strong></td>
+				<td width="20%" th:text="${doc.elementText('ClosedUnit')}"></td>
+				<td bgcolor="#CAE2F7" width="15%"><strong>结案日期</strong></td>
+				<td width="20%" th:text="${doc.elementText('ClosedDate')}"></td>
+				<td bgcolor="#CAE2F7" width="15%"><strong>结案医师签名</strong></td>
+				<td th:text="${doc.elementText('ClosedDoctor')}"></td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

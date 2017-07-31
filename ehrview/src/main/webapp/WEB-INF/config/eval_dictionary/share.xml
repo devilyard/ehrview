@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic> 
+  	<item key="EHR_HealthRecord" text="个人基本健康信息登记" />
+	<item key="Birth_Certificate" text="出生医学证明" />
+	<item key="MHC_BabyVisitInfo" text="新生儿家庭访视" />
+	<item key="CDH_CheckUp" text="儿童健康体检" />
+	<item key="MHC_FirstVisitRecord" text="首次产前随访服务" />
+	<item key="MHC_VisitRecord" text="产前随访服务" />
+	<item key="MHC_PostnatalVisitInfo" text="产后访视" />
+	<item key="MHC_Postnatal42DayRecord" text="产后42天健康检查" />
+	<item key="Vaccination_Report" text="预防接种报告" />
+	<item key="InfectiousDisease_Report" text="传染病报告" />
+	<item key="Death_Certificate" text="死亡医学证明" />
+	<item key="MDC_HypertensionVisit" text="高血压患者随访服务" />
+	<item key="MDC_DiabetesVisit" text="2型糖尿病患者随访服务" />
+	<item key="PSY_PsychosisRecord" text="重性精神病患者个人信息登记" />
+	<item key="PSY_PsychosisVisit" text="重性精神病患者随访服务" />
+	<item key="Cu_Register" text="成人健康体检" />
+	<item key="Opt_Record" text="门诊摘要" />
+	<item key="Ipt_Record" text="住院摘要" />
+	<item key="EMR_ConsultationRecord" text="会诊记录" />
+	<item key="EMR_ReferralRecord" text="转诊（院）记录" />
+</dic>

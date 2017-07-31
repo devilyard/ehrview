@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="10" text="研究生"/>
+  <item key="11" text="研究生毕业"/>
+  <item key="19" text="研究生肄业"/>
+  <item key="20" text="大学本科"/>
+  <item key="21" text="大学毕业"/>
+  <item key="28" text="相当大学毕业"/>
+  <item key="29" text="大学肄业"/>
+  <item key="30" text="大学专科和专科学校"/>
+  <item key="31" text="专科毕业"/>
+  <item key="38" text="相当专科毕业"/>
+  <item key="39" text="专科肄业"/>
+  <item key="40" text="中等专业学校或中等技术学校"/>
+  <item key="41" text="中专毕业"/>
+  <item key="42" text="中技毕业"/>
+  <item key="48" text="相当中专或中技毕业"/>
+  <item key="49" text="中专或中技肄业"/>
+  <item key="50" text="技工学校"/>
+  <item key="51" text="技工学校毕业"/>
+  <item key="59" text="技工学校肄业"/>
+  <item key="60" text="高中"/>
+  <item key="61" text="高中毕业"/>
+  <item key="62" text="职业高中毕业"/>
+  <item key="63" text="农业高中毕业"/>
+  <item key="68" text="相当高中毕业"/>
+  <item key="69" text="高中肄业"/>
+  <item key="70" text="初中"/>
+  <item key="71" text="初中毕业"/>
+  <item key="72" text="职业初中毕业"/>
+  <item key="73" text="农业初中毕业"/>
+  <item key="78" text="相当初中毕业"/>
+  <item key="79" text="初中肄业"/>
+  <item key="80" text="小学"/>
+  <item key="81" text="小学毕业"/>
+  <item key="88" text="相当小学毕业"/>
+  <item key="89" text="小学肄业"/>
+  <item key="90" text="文盲或半文盲"/>
+  <item key="91" text="未分类"/>
+</dic>

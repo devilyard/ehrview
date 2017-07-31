@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="社区医疗机构"/>
+  <item key="2" text="杭州市其他医疗机构"/>
+  <item key="3" text="非杭州市医疗机构"/>
+</dic>

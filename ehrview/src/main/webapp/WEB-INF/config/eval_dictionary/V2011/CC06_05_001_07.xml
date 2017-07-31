@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="控制满意"/>
+  <item key="2" text="控制不满意"/>
+  <item key="3" text="不良反应"/>
+  <item key="4" text="并发症"/>
+</dic>

@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="x-ua-compatible" content="ie=6" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>高血压患者随访服务记录表</title>
+</head>
+
+<body style="padding: 20px;font-size: 12px" >
+	<style type="text/css">
+.my table {
+	border-bottom: #ccc solid 1px;
+	border-left: #ccc solid 1px;
+	border-top: #ccc solid 1px;
+	text-align: left;
+}
+
+.my td {
+	border-right: #ccc solid 1px;
+	border-bottom: #ccc dotted 1px;
+	padding: 4px;
+}
+
+.red {
+	color: red;
+	font-weight: bold;
+}
+</style>
+	<div style="text-align: center; height: 40px; line-height: 40px; font-size: 16px; font-weight: bold;">高血压患者随访服务记录表</div>
+	<table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
+		<tr>
+			<td align="right"><strong>编号：</strong><u th:text="${doc.elementText('PHRID')}"></u></td>
+		</tr>
+		<tr>
+			<td style="border-bottom: 4px #09F solid;" colspan="2"></td>
+		</tr>
+		<tr>
+			<td style="height: 1px;" colspan="2"></td>
+		</tr>
+		<tr>
+			<td height="10" style="border-top: 1px #09f solid;" colspan="2"></td>
+		</tr>
+	</table>
+	<div class="my">
+		<table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
+			<tr>
+				<td width="90" align="left" bgcolor="#CAE2F7"><strong>随访日期</strong></td>
+				<td colspan="2" th:text="${doc.elementText('VisitDate')}"></td>
+			</tr>
+			<tr>
+				<td align="left" bgcolor="#CAE2F7"><strong>随访方式</strong></td>
+				<td colspan="2" th:if="${doc.element('VisitWay') != null}" th:text="${doc.element('VisitWay').attributeValue('display')}"></td>
+			</tr>
+			<tr>
+				<td align="left" bgcolor="#CAE2F7"><strong>症状</strong></td>
+				<td colspan="2" th:if="${doc.element('CurrentSymptoms') != null}" th:text="${doc.element('CurrentSymptoms').attributeValue('display')}"></td>
+			</tr>
+			<tr>
+				<td rowspan="3" align="left" bgcolor="#CAE2F7"><strong>体征</strong></td>
+				<td><strong>血压：</strong><span th:text="${doc.elementText('Constriction')}+'/'+${doc.elementText('Diastolic')}+'(mmHg)'"></span>
+				</td>
+				<td><strong>体重：</strong><span th:text="${doc.elementText('Weight')}+'(kg)'"></span></td>
+			</tr>
+			<tr>
+				<td><strong>体质指数：</strong><span th:text="${doc.elementText('BMI')}"></span></td>
+				<td><strong>心率：</strong><span th:text="${doc.elementText('HeartRate')}"></span></td>
+			</tr>
+			<tr>
+				<td colspan="2"><strong>其他：</strong><span th:text="${doc.elementText('OtherSigns')}"></span></td>
+			</tr>
+			<tr>
+				<td rowspan="3" align="left" bgcolor="#CAE2F7"><strong>生活方式指导</strong></td>
+				<td><strong>日吸烟量：</strong><span th:text="${doc.elementText('SmokeCount')}+'（支）'"></span></td>
+				<td><strong>日饮酒量：</strong><span th:text="${doc.elementText('DrinkCount')}+'（两）'"></span></td>
+			</tr>
+			<tr>
+				<td><strong>运动：</strong><span th:text="${doc.elementText('TrainTimesWeek')}+'次/周  '+${doc.elementText('TrainMinute')}+'分钟/次'"></span>
+				</td>
+				<td><strong>摄盐情况：</strong><span th:text="${doc.elementText('Salt')}+'（克/天）'"></span></td>
+			</tr>
+			<tr>
+				<td>
+					<strong>心理调整：</strong>
+					<span th:if="${doc.element('PsychologyChange') != null}" th:text="${doc.element('PsychologyChange').attributeValue('display')}"></span>
+				</td>
+				<td>
+					<strong>遵医行为：</strong>
+					<span th:if="${doc.element('ObeyDoctor') != null}" th:text="${doc.element('ObeyDoctor').attributeValue('display')}"></span>
+				</td>
+			</tr>
+			<tr>
+				<td align="left" bgcolor="#CAE2F7"><strong>辅助检查</strong></td>
+				<td colspan="2" th:text=" ${doc.elementText('AuxiliaryCheck')}"></td>
+			</tr>
+			<tr>
+				<td align="left" bgcolor="#CAE2F7"><strong>服药依从性</strong></td>
+				<td colspan="2" th:if=" ${doc.element('Medicine') != null}" th:text=" ${doc.element('Medicine').attributeValue('display')}"></td>
+			</tr>
+			<tr>
+				<td align="left" bgcolor="#CAE2F7"><strong>药物不良反应</strong></td>
+				<td colspan="2" th:if=" ${doc.element('MedicineBadEffect') != null}" th:text=" ${doc.element('MedicineBadEffect').attributeValue('display')}"></td>
+			</tr>
+			<tr>
+				<td align="left" bgcolor="#CAE2F7"><strong>此次随访分类</strong></td>
+				<td colspan="2" th:if=" ${doc.element('VisitEvaluate') != null}" th:text=" ${doc.element('VisitEvaluate').attributeValue('display')}"></td>
+			</tr>
+			<tr>
+				<td align="left" bgcolor="#CAE2F7"><strong>用药情况</strong></td>
+				<td colspan="2">
+				<div th:if="${doc.element('MDC_HypertensionMedicines') != null}">
+					<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" style="border: 0;"
+						th:each="opt:${doc.element('MDC_HypertensionMedicines').selectNodes('MDC_HypertensionMedicine')}">
+						<tr>
+							<td colspan="2" style="border-right: none;"><strong th:text="'药名：'+${opt.elementText('MedicineName')}"></strong></td>
+						</tr>
+						<tr>
+							<td width="50%" style="border-bottom: 1px #ccc dotted; border-right: none;">
+								<strong>每日：</strong>
+								<span th:text="${opt.elementText('MedicineFrequency')}"></span>
+							</td>
+							<td style="border-left: 1px #ccc dotted; border-bottom: 1px #ccc dotted; border-right: none;">
+								<strong>每次：</strong>
+								<span th:text="${opt.elementText('MedicineDosage')}+${opt.elementText('UseUnits')}"></span>
+							</td>
+						</tr>
+					</table>
+					</div>
+					</td>
+			</tr>
+			<tr>
+				<td rowspan="2" align="left" bgcolor="#CAE2F7"><strong>转诊</strong></td>
+				<td colspan="2"><strong>原 因：</strong>
+					<span th:text="${doc.elementText('ReferralReason')}"></span>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><strong>机构及科别：</strong>
+					<span th:text="${doc.elementText('AgencyAndDept')}"></span>
+				</td>
+			</tr>
+			<tr>
+				<td align="left" bgcolor="#CAE2F7"><strong>下次随访日期</strong></td>
+				<td colspan="2" th:text="${doc.elementText('NextDate')}"></td>
+			</tr>
+			<tr>
+				<td align="left" bgcolor="#CAE2F7"><strong>随访医生签名</strong></td>
+				<td colspan="2"><span th:text=" ${doc.elementText('VisitDoctor')}"></span></td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

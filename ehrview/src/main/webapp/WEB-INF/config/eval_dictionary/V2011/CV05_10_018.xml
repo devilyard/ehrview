@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="HBeAg转阴"/>
+  <item key="2" text="HBeAg血清学转换"/>
+  <item key="3" text="HBsAg转阴"/>
+  <item key="4" text="HBsAg血清学转换"/>
+  <item key="9" text="其他"/>
+</dic>

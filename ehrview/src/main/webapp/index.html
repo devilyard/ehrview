@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>电子健康档案浏览器</title>
+<style type="text/css">
+body {
+	font-family: "微软雅黑", "宋体";
+	font-size: 12px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.main {
+	height: 550px;
+	background: url(pageImages/ehrviewbg.jpg) repeat-x;
+}
+
+.loginbg {
+	background: url(pageImages/ehrviewlogin.jpg) no-repeat;
+	width: 1000px;
+	height: 550px;
+	margin: 0 auto;
+}
+
+.login {
+	width: 320px;
+	height: 240px;
+	padding-top: 170px;
+	padding-right: 60px;
+	float: right;
+	text-align: left;
+	line-height: 24px;
+}
+</style>
+<script type="text/javascript" src="boot.jsc"></script>
+<script type="text/javascript">
+	function showModalViewDialog(path, win1, mote1) {
+		showURL = path;
+		win = win1;
+		mote = mote1;
+		setTimeout("showDialog()", 100); //该语句的执行时间不会超过15秒
+	}
+	function showDialog() {
+		window.showModalDialog(showURL, win, mote);
+	}
+</script>
+</head>
+
+<body>
+	<div style="float: left; width: 0px; height: 0px;">
+		<img id="pop" src="photo/logon.png" width="0" height="0" />
+	</div>
+	<div class="main">
+		<div class="loginbg">
+			<div class="login">
+				<table width="sss" border="0" cellspacing="0" cellpadding="0">
+					<tr>
+						<td width="65" height="45" align="center">用户名：</td>
+						<td><div id="usertext"></div></td>
+					</tr>
+					<tr>
+						<td height="45" align="center">密 码：</td>
+						<td valign="middle"><input id="pwd" name="pwd"
+							type="password" style="width: 155px; height: 22px" /></td>
+					</tr>
+					<tr>
+						<td height="45" align="center">角 色：</td>
+						<td><div id='select-role'></div></td>
+					</tr>
+					<tr>
+						<td height="90">&nbsp;</td>
+						<td><input type="image" name="logon" id="logon"
+							src="pageImages/loginbut.gif" /></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="个人生活料理"/>
+  <item key="2" text="家务劳动"/>
+  <item key="3" text="生产劳动及工作"/>
+  <item key="4" text="学习能力"/>
+  <item key="5" text="社会人际交往"/>
+</dic>

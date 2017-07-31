@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="01" text="普通IFN-α"/>
+  <item key="02" text="聚乙二醇IFN-α2a"/>
+  <item key="03" text="聚乙二醇IFN-α2b"/>
+  <item key="04" text="拉米夫定"/>
+  <item key="05" text="替比夫定"/>
+  <item key="06" text="恩替卡韦"/>
+  <item key="07" text="阿德福韦酯"/>
+  <item key="08" text="替诺福韦酯"/>
+  <item key="99" text="其他"/>
+</dic>

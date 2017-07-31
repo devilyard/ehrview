@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="0" text="无"/>
+  <item key="1" text="缺血性卒中"/>
+  <item key="2" text="脑出血"/>
+  <item key="3" text="短暂性脑缺血发作"/>
+  <item key="4" text="心肌梗死史"/>
+  <item key="5" text="冠状动脉血运重建"/>
+  <item key="6" text="心绞痛"/>
+  <item key="7" text="充血性心力衰竭"/>
+  <item key="8" text="糖尿病肾病"/>
+  <item key="9" text="肾功能受损（血清肌酐）"/>
+  <item key="10" text="视网膜病变"/>
+</dic>

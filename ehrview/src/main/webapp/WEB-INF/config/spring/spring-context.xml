@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2007 (http://www.altova.com) by Sean220 (Sean220) -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+	<bean id="dateContext" class="ctd.util.context.DateContext" />
+	<bean id="appContext" class="ctd.util.context.Context" />
+	<bean id="topContext" class="ctd.util.context.Context">
+		<property name="subCtxs">
+			<map>
+				<entry>
+					<key>
+						<value>date</value>
+					</key>
+					<ref bean="dateContext" />
+				</entry>
+				<entry>
+					<key>
+						<value>app</value>
+					</key>
+					<ref bean="appContext" />
+				</entry>
+			</map>
+		</property>
+		<property name="ctxValues">
+			<map>
+				<entry>
+					<key>
+						<value>uploadMaxSize</value>
+					</key>
+					<value>1M</value>
+				</entry>
+				<entry>
+					<key>
+						<value>appConfigHome</value>
+					</key>
+					<value>WEB-INF/config/applications.xml</value>
+				</entry>
+				<entry>
+					<key>
+						<value>userHome</value>
+					</key>
+					<value>WEB-INF/config/users/users.xml</value>
+				</entry>
+				<entry>
+					<key>
+						<value>roleHome</value>
+					</key>
+					<value>WEB-INF/config/roles/roles.xml</value>
+				</entry>
+				<entry>
+					<key>
+						<value>dictionaryHome</value>
+					</key>
+					<value>WEB-INF/config/dictionary/dictionaries.xml</value>
+				</entry>
+				<entry>
+					<key>
+						<value>schemaHome</value>
+					</key>
+					<value>WEB-INF/config/schema/schemas.xml</value>
+				</entry>
+				<entry>
+					<key>
+						<value>mappingHome</value>
+					</key>
+					<value>WEB-INF/config/mappings/</value>
+				</entry>
+				<entry>
+					<key>
+						<value>unitConfigHome</value>
+					</key>
+					<value>WEB-INF/config/dictionary/sys/manageUnit.xml</value>
+				</entry>
+			</map>
+		</property>
+	</bean>
+
+	<bean id="staticInitContext" class="ctd.util.context.Context">
+		<constructor-arg type="java.lang.String" value="server" />
+		<constructor-arg ref="topContext" />
+	</bean>
+</beans>

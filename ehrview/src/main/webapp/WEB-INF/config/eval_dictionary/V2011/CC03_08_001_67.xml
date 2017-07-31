@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="正常"/>
+  <item key="2" text="口唇苍白"/>
+  <item key="3" text="口周青紫"/>
+  <item key="4" text="口角糜烂"/>
+  <item key="5" text="地图舌"/>
+  <item key="6" text="黏膜溃疡"/>
+  <item key="7" text="鹅口疮"/>
+  <item key="8" text="唇裂"/>
+  <item key="9" text="腭裂"/>
+  <item key="10" text="唇腭裂"/>
+  <item key="11" text="舌系带短"/>
+  <item key="12" text="咬颌异常"/>
+  <item key="13" text="出牙次序乱"/>
+  <item key="14" text="其他"/>
+</dic>

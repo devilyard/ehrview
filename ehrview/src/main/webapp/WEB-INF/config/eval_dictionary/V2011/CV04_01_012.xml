@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="成形"/>
+  <item key="11" text="柏油样便"/>
+  <item key="12" text="白陶土样便"/>
+  <item key="2" text="糊状"/>
+  <item key="21" text="稀糊状"/>
+  <item key="22" text="黏液便"/>
+  <item key="23" text="细条样便"/>
+  <item key="3" text="稀"/>
+  <item key="31" text="水样便"/>
+  <item key="32" text="米泔样便"/>
+  <item key="4" text="鲜血样便"/>
+  <item key="5" text="脓性及脓血便"/>
+  <item key="9" text="其他"/>
+</dic>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<entry id="MTC_Query_Log" alias="mtc查询日志" sort="CREATETIME desc">
+	<item id="ID" alias="mtcquerylog" type="int" not-null="1" pkey="true" display="0"/>
+	<item id="AUTHORORGANIZATION" alias="医院名称" type="string" length="30" width="130">
+		<dic id="authororganization_text" />
+	</item>
+	<item id="CERTIFICATETYPECODE" alias="证件类型" type="string" length="30" width="80">
+		<dic id="certificatetypecode"/>
+	</item>
+	<item id="CERTIFICATENO" alias="证件号码" type="string" length="32" width="160"/>
+	<item id="NAME" alias="姓名" type="string" not-null="1" length="30" width="50"/>
+	<item id="REPORTTYPE" alias="报告类型" type="string" length="10" width="80">
+		<dic id="reporttype"/>
+	</item>
+	<item id="CREATETIME" alias="查询时间" type="timestamp" not-null="1" width="150"/>
+</entry>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic> 
+  <item key="1" text="离休医保险种" mCode="1" pyCode="lxybxz"/>  
+  <item key="2" text="子女统筹医保险种" mCode="2" pyCode="zntcybxz"/>  
+  <item key="3" text="老居民医保险种" mCode="3" pyCode="ljmybxz"/>  
+  <item key="4" text="大学生医保险种" mCode="4" pyCode="dxsybxz"/>  
+  <item key="5" text="少儿医保险种" mCode="5" pyCode="seybxz"/>  
+  <item key="6" text="非从业医保险种" mCode="6" pyCode="fcyybxz"/>  
+  <item key="7" text="新农合医保险种" mCode="7" pyCode="xnhybxz"/>  
+  <item key="8" text="普通职工医保险种" mCode="8" pyCode="ptzgybxz"/>  
+  <item key="9" text="双低医保(主要指农民工，低缴费低保障)" mCode="9" pyCode="sdyb"/>  
+</dic>

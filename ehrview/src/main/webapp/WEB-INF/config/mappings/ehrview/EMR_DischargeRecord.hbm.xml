@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="EMR_DischargeRecord" table="EMR_DischargeRecord">
+			<id name="DCID" type="java.lang.String">
+            	<column name="DCID"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="PatientType" type="java.lang.String" length="2" />
+        	<property name="VisitID" type="java.lang.String" length="16" />
+        	<property name="MPIID" type="java.lang.String" length="32" />
+        	<property name="EffectiveFlag" type="java.lang.String" length="1" not-null="true"/>
+        	<property name="EffectiveTime" type="java.util.Date" not-null="true" />
+        	<property name="SourceID" type="java.lang.String" length="50" not-null="true" />
+        	<property name="RecordTitle" type="java.lang.String" length="50" not-null="true" />
+        	<property name="RecordClassifying" type="java.lang.String" length="50" not-null="true" />
+        	<property name="UploadTime" type="java.util.Date" not-null="true" />
+        	<property name="UpdateTime" type="java.util.Date" not-null="true" />
+        	<property name="SystemTime" type="java.util.Date" not-null="true" />
+        	<property name="Author" type="java.lang.String" length="32" not-null="true" />
+        	<property name="ZoneID" type="java.lang.String" length="1" />
+        	<property name="StatisticDate" type="java.util.Date"  />
+        	<property name="AuthorOrganization" type="java.lang.String" length="16" />
+        	<property name="AdmissionDateTime" type="java.util.Date"  />
+        	<property name="AdmissionCondition" type="java.lang.String" length="2000" />
+        	<property name="AdmissionDiagnose" type="java.lang.String" length="100" />
+        	<property name="AdmissionDiagCode" type="java.lang.String" length="7" />
+        	<property name="DischargeDateTime" type="java.util.Date"  />
+        	<property name="Diagnose" type="java.lang.String" length="100" />
+        	<property name="DiagnoseCode" type="java.lang.String" length="7" />
+        	<property name="DischargeSituation" type="java.lang.String" length="2000" />
+        	<property name="AuxiliaryExaminationPositiveRe" type="java.lang.String" length="2000" />
+        	<property name="DischargeSymptomAndSign" type="java.lang.String" length="2000" />
+        	<property name="AdmissionAdvice" type="java.lang.String" length="2000" />
+        	<property name="SeniorDoctor" type="java.lang.String" length="50" />
+        	<property name="SignDateTime" type="java.util.Date"  />
+        	<property name="TreatmentProcess" type="java.lang.String" length="2000" />
+        	<property name="ChineseFourObservationDescript" type="java.lang.String" length="2000" />
+        	<property name="DifferentiationTypeCode" type="java.lang.String" length="7" />
+        	<property name="DifferentiationTypeName" type="java.lang.String" length="50" />
+        	<property name="TherapeuticPrinciple" type="java.lang.String" length="100" />
+        	<property name="ChiefDoctorSign" type="java.lang.String" length="50" />
+        	<property name="AttendingDoctor" type="java.lang.String" length="50" />
+        	<property name="HospizationDoctor" type="java.lang.String" length="50" />
+        	<property name="VersionNumber" type="java.lang.String" length="10" />
+        	<property name="ActualHospitalizationDays" type="java.lang.String" length="4" />
+</class>
+</hibernate-mapping>

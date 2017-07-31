@@ -1,0 +1,52 @@
+@CHARSET "UTF-8";
+.x-shortcut-wrap{
+	width:90px;
+	float: left;
+	margin-left: auto;
+	margin-right: auto;
+	background:transparent;
+	padding: 5px;
+	cursor: pointer;
+	text-align: center;
+}
+.x-shortcut-wrap div{
+	height: 48px;
+	width: 48px;
+	margin-left: auto;
+	margin-right: auto;	
+	float:none;
+	background:transparent url(../images/grid48x48.gif) no-repeat;
+}
+
+.x-shortcut-wrap span{
+	width:90px;
+	white-space:nowrap;
+	display: block;
+	text-overflow:ellipsis;
+	overflow: hidden;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;	
+	color:#ffffff;
+    font-size:9pt;
+	background:transparent;
+}
+
+.x-shortcut-over{
+    border:1px solid #99bbe8;
+  	padding: 4px;
+  	background:transparent;
+}
+
+.x-shortcut-selected{
+	border:0px solid;
+	padding:5px;
+}
+.x-shortcut-selected span{
+	white-space:normal;
+	display: block;
+	color:red;
+	background:#99bbe8;
+}
+
+

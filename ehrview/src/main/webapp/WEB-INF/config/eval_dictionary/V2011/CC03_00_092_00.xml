@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="轻微"/>
+  <item key="2" text="一般"/>
+  <item key="3" text="严重"/>
+</dic>

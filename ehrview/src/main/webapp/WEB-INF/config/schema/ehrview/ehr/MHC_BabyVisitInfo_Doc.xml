@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<entry id="MHC_BabyVisitInfo_Doc" alias="MHC新生儿访视基本信息文档表(MHC_BabyVisitInfo_Doc)">
+  <item id="DocID" alias="文档号" type="string" length="16" generator="assigned" pkey="true"/>
+  <item id="DCID" alias="记录号" type="string" length="16"/>
+  <item id="DocFormat" alias="文档格式" type="string" length="2" not-null="1"/>
+  <item id="DocContent" alias="文档内容"/>
+</entry>

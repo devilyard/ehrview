@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="4" text="上上"/>
+  <item key="3" text="上"/>
+  <item key="2" text="中上"/>
+  <item key="1" text="中高"/>
+  <item key="-1" text="中低"/>
+  <item key="-2" text="中下"/>
+  <item key="-3" text="下"/>
+  <item key="-4" text="下下"/>
+  <item key="0" text="没有匹配"/>
+</dic>

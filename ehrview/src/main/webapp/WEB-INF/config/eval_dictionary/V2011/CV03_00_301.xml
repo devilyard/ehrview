@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="无"/>
+  <item key="2" text="化学品"/>
+  <item key="3" text="毒物"/>
+  <item key="4" text="射线"/>
+  <item key="5" text="不详"/>
+  <item key="9" text="其他"/>
+</dic>

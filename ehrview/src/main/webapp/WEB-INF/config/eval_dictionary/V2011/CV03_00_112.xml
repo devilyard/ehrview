@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="无"/>
+  <item key="2" text="轻度滋事" comment="公安机关出警但仅作一般教育等处理的案情，例如患者打、骂他人或者扰乱秩序，但没有造成生命财产损伤。"/>
+  <item key="3" text="肇事" comment="患者的行为触犯了我国《治安管理处罚法》但未触犯《刑法》，例如患者有行凶伤人毁物等，但未导致被害人轻、重伤。"/>
+  <item key="4" text="肇祸" comment="患者的行为触犯了《刑法》，属于犯罪行为"/>
+  <item key="5" text="自伤"/>
+  <item key="6" text="自杀未遂"/>
+  <item key="9" text="其他"/>
+</dic>

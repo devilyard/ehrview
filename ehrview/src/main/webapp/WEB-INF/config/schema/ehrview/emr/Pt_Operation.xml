@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<entry id="Pt_Operation" alias="手术记录(Pt_Operation)" hasDoc="true">
+  <item id="DCID" alias="记录号" type="string" length="16" generator="assigned" pkey="true"/>
+  <item id="MPIID" alias="主索引标识" type="string" length="32"/>
+  <item id="SourceID" alias="来源标识" length="50"/>
+  <item id="RecordClassifying" alias="记录分类" length="50"/>
+  <item id="RecordTitle" alias="记录名称" length="50"/>
+  <item id="EffectiveTime" alias="记录时间" type="date"/>
+  <item id="EffectiveFlag" alias="有效标志" type="string" length="1"/>
+  <item id="VersionNumber" alias="版本" length="10"/>
+  <item id="AuthorOrganization" alias="创建机构代码" length="22"/>
+  <item id="AuthorOrganization_text" alias="创建机构" length="50"/>
+  <item id="Author" alias="创建人" length="32"/>
+  <item id="SystemTime" alias="创建时间" type="date"/>
+  <item id="UploadTime" alias="上传时间" type="date"/>
+  <item id="UpdateTime" alias="更新时间" type="date"/>
+  <item id="JZLSH" alias="就诊流水号" length="32"/>
+  <item id="SSJLLSH" alias="手术记录流水号" length="32"/>
+  <item id="MZZYBZ_TEXT" alias="门诊住院标识名称" length="16"/>
+  <item id="MZZYBZ" alias="门诊住院标识代码" length="2"/>
+  <item id="SSKSSJ" alias="手术起始时间" type="date"/>
+  <item id="SSJSSJ" alias="手术结束时间" type="date"/>
+  <item id="SSQZD" alias="手术前诊断" length="20"/>
+  <item id="SSHZD" alias="手术后诊断" length="20"/>
+  <item id="SSDM" alias="手术代码" length="20"/>
+  <item id="SSMC" alias="手术名称" length="100"/>
+  <item id="SSBWDM" alias="手术部位代码" length="20"/>
+  <item id="SSBWMC" alias="手术部位名称" length="100"/>
+</entry>

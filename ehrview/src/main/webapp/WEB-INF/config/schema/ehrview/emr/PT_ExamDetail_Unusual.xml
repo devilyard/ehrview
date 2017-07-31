@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<entry id="PT_ExamDetail_Unusual" alias="PT检验异常指标(PT_ExamDetail_Unusual)">
+  <item id="DCID" alias="记录号" type="string" length="16" not-null="1" generator="assigned" pkey="true"/>
+  <item id="MPIID" alias="个人索引号" type="string" length="32" not-null="1"/>
+  <item id="SystemTime" alias="创建时间" type="date" not-null="1"/>
+  <item id="EffectiveTime" alias="记录时间" type="date" not-null="1"/>
+  <item id="SourceID" alias="来源标识" length="50" not-null="1"/>
+  <item id="RecordClassifying" alias="记录分类" length="16" not-null="1"/>
+  <item id="RecordTitle" alias="记录名称" length="50" not-null="1"/>
+  <item id="EffectiveFlag" alias="有效标志" type="string" length="1" not-null="1"/>
+  <item id="VersionNumber" alias="版本" length="10" not-null="1"/>
+  <item id="AuthorOrganization" alias="创建机构" length="16" not-null="1"/>
+  <item id="Author" alias="创建人" length="32" not-null="1"/>
+  <item id="UploadTime" alias="上传时间" type="date" not-null="1"/>
+  <item id="UpdateTime" alias="更新时间" type="date" not-null="1"/>
+  <item id="MedicalInstitutions" alias="医疗机构名称" length="50" not-null="1"/>
+  <item id="MedicalOrgnationCode" alias="医疗机构组织机构代码" length="10" not-null="1"/>
+  <item id="LabDetailID" alias="检验明细流水号" type="string" length="20" not-null="1"/>
+  <item id="LabReportNo" alias="检验报告单号" type="string" length="32" not-null="1"/>
+  <item id="ExamItemCode" alias="检验项目代码" type="string" length="20" not-null="1"/>
+  <item id="ExamItemName" alias="检验项目名称" type="string" length="50" not-null="1"/>
+  <item id="ExamItemEngName" alias="检验项目英文名称" type="string" length="100"/>
+  <item id="ExamResult" alias="检验结果" type="string" length="100" not-null="1"/>
+  <item id="ExamUnits" alias="计量单位" type="string" length="20"/>
+  <item id="ReferenceScope" alias="参考值范围" type="string" length="50" not-null="1"/>
+</entry>

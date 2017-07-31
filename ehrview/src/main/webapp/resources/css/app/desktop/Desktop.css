@@ -1,0 +1,496 @@
+html, body {
+	background:#3d71b8 url(images/wallpapers/desk.jpg) no-repeat;
+    font: normal 12px tahoma, arial, verdana, sans-serif;
+	margin: 0;
+	padding: 0;
+	border: 0 none;
+	overflow: hidden;
+	height: 100%;
+}
+
+#dpanels {
+	width: 250px;
+	float: right;
+}
+
+#dpanels .x-panel {
+	margin: 15px;
+}
+
+#dpanels .x-date-picker {
+	border: 0 none;
+	border-top: 0 none;
+	background: transparent;
+}
+
+#dpanels .x-date-picker td.x-date-active {
+	background: #ffffff;
+}
+
+#dpanels .x-date-picker {
+	width: 100% !important;
+}
+
+#x-desktop {
+	width: 100%;
+	height: 100%;
+	border: 0 none;
+	position: relative;
+    overflow:hidden;
+    zoom:1;
+}
+
+#spacer {
+	height: 25px;
+	float: left;
+	width: 0;
+	overflow: hidden;
+	margin-top: 2px;
+}
+
+.x-window-body p,.x-panel-body p {
+	padding: 10px;
+	margin: 0;
+}
+
+.x-window-maximized .x-window-bc {
+	height:0;
+}
+
+.x-window-header-text {
+	cursor:default;
+}
+
+.x-resizable-proxy{
+    background:#C7DFFC;
+    opacity:.5;
+    -moz-opacity:.5;
+    filter:alpha(opacity=50);
+    border: 1px solid #3b5a82;
+}
+
+.x-clear {
+    clear:both;
+    height:0;
+    overflow:hidden;
+    line-height:0;
+    font-size:0;
+}
+/* IM window icons */
+.icon-grid {
+    background-image:url( images/grid.png ) !important;
+}
+.icon-form{
+	background-image:url( images/bogus.png ) !important;
+}
+.add {
+    background-image:url(images/shared/icons/fam/add.gif) !important;
+}
+.option {
+    background-image:url(images/shared/icons/fam/plugin.gif) !important;
+}
+.remove {
+    background-image:url(images/shared/icons/fam/delete.gif) !important;
+}
+.save {
+    background-image:url(images/shared/icons/save.gif) !important;
+}
+.accordion {
+    background-image:url(images/accordian.gif) !important;
+}
+.tabs {
+    background-image:url(images/tabs.gif) !important;
+}
+
+.x-logon-winlogo {
+    background-image:url(images/logo.gif) !important;
+	no-repeat;
+}
+
+.x-titlelogo-bg {
+	height:100%;
+	background:#8fbae2 url(images/logobannerbg.png) repeat-x;
+}
+
+.x-titlelogo-banner {
+	height:100%;
+	background:transparent url(images/logobanner.png) no-repeat;
+}
+
+.x-top-lnkCP {
+	width:80px;
+	height:50px;
+	position:relative;
+	background:transparent url(images/top/topCP.gif) no-repeat;
+	float: right;
+	text-align: right;
+	cursor: hand;
+	display: block;
+	font-size:10pt;
+}
+
+.x-top-lnkLK {
+	width:80px;
+	height:50px;
+	position:relative;
+	background:transparent url(images/top/topLK.gif) no-repeat;
+	float: right;
+	text-align: right;
+	cursor: hand;
+	font-size:10pt;
+}
+
+.x-top-lnkQT {
+	width:80px;
+	height:50px;
+	position:relative;
+	background:transparent url(images/top/topQT.gif) no-repeat;
+	float: right;
+	text-align: right;
+	cursor: hand;
+	font-size:10pt;
+}
+
+.x-top-lnkOL {
+	width:120px;
+	height:50px;
+	position:relative;
+	float: right;
+	text-align: left;
+	cursor: hand;
+	font-size:10pt;
+	padding-top: 7px;
+}
+
+.x-logon-win {
+    background-image:url(images/logout.gif) !important;
+
+}
+
+/* IM window icons */
+
+.user {
+    background-image:url( images/shared/icons/fam/user.gif ) !important;
+}
+
+.user-add {
+    background-image:url(images/shared/icons/fam/user_add.gif) !important;
+}
+
+.user-delete {
+    background-image:url(images/shared/icons/fam/user_delete.gif) !important;
+}
+
+
+.connect {
+    background-image:url(images/shared/icons/fam/connect.gif) !important;
+}
+
+.user-girl {
+    background-image:url(images/shared/icons/fam/user_female.gif) !important;
+}
+
+.user-kid {
+    background-image:url(images/shared/icons/fam/user_green.gif) !important;
+}
+
+.user-suit {
+    background-image:url(images/shared/icons/fam/user_suit.gif) !important;
+}
+
+.new{
+	background-image:url(images/shared/icons/create.gif) !important;
+}
+
+.create{
+	background-image:url(images/shared/icons/create.gif) !important;
+}
+.update{
+    background-image:url(images/shared/icons/update.gif)!important;
+}
+.read{
+    background-image:url(images/shared/icons/read.gif)!important;
+}
+.add{
+	background-image:url(images/shared/icons/fam/add.gif)!important;
+}
+
+.reject{
+	background-image:url(images/shared/icons/return.gif)!important;
+}
+.post{
+	background-image:url(images/shared/icons/fam/folder_go.png)!important;
+}
+.approve{
+	background-image:url(images/shared/icons/fam/add.gif)!important;
+}
+.confirm{
+	background-image:url(images/shared/icons/fam/plugin_add.gif)!important;
+}
+
+.save{
+	background-image:url(images/shared/icons/save.gif) !important;
+}
+
+.query{
+	background-image:url(images/shared/icons/query.gif) !important;
+}
+
+.copy{
+	background-image:url(images/shared/icons/copy.gif) !important;
+}
+
+.print{
+	background-image:url(images/shared/icons/print.gif) !important;
+}
+
+.doc{
+	background-image:url(images/shared/icons/doc.gif) !important;
+}
+
+.excel{
+	background-image:url(images/shared/icons/excel.gif) !important;
+}
+
+.pdf{
+	background-image:url(images/shared/icons/pdf.gif) !important;
+}
+
+.stock{
+	background-image:url(images/shared/icons/stock.gif) !important;
+}
+
+.showHistory{
+	background-image:url(images/shared/icons/copy.gif) !important;
+}
+
+.return{
+	background-image:url(images/shared/icons/return.gif) !important;
+}
+
+.remove{
+	background-image:url(images/shared/icons/fam/delete.gif) !important;
+}
+
+.app{
+	background-image:url(images/shared/icons/apps/app.gif) !important;
+}
+
+.expandall {
+	background-image: url(images/shared/icons/apps/expandall.gif) !important;
+}
+
+.backward {
+	background-image: url(images/shared/icons/apps/backward.png) !important;
+}
+
+.list {
+	background-image: url(images/shared/icons/apps/list.png) !important;
+}
+
+.refresh {
+	background-image: url(images/shared/icons/apps/refresh.png) !important;
+}
+
+.module{
+	background-image:url(images/shared/icons/apps/module.gif) !important;
+}
+
+.action{
+	background-image:url(images/shared/icons/apps/action.gif) !important;
+}
+
+.treeRemove{
+	background-image:url(images/shared/icons/treeRemove.gif) !important;
+}
+
+.treeInsert{
+	background-image:url(images/shared/icons/treeInsert.gif) !important;
+}
+
+.treeAppend{
+	background-image:url(images/shared/icons/treeAppend.gif) !important;
+}
+
+
+.x-form-fileupload{
+	height:20px;
+	overflow:hidden;
+}
+
+.x-view-nav{
+	background-color:#8db2e3;
+	margin-right:'auto';
+	margin-left:'auto';
+}
+
+
+<!--  biz images  -->
+
+
+.common_modify{
+	background-image:url(images/shared/icons/common/modify.png) !important;
+}
+
+.common_cancel{
+	background-image:url(images/shared/icons/common/cancel.png) !important;
+}
+
+.common_reset{
+	background-image:url(images/shared/icons/common/reset.png) !important;
+}
+
+.empi_cardMan{
+	background-image:url(images/shared/icons/empi/cardMan.png) !important;
+}
+
+.empi_combination{
+	background-image:url(images/shared/icons/empi/combination.png) !important;
+}
+
+.empi_lock{
+	background-image:url(images/shared/icons/empi/lock.png) !important;
+}
+
+.empi_unlock{
+	background-image:url(images/shared/icons/empi/unlock.png) !important;
+}
+
+.healthDoc_familyGraphic{
+	background-image:url(images/shared/icons/healthDoc/familyGraphic.png) !important;
+}
+
+.healthDoc_familyDoc{
+	background-image:url(images/shared/icons/healthDoc/familyDoc.png) !important;
+}
+
+.healthDoc_movement{
+	background-image:url(images/shared/icons/healthDoc/movement.png) !important;
+}
+
+.healthDoc_import{
+	background-image:url(images/shared/icons/healthDoc/import.png) !important;
+}
+
+.healthDoc_autoMatch{
+	background-image:url(images/shared/icons/healthDoc/autoMatch.png) !important;
+}
+
+.healthDoc_addMember{
+	background-image:url(images/shared/icons/healthDoc/addMember.png) !important;
+}
+
+.archiveMove_apply{
+	background-image:url(images/shared/icons/archiveMove/apply.png) !important;
+}
+
+.archiveMove_commit{
+	background-image:url(images/shared/icons/archiveMove/commit.png) !important;
+}
+
+.hypertension_check{
+	background-image:url(images/shared/icons/hypertension/check.png) !important;
+}
+
+.hypertension_export{
+	background-image:url(images/shared/icons/hypertension/export.png) !important;
+}
+
+.hypertension_group{
+	background-image:url(images/shared/icons/hypertension/group.png) !important;
+}
+
+.hypertension_visit{
+	background-image:url(images/shared/icons/hypertension/visit.png) !important;
+}
+
+.common_writeOff{
+	background-image:url(images/shared/icons/common/writeOff.png) !important;
+}
+
+.common_writeOffCheck{
+	background-image:url(images/shared/icons/common/writeOffCheck.png) !important;
+}
+
+.common_query{
+	background-image:url(images/shared/icons/common/query.png) !important;
+}
+.common_select{
+	background-image:url(images/shared/icons/common/select.png) !important;
+}
+
+.common_treat{
+	background-image:url(images/shared/icons/common/treat.png) !important;
+}
+
+.common_treat{
+	background-image:url(images/shared/icons/common/treat.png) !important;
+}
+
+.mail_edit{
+	background-image:url(images/shared/icons/message/mail_edit.png) !important;
+}
+
+.mail_send{
+	background-image:url(images/shared/icons/message/mail_send.png) !important;
+}
+
+.mail_refresh{
+	background-image:url(images/shared/icons/message/mail_refresh.gif) !important;
+}
+
+.expand{
+	background-image:url(images/shared/icons/message/expand.png) !important;
+}
+
+.collapse{
+	background-image:url(images/shared/icons/message/collapse.png) !important;
+}
+
+.mail_outbox{
+	background-image:url(images/shared/icons/message/mail_outbox.png) !important;
+}
+
+.mail_inbox{
+	background-image:url(images/shared/icons/message/mail_inbox.png) !important;
+}
+
+.mail_box{
+	background-image:url(images/shared/icons/message/mail_box.png) !important;
+}
+
+.mail_recipient{
+	background-image:url(images/shared/icons/message/mail_recipient.png) !important;
+}
+
+.pos-grid{background-color:#000000!important}
+.pos-input-text{font:bold 12pt arial!important;color:red}
+.pos-status-text{font:bold 11pt arial!important;background-color:#000000;color:green;border-top:1px solid #99BBE8;border-right:1px solid #fff;border-bottom:1px solid #fff;border-left:1px solid #99BBE8;padding:2px 8px 2px 5px;}
+.store-input-text{font:bold 10pt arial!important;color:green}
+
+.logout{
+	background-image:url(images/shared/icons/logout.gif) !important;
+}
+
+.new{
+	background-image:url(images/shared/icons/create.gif) !important;
+}
+
+.create{
+	background-image:url(images/shared/icons/create.gif) !important;
+}
+.update{
+    background-image:url(images/shared/icons/update.gif)!important;
+}
+.logout{
+	background-image:url(images/shared/icons/logout.gif) !important;
+}
+.recover{
+    background-image:url(images/shared/icons/return.gif)!important;
+}
+.regloss{
+	background-image:url(images/shared/icons/regloss.gif) !important;
+}
+.unregloss{
+    background-image:url(images/shared/icons/unregloss.gif)!important;
+}

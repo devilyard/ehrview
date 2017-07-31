@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="100" text="100 身体正常，无任何不适"/>
+  <item key="90" text="90 能进行正常活动，有轻微不适"/>
+  <item key="80" text="80 勉强可进行正常活动，有一些不适"/>
+  <item key="70" text="70 生活可自理，但不能维持正常生活或工作"/>
+  <item key="60" text="60 有时需人扶助，但大多数时间可自理"/>
+  <item key="50" text="50 常需人照料"/>
+  <item key="40" text="40 生活不能自理，需特别照顾"/>
+  <item key="30" text="30 生活严重不能自理"/>
+  <item key="20" text="20 病重，需住院积极支持治疗"/>
+  <item key="10" text="10 病危，临近死亡"/>
+  <item key="0" text="死亡"/>
+</dic>

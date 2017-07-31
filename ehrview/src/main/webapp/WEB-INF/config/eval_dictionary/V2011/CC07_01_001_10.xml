@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="04" text="强化管理"/>
+  <item key="09" text="未评估"/>
+  <item key="99" text="常规管理"/>
+</dic>

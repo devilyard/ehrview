@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<role name="局长" parent="base" id="director">
+  <accredit>
+    <apps acType="whitelist">
+      <others/>
+    </apps>
+    <service acType="whitelist"></service>
+    <storage acType="whitelist">
+      <others acValue="1111"/>
+    </storage>
+  </accredit>
+</role>

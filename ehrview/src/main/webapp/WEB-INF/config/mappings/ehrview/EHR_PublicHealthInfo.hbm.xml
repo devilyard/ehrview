@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="EHR_PublicHealthInfo" table="EHR_PublicHealthInfo">
+			<id name="DCID" type="java.lang.String">
+            	<column name="DCID"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="MPIID" type="java.lang.String" length="32" />
+        	<property name="SRCEntryName" type="java.lang.String" length="50" />
+        	<property name="BusinessName" type="java.lang.String" length="50" />
+        	<property name="SRCID" type="java.lang.String" length="50" />
+        	<property name="ManaUnitID" type="java.lang.String" length="16" />
+        	<property name="SystemTime" type="timestamp"  />
+        	<property name="CreateUnitID" type="java.lang.String" length="16" />
+        	<property name="CreateUnit_Text" type="java.lang.String" length="200" />
+        	<property name="VersionNumber" type="java.lang.String" length="10" />
+        	<property name="UploadDate" type="timestamp"  />
+        	<property name="EndFlag" type="java.lang.String" length="1" />
+</class>
+</hibernate-mapping>

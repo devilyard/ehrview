@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry id="SYS_HomePage" alias="用户首页配置">
+    <item id="id" alias="id" type="int" not-null="true" pkey="true" generator="auto" length="50" />
+	<item id="userId" alias="人员编号" type="string" length="50">
+	    <set type="exp" run="server">['$','%user.userId']</set>
+	</item>
+	<item id="moduleId" alias="模块编号" type="string" not-null="1" />
+	<item id="position" alias="模块位置" type="string" />  
+</entry>

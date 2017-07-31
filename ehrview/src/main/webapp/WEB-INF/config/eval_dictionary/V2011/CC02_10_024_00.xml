@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="配偶"/>
+  <item key="2" text="子"/>
+  <item key="3" text="女"/>
+  <item key="4" text="孙子、孙女或外孙子、外孙女"/>
+  <item key="5" text="父母"/>
+  <item key="6" text="祖父母或外祖父母"/>
+  <item key="7" text="兄、弟、姐、妹"/>
+  <item key="9" text="其他"/>
+</dic>

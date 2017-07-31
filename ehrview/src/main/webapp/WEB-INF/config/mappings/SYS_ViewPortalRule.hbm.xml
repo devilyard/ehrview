@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="SYS_ViewPortalRule" table="SYS_ViewPortalRule">
+		<id name="DCID" type="java.lang.Integer">
+			<column name="DCID" />
+			<generator class="sequence">
+				<param name="sequence">SEQ_SYS_ViewPortalRule</param>
+			</generator>
+		</id>
+		<property name="RoleId" type="java.lang.String" length="50" />
+		<property name="Population" type="java.lang.String" length="10" />
+		<property name="Operator" type="java.lang.String" length="6" />
+		<property name="ManageUnit" type="java.lang.String" length="30" />
+		<property name="Expression" type="java.lang.String" length="500" />
+		<property name="LayoutId" type="java.lang.Integer" not-null="true"/>
+		<property name="ManageUnit_Text" type="java.lang.String" length="100" />
+	</class>
+</hibernate-mapping>

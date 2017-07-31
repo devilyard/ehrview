@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic> 
+  <item key="1" text="RH阳性" mCode="1"/>
+  <item key="2" text="RH阴性" mCode="2"/>   
+  <item key="3" text="不详" mCode="3" pyCode="bx"/>
+</dic>

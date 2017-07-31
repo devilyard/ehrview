@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="主食，如谷类（米、面等），杂粮（小米、玉米、高粱等）"/>
+  <item key="2" text="蛋类"/>
+  <item key="3" text="鱼虾类"/>
+  <item key="4" text="肉类"/>
+  <item key="5" text="奶类及其制品"/>
+  <item key="6" text="豆类及其制品"/>
+  <item key="7" text="蔬菜"/>
+  <item key="8" text="水果"/>
+</dic>

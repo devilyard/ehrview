@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="01" text="尸检" comment="医疗机构的尸体解剖及公安部门的尸解/尸检"/>
+  <item key="02" text="病理" comment="包括活体脱落细胞学检查及组织检查等病理检查"/>
+  <item key="03" text="手术" comment="以手术为诊断依据而未进行理化检查"/>
+  <item key="04" text="临床+理化" comment="包括B超、X光、心电图等特殊检查"/>
+  <item key="05" text="临床" comment="以临床检查为诊断依据而未进行理化检查"/>
+  <item key="06" text="死后推断" comment="生前无任何疾病诊断，根据调查后推断死因"/>
+  <item key="07" text="不详"/>
+</dic>

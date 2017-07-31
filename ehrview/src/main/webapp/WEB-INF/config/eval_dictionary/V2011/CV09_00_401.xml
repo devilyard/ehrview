@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="总收人"/>
+  <item key="11" text="财政补助收人"/>
+  <item key="111" text="专项补助"/>
+  <item key="12" text="上级补助收人"/>
+  <item key="13" text="事业收人"/>
+  <item key="2" text="总支出"/>
+  <item key="21" text="事业支出"/>
+  <item key="22" text="财政专项支出"/>
+  <item key="23" text="培训经费支出"/>
+  <item key="24" text="人员支出"/>
+  <item key="25" text="离退休费"/>
+</dic>

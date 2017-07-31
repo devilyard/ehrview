@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="目前未见异常" comment="本次职业健康检查各项检查指标均在正常范围内"/>
+  <item key="2" text="复查" comment="检查时发现单项或多项异常，需要复查确定者，应明确复查的内容和时间"/>
+  <item key="3" text="疑似职业病" comment="检查发现疑似职业病或可能患有职业病，需要提交职业病诊断机构进一步明确诊断者"/>
+  <item key="4" text="职业禁忌证" comment="检查发现有职业禁忌证的患者，需写明具体疾病名称"/>
+  <item key="9" text="其他" comment="除目标疾病之外的其他疾病或某些检查指标的异常"/>
+</dic>

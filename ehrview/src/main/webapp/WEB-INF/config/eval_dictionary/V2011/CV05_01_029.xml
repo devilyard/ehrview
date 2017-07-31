@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="慢性乙型肝炎" comment="既往有乙型肝炎病史或HRAg阳性超过6个月，现HBsAg和(或)HBV
+DNA仍为阳性，伴ALT持续或反复升高，或肝组织学检查有肝炎病变"/>
+  <item key="2" text="乙型肝炎肝硬化" comment="乙型肝炎肝硬化是慢性乙型肝炎发展的结果，其病理学定义为弥漫性纤维化
+伴有假小叶形成"/>
+  <item key="3" text="携带者" comment="包括慢性HBV携带者和非活动性HBsAg携带者，前者多为免疫耐受期的
+HBsAg、HBeAg和HBVDNA阳性者，1年内连续随访3次以上均显示血清
+ALT和AsT在正常范围，肝组学检查无明显异常；后者指血清H队Ag阳性、HBeAg阴性、抗-HBe阳性或阴性，HBVDNA低于最低检测限，1年内连续随访3次以上，ALT均在正常范围或肝组织无明显病理变化者"/>
+  <item key="4" text="隐匿性慢性乙型肝炎" comment="血清HBsAg阴性，但血清和(或)肝组织中HBVDNA阳性，并有慢性乙型肝
+炎的临床表现"/>
+</dic>

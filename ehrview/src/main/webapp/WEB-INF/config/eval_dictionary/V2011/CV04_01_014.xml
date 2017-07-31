@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="可自理" comment="0～3分者为可自理"/>
+  <item key="2" text="轻度依赖" comment="4～8分者为轻度依赖"/>
+  <item key="3" text="中度依赖" comment="9～18分者为中度依赖"/>
+  <item key="4" text="不能自理" comment="≥19分者为不能自理"/>
+</dic>

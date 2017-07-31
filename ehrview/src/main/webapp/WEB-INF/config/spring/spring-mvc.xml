@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+	<context:component-scan base-package="com.bsoft.ehr" use-default-filters="false">
+		<context:include-filter type="regex" expression="com.bsoft.ehr.controller.*" />
+		<context:include-filter type="regex" expression="com.bsoft.ehr.service.*" />
+		<context:include-filter type="regex" expression="com.bsoft.ehr.web.*" />
+	</context:component-scan>
+	
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="/**" />
+			<bean class="com.bsoft.ehr.auth.LogonInterceptor" />
+		</mvc:interceptor>
+		<mvc:interceptor>
+			<mvc:mapping path="/**" />
+			<bean class="com.bsoft.ehr.auth.ViewAuthorizationInterceptor" />
+		</mvc:interceptor>
+	</mvc:interceptors>
+	
+	<mvc:annotation-driven>
+		<mvc:argument-resolvers>
+			<bean class="com.bsoft.ehr.web.method.support.VisitKeyParamArgumentResolver"/>
+			<bean class="com.bsoft.ehr.web.method.support.HttpSessionParamArgumentResolver" />
+		</mvc:argument-resolvers>
+		<mvc:message-converters>
+			<bean class="com.bsoft.ehr.web.converter.JsonHttpMessageConverter" />
+			<bean class="com.bsoft.ehr.web.converter.ImageHttpMessageConverter"/>
+		</mvc:message-converters>
+	</mvc:annotation-driven>
+	
+	<mvc:default-servlet-handler />
+</beans>

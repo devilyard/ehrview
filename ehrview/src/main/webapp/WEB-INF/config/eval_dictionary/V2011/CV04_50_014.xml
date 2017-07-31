@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="阳性" comment="痰标本培养结果阳性"/>
+  <item key="2" text="阴性" comment="痰标本培养结果阴性"/>
+  <item key="3" text="污染" comment="痰标本被其他病原菌污染"/>
+  <item key="4" text="未查" comment="未进行痰检"/>
+</dic>

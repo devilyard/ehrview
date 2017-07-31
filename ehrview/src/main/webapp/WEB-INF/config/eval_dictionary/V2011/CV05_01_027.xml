@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="01" text="临床"/>
+  <item key="02" text="X线"/>
+  <item key="03" text="超声波"/>
+  <item key="04" text="CT"/>
+  <item key="05" text="内窥镜"/>
+  <item key="06" text="核磁共振"/>
+  <item key="07" text="手术(无病理)"/>
+  <item key="08" text="尸检(无病理)"/>
+  <item key="09" text="生化"/>
+  <item key="10" text="免疫"/>
+  <item key="11" text="血片" comment="血压涂片检查"/>
+  <item key="12" text="细胞学"/>
+  <item key="13" text="病理(继发)"/>
+  <item key="14" text="病理(原发)"/>
+  <item key="15" text="尸检(有病理)"/>
+  <item key="16" text="不详"/>
+  <item key="17" text="死亡补发病" comment="病人死因为恶性肿瘤，而之前没有医院报告的记录，这种情况需进行死亡补充报告"/>
+</dic>

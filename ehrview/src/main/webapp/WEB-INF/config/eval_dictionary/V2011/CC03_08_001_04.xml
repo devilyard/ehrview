@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="28天"/>
+  <item key="3" text="3月龄"/>
+  <item key="6" text="6月龄"/>
+  <item key="9" text="9月龄"/>
+  <item key="12" text="12月龄"/>
+  <item key="18" text="18月龄"/>
+  <item key="24" text="24月龄"/>
+  <item key="30" text="30月龄"/>
+  <item key="36" text="36月龄"/>
+</dic>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<role name="责任医生" type="post" parent="base" id="system">
+</role>

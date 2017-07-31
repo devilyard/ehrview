@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="PT_ExamDetail_Unusual" table="PT_ExamDetail_Unusual">
+			<id name="DCID" type="java.lang.String">
+            	<column name="DCID"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="MPIID" type="java.lang.String" length="32" />
+        	<property name="SystemTime" type="java.util.Date"  />
+        	<property name="EffectiveTime" type="java.util.Date"  />
+        	<property name="SourceID" type="java.lang.String" length="50" />
+        	<property name="RecordClassifying" type="java.lang.String" length="16" />
+        	<property name="RecordTitle" type="java.lang.String" length="50" />
+        	<property name="EffectiveFlag" type="java.lang.String" length="1" />
+        	<property name="VersionNumber" type="java.lang.String" length="10" />
+        	<property name="AuthorOrganization" type="java.lang.String" length="16" />
+        	<property name="Author" type="java.lang.String" length="32" />
+        	<property name="UploadTime" type="java.util.Date"  />
+        	<property name="UpdateTime" type="java.util.Date"  />
+        	<property name="MedicalInstitutions" type="java.lang.String" length="50" />
+        	<property name="MedicalOrgnationCode" type="java.lang.String" length="10" />
+        	<property name="LabDetailID" type="java.lang.String" length="20" />
+        	<property name="LabReportNo" type="java.lang.String" length="32" />
+        	<property name="ExamItemCode" type="java.lang.String" length="20" />
+        	<property name="ExamItemName" type="java.lang.String" length="50" />
+        	<property name="ExamItemEngName" type="java.lang.String" length="100" />
+        	<property name="ExamResult" type="java.lang.String" length="100" />
+        	<property name="ExamUnits" type="java.lang.String" length="20" />
+        	<property name="ReferenceScope" type="java.lang.String" length="50" />
+</class>
+</hibernate-mapping>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<entry id="EMR_ProcedureTreatment" alias="5500一般治疗处置记录(EMR_ProcedureTreatment)" hasDoc="true">
+  <item id="DCID" alias="记录号" type="string" length="16" generator="assigned" pkey="true"/>
+  <item id="VisitID" alias="就诊标识" type="string" length="16"/>
+  <item id="PatientType" alias="患者类型" type="string" length="2"/>
+  <item id="MPIID" alias="主索引标识" type="string" length="32"/>
+  <item id="SourceID" alias="来源标识" type="string" length="50"/>
+  <item id="ZoneID" alias="分区标识" type="string" length="1"/>
+  <item id="StatisticDate" alias="统计日期" type="timestamp"/>
+  <item id="RecordClassifying" alias="记录分类" type="string" length="50"/>
+  <item id="RecordTitle" alias="记录名称" type="string" length="50"/>
+  <item id="EffectiveTime" alias="记录时间" type="timestamp"/>
+  <item id="EffectiveFlag" alias="有效标志" type="string" length="1"/>
+  <item id="VersionNumber" alias="版本" type="string" length="10"/>
+  <item id="AuthorOrganization" alias="创建机构" type="string" length="16"/>
+  <item id="Author" alias="创建人" type="string" length="32"/>
+  <item id="SystemTime" alias="创建时间" type="timestamp"/>
+  <item id="Authenticator" alias="审核人" type="string" length="32"/>
+  <item id="AuthenticatorTime" alias="审核时间" type="timestamp"/>
+  <item id="UploadTime" alias="上传时间" type="timestamp"/>
+  <item id="UpdateTime" alias="更新时间" type="timestamp"/>
+  <item id="Summary" alias="记录摘要" type="string" length="4000"/>
+</entry>

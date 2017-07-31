@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="01" text="个人卫生"/>
+  <item key="02" text="心理"/>
+  <item key="03" text="膳食营养"/>
+  <item key="04" text="避免致畸因素和疾病对胚胎的不良影响"/>
+  <item key="05" text="产前筛查宣传告知"/>
+  <item key="06" text="运动"/>
+  <item key="07" text="白我监测"/>
+  <item key="08" text="分娩准备"/>
+  <item key="09" text="母乳喂养"/>
+  <item key="10" text="新生儿护理与喂养"/>
+  <item key="11" text="婴儿喂养与营养"/>
+  <item key="12" text="性保健"/>
+  <item key="13" text="避孕"/>
+  <item key="99" text="其他"/>
+</dic>

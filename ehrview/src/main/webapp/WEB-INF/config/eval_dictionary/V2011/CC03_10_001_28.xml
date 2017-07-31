@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="纯母乳喂养"/>
+  <item key="2" text="主要母乳喂养"/>
+  <item key="3" text="辅助喂养"/>
+  <item key="4" text="人工喂养"/>
+</dic>

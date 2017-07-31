@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="SUMMARY_Hist_Drug" table="SUMMARY_Hist_Drug">
+		<id name="DCID" type="java.lang.String">
+           	<column name="DCID"/>
+           	<generator class="assigned" />
+       	</id>
+       	<property name="MPIID" type="java.lang.String" length="32" />
+       	<property name="UploadTime" type="java.util.Date"  />
+       	<property name="SystemTime" type="java.util.Date"  />
+<!--        	<property name="EffectiveFlag" type="java.lang.String" length="1" /> -->
+       	<property name="AuthorOrganization" type="java.lang.String" length="16" />
+       	<property name="AuthorOrganization_Text" type="java.lang.String" length="200" />
+       	<property name="SRCEntryName" type="java.lang.String" length="50" />
+       	<property name="SRCID" type="java.lang.String" length="50" />
+       	<property name="MedicineRecordSRC" type="java.lang.String" length="1"/>
+       	<property name="MedicineCode" type="java.lang.String" length="20" />
+       	<property name="MedicineName" type="java.lang.String" length="100" />
+       	<property name="MedicineCategory" type="java.lang.String" length="8" />
+       	<property name="PrescribeDate" type="java.util.Date"  />
+       	<property name="Dosage" type="java.lang.Double" length="10" />
+       	<property name="DosageUnit" type="java.lang.String" length="20" />
+       	<property name="Frequency" type="java.lang.String" length="20" />
+       	<property name="MedicineWayCode" type="java.lang.String" length="3" />
+       	<property name="MedicineWay" type="java.lang.String" length="16" />
+       	<property name="MedicineUsage" type="java.lang.String" length="32"/>
+  		<property name="MedicationDays" type="java.lang.String" length="5"/>
+  		<property name="DispensingAmount" type="java.lang.String" length="20"/>
+  		<property name="DoctorAdviceGroup" type="java.lang.String" length="32"/>
+<!--   		<property name="VisitID" type="java.lang.String" length="32"/> -->
+	</class>
+</hibernate-mapping>

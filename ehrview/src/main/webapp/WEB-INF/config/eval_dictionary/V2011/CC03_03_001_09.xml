@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="正常"/>
+  <item key="2" text="青紫"/>
+  <item key="3" text="窒息"/>
+  <item key="4" text="产伤"/>
+  <item key="5" text="抢救"/>
+</dic>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dic>
+	<item key="01" text="本人电话" mCode="0" pyCode="brdh" />
+	<item key="02" text="配偶电话" mCode="1" pyCode="podh" />
+	<item key="03" text="监护人电话" mCode="2" pyCode="jhrdh" />
+	<item key="04" text="家庭电话" mCode="3" pyCode="jtdh" />
+	<item key="05" text="工作单位电话" mCode="4" pyCode="brgzdwdh" />
+	<item key="06" text="居委会电话" mCode="5" pyCode="jwhdh" />
+	<item key="07" text="电子邮件" mCode="6" pyCode="dzyj" />
+	<item key="08" text="MSN" mCode="7" pyCode="msn" />
+	<item key="09" text="QQ" mCode="8" pyCode="qq" />
+	<item key="99" text="其他" mCode="9" pyCode="qt" />
+</dic>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="SUMMARY_Hist_Traumatism" table="SUMMARY_Hist_Traumatism">
+			<id name="DCID" type="java.lang.String">
+            	<column name="DCID"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="MPIID" type="java.lang.String" length="32" />
+        	<property name="TRAUMATISMNAME" type="java.lang.String"  length="500" />
+        	<property name="TRAUMATISMCODE" type="java.lang.String" length="16" />
+        	<property name="DIAGNOSISDATE" type="date" />
+        	<property name="DIAGNOSISUNITID" type="java.lang.String" length="16" />
+        	<property name="DIAGNOSISUNIT_TEXT" type="java.lang.String" length="200" />
+        	<property name="UPLOADTIME" type="date" />
+        	<property name="SYSTEMTIME" type="date" />
+        	<property name="AUTHORORGANIZATION" type="java.lang.String" length="22" />
+        	<property name="SRCENTRYNAME" type="java.lang.String" length="50" />
+        	<property name="SRCID" type="java.lang.String" length="50" />
+        	<property name="DIAGNOSISUNITTEXT" type="java.lang.String" length="200" />
+        	<property name="CUT_ADDR" type="java.lang.String" length="200" />
+</class>
+</hibernate-mapping>

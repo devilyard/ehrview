@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dic> 
+  <item key="01" text="户籍住址" mCode="0" pyCode="hjzz"/>  
+  <item key="02" text="工作场所地址" mCode="1" pyCode="gzcsdz"/>  
+  <item key="03" text="家庭常住地址" mCode="2" pyCode="jtczdz"/>  
+  <item key="04" text="通讯地址" mCode="3" pyCode="txdz"/>  
+  <item key="05" text="暂住地址" mCode="4" pyCode="zzdz"/>  
+  <item key="06" text="出生地址" mCode="5" pyCode="csdz"/>  
+  <item key="07" text="产后休养地址" mCode="6" pyCode="chxydz"/>  
+  <item key="08" text="变迁地址" mCode="7" pyCode="bqdz"/>  
+  <item key="09" text="现住址" mCode="8" pyCode="xzz"/>  
+  <item key="99" text="其他地址" mCode="9" pyCode="qtdz"/>   
+</dic>

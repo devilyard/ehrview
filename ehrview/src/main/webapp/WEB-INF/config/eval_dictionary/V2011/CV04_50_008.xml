@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="先天性甲状腺功能减低症"/>
+  <item key="2" text="苯丙酮尿症"/>
+  <item key="3" text="6-磷酸葡萄糖脱氢酶缺乏症"/>
+  <item key="4" text="先天性肾上腺皮质增生症"/>
+  <item key="5" text="半乳糖血症"/>
+  <item key="6" text="地中海贫血"/>
+  <item key="9" text="其他"/>
+</dic>

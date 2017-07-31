@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<entry id="EHR_HealthRecord" alias="EHR个人健康档案" hasDoc="true">
+  <item id="DCID" alias="记录号" type="string" length="16" not-null="1" generator="assigned" pkey="true"/>
+  <item id="MPIID" alias="主索引标识" type="string" length="32" not-null="1"/>
+  <item id="SourceID" alias="来源标识" length="50" not-null="1"/>
+  <item id="RecordClassifying" alias="记录分类" length="50" not-null="1"/>
+  <item id="RecordTitle" alias="记录名称" length="50" not-null="1"/>
+  <item id="EffectiveTime" alias="记录时间" type="date" not-null="1"/>
+  <item id="EffectiveFlag" alias="有效标志" type="string" length="1" not-null="1"/>
+  <item id="VersionNumber" alias="版本" length="10" not-null="1"/>
+  <item id="AuthorOrganization" alias="创建机构" length="16" not-null="1"/>
+  <item id="Author" alias="创建人" length="32" not-null="1"/>
+  <item id="SystemTime" alias="创建时间" type="date" not-null="1"/>
+  <item id="UploadTime" alias="上传时间" type="date" not-null="1"/>
+  <item id="UpdateTime" alias="更新时间" type="date" not-null="1"/>
+  <item id="FamilyID" alias="家庭编号" length="16"/>
+  <item id="MotherID" alias="母亲编号" length="32"/>
+  <item id="PartnerID" alias="配偶编号" length="32"/>
+  <item id="FatherID" alias="父亲编号" length="32"/>
+  <item id="RelaCode" alias="户主关系" length="2"/>
+  <item id="ManaDoctor_Text" alias="责任医生姓名" length="30"/>
+  <item id="ManaDoctorID" alias="责任医生" length="20"/>
+  <item id="RegionCode_Text" alias="网格地址名称" length="60"/>
+  <item id="RegionCode" alias="网格地址" length="25"/>
+  <item id="PHRID" alias="健康档案号" length="16"/>
+  <item id="ManaUnitID" alias="管辖机构" length="16"/>
+  <item id="ManaUnit_Text" alias="管辖机构" length="60"/>
+</entry>

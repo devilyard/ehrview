@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic> 
+  <item key="Pt_LabReport" text="检验报告"/>
+  <item key="Pt_ExamReport" text="检查报告"/>
+</dic>

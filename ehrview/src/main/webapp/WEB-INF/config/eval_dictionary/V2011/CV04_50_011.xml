@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="巴氏分类法"/>
+  <item key="11" text="巴氏I级"/>
+  <item key="12" text="巴氏Ⅱ级"/>
+  <item key="13" text="巴氏Ⅲ级"/>
+  <item key="14" text="巴氏Ⅳ级"/>
+  <item key="15" text="巴氏Ⅴ级"/>
+  <item key="2" text="TBs分类法"/>
+  <item key="21" text="良性细胞学改变"/>
+  <item key="22" text="鳞状上皮细胞异常"/>
+  <item key="23" text="腺上皮细胞改变"/>
+  <item key="24" text="其他恶性肿瘤"/>
+</dic>

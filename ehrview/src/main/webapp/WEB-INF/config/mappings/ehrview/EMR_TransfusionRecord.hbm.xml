@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="EMR_TransfusionRecord" table="EMR_TransfusionRecord">
+			<id name="DCID" type="java.lang.String">
+            	<column name="DCID"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="VisitID" type="java.lang.String" length="16" />
+        	<property name="PatientType" type="java.lang.String" length="2" />
+        	<property name="MPIID" type="java.lang.String" length="32" />
+        	<property name="ZoneID" type="java.lang.String" length="1" />
+        	<property name="StatisticDate" type="timestamp"  />
+        	<property name="AuthorOrganization" type="java.lang.String" length="16" />
+        	<property name="AuthorOrganizationName" type="java.lang.String" length="100" />
+        	<property name="DeptName" type="java.lang.String" length="50" />
+        	<property name="WardAreaNm" type="java.lang.String" length="50" />
+        	<property name="ABOBloodCode" type="java.lang.String" length="1" />
+        	<property name="ABOBloodCode_Text" type="java.lang.String" length="32" />
+        	<property name="RhBloodCode" type="java.lang.String" length="1" />
+        	<property name="RhBloodCode_Text" type="java.lang.String" length="32" />
+        	<property name="BloodTransfusionSign" type="java.lang.String" length="1" />
+        	<property name="ClinicalDiagnosis" type="java.lang.String" length="100" />
+        	<property name="DiagnoseCode" type="java.lang.String" length="7" />
+        	<property name="TransfusionProperties" type="java.lang.String" length="1" />
+        	<property name="RequestBlood" type="java.lang.String" length="30" />
+        	<property name="TransfusionIndications" type="java.lang.String" length="200" />
+        	<property name="BloodExaminationResults" type="java.lang.String" length="200" />
+        	<property name="BloodTransfusionProcessRecord" type="java.lang.String" length="2000" />
+        	<property name="TransfusionBreedCode" type="java.lang.String" length="1" />
+        	<property name="BloodTransfusionVolume" type="java.lang.String" length="4" />
+        	<property name="BloodTransfusionMeasurementUni" type="java.lang.String" length="10" />
+        	<property name="TransfusionReactionSign" type="java.lang.String" length="1" />
+        	<property name="TransfusionRectionType" type="java.lang.String" length="1" />
+        	<property name="TransfusionRectionType_Text" type="java.lang.String" length="32" />
+        	<property name="BloodTransfusionTimes" type="java.lang.String" length="2" />
+        	<property name="BloodTransfusionDateTime" type="timestamp"  />
+        	<property name="TransfusionReason" type="java.lang.String" length="100" />
+        	<property name="DoctorSign" type="java.lang.String" length="50" />
+        	<property name="SignDateTime" type="timestamp"  />
+        	<property name="VersionNumber" type="java.lang.String" length="10" />
+        	<property name="EffectiveFlag" type="java.lang.String" length="1" />
+</class>
+</hibernate-mapping>

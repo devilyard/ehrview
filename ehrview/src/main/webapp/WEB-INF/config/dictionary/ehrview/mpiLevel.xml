@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<dic alias="人群类别">
+  <item key="0" text="普通人群" mCode="0"/>
+  <item key="1" text="特殊人群" mCode="1"/>
+</dic>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="01" text="学生集体食堂"/>
+  <item key="02" text="学生宿舍(间)"/>
+  <item key="03" text="洗浴场所"/>
+  <item key="04" text="学生厕所(蹲位)"/>
+  <item key="05" text="游泳场所"/>
+  <item key="06" text="体育馆"/>
+  <item key="07" text="图书馆(阅览室)"/>
+</dic>

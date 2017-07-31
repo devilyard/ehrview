@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="维持"/>
+  <item key="2" text="撤销"/>
+  <item key="3" text="变更"/>
+  <item key="4" text="限期履行职责"/>
+  <item key="5" text="确认具体行政行为违法"/>
+</dic>

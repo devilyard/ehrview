@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry entityName="MPI_DemographicInfo" alias="MPI个人基本信息" sort="lastModifyTime desc">
+	<item id="mpiId" alias="MPI" type="string" length="32" hidden="1" display="0" pkey="true" />
+	<item id="cardNo" alias="健康卡" type="string" virtual="true" length="20" queryable="true" />
+		
+	<item id="personName" alias="姓名" type="string" length="20" queryable="true"  />
+	<item id="personName_pyCode" alias="姓名简码" type="string" length="20" queryable="true" hidden="true" display="0"/>
+	<item id="photo" alias="" xtype="myImageField" type="string" length="100" display="2"  virtual="true" rowspan="5" defaultValue="default"/>
+	<item id="idCard" alias="身份证" type="string" length="20" width="160"  update="false" queryable="true" vtype="idCard" enableKeyEvents="true" virtual="true" />
+	<item id="sexCode" alias="性别" type="string" length="1" width="40" queryable="true" not-null="1" defalutValue = "9">
+		<dic id="gender" />
+	</item>
+	<item id="birthday" alias="出生日期" type="date" width="75"  not-null="1" queryable="true" maxValue="%server.date.date" />
+	<item id="registeredPermanent" alias="户籍标志" type="string" length="1"  width="100">
+		<dic id="registeredPermanent" />
+	</item>
+	<item id="address" alias="家庭地址" type="string" length="100" width="200" colspan="2" virtual="true" queryable="true"/>
+	<item id="mpiLevel" alias="人群类别" type="string" width="100" virtual="true" defaultValue="0">
+		<dic id="mpiLevel"/>
+	</item>
+	<item id="postalCode" alias="邮编" type="string" length="6"  virtual="true" queryable="true"/>
+	<item id="contactNo" alias="本人电话" type="string" length="20" width="105"  virtual="true" vtype="contactNo"/>
+	
+	<item id="contactIdCard" alias="联系人身份证" type="string" length="50" vtype="idCard" display="2"/>
+	<item id="contactName"   alias="联系人姓名"   type="string" length="20" display="2"/>
+	<item id="contactPhone"  alias="联系人电话"   type="string" length="32" vtype="contactNo" display="2"/>
+	
+	<item id="nationalityCode" alias="国籍" type="string" length="3">
+		<dic id="nationality" />
+	</item>
+	<item id="nationCode" alias="民族" type="string" length="2">
+		<dic id="ethnic" />
+	</item>
+	<item id="bloodTypeCode" alias="血型" type="string" length="1">
+		<dic id="blood" />
+	</item>
+	<item id="rhBloodCode" alias="RH血型" type="string" length="1">
+		<dic id="rhBlood" />
+	</item>
+
+	<item id="maritalStatusCode" alias="婚姻状况" type="string" length="2" width="105">
+		<dic id="maritals" render="Tree" onlySelectorLeaf="false"/>
+	</item>
+	<item id="workCode" alias="职业类别" type="string" length="3" width="140">
+		<dic id="jobtitle" onlySelectLeaf="true" />
+	</item>
+	<item id="educationCode" alias="文化程度" type="string" length="2" >
+		<dic id="education" render="Tree" onlySelectorLeaf="false"/>
+	</item>
+	<item id="insuranceCode" alias="医保类别" type="string" length="2"  >
+		<dic id="insurance" />
+	</item>
+	<item id="insuranceType" alias="保险类别" type="string" length="20">
+		<dic id="insuranceType"/>
+	</item>
+	<item id="startWorkDate" alias="参加工作日期" type="date" maxValue="%server.date.date" width="110"/>
+	<item id="workPlace" alias="工作单位" type="string" length="50" />	
+	<item id="death" alias="是否死亡" type="string" length="1" defaultValue="0" display="1" >
+		<dic id="yesOrNo"/>
+	</item>
+	<item id="status" alias="档案状态" type="string" length="1" defaultValue="0" display="1" >
+		<dic id="statusType"/>
+	</item>
+	<item id="createUnit" alias="建档机构" type="string" length="16" canRead="false" display="0" />
+	<item id="createUser" alias="建档人" type="string" length="20" display="0" />
+	<item id="createTime" alias="建档时间" type="timestamp" display="0" />
+	<item id="lastModifyUnit" alias="最后修改机构" type="string" length="16" display="0" >
+		<!--<set type="exp">['$','%user.manageUnit.id']</set>
+			--></item>
+	<item id="lastModifyTime" alias="最后修改时间" type="timestamp" display="0" defaultValue="%server.date.date">
+		<set type="exp">['$','%server.date.datetime']</set>
+	</item>
+	<item id="lastModifyUser" alias="最后修改人" type="string" length="20" display="0" >
+		<dic id="user"/>
+	</item>
+	
+	<item id="versionNumber" alias="版本号" type="string" length="32"  display="0"/>
+</entry>

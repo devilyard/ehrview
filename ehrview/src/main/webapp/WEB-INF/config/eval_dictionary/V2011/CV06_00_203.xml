@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="01" text="手术" comment="从确诊到首次访视或两次访视之间是否经过手术治疗"/>
+  <item key="02" text="化疗" comment="从确诊到首次访视或两次访视之间是否经过化疗治疗"/>
+  <item key="03" text="改疗" comment="从确诊到首次访视或两次访视之间是否经过放射治疗"/>
+  <item key="04" text="中药" comment="从确诊到首次访视或两次访视之间是否经过中药治疗"/>
+  <item key="05" text="免疫" comment="从确诊到首次访视或两次访视之间是否经过免疫治疗"/>
+  <item key="06" text="介人" comment="从确诊到首次访视或两次访视之间是否经过介人治疗"/>
+  <item key="07" text="止痛治疗" comment="从确诊到首次访视或两次访视之间是否经过止痛治疗"/>
+  <item key="08" text="未治疗" comment="从确诊到首次访视或两次访视之间没有经过任何以上治疗"/>
+  <item key="99" text="其他治疗" comment="从确诊到首次访视或两次访视之间是否经过除以上各治疗方式以外的治疗"/>
+</dic>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<BasicDataset>
+	<DataSet code="HDSD00.01.04" displayName="儿童健康检查" codeSystem="WS365-2011" codeSystemName="城乡居民健康档案基本数据集"/>
+	<HDSD00.01.001 dataelementName="城乡居民健康档案编号" value="" datatype="N17"/>
+	<HDSD00.01.290 dataelementName="儿童健康检查记录表单编号" value="" datatype="AN1..20"/>
+	<HDSD00.01.002 dataelementName="本人姓名" value="" datatype="A1..50"/>
+	<HDSD00.01.291 dataelementName="身长（cm）" value="" datatype="N4..5,1"/>
+	<HDSD00.01.292 dataelementName="年龄别身高评价结果代码" code="" datatype="N1" dic="CV05_10_006" displayName="中" codeSystem="2.16.156.10011.2.3.1.144" codeSystemName="儿童生长发育评价结果代码表"/>
+	<HDSD00.01.056 dataelementName="体重（kg）" value="" datatype="N3..5,1"/>
+	<HDSD00.01.293 dataelementName="年龄别体重评价结果代码" code="" datatype="N1" dic="CV05_10_006"  displayName="中" codeSystem="2.16.156.10011.2.3.1.144" codeSystemName="儿童生长发育评价结果代码表"/>
+	<HDSD00.01.294 dataelementName="体格发育评价代码" code="" datatype="N1" dic="CV04_10_020" displayName="正常" codeSystem="2.16.156.10011.2.3.1.74" codeSystemName="儿童体格发育评价代码"/>
+	<HDSD00.01.295 dataelementName="头围（cm）" value="" datatype="N4,1"/>
+	<HDSD00.01.296 dataelementName="儿童面色代码" code="" datatype="N1" dic="CV04_10_008"  displayName="红润" codeSystem="2.16.156.10011.2.3.1.62" codeSystemName="儿童面色代码表"/>
+	<HDSD00.01.297 dataelementName="皮肤检查异常标志" value="" datatype="T/F"/>
+	<HDSD00.01.298 dataelementName="前囟闭合标志" value="" datatype="T/F"/>
+	<HDSD00.01.253 dataelementName="前囟横径（cm）" value="" datatype="N3,1"/>
+	<HDSD00.01.254 dataelementName="前囟纵径（cm）" value="" datatype="N3,1"/>
+	<HDSD00.01.272 dataelementName="颈部包块标志" value="" datatype="T/F"/>
+	<HDSD00.01.256 dataelementName="眼外观检查异常标志" value="" datatype="T/F"/>
+	<HDSD00.01.091 dataelementName="左眼裸眼远视力值" value="" datatype="N3,1"/>
+	<HDSD00.01.092 dataelementName="右眼裸眼远视力值" value="" datatype="N3,1"/>
+	<HDSD00.01.093 dataelementName="左眼矫正远视力值" value="" datatype="N3,1"/>
+	<HDSD00.01.094 dataelementName="右眼矫正远视力值" value="" datatype="N3,1"/>
+	<HDSD00.01.258 dataelementName="耳外观检查异常标志" value="" datatype="T/F"/>
+	<HDSD00.01.241 dataelementName="新生儿听力筛查结果代码" code="" datatype="N1" dic="CC04_04_001_00" displayName="通过" codeSystem="2.16.156.10011.2.3.2.15" codeSystemName="新生儿听力筛查结果代码表"/>
+	<HDSD00.01.262 dataelementName="口腔检查异常标志" value="" datatype="T/F"/>
+	<HDSD00.01.299 dataelementName="出牙数（颗）" value="" datatype="N1..2"/>
+	<HDSD00.01.300 dataelementName="龋齿数（颗）" value="" datatype="N1..2"/>
+	<HDSD00.01.264 dataelementName="肺部听诊异常标志" value="" datatype="T/F"/>
+	<HDSD00.01.266 dataelementName="心脏听诊异常标志" value="" datatype="T/F"/>
+	<HDSD00.01.268 dataelementName="腹部触诊异常标志" value="" datatype="T/F"/>
+	<HDSD00.01.301 dataelementName="脐带脱落标志" value="" datatype="T/F"/>
+	<HDSD00.01.280 dataelementName="脐带检查结果代码" code="" datatype="N1" dic="CV04_10_019" displayName="未脱" codeSystem="2.16.156.10011.2.3.1.73" codeSystemName="脐带检查结果代码表"/>
+	<HDSD00.01.302 dataelementName="脐疝标志" value="" datatype="T/F"/>
+	<HDSD00.01.270 dataelementName="四肢活动度异常标志" value="" datatype="T/F"/>
+	<HDSD00.01.303 dataelementName="步态异常标志" value="" datatype="T/F"/>
+	<HDSD00.01.304 dataelementName="可疑佝偻病症状代码" code="" datatype="N1" dic="CV04_10_021" displayName="无" codeSystem="2.16.156.10011.2.3.1.75" codeSystemName="可疑佝偻病症状代码表"/>
+	<HDSD00.01.305 dataelementName="可疑佝偻病体症代码" code="" datatype="N1" dic="CV04_10_022" displayName="无" codeSystem="2.16.156.10011.2.3.1.76" codeSystemName="可疑佝偻病体征代码表"/>
+	<HDSD00.01.274 dataelementName="肛门检查异常标志" value="" datatype="T/F"/>
+	<HDSD00.01.276 dataelementName="外生殖器检查异常标志" value="" datatype="T/F"/>
+	<HDSD00.01.136 dataelementName="血红蛋白值（g/L）" value="" datatype="N1..3"/>
+	<HDSD00.01.316 dataelementName="户外活动时长（d）" value="" datatype="N1..4,1"/>
+	<HDSD00.01.317 dataelementName="服用维生素D名称" value="" datatype="AN1..100"/>
+	<HDSD00.01.318 dataelementName="服用维生素D剂量（IU/d）" value="" datatype="N1..5"/>
+	<HDSD00.01.319 dataelementName="儿童发育评估通过标志" value="" datatype="T/F"/>
+	<HDSD00.01.320 dataelementName="两次随访间患病标志" value="" datatype="T/F"/>
+	<HDSD00.01.321 dataelementName="两次随访间患肺炎住院次数" value="" datatype="N1..2"/>
+	<HDSD00.01.322 dataelementName="两次随访间患腹泻住院次数" value="" datatype="N1..2"/>
+	<HDSD00.01.323 dataelementName="两次随访间因外伤住院次数" value="" datatype="N1..2"/>
+	<HDSD00.01.324 dataelementName="两次随访间患其他疾病情况" value="" datatype="AN1..100"/>
+	<HDSD00.01.281 dataelementName="转诊标志" value="" datatype="T/F"/>
+	<HDSD00.01.282 dataelementName="转入医疗机构名称" value="" datatype="AN1..70"/>
+	<HDSD00.01.283 dataelementName="转入机构科室名称" value="" datatype="AN1..50"/>
+	<HDSD00.01.284 dataelementName="转诊原因" value="" datatype="AN1..100"/>
+	<HDSD00.01.328 dataelementName="儿童健康指导类别代码" code="" datatype="N1" dic="CV06_00_217" displayName="其他" codeSystem="2.16.156.10011.2.3.1.193" codeSystemName="儿童健康指导类别代码表"/>
+	<HDSD00.01.329 dataelementName="随访日期" value="" datatype="D8"/>
+	<HDSD00.01.330 dataelementName="随访医师姓名" value="" datatype="A1..50"/>
+	<HDSD00.01.483 dataelementName="下次随访日期" value="" datatype="D8"/>
+</BasicDataset>

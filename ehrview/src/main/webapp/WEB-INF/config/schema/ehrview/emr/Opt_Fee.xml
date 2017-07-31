@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<entry id="Opt_Fee" alias="门诊收费明细表(Opt_Fee)">
+  <item id="DCID" alias="记录号" type="string" length="16" not-null="1" generator="assigned" pkey="true"/>
+  <item id="MPIID" alias="主索引标识" type="string" length="32" not-null="1"/>
+  <item id="SourceID" alias="来源标识" length="50"/>
+  <item id="RecordClassifying" alias="记录分类" length="50"/>
+  <item id="RecordTitle" alias="记录名称" length="50"/>
+  <item id="EffectiveTime" alias="记录时间" type="date"/>
+  <item id="EffectiveFlag" alias="有效标志" type="string" length="1"/>
+  <item id="VersionNumber" alias="版本" length="10"/>
+  <item id="AuthorOrganization" alias="创建机构" length="16"/>
+  <item id="Author" alias="创建人" length="32"/>
+  <item id="SystemTime" alias="创建时间" type="date"/>
+  <item id="UploadTime" alias="上传时间" type="date"/>
+  <item id="UpdateTime" alias="更新时间" type="date"/>
+  <item id="JZLSH" alias="就诊流水号" length="32"/>
+  <item id="FYMXID" alias="费用明细流水号" length="32"/>
+  <item id="CFID" alias="处方ID" length="32"/>
+  <item id="TFBZ" alias="退费标志" length="1"/>
+  <item id="YBFYLB" alias="医保费用类别" length="1"/>
+</entry>

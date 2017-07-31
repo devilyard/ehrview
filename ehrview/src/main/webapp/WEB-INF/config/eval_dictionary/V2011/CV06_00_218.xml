@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="戒烟"/>
+  <item key="2" text="健康饮酒"/>
+  <item key="3" text="饮食"/>
+  <item key="4" text="锻炼"/>
+  <item key="5" text="减体重"/>
+  <item key="6" text="建议接种疫苗"/>
+  <item key="9" text="其他"/>
+</dic>

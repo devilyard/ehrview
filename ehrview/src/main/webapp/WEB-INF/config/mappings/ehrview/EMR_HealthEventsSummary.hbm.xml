@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="EMR_HealthEventsSummary" table="EMR_HealthEventsSummary">
+			<id name="VisitID" type="java.lang.String">
+            	<column name="VisitID"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="PatientType" type="java.lang.String" length="2" />
+        	<property name="MPIID" type="java.lang.String" length="32" />
+        	<property name="SourceID" type="java.lang.String" length="50" />
+        	<property name="ZoneID" type="java.lang.String" length="1" />
+        	<property name="StatisticDate" type="timestamp"  />
+        	<property name="MedicalOrgnationCode" type="java.lang.String" length="10" />
+        	<property name="MedicalInstitutions" type="java.lang.String" length="70" />
+        	<property name="VisitDeptID" type="java.lang.String" length="18" />
+        	<property name="VisitDeptName" type="java.lang.String" length="50" />
+        	<property name="ClinicID" type="java.lang.String" length="32" />
+        	<property name="HospizationID" type="java.lang.String" length="10" />
+        	<property name="VisitDateTime" type="timestamp"  />
+        	<property name="VisitReason" type="java.lang.String" length="100" />
+        	<property name="DiagnoseName" type="java.lang.String" length="100" />
+        	<property name="DiagnoseCode" type="java.lang.String" length="7" />
+        	<property name="OtherDiagnose" type="java.lang.String" length="255" />
+        	<property name="OperationCode" type="java.lang.String" length="5" />
+        	<property name="OperationName" type="java.lang.String" length="80" />
+        	<property name="KeyDrugName" type="java.lang.String" length="50" />
+        	<property name="KeyDrugUsage" type="java.lang.String" length="100" />
+        	<property name="AdverseDrugReaction" type="java.lang.String" length="100" />
+        	<property name="HerbalMedicineUseTypeCode" type="java.lang.String" length="20" />
+        	<property name="OtherMedicalMeasure" type="java.lang.String" length="2000" />
+        	<property name="CureResultCode" type="java.lang.String" length="1" />
+        	<property name="AdmissionDateTime" type="timestamp"  />
+        	<property name="DischargeDateTime" type="timestamp"  />
+        	<property name="ResponsibilityDoctorID" type="java.lang.String" length="50" />
+        	<property name="ResponsibilityDoctor" type="java.lang.String" length="50" />
+        	<property name="EffectiveFlag" type="java.lang.String" length="1" />
+        	<property name="AuthorOrganization" type="java.lang.String" length="16" />
+        	<property name="Author" type="java.lang.String" length="32" />
+        	<property name="SystemTime" type="timestamp"  />
+        	<property name="UploadTime" type="timestamp"  />
+        	<property name="UpdateTime" type="timestamp"  />
+</class>
+</hibernate-mapping>

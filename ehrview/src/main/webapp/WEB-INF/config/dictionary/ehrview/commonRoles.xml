@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic alias="普通医生角色">
+  <item key="develop" text="研发经理"/>
+  <item key="teamer" text="组员"/>
+  <item key="teamlead" text="组长"/>
+  <item key="base" text="基本用户"/>
+</dic>

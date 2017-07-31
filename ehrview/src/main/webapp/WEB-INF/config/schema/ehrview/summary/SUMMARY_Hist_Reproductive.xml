@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<entry id="SUMMARY_Hist_Reproductive" alias="既往史_生育史">
+  <item id="DCID" alias="记录号" type="string" length="16" not-null="1" generator="assigned" pkey="true"/>
+  <item id="MPIID" alias="主索引标识" type="string" length="32" not-null="1"/>
+  <item id="WayStop" alias="妊娠终止方式" length="100"/>
+  <item id="StopDate" alias="妊娠终止时间" type="date"/>
+  <item id="Twins" alias="胎数"/>
+  <item id="UploadTime" alias="上传时间" type="date"/>
+  <item id="SystemTime" alias="创建时间" type="date"/>
+  <item id="AuthorOrganization" alias="创建机构代码" length="16"/>
+  <item id="AuthorOrganization_Text" alias="创建机构" length="200"/>
+  <item id="SRCEntryName" alias="数据来源" length="50"/>
+  <item id="SRCID" alias="源标识号" length="50"/>
+</entry>
+ 

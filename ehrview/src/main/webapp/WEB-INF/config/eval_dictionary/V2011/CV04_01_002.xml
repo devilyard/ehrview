@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="量多"/>
+  <item key="2" text="量中"/>
+  <item key="3" text="量少"/>
+  <item key="4" text="无"/>
+</dic>

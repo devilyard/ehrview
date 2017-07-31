@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="无裂伤"/>
+  <item key="2" text="Ⅰ°裂伤"/>
+  <item key="3" text="Ⅱ°裂伤"/>
+  <item key="4" text="Ⅲ°裂伤"/>
+  <item key="5" text="会阴切开"/>
+</dic>

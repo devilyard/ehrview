@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="01" text="幻觉"/>
+  <item key="02" text="交流困难"/>
+  <item key="03" text="猜疑"/>
+  <item key="04" text="喜怒无常"/>
+  <item key="05" text="行为怪异"/>
+  <item key="06" text="兴奋话多"/>
+  <item key="07" text="伤人毁物"/>
+  <item key="08" text="悲观厌世"/>
+  <item key="09" text="无故外走"/>
+  <item key="10" text="自语自笑"/>
+  <item key="11" text="孤僻懒散"/>
+  <item key="99" text="其他"/>
+</dic>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="足跟"/>
+  <item key="2" text="手指"/>
+  <item key="3" text="股静脉"/>
+  <item key="4" text="颈静脉"/>
+  <item key="5" text="脐静脉"/>
+  <item key="6" text="桡静脉"/>
+  <item key="9" text="其他"/>
+</dic>

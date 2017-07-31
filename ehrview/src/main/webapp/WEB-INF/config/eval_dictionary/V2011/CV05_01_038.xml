@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="药物" comment="指可能导致人体发生过敏反应的药物"/>
+  <item key="101" text="青霉素类抗生素"/>
+  <item key="102" text="磺胺类抗生素"/>
+  <item key="103" text="头孢类抗生素"/>
+  <item key="104" text="含碘药品"/>
+  <item key="105" text="酒精"/>
+  <item key="106" text="镇静麻醉剂"/>
+  <item key="199" text="其他药物过敏源"/>
+  <item key="2" text="食物" comment="指可能导致人体发生过敏反应的食物"/>
+  <item key="201" text="猪肉"/>
+  <item key="202" text="羊肉"/>
+  <item key="203" text="牛肉"/>
+  <item key="204" text="牛奶"/>
+  <item key="205" text="蛋及蛋制品"/>
+  <item key="206" text="鸡、鸭等禽类食品"/>
+  <item key="207" text="鱼、虾等水产类食品"/>
+  <item key="208" text="水果(包括带壳的果仁)"/>
+  <item key="299" text="其他食物过敏源"/>
+  <item key="3" text="环境" comment="指环境中存在的、可通过呼吸道吸人或皮肤、黏膜接触导致人体发生过
+敏反应的物质"/>
+  <item key="301" text="植物花粉"/>
+  <item key="302" text="动物毛发"/>
+  <item key="303" text="空气粉尘"/>
+  <item key="399" text="其他环境过敏源"/>
+  <item key="4" text="混合性过敏源"/>
+  <item key="9" text="其他过敏源"/>
+</dic>

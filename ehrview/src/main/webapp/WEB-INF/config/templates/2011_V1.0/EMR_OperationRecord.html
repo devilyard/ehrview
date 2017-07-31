@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>手术记录</title>
+
+</head>
+
+<body style="padding: 20px; font-size: 12px;">
+	<style type="text/css">
+.my table {
+	text-align: left;
+	margin-bottom: 20px;
+}
+
+.my td {
+	padding-left: 6px;
+	line-height: 24px;
+	border-bottom: #eee solid 1px;
+}
+
+.two table {
+	border-bottom: #ccc solid 1px;
+	border-left: #ccc solid 1px;
+	border-top: #ccc solid 1px;
+	text-align: left;
+	margin-bottom: 20px;
+}
+
+.two td {
+	border-right: #ccc solid 1px;
+	height: 24px;
+	line-height: 18px;
+	text-indent: 4px;
+	border-bottom: #ccc dotted 1px;
+}
+
+.linenone {
+	border-bottom: none;
+}
+
+.two td .ta2 {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+.two td .ta2 td {
+	margin: 0;
+}
+
+.ta2 td.none {
+	border-right: none;
+}
+
+.ta2 td.none2 {
+	border-bottom: none;
+}
+</style>
+	<table width="95%" border="0" align="center" cellpadding="0"
+		cellspacing="0">
+		<tr>
+			<td align="center" colspan="4" style="font-size: 24px; height: 40px; line-height: 50px; text-align: center">
+				<p align="center">手术记录</p>
+			</td>
+		</tr>
+		<tr>
+			<td height="30" width="25%"><strong>姓名：</strong> <u th:text="${doc.elementText('Name')}"></u></td>
+			<td width="25%"><strong>病区：</strong> <u th:text="${doc.elementText('WardAreaNm')}"></u></td>
+			<td width="25%"><strong>床号：</strong> <u th:text="${doc.elementText('SickbedID')}"></u></td>
+			<td><strong>住院号：</strong> <u th:text="${doc.elementText('HospizationID')}"></u></td>
+		</tr>
+		<tr>
+			<td style="border-bottom: 4px #09F solid;" colspan="4"></td>
+		</tr>
+		<tr>
+			<td style="height: 1px;" colspan="4"></td>
+		</tr>
+		<tr>
+			<td height="10" style="border-top: 1px #09f solid;" colspan="4"></td>
+		</tr>
+	</table>
+	<div class="two">
+		<table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
+			<tr>
+				<td bgcolor="#CAE2F7" width="90"><strong>手术日期</strong></td>
+				<td>
+					<span th:if="${doc.elementText('OperationStartDateTime').length() >= 10}" th:text="${doc.elementText('OperationStartDateTime').substring(0,10)}"></span>
+					<strong>开始于</strong><span th:if="${doc.elementText('OperationStartDateTime').length() >= 18}" th:text="${doc.elementText('OperationStartDateTime').substring(11,18)}"></span>
+					<strong>结束于</strong><span th:if="${doc.elementText('OperationEndDateTime').length() >= 18}" th:text="${doc.elementText('OperationEndDateTime').substring(11,18)}"></span>
+					<strong>共用时</strong><span th:text="${doc.elementText('OperationWholeTime')}"></span>
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>术前诊断</strong></td>
+				<td><span th:text="${doc.elementText('PreoperativeDiagnosis')}"></span></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>术后诊断</strong></td>
+				<td><span th:text="${doc.elementText('PostoperativeDiagnosis')}"></span></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>手术名称</strong></td>
+				<td><span th:text="${doc.elementText('OperationName')}"></span></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>手术人员</strong></td>
+				<td><span th:text="${doc.elementText('Operator')}"></span></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>I 助</strong></td>
+				<td><span th:text="${doc.elementText('Assistant1')}"></span></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>II 助</strong></td>
+				<td><span th:text="${doc.elementText('Assistant2')}"></span></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>器械护士</strong></td>
+				<td><span th:text="${doc.elementText('ApparatusNurse')}"></span></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>巡台护士</strong></td>
+				<td><span th:text="${doc.elementText('StatioNurses')}"></span></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>麻醉方法</strong></td>
+				<td><span th:text="${doc.elementText('AnaesthesiaMethod')}"></span></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>麻醉医师</strong></td>
+				<td><span th:text="${doc.elementText('AnesthetistName')}"></span></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>手术经过</strong></td>
+				<td><span th:text="${doc.elementText('OperationProcessDescription')}"></span></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>手术者签名</strong></td>
+				<td colspan="3"><span th:text="${doc.elementText('OperatorSign')}"></span></td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="I型" comment="原发性肺结核"/>
+  <item key="2" text="Ⅱ型" comment="血行播散性肺结核"/>
+  <item key="3" text="Ⅲ型" comment="继发性肺结核"/>
+  <item key="4" text="Ⅳ型" comment="结核性胸膜炎"/>
+  <item key="5" text="V型" comment="其他肺外结核"/>
+</dic>

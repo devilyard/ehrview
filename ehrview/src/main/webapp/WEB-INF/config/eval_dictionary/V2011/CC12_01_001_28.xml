@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="督导随访"/>
+  <item key="2" text="用药"/>
+  <item key="3" text="饮食"/>
+  <item key="4" text="康复"/>
+  <item key="5" text="家床"/>
+  <item key="6" text="住院"/>
+  <item key="7" text="出诊"/>
+</dic>

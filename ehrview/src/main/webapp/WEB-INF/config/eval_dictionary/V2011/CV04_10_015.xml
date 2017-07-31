@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="未触及"/>
+  <item key="2" text="触及双侧对称"/>
+  <item key="3" text="触及左侧弱或消失"/>
+  <item key="4" text="触及右侧弱或消失"/>
+</dic>

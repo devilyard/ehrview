@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic> 
+  <item key="15" text="半个月前"/>
+  <item key="30" text="1个月前"/>
+  <item key="60" text="2个月前"/>
+  <item key="90" text="3个月前"/>
+  <item key="180" text="半年前"/>
+</dic>

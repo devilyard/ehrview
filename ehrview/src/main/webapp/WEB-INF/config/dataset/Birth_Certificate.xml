@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<BasicDataset>
+	<DataSet code="HDSB01.01" displayName="出生医学证明" codeSystem="WS376-2013" codeSystemName="儿童保健基本数据集"/>
+	<HDSB01.01.001 dataelementName="出生医学证明编号" value="" datatype="N17"/>
+	<HDSB01.01.002 dataelementName="新生儿姓名" value="" datatype="A1..50"/>
+	<HDSB01.01.003 dataelementName="新生儿性别代码" code="" datatype="N1" dic="GB_T2261_1" displayName="女性" codeSystem="2.16.156.10011.2.3.3.4" codeSystemName="生理性别代码表(GB/T 2261.1)"/>
+	<HDSB01.01.004 dataelementName="新生儿出生日期时间" value="" datatype="D8"/>
+	<HDSB01.01.005 dataelementName="出生地址-省（自治区、直辖市）" value="" datatype="AN1..70"/>
+	<HDSB01.01.006 dataelementName="出生地址-市（地区、州）" value="" datatype="AN1..70"/>
+	<HDSB01.01.007 dataelementName="出生地址-县（区）" value="" datatype="AN1..70"/>
+	<HDSB01.01.008 dataelementName="母亲姓名" value="" datatype="A1..50"/>
+	<HDSB01.01.009 dataelementName="母亲出生日期" value="" datatype="D8"/>
+	<HDSB01.01.010 dataelementName="母亲国籍" code="" datatype="AN3" dic="GB_T2659" displayName="中国" codeSystem="2.16.156.10011.2.3.3.1" codeSystemName="世界各国和地区名称代码(GB/T 2659)"/>
+	<HDSB01.01.011 dataelementName="母亲民族" code="" datatype="N2" dic="GB_T3304" displayName="汉族" codeSystem="2.16.156.10011.2.3.3.3" codeSystemName="民族类别代码表(GB 3304)"/>
+	<HDSB01.01.012 dataelementName="家庭地址-省（自治区、直辖市）" value="" datatype="AN1..70"/>
+	<HDSB01.01.013 dataelementName="家庭地址-市（地区、州）" value="" datatype="AN1..70"/>
+	<HDSB01.01.014 dataelementName="家庭地址-县（区）" value="" datatype="AN1..70"/>
+	<HDSB01.01.015 dataelementName="家庭地址-乡（镇、街道办事处）" value="" datatype="AN1..70"/>
+	<HDSB01.01.016 dataelementName="家庭地址-村（街、路、弄等）" value="" datatype="AN1..70"/>
+	<HDSB01.01.017 dataelementName="家庭地址-门牌号码" value="" datatype="AN1..70"/>
+	<HDSB01.01.018 dataelementName="母亲身份证件类别代码" code="" datatype="N2" dic="CV02_01_101" displayName="居民身份证" codeSystem="2.16.156.10011.2.3.1.1" codeSystemName="身份证件类别代码表"/>
+	<HDSB01.01.019 dataelementName="母亲身份证件号码" value="" datatype="AN18"/>
+	<HDSB01.01.020 dataelementName="父亲姓名" value="" datatype="A1..50"/>
+	<HDSB01.01.021 dataelementName="父亲出生日期" value="" datatype="D8"/>
+	<HDSB01.01.022 dataelementName="父亲国籍" code="" datatype="AN3" dic="GB_T2659" displayName="中国" codeSystem="2.16.156.10011.2.3.3.1" codeSystemName="世界各国和地区名称代码(GB/T 2659)"/>
+	<HDSB01.01.023 dataelementName="父亲民族" code="" datatype="N2" dic="GB_T3304" displayName="汉族" codeSystem="2.16.156.10011.2.3.3.3" codeSystemName="民族类别代码表(GB 3304)"/>
+	<HDSB01.01.024 dataelementName="家庭地址-省（自治区、直辖市）" value="" datatype="AN1..70"/>
+	<HDSB01.01.025 dataelementName="家庭地址-市（地区、州）" value="" datatype="AN1..70"/>
+	<HDSB01.01.026 dataelementName="家庭地址-县（区）" value="" datatype="AN1..70"/>
+	<HDSB01.01.027 dataelementName="家庭地址-乡（镇、街道办事处）" value="" datatype="AN1..70"/>
+	<HDSB01.01.028 dataelementName="家庭地址-村（街、路、弄等）" value="" datatype="AN1..70"/>
+	<HDSB01.01.029 dataelementName="家庭地址-门牌号码" value="" datatype="AN1..70"/>
+	<HDSB01.01.030 dataelementName="父亲身份证件类别代码" code="" datatype="N2" dic="CV02_01_101" displayName="居民身份证" codeSystem="2.16.156.10011.2.3.1.1" codeSystemName="身份证件类别代码表"/>
+	<HDSB01.01.031 dataelementName="父亲身份证件号码" value="" datatype="AN18"/>
+	<HDSB01.01.032 dataelementName="出生孕周（d）" value="" datatype="N2..3"/>
+	<HDSB01.01.033 dataelementName="出生身长（cm）" value="" datatype="N4..5,1"/>
+	<HDSB01.01.034 dataelementName="出生体重（g）" value="" datatype="N3..4"/>
+	<HDSB01.01.035 dataelementName="接生人员姓名" value="" datatype="A1..50"/>
+	<HDSB01.01.036 dataelementName="医疗机构名称" value="" datatype="AN1..70"/>
+	<HDSB01.01.037 dataelementName="签发人员姓名" value="" datatype="A1..50"/>
+	<HDSB01.01.038 dataelementName="领证人员姓名" value="" datatype="A1..50"/>
+	<HDSB01.01.039 dataelementName="签发日期" value="" datatype="D8"/>
+	<HDSB01.01.040 dataelementName="签发机构名称" value="" datatype="AN1..70"/>
+</BasicDataset>

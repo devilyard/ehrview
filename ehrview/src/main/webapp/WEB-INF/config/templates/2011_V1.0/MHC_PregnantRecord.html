@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>孕产妇基本情况登记表</title>
+</head>
+
+<body style="padding: 20px; font-size: 12px;">
+<style type="text/css">
+.my table {
+	border-bottom: #ccc solid 1px;
+	border-left: #ccc solid 1px;
+	border-top: #ccc solid 1px;
+	text-align: left;
+}
+
+.my td {
+	border-right: #ccc solid 1px;
+	border-bottom: #ccc dotted 1px;
+	padding: 4px;
+}
+
+.red {
+	color: red;
+	font-weight: bold;
+}
+</style>
+	<table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
+		<tr>
+			<td align="center" colspan="2" style="font-size: 24px; height: 40px; line-height: 50px; text-align: center">孕产妇基本情况登记表</td>
+		</tr>
+		<tr>
+			<td height="30" width="75%"></td>
+			<td><strong>编号：</strong> <u th:text="${doc.elementText('PregnantID')}"></u></td>
+		</tr>
+		<tr>
+			<td style="border-bottom: 4px #09F solid;" colspan="2"></td>
+		</tr>
+		<tr>
+			<td style="height: 1px;" colspan="2"></td>
+		</tr>
+		<tr>
+			<td height="10" style="border-top: 1px #09f solid;" colspan="2"></td>
+		</tr>
+	</table>
+	<div class="my">
+		<table width="95%" border="0" align="center" cellpadding="0"
+			cellspacing="0">
+			<tr>
+				<td colspan="6" bgcolor="#f1f1f1"><strong>本人情况</strong></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7" width="15%"><strong>姓名</strong></td>
+				<td width="20%" th:text="${personName}"></td>
+				<td bgcolor="#CAE2F7" width="15%"><strong>出生日期</strong></td>
+				<td colspan="3" th:if="${birthday != null}" th:text="${#dates.format(birthday,'yyyy-MM-dd')}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>身份证件类别</strong></td>
+				<td><span>身份证</span></td>
+				<td bgcolor="#CAE2F7"><strong>身份证件号码</strong></td>
+				<td colspan="3" th:text="${idCard}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7" width="15%"><strong>职    业</strong></td>
+				<td width="20%" th:text="${workCode_text}"></td>
+				<td bgcolor="#CAE2F7" width="15%"><strong>文化程度</strong></td>
+				<td width="20%" th:text="${educationCode_text}"></td>
+				<td bgcolor="#CAE2F7" width="15%"><strong>民族</strong></td>
+				<td th:text="${nationCode_text}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>联系电话</strong></td>
+				<td th:text="${contactNo}"></td>
+				<td bgcolor="#CAE2F7"><strong>工作单位</strong></td>
+				<td colspan="3" th:text="${workPlace}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>户籍地址</strong></td>
+				<td colspan="5" th:text="${doc.elementText('HomeAddress_Text')}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>现住地址</strong></td>
+				<td colspan="5" th:text="${doc.elementText('RealRegionCode_Text')}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>产后休养地址</strong></td>
+				<td colspan="5" th:text="${doc.elementText('RestRegionCode_Text')}"></td>
+			</tr>
+		</table>
+
+		<table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
+			<tr>
+				<td colspan="6" bgcolor="#f1f1f1"><strong>丈夫情况</strong></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7" width="15%"><strong>姓名</strong></td>
+				<td width="20%">
+					<span th:if="${partner_personName != null}" th:text="${partner_personName}"></span>
+				</td>
+				<td bgcolor="#CAE2F7" width="15%"><strong>出生日期</strong></td>
+				<td colspan="3">
+					<span th:if="${partner_birthday != null}" th:text="${#dates.format(partner_birthday,'yyyy-MM-dd')}"></span>
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>身份证件类别</strong></td>
+				<td><span>身份证</span></td>
+				<td bgcolor="#CAE2F7"><strong>身份证件号码</strong></td>
+				<td colspan="3"><span th:if="${partner_idCard != null}" th:text="${partner_idCard}"></span></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7" width="15%"><strong>职    业</strong></td>
+				<td width="20%">
+					<span th:if="${partner_workCode_text != null}" th:text="${partner_workCode_text}"></span>
+				</td>
+				<td bgcolor="#CAE2F7" width="15%"><strong>文化程度</strong></td>
+				<td width="20%">
+					<span th:if="${partner_educationCode_text != null}" th:text="${partner_educationCode_text}"></span>
+				</td>
+				<td bgcolor="#CAE2F7" width="15%"><strong>民族</strong></td>
+				<td><span th:if="${partner_nationCode_text != null}" th:text="${partner_nationCode_text}"></span></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>联系电话</strong></td>
+				<td><span th:if="${partner_contactNo != null}" th:text="${partner_contactNo}"></span></td>
+				<td bgcolor="#CAE2F7"><strong>工作单位</strong></td>
+				<td colspan="3"><span th:if="${partner_workPlace != null}" th:text="${partner_workPlace}"></span></td>
+			</tr>
+		</table>
+		<table width="95%" border="0" align="center" cellpadding="0"
+			cellspacing="0">
+			<tr>
+				<td colspan="6" bgcolor="#f1f1f1"><strong>月经史</strong></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7" width="15%"><strong>初潮年龄</strong></td>
+				<td width="20%" th:text="${doc.elementText('MenarcheAge')} + '岁'"></td>
+				<td bgcolor="#CAE2F7" width="15%"><strong>经期/周期</strong></td>
+				<td width="20%" th:text="${doc.elementText('MenstrualPeriod')} + '/' + ${doc.elementText('Cycle')} + '天'"></td>
+				<td bgcolor="#CAE2F7" width="15%"><strong>月经量</strong></td>
+				<td th:if="${doc.element('MenstrualBlood') != null}" th:text="${doc.element('MenstrualBlood').attributeValue('display')}"></td>
+			</tr>
+		</table>
+		<table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
+			<tr>
+				<td colspan="6" bgcolor="#f1f1f1"><strong>孕产史</strong></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7" width="15%"><strong>孕次</strong></td>
+				<td width="20%" th:text="${doc.elementText('Gravidity')} + '次'"></td>
+				<td bgcolor="#CAE2F7" width="15%"><strong>产次</strong></td>
+				<td colspan="3">
+					<span th:text="${doc.elementText('Parity')}"></span>次 其中：人工流产次数：
+					<span th:text="${doc.elementText('TrafficFlow')}"></span>次
+					&nbsp;&nbsp;难产次数：<span th:text="${doc.elementText('Dystocia')}"></span>次
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>前次妊娠终止日期</strong></td>
+				<td th:text="${doc.elementText('PreGestationDate')}"></td>
+				<td bgcolor="#CAE2F7"><strong>前次妊娠终止方式</strong></td>
+				<td colspan="3" th:if="${doc.element('PreGestationMode') != null}" th:text="${doc.element('PreGestationMode').attributeValue('display')}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>前次分娩日期</strong></td>
+				<td th:text="${doc.elementText('PreDeliveryDate')}"></td>
+				<td bgcolor="#CAE2F7"><strong>前次分娩方式</strong></td>
+				<td colspan="3" th:if="${doc.element('PreDeliveryMode') != null}" th:text="${doc.element('PreDeliveryMode').attributeValue('display')}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>妊娠合并/并发症史</strong></td>
+				<td colspan="5" th:text="${doc.elementText('GestationNeuropathy')}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>既往病史</strong></td>
+				<td colspan="5" th:text="${doc.elementText('PastHistory')}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>家族史</strong></td>
+				<td colspan="5" th:text="${doc.elementText('FamilyHistory')}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>手 术 史</strong></td>
+				<td colspan="5" th:text="${doc.elementText('OperationHistory')}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>妇科手术史</strong></td>
+				<td colspan="5" th:text="${doc.elementText('GynecologyOPS')}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>药物过敏史</strong></td>
+				<td colspan="5" th:text="${doc.elementText('AllergicHistory')}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>毒物接触史</strong></td>
+				<td colspan="5" th:text="${doc.elementText('PoisonTouchHis')}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>遗传家族史</strong></td>
+				<td colspan="5" th:text="${doc.elementText('HeredityFamilyHistory')}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>建册单位</strong></td>
+				<td th:text="${doc.elementText('CreateUnit')}"></td>
+				<td bgcolor="#CAE2F7"><strong>建册医师签名</strong></td>
+				<td th:text="${doc.elementText('CreateUser')}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>建册日期</strong></td>
+				<td th:text="${doc.elementText('CreateDate')}"></td>
+				<td bgcolor="#CAE2F7"><strong>建册孕周</strong></td>
+				<td colspan="3" th:text="${doc.elementText('GestationalWeeks')}"></td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="1千元及以上且小于1万元"/>
+  <item key="2" text="1万元及以上且小于10万元"/>
+  <item key="3" text="10万元及以上"/>
+</dic>

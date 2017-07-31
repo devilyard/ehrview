@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1402" text="听力残"/>
+  <item key="1403" text="言语残"/>
+  <item key="1404" text="肢体残(上肢)"/>
+  <item key="1408" text="肢体残(下肢)"/>
+  <item key="1405" text="智力残"/>
+  <item key="1406" text="视力残"/>
+  <item key="1407" text="精神残"/>
+  <item key="1409" text="孤独症儿童"/>
+  <item key="1410" text="脑瘫儿童"/>
+  <item key="1412" text="其他残疾"/>
+</dic>

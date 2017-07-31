@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="01" text="一组"/>
+  <item key="02" text="二组 03三组"/>
+  <item key="99" text="一般管理对象"/>
+</dic>

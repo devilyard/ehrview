@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="正常"/>
+  <item key="2" text="动作不对称"/>
+  <item key="3" text="动作迟缓"/>
+  <item key="4" text="异常肌张力/异常姿势"/>
+  <item key="5" text="其他异常"/>
+</dic>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="10" text="未婚"/>
+  <item key="20" text="已婚"/>
+  <item key="21" text="初婚"/>
+  <item key="22" text="再婚"/>
+  <item key="23" text="复婚"/>
+  <item key="30" text="丧偶"/>
+  <item key="40" text="离婚"/>
+  <item key="90" text="未说明的婚姻状况"/>
+</dic>

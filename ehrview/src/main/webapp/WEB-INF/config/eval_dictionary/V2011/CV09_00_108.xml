@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="微生物指标"/>
+  <item key="2" text="理化指标"/>
+  <item key="3" text="毒理学指标"/>
+  <item key="4" text="感官性状和一般化学指标"/>
+  <item key="5" text="放射性指标"/>
+  <item key="6" text="消毒剂指标"/>
+</dic>

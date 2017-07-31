@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="正常"/>
+  <item key="2" text="低体重"/>
+  <item key="3" text="消瘦"/>
+  <item key="4" text="发育迟缓"/>
+  <item key="5" text="超重"/>
+</dic>

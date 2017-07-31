@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="0" text="无"/>
+  <item key="1" text="空腹血糖≥"/>
+  <item key="7" text="0mmol/L(126mg/dL)或餐后血糖≥"/>
+  <item key="11" text="1mmol/L(200mg/dL)"/>
+</dic>

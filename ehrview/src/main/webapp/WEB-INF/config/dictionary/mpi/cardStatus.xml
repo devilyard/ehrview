@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dic> 
+	<item key="0" text="正常" mCode="0" pyCode="gs"/>  
+	<item key="1" text="挂失" mCode="1" pyCode="zc"/>  
+	<item key="2" text="注销" mCode="2" pyCode="zx"/>  
+	<item key="3" text="失效" mCode="3" pyCode="sx"/>  
+</dic>

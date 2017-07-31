@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="正高"/>
+  <item key="2" text="副高"/>
+  <item key="3" text="中级"/>
+  <item key="4" text="师级/助理"/>
+  <item key="5" text="士级"/>
+  <item key="6" text="待聃"/>
+</dic>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="0" text="未执行"/>
+  <item key="1" text="已安排(已采集)"/>
+  <item key="2" text="已执行(已接收)"/>
+  <item key="3" text="已报告"/>
+</dic>

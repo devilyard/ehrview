@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="自主呼吸，"/>
+  <item key="2" text="辅助呼吸，"/>
+  <item key="3" text="控制呼吸"/>
+</dic>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<entry id="Ipt_MedicalRecordPage" alias="住院病案首页(2012)(Ipt_MedicalRecordPage)" hasDoc="true">
+  <item id="DCID" alias="记录号" type="string" length="16" not-null="1" generator="assigned" pkey="true"/>
+  <item id="MPIID" alias="主索引标识" type="string" length="32" not-null="1"/>
+  <item id="SourceID" alias="来源标识" length="50"/>
+  <item id="RecordClassifying" alias="记录分类" length="50"/>
+  <item id="RecordTitle" alias="记录名称" length="50"/>
+  <item id="EffectiveTime" alias="记录时间" type="date"/>
+  <item id="EffectiveFlag" alias="有效标志" type="string" length="1"/>
+  <item id="VersionNumber" alias="版本" length="10"/>
+  <item id="AuthorOrganization" alias="创建机构" length="16"/>
+  <item id="Author" alias="创建人" length="32"/>
+  <item id="SystemTime" alias="创建时间" type="date"/>
+  <item id="UploadTime" alias="上传时间" type="date"/>
+  <item id="UpdateTime" alias="更新时间" type="date"/>
+  <item id="JZLSH" alias="就诊流水号" length="32"/>
+<!--   <item id="HospizationID" alias="住院号" length="10"/> -->
+<!--   <item id="PathologyID" alias="病理号" length="18"/> -->
+<!--   <item id="DischargeMethods" alias="离院方式" length="1"/> -->
+<!--   <item id="HospizationTotalCost" alias="住院总费用（元）" length="18" precision="2"/> -->
+<!--   <item id="BZBAH" alias="病案号" length="18"/> -->
+<!--   <item id="BZSJBL" alias="示教病例" length="2"/> -->
+<!--   <item id="BZCYSJ" alias="出院日期时间" type="date"/> -->
+<!--   <item id="BZRYSJ" alias="入院时间" type="date"/> -->
+<!--   <item id="BZQZRQ" alias="确诊日期" type="date"/> -->
+</entry>

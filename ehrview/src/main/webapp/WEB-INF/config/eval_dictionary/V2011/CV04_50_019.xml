@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="未见异常"/>
+  <item key="2" text="滴虫"/>
+  <item key="3" text="假丝酵母菌"/>
+  <item key="9" text="其他"/>
+</dic>

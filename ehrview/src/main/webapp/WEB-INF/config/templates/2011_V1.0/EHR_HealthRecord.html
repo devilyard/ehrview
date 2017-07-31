@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>个人基本情况登记表</title>
+</head>
+
+<body style="padding: 20px; font-size: 12px;">
+	<style type="text/css">
+
+
+
+.my table {
+	text-align: left;
+	margin-bottom: 20px;
+}
+
+.my td {
+	padding-left: 6px;
+	line-height: 24px;
+	border-bottom: #eee solid 1px;
+}
+
+.two table {
+	border-bottom: #ccc solid 1px;
+	border-left: #ccc solid 1px;
+	border-top: #ccc solid 1px;
+	text-align: left;
+	margin-bottom: 20px;
+}
+
+.two td {
+	border-right: #ccc solid 1px;
+	padding: 4px;
+	border-bottom: #ccc dotted 1px;
+}
+
+
+.linenone {
+	border-bottom: none;
+}
+</style>
+	<table width="95%" border="0" align="center" cellpadding="0"
+		cellspacing="0">
+		<tr>
+			<td align="center" colspan="2"
+				style="font-size: 24px; height: 40px; line-height: 50px; text-align: center">个人基本情况登记表</td>
+		</tr>
+		<tr>
+			<td height="30" width="75%" align="left" style="padding-left: 10px">
+<!-- 			<strong>姓名：</strong><u -->
+<!-- 				style="margin-right: 100px;" th:text="${personName}"></u> -->
+				</td>
+			<td align="right"><strong>编号：</strong>
+				<u th:text="${doc.elementText('PHRID')}"></u>
+			</td>
+		</tr>
+		<tr>
+			<td style="border-bottom: 4px #09F solid;" colspan="2"></td>
+		</tr>
+		<tr>
+			<td style="height: 1px;" colspan="2"></td>
+		</tr>
+		<tr>
+			<td height="10" style="border-top: 1px #09f solid;" colspan="2"></td>
+		</tr>
+	</table>
+	<div class="two">
+		<table width="95%" border="0" align="center" cellpadding="0"
+			cellspacing="0">
+			<tr>
+				<td bgcolor="#CAE2F7" width="15%"><strong>姓 名</strong></td>
+				<td width="20%" th:text="${personName}"></td>
+				<td bgcolor="#CAE2F7" width="15%"><strong>性 别</strong></td>
+				<td width="20%" th:text="${sexCode_text}">女</td>
+				<td bgcolor="#CAE2F7" width="15%"><strong>出生日期</strong></td>
+				<td th:if="${birthday != null}" th:text="${#dates.format(birthday,'yyyy-MM-dd')}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>身份证号</strong></td>
+				<td th:text="${idCard}"></td>
+				<td bgcolor="#CAE2F7"><strong>工作单位</strong></td>
+				<td colspan="3" th:text="${workPlace}"></td>
+			</tr>
+			<tr th:object="${idCard}">
+				<td bgcolor="#CAE2F7"><strong>本人电话</strong></td>
+				<td th:if="${contactNo != null}"
+					th:text="${contactNo}"></td>
+				<td bgcolor="#CAE2F7"><strong>联系人姓名</strong></td>
+				<td th:text="${contactName}"></td>
+				<td bgcolor="#CAE2F7"><strong>联系人电话</strong></td>
+				<td> <span th:if="${contactPhone != null}" th:text="${contactPhone}"></span></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>家庭地址</strong></td>
+				<td colspan="3" th:text="${address}"></td>
+				<td bgcolor="#CAE2F7"><strong>邮政编码</strong></td>
+				<td th:text="${postalCode}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>常住类型</strong></td>
+				<td colspan="3" th:text="${registeredPermanent_text}"></td>
+				<td bgcolor="#CAE2F7"><strong>民 族</strong></td>
+				<td th:text="${nationCode_text}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>血型</strong></td>
+				<td colspan="5" th:text="${bloodTypeCode_text}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>文化程度</strong></td>
+				<td colspan="5" th:text="${educationCode_text}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>职 业</strong></td>
+				<td colspan="5" th:text="${workCode_text}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>婚姻状况</strong></td>
+				<td colspan="5" th:text="${maritalStatusCode_text}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>医保类别</strong></td>
+				<td colspan="5" th:text="${insuranceCode_text}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>药物过敏史</strong></td>
+				<td colspan="5" th:text="${PastHistoryCode01}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>暴 露 史</strong></td>
+				<td colspan="5" th:text="${PastHistoryCode12}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7" rowspan="4"><strong>既 往 史</strong></td>
+				<td><strong>疾病</strong></td>
+				<td colspan="4" th:text="${PastHistoryCode02}"></td>
+			</tr>
+			<tr>
+				<td><strong>手 术</strong></td>
+				<td colspan="4" th:text="${PastHistoryCode03}"></td>
+			</tr>
+			<tr>
+				<td><strong>外 伤</strong></td>
+				<td colspan="4" th:text="${PastHistoryCode06}"></td>
+			</tr>
+			<tr>
+				<td><strong>输 血</strong></td>
+				<td colspan="4" th:text="${PastHistoryCode04}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7" rowspan="3"><strong>家 族 史</strong></td>
+				<td><strong>父 亲</strong></td>
+				<td th:text="${PastHistoryCode07}"></td>
+				<td><strong>母 亲</strong></td>
+				<td colspan="2" th:text="${PastHistoryCode08}"></td>
+			</tr>
+			<tr>
+				<td><strong>兄弟姐妹</strong></td>
+				<td th:text="${PastHistoryCode09}"></td>
+				<td><strong>子 女</strong></td>
+				<td colspan="2" th:text="${PastHistoryCode10}"></td>
+			</tr>
+			<tr>
+				<td colspan="5"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>遗传病史</strong></td>
+				<td colspan="5" th:text="${PastHistoryCode05}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>残疾情况</strong></td>
+				<td colspan="5" th:text="${PastHistoryCode11}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>建档日期</strong></td>
+				<td th:text="${doc.elementText('CreateDate')}"></td>
+				<td bgcolor="#CAE2F7"><strong>建档机构</strong></td>
+				<td th:text="${doc.elementText('CreateUnit')}"></td>
+				<td bgcolor="#CAE2F7"><strong>建档责任人</strong></td>
+				<td th:text="${doc.elementText('CreateUser')}"></td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

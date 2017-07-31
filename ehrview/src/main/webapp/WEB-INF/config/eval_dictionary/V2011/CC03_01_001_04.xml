@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="喂养不当"/>
+  <item key="2" text="急、慢性疾病"/>
+  <item key="3" text="产前产时因素"/>
+  <item key="4" text="遗传因素"/>
+  <item key="5" text="运动过少"/>
+  <item key="6" text="不良生活方式"/>
+  <item key="7" text="其他"/>
+</dic>

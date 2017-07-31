@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry id="YX_PersonURL" alias="影像">
+	<item id="ID" alias="主键" type="string" length="200" not-null="1" pkey="true"/>
+  	<item id="INSURANCE_NO" alias="医保卡号" type="string" length="64"/>
+  	<item id="IDENTITY_NO" alias="身份证号" type="string" length="64"/>
+  	<item id="STUDY_TIME" alias="检查时间" type="timestamp"/>
+  	<item id="APDS_URL" alias="平台调阅 URL" type="string" length="4000"/>
+  	<item id="UPDATE_TIME" alias="记录更新时间" type="timestamp"/>
+</entry>

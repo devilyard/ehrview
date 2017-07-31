@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<entry id="SUMMARY_Hist_Drug" alias="SUMMARY既往史_用药记录(SUMMARY_Hist_Drug)">
+  <item id="DCID" alias="记录号" type="string" length="16" not-null="1" generator="assigned" pkey="true"/>
+  <item id="MPIID" alias="主索引标识" type="string" length="32" not-null="1"/>
+  <item id="UploadTime" alias="上传时间" type="date"/>
+  <item id="SystemTime" alias="创建时间" type="date"/>
+  <item id="AuthorOrganization" alias="创建机构代码" length="16"/>
+  <item id="AuthorOrganization_Text" alias="创建机构" length="16"/>
+  <item id="SRCEntryName" alias="数据来源" length="50"/>
+  <item id="MedicineRecordSRC" alias="药品记录来源" type="java.lang.String" length="1"/>
+  <item id="SRCID" alias="源标识号" length="50"/>
+  <item id="MedicineCode" alias="药物代码" length="20"/>
+  <item id="MedicineName" alias="药物名称" length="100"/>
+  <item id="MedicineCategory" alias="药物分类" length="8"/>
+  <item id="PrescribeDate" alias="开药日期" type="date"/>
+  <item id="Dosage" alias="一次剂量" length="10" precision="4"/>
+  <item id="DosageUnit" alias="剂量单位" length="20"/>
+  <item id="Frequency" alias="使用频率" length="20"/>
+  <item id="MedicineWayCode" alias="用药途径代码" type="string" length="3"/>
+  <item id="MedicineWay" alias="用药途径" type="string" length="16"/>
+  <item id="MedicineUsage" alias="药品用法" type="string" length="32"/>
+  <item id="MedicationDays" alias="用药天数" length="5"/>
+  <item id="DispensingAmount" alias="发药数量" type="string" length="20"/>
+  <item id="DoctorAdviceGroup" alias="医嘱组号" type="string" length="32"/>
+  <item id="DiagID" alias="门诊号" type="string" length="32"/>
+</entry>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="摄像机"/>
+  <item key="2" text="照相机"/>
+  <item key="3" text="录音机（笔）"/>
+</dic>

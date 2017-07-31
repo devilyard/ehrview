@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="本地户口"/>
+  <item key="2" text="非本地户口"/>
+  <item key="3" text="非本地户口居住一年以上"/>
+</dic>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="0" text="未做"/>
+  <item key="1" text="符合"/>
+  <item key="2" text="不符合"/>
+  <item key="3" text="不确定"/>
+</dic>

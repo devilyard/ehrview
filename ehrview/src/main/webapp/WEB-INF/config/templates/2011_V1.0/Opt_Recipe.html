@@ -1,0 +1,10 @@
+<tr th:each="opt:${doc.element('Opt_RecipeDetails').selectNodes('Opt_RecipeDetail')}">
+	<td style='text-align:left;'><span th:if="${doc.element('KFSJ') != null}" th:text="${doc.element('KFSJ').getText()}"></span></td>
+	<td style='text-align:left;'><span th:if="${opt.element('XMMC').getText() != null}" th:text="${opt.element('XMMC').getText()}"></span></td>
+	<td style='text-align:left;'><span th:if="${opt.element('JL').getText() != null}" th:text="${opt.element('JL').getText() + opt.element('DW').getText()}"></span></td>
+	<td style='text-align:left;'><span th:if="${opt.element('YYPD').attribute('localText') != null}" th:text="${opt.element('YYPD').attribute('localText').getValue()}"></span></td>
+	<td style='text-align:left;'><span th:if="${opt.element('TJMC').getText() != null}" th:text="${opt.element('TJMC').getText()}"></span></td>
+	<td style='text-align:left;'><span th:if="${opt.element('MCSL').getText() != null}" th:text="${opt.element('MCSL').getText()+ opt.element('MCDW').getText()}"></span></td>
+	<td style='text-align:left;'><span th:if="${opt.element('YYTS').getText() != null}" th:text="${opt.element('YYTS').getText()}"></span></td>
+</tr>
+			

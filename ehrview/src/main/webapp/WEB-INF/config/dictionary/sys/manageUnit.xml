@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dic id="manageUnit"> 
+  <item key="3301" text="杭州市卫生局" pyCode="hzswsj" type="R" ref="PDY10000-1"> 
+    <item key="A" type="R"/>
+    <item key="330101" text="西湖区卫生局" pyCode="xhqwsj" type="S" ref="PDY12000-4"> 
+    </item>  
+    <item key="330102" text="上城区卫生局" pyCode="scqwsj" type="S" ref="PDY11000-1"> 
+      <item key="330102001" text="清波望江街道社区卫生服务中心" pyCode="qbwjjdsqwsfwzx" type="B" ref="PDY11001-2"> 
+        <item key="33010200101" text="定安路社区团队" pyCode="dalsqtd" type="Q" ref="PDY11001-3"/>  
+        <item key="33010200102" text="在水一方社区团队" pyCode="zsyfsqtd" type="Q" ref="PDY11001-4"/>  
+        <item key="33010200103" text="近江东园社区团队" pyCode="jjdysqtd" type="Q" ref="PDY11001-5"/> 
+      </item>  
+      <item key="330102003" text="湖滨街道社区卫生服务中心" pyCode="hbjdsqwsfwzx" type="B" ref="PDY11002-3"> 
+        <item key="33010200301" text="涌金门社区团队" pyCode="yjmsqtd" type="Q" ref="PDY11002-4"/>  
+        <item key="33010200302" text="东坡路社区团队" pyCode="dplsqtd" type="Q" ref="PDY11002-5"/> 
+      </item> 
+    </item>  
+    <item key="330103" text="下城区卫生局" pyCode="xcqwsj" type="S" ref="PDY12000-4"> 
+      <item key="330103001" text="长庆潮鸣社区卫生服务中心" pyCode="zqcmsqwsfwzx" type="B" ref="PDY12001-4"> 
+        <item key="33010300102" text="所巷社区" pyCode="sxsq" type="P" ref="PDY12002-5"/>  
+        <item key="33010300101" text="浙大御跸社区" pyCode="zdybsq" type="P" ref="PDY12003-4"/> 
+      </item> 
+    </item>  
+  </item> 
+</dic>

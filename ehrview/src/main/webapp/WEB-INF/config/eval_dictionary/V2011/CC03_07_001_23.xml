@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="01" text="产力异常"/>
+  <item key="02" text="胎位异常"/>
+  <item key="03" text="产程停滞"/>
+  <item key="04" text="胎儿窘迫"/>
+  <item key="05" text="脐带脱垂"/>
+  <item key="06" text="产后出血"/>
+  <item key="07" text="羊水栓塞"/>
+  <item key="08" text="弥漫性血管内凝血"/>
+  <item key="09" text="产科休克"/>
+  <item key="10" text="子宫破裂"/>
+  <item key="99" text="其他"/>
+</dic>

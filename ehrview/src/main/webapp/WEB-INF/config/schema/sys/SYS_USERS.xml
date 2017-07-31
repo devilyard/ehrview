@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry id="SYS_USERS" alias="用户档案" sort="a.userId">
+	<item id="userId" alias="人员标识" type="string" length="50" not-null="true" pkey="true" queryable="true"/>
+	<item ref="b.personName" update="false"/>
+	<item ref="b.img" alias="" update="false" fixed="true"/>
+	<item id="cardnum" alias="证件号码" type="string" xtype="lookupfieldex" editable="true" 
+	                 colspan="2" length="25" width="150" not-null="1" update="false">
+	</item>
+	<item id="password" alias="登录密码" type="string" length="50" not-null="1" inputType="password" display="2"/>	
+	<item id="status" alias="用户状态" type="string" length="1" defaultValue="0" not-null="true">
+		<dic>
+			<item key="0" text="正常"/>
+			<item key="1" text="禁用"/>
+		</dic>
+	</item>
+	<item ref="b.gender" update="false"/>
+	<item ref="b.mobile" display="1"/>	
+	
+	<item ref="b.pyCode" />
+	<!--  item id="remark" alias="备注" type="string" length="255" colspan="3" width="250" height="50" xtype="textarea"/-->	
+	<item id="mapSign" alias="地图物理标识" type="string" length="10" display="0" />
+	<item id="lastModifyUser" alias="最后修改人" type="string" length="20"
+		defaultValue="%user.userId" display="1">
+	</item>
+	<item id="lastModifyDate" alias="最后修改日期" type="date"
+		defaultValue="%server.date.date" display="1">
+	</item>
+	<item id="userVersion" type="string" display="0">
+	    <set type="exp" run="server">['$','%server.date.timeToLong']</set>
+	</item>
+	
+	<relations>
+	 <relation type="children" entryName="SYS_Personnel">
+	   <join parent="userId" child="personId" />
+	 </relation>
+  </relations>
+</entry>

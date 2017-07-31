@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="无下肢水肿"/>
+  <item key="2" text="单侧下肢水肿"/>
+  <item key="3" text="双侧不对称下肢水肿"/>
+  <item key="4" text="双侧对称下肢水肿"/>
+</dic>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="已筛查"/>
+  <item key="2" text="未筛查"/>
+  <item key="3" text="不详"/>
+</dic>

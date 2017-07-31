@@ -1,0 +1,501 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>病案首页</title>
+<style type="text/css">
+body {
+	margin: 0px;
+	padding: 0px;
+	font-size: 12px;
+	font-family: '微软雅黑', '宋体', Helvetica, sans-serif;
+	/*background-color:#EDEDED;*/
+}
+
+.main_div{
+	padding: 10px;
+	background-color:#FFF;
+}
+
+.myTR{
+	height: 25px;
+}
+
+.mySPAN{
+	margin-left:20px;
+}
+
+.mySPAN1{
+	padding-left:5px;
+	padding-right:5px;
+	padding-top:2px;
+	padding-bottom:2px;
+	border:1px #000 solid;
+}
+
+.myTD1{
+	padding:5px;
+	border-top:2px #000 solid;
+	border-right:1px #000 solid;
+	border-bottom:1px #000 solid;
+}
+
+.myTD2{
+	padding:5px;
+	border-top:2px #000 solid;
+	border-bottom:1px #000 solid;
+}
+
+.myTD3{
+	padding:5px;
+	border-right:1px #000 solid;
+	border-bottom:1px #000 solid;
+}
+
+.myTD4{
+	padding:5px;
+	border-bottom:1px #000 solid;
+}
+
+.myTD5{
+	border-top:2px #000 solid; padding-top:10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="main_div">
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr style="font-family:'华文楷体';">
+	<td width="30%"></td>
+    <td width="40%" align="center" style="font-size:24px; font-weight:bold;">
+    	<span th:text="${doc.elementText('MedicalInstitutions')}"></span>
+    </td>
+    <td width="30%" style="font-size:16px;">
+    	（组织机构代码：<span th:text="${doc.elementText('MedicalOrgnationCode')}"></span>）
+    </td>
+</tr>
+<tr style="font-family:'黑体';">
+    <td style="font-size:16px;">医疗付费方式：<u th:text="${doc.element('MedicalCostPayTypeCode').attributeValue('display')}"></u></td>
+    <td align="center" style="font-size:36px; font-weight:bold; letter-spacing:10px;">住院病案首页</td>
+    <td></td>
+</tr>
+<tr style="font-size:16px;">
+    <td style="font-family:'黑体';">健康卡号：<u th:text="${doc.elementText('HealthCardID')}"></u></td>
+    <td align="center">第&nbsp;&nbsp;<u th:text="${doc.elementText('HospizationTimes')}"></u>&nbsp;&nbsp;次住院</td>
+    <td >住院号&nbsp;&nbsp;<u th:text="${doc.elementText('MedicalRecordID')}"></u></td>
+</tr>
+</table>
+
+<table style="margin-top:10px;" width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr class="myTR">
+	<td class="myTD5">
+    	姓名&nbsp;<u th:text="${doc.elementText('Name')}"></u>
+     </td>
+    <td class="myTD5">
+        性别&nbsp;<u th:text="${doc.element('Sex').attributeValue('display')}"></u>
+     </td>
+    <td class="myTD5">
+        出生日期&nbsp;<u th:text="${doc.elementText('BirthDateTime')}"></u>
+	 </td>
+    <td class="myTD5">        
+        年龄&nbsp;<u th:text="${doc.elementText('Age')}"></u>
+     </td>
+    <td class="myTD5">
+        国籍&nbsp;<u th:text="${doc.element('Nationality').attributeValue('display')}"></u>
+    </td>
+</tr>
+<tr class="myTR">
+	<td colspan="2">
+    	（年龄不足1周岁的）年龄&nbsp;<u th:text="${doc.elementText('MonthsAge')}"></u>月
+     </td>
+    <td colspan="2">
+        新生儿体重&nbsp;<u th:text="${doc.elementText('NeonatalBirthWeight')}"></u>克
+     </td>
+    <td>
+        新生儿入院体重&nbsp;<u th:text="${doc.elementText('NeonatalAdmissionWeight')}"></u>克
+    </td>
+</tr>
+<tr class="myTR">
+	<td colspan="3">
+    	出生地&nbsp;<u><span th:text="${doc.elementText('Province')}">${doc.Province}</span>
+                    <span th:text="${doc.elementText('City')}">${doc.City}</span>
+                    <span th:text="${doc.elementText('County')}">${doc.County}</span></u>
+     </td>
+    <td>
+        籍贯&nbsp;<u><span th:text="${doc.elementText('OriginProvince')}">${doc.OriginProvince}</span>
+                    <span th:text="${doc.elementText('OriginCity')}">${doc.OriginCity}</span></u>
+     </td>
+    <td>
+        民族&nbsp;<u th:text="${doc.element('EthnicGroup').attributeValue('display')}"></u> 
+    </td>
+</tr>
+<tr class="myTR">
+	<td colspan="2">
+    	身份证号码&nbsp;<u th:text="${doc.elementText('IDCard')}"></u> 
+    </td>
+    <td>
+        职业&nbsp;<u th:text="${doc.element('OccupationCategoryCode').attributeValue('display')}"></u> 
+    </td>
+    <td colspan="2">
+        婚姻&nbsp;<u th:text="${doc.element('MaritalStatus').attributeValue('display')}"></u> 
+    </td>
+</tr>
+<tr class="myTR">
+	<td colspan="3">
+    	 现住址&nbsp;<u><span th:text="${doc.elementText('PresentAddrPrvince')}"></span>
+        		<span th:text="${doc.elementText('PresentAddrCity')}"></span>
+                <span th:text="${doc.elementText('PresentAddrCounty')}"></span>
+                <span th:text="${doc.elementText('PresentAddrOther')}"></span></u>
+ 	</td>
+    <td>
+        电话&nbsp;<u th:text="${doc.elementText('PatientPhone')}"></u> 
+  	</td>
+    <td>
+        邮政编码&nbsp;<u th:text="${doc.elementText('PresentAddrPostalcode')}"></u> 
+    </td>
+</tr>
+<tr class="myTR">
+	<td colspan="3">
+    	户口地址&nbsp;<u><span th:text="${doc.elementText('RegisteredPermanentResidencePr')}"></span>
+        <span th:text="${doc.elementText('RegisteredPermanentResidenceCi')}"></span>
+        <span th:text="${doc.elementText('RegisteredPermanentResidenceTo')}"></span>
+        <span th:text="${doc.elementText('RegisteredPermanentResidenceOt')}"></span></u> 
+   </td>
+    <td>
+   </td>
+    <td>
+        邮政编码&nbsp;<u th:text="${doc.elementText('RegisteredPermanentResidencePo')}"></u> 
+    </td>
+</tr>
+<tr class="myTR">
+	<td colspan="3">
+    	工作单位及地址&nbsp;<u><span th:text="${doc.elementText('WorkUnit')}"></span>
+        <span th:text="${doc.elementText('WorkAddrProvince')}"></span>
+        <span th:text="${doc.elementText('WorkAddrCity')}"></span>
+        <span th:text="${doc.elementText('WorkAddrCounty')}"></span></u> 
+    </td>
+    <td>
+        电话&nbsp;<u th:text="${doc.elementText('WorkAddrPhone')}"></u> 
+    </td>
+    <td>
+        邮政编码&nbsp;<u th:text="${doc.elementText('WorkAddrPostalcode')}"></u> 
+    </td>
+</tr>
+<tr class="myTR">
+	<td>
+    	联系人姓名&nbsp;<u th:text="${doc.elementText('ContactPerson')}"></u> 
+   	</td>
+    <td>
+        关系&nbsp;<u th:text="${doc.element('RelationShipWithPatient').attributeValue('display')}"></u> 
+    </td>
+    <td colspan="2">
+        地址&nbsp;<u><span th:text="${doc.elementText('ContactPersonProvince')}"></span>
+        <span th:text="${doc.elementText('ContactPersonCity')}"></span>
+        <span th:text="${doc.elementText('ContactPersonTown')}"></span>
+        <span th:text="${doc.elementText('ContactPersonCounty')}"></span>
+        <span th:text="${doc.elementText('ContactPersonVilage')}"></span>
+        <span th:text="${doc.elementText('ContactPersonHouseNumber')}"></span></u> 
+    </td>
+    <td>
+        电话&nbsp;<u th:text="${doc.elementText('ContactPersonTel')}"></u> 
+    </td>
+</tr>
+<tr class="myTR">
+	<td colspan="5">
+    	入院途径&nbsp;<u th:text="${doc.elementText('AdmissionRoute')}"></u> 
+    </td>
+</tr>
+<tr class="myTR">
+	<td colspan="2">
+    	入院日期&nbsp;<u th:text="${doc.elementText('AdmissionDateTime')}"></u> 
+    </td>
+    <td>
+        入院科别&nbsp;<u th:text="${doc.elementText('AdmissionDeptName')}"></u> 
+    </td>
+    <td>
+        病房&nbsp;<u th:text="${doc.element('AdmissionSickroom').attributeValue('display')}"></u> 
+    </td>
+    <td>
+        转科科别&nbsp;<u th:text="${doc.elementText('TransferredDeptName')}"></u> 
+    </td>
+</tr>
+<tr class="myTR">
+	<td colspan="2">
+    	出院日期&nbsp;<u th:text="${doc.elementText('DischargeDateTime')}"></u> 
+    </td>
+    <td>
+        出院院科别&nbsp;<u th:text="${doc.elementText('DischargeDepartment')}"></u> 
+    </td>
+    <td>
+        病房&nbsp;<u th:text="${doc.element('DischargeSickRoom').attributeValue('display')}"></u>
+    </td>
+    <td>
+        实际住院<u th:text="${doc.elementText('ActualHospitalizationDays')}"></u>天
+    </td>
+</tr>
+<tr class="myTR">
+	<td colspan="3">
+    	门（急）诊诊断&nbsp;<u th:text="${doc.elementText('ClinicDiagnosis')}"></u>
+    </td>
+    <td colspan="2">
+        疾病编码&nbsp;<u th:text="${doc.elementText('ClinicWesternDiagnosisCode')}"></u>
+    </td>
+</tr>
+</table>
+
+<table style="margin-top:10px;" width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr class="myTR" style="font-size:16px;">
+	<td align="center" class="myTD1"><b>出院诊断</b></td>
+    <td align="center" class="myTD1"><b>疾病编码</b></td>
+    <td align="center" class="myTD1"><b>入院病情</b></td>
+    <td align="center" class="myTD1"><b>出院诊断</b></td>
+    <td align="center" class="myTD1"><b>疾病编码</b></td>
+    <td align="center" class="myTD2"><b>入院病情</b></td>
+</tr>
+
+<tr th:each="s,iterStat:${doc.elements('PatientDiagnose')}" class="myTR">
+	<td align="center" class="myTD3">
+		<b th:if="${iterStat.index} == 0">主要诊断：</b><span  th:if="${iterStat.index} == 0" th:text="${doc.elementText('MasterDiseaseName')}"></span>
+	</td>
+    <td align="center" class="myTD3"><span th:if="${iterStat.index} == 0" th:text="${doc.elementText('MasterDiseaseCode')}"></span></td>
+    <td align="center" class="myTD3"><span th:if="${iterStat.index} == 0" th:text="${doc.element('MasterAdmissionCondition').attributeValue('display')}"></span></td>
+    <td align="center" class="myTD3"><b th:if="${iterStat.index} == 0">其他诊断：</b><span th:text="${s.elementText('DiseaseName')}"></span></td>
+    <td align="center" class="myTD3"><span th:text="${s.elementText('DiseaseCode')}"></span></td>
+    <td align="center" class="myTD4"><span th:text="${s.element('AdmissionCondition').attributeValue('display')}"></span></td>
+</tr>
+
+<tr class="myTR">
+	<td class="myTD3" colspan="3">
+		入院病情&nbsp;<u>1.有，2.临床未确定，3.情况不明，4.无 </u></td>
+    <td class="myTD3"></td>
+    <td class="myTD3"></td>
+    <td class="myTD4"></td>
+</tr>
+</table>
+
+<table style="margin-top:10px;" width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr class="myTR">
+	<td class="myTD4">
+    	<span>损伤、中毒的外部原因&nbsp;<u th:text="${doc.elementText('OutsideReasonOfInjuryAndPoison')}"></u></span>
+        <span class="mySPAN">疾病编码&nbsp;<u th:text="${doc.elementText('OutsideReasonOfInjuryAndPoCode')}"></u></span>
+    </td>
+</tr>
+<tr class="myTR">
+	<td class="myTD4">
+    	<span>病理诊断&nbsp;<u th:text="${doc.elementText('PathologyDiseaseName')}"></u></span>
+        <span class="mySPAN">疾病编码&nbsp;<u th:text="${doc.elementText('PathologyDiseaseCode')}"></u></span>
+    </td>
+</tr>
+<tr class="myTR">
+	<td class="myTD4">
+    	<span>病理号&nbsp;<u th:text="${doc.elementText('PathologyID')}"></u></span>
+    </td>
+</tr>
+<tr class="myTR">
+	<td class="myTD4">
+    	<span>药物过敏&nbsp;<u th:text="${doc.elementText('AllergicDrug')}"></u></span>
+        <span class="mySPAN">死亡患者尸检&nbsp;<u th:text="${doc.elementText('AutopsySign')}"></u></span>
+    </td>
+</tr>
+<tr class="myTR">
+	<td class="myTD4">
+    	<span>血型&nbsp;<u th:text="${doc.element('ABOBloodCode').attributeValue('display')}"></u></span>
+        <span class="mySPAN">Rh&nbsp;<u th:text="${doc.element('RhBloodCode').attributeValue('display')}"></u></span>
+    </td>
+</tr>
+<tr class="myTR">
+	<td class="myTD4">
+    	<span>科主任&nbsp;<u th:text="${doc.element('DeptManager').attributeValue('display')}"></u></span>
+        <span class="mySPAN">主（副主）任医师&nbsp;<u th:text="${doc.element('ChiefDoctorSign').attributeValue('display')}"></u></span>
+        <span class="mySPAN">主治医师&nbsp;<u th:text="${doc.element('AttendingDoctor').attributeValue('display')}"></u></span>
+        <span class="mySPAN">住院医师&nbsp;<u th:text="${doc.element('HospizationDoctor').attributeValue('display')}"></u></span>
+    </td>
+</tr>
+<tr class="myTR">
+	<td class="myTD4">
+    	<span>责任护士&nbsp;<u th:text="${doc.element('ResponsibilityNurse').attributeValue('display')}"></u></span>
+        <span class="mySPAN">进修医师&nbsp;<u th:text="${doc.element('RefresherDoctors').attributeValue('display')}"></u></span>
+        <span class="mySPAN">实习医师&nbsp;<u th:text="${doc.element('InternDoctor').attributeValue('display')}"></u></span>
+        <span class="mySPAN">编码员&nbsp;<u th:text="${doc.element('MedicalRecordCoderSign').attributeValue('display')}"></u></span>
+    </td>
+</tr>
+<tr class="myTR">
+	<td class="myTD4">
+    	<span>病案质量&nbsp;<u th:text="${doc.element('MedicalRecordQuality').attributeValue('display')}"></u></span>
+        <span class="mySPAN">质控医师&nbsp;<u th:text="${doc.element('QualityControlDoctor').attributeValue('display')}"></u></span>
+        <span class="mySPAN">质控护士&nbsp;<u th:text="${doc.element('QualityControlSign').attributeValue('display')}"></u></span>
+        <span class="mySPAN">日期&nbsp;<u th:text="${doc.elementText('QualityControlDate')}"></u></span>
+    </td>
+</tr>
+</table>
+
+<table style="margin-top:10px;" width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr class="myTR" style="font-size:16px;">
+	<td rowspan="2" align="center" class="myTD1"><b>手术及操作编码</b></td>
+	<td rowspan="2" align="center" class="myTD1"><b>手术及操作日期</b></td>
+	<td rowspan="2" align="center" class="myTD1"><b>手术级别</b></td>
+	<td rowspan="2" align="center" class="myTD1"><b>手术及操作名称</b></td>
+	<td colspan="3" align="center" class="myTD1"><b>手术及操作医师</b></td>
+	<td rowspan="2" align="center" class="myTD1"><b>切口愈合等级</b></td>
+	<td rowspan="2" align="center" class="myTD1"><b>麻醉方式</b></td>
+	<td rowspan="2" align="center" class="myTD2"><b>麻醉医师</b></td>
+</tr>
+<tr class="myTR" style="font-size:16px;">
+	<td align="center" class="myTD3"><b>术者</b></td>
+	<td align="center" class="myTD3"><b>Ⅰ助</b></td>
+	<td align="center" class="myTD3"><b>Ⅱ助</b></td>
+</tr>
+<tr th:each="s:${doc.elements('PatientOperation')}" class="myTR">
+    <td align="center" class="myTD3"><span th:text="${s.elementText('OperationCode')}"></span></td>
+	<td align="center" class="myTD3"><span th:text="${s.elementText('OperationDateTime')}"></span></td>
+	<td align="center" class="myTD3"><span th:text="${s.element('OperationLevel').attributeValue('display')}"></span></td>
+	<td align="center" class="myTD3"><span th:text="${s.elementText('OperationName')}"></span></td>
+	<td align="center" class="myTD3"><span th:text="${s.element('OperatorSign').attributeValue('display')}"></span></td>
+	<td align="center" class="myTD3"><span th:text="${s.element('Assistant1').attributeValue('display')}"></span></td>
+	<td align="center" class="myTD3"><span th:text="${s.element('Assistant2').attributeValue('display')}"></span></td>
+	<td align="center" class="myTD3"><span th:text="${s.element('OperationIncisionHealLevel').attributeValue('display')}"></span></td>
+	<td align="center" class="myTD3"><span th:text="${s.element('AnesthesiaWay').attributeValue('display')}"></span></td>
+	<td align="center" class="myTD3"><span th:text="${s.element('AnesthesiaDoctor').attributeValue('display')}"></span></td>
+</tr>
+</table>
+
+<table style="margin-top:10px;" width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr class="myTR">
+	<td class="myTD4">
+    	离院方式&nbsp;<u th:text="${doc.element('LeaveHospitalWay').attributeValue('display')}"></u>
+    </td>
+</tr>
+<tr class="myTR">
+	<td class="myTD4">
+    	是否有出院31天内再住院计划&nbsp;<u th:text="${doc.elementText('Day31InpatientMk')}"></u>
+    </td>
+</tr>
+<tr class="myTR">
+	<td class="myTD4">
+    	<span>颅脑损伤患者昏迷时间：入院前:<u th:text="${doc.elementText('StuporTimeBeforeAdmission')}"></u>
+					小时</span>
+        <span class="mySPAN">入院后:<u th:text="${doc.elementText('StuporTimeAfterAdmission')}"></u>小时</span>
+    </td>
+</tr>
+</table>
+
+<table style="margin-top:10px;" width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr class="myTR">
+	<td style="border-top:2px #000 solid; padding-top:10px;">
+    	<b>住院费用总计（元）：</b>&nbsp;<b>总费用</b>&nbsp;<u th:text="${doc.elementText('HospizationTotalCost')}"></u>&nbsp;
+        （自付金额：&nbsp;<u th:text="${doc.elementText('HospizationTotalPersonalCost')}"></u>）
+    </td>
+</tr>
+<tr class="myTR">
+    <td>
+    	<b>1.综合医疗服务类：</b>（1）一般医疗服务费：<u th:text="${doc.elementText('GeneralMedicalServicesCost')}"></u>
+		（2）一般治疗操作费：<u th:text="${doc.elementText('GeneralTreatmentOfoperationCos')}"></u>
+		（3）护理费：<u th:text="${doc.elementText('CommonNurseCost')}"></u>
+		（4）其他费用：<u th:text="${doc.elementText('CommonOtherCost')}"></u>
+    </td>
+</tr>
+<tr class="myTR">
+    <td>
+    	<b>2.诊断类：</b>（5）病理诊断费：<u th:text="${doc.elementText('PathologicalDiagnosisCost')}"></u>
+		（6）实验室诊断费：<u th:text="${doc.elementText('LaboratoryDiagnosisCost')}"></u>
+		（7）影像学诊断费：<u th:text="${doc.elementText('ImagingDiagnosisCost')}"></u>
+		（8）临床诊断项目费：<u th:text="${doc.elementText('ClinicalDiagnosisItemCost')}"></u>
+    </td>
+</tr>
+<tr class="myTR">
+    <td>
+    	<b>3.治疗类：</b>（9）非手术治疗项目费：<u th:text="${doc.elementText('NonOperationTreatmentItemCost')}"></u>
+    	（临床物理治疗费：<u th:text="${doc.elementText('ClinicalPhysicalTreatmentCost')}"></u>）
+		（10）手术治疗费：<u th:text="${doc.elementText('OperationTreatmentCost')}"></u>
+		（麻醉费：<u th:text="${doc.elementText('AnestheticCost')}"></u>&nbsp;手术费：<u th:text="${doc.elementText('OperationCost')}"></u>）
+    </td>
+</tr>
+<tr class="myTR">
+    <td>
+    	<b>4.康复类：</b>（11）康复费：<u th:text="${doc.elementText('RecoveryCost')}"></u>
+    </td>
+</tr>
+<tr class="myTR">
+    <td>
+    	<b>5.中医类：</b>（12）中医治疗费：<u th:text="${doc.elementText('ChineseMedicineTreatmentCost')}"></u>
+    </td>
+</tr>
+<tr class="myTR">
+    <td>
+    	<b>6.西医类：</b>（13）西药费：<u th:text="${doc.elementText('WesternMedicineCost')}"></u>
+    	（抗菌药物费用：<u th:text="${doc.elementText('AntibacterialDrugCost')}"></u>）
+    </td>
+</tr>
+<tr class="myTR">
+    <td>
+    	<b>7.中药类：</b>（14）中成药费：<u th:text="${doc.elementText('InMedicineCost')}"></u>
+        	（15）中草药费：<u th:text="${doc.elementText('ChineseHerbalMedicineCost')}"></u>
+    </td>
+</tr>
+<tr class="myTR">
+    <td>
+    	<b>8.血液和血液制品类：</b>（16）血费：<u th:text="${doc.elementText('BloodCost')}"></u>
+        （17）白蛋白类制品费：<u th:text="${doc.elementText('AlbuminProductCost')}"></u>
+        （18）球蛋白类制品费：<u th:text="${doc.elementText('GlobulinsProductCost')}"></u>
+        （19）凝血因子类制品费：<u th:text="${doc.elementText('CoagulationFactorProductCost')}"></u>
+        （20）细胞因子类制品费：<u th:text="${doc.elementText('CytokineProductsCost')}"></u>
+    </td>
+</tr>
+<tr class="myTR">
+    <td>
+    	<b>9.耗材类：</b>（21）检查用一次性医用材料费：<u th:text="${doc.elementText('DisposableMedicalMeterialCost')}"></u>
+        （22）治疗用一次性医用材料费：<u th:text="${doc.elementText('DisposableMedicalMaterialsCost')}"></u>
+        （23）手术用一次性医用材料费：<u th:text="${doc.elementText('OperationMedcDisposCos')}"></u>
+    </td>
+</tr>
+<tr class="myTR">
+    <td>
+    	<b>10.其他类：</b>（24）其他费：<u th:text="${doc.elementText('OtherCost')}"></u>
+    </td>
+</tr>
+</table>
+
+<!--
+<table style="margin-top:10px;" width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr class="myTR">
+	<td style="border-top:2px #000 solid; padding-top:10px;">
+    	主要诊断治愈好转情况：1.治愈&nbsp;2.好转&nbsp;3.未愈
+	</td>
+</tr>
+<tr class="myTR">
+	<td>
+    	诊断符合情况：1.门诊与出院&nbsp;2.入院与出院&nbsp;3.术前与术后&nbsp;4.临床与病理
+
+        5.放射与病理&nbsp;（0.未做&nbsp;1.符合&nbsp;2.不符合&nbsp;3.不确定）
+	</td>
+</tr>
+<tr class="myTR">
+	<td>
+    	抢救情况：抢救<u>1</u>次&nbsp;成功<u>1</u>次
+	</td>
+</tr>
+<tr class="myTR">
+	<td>
+    	临床路径管理：1.完成&nbsp;2.变异&nbsp;3.退出&nbsp;4.未入	
+    </td>
+</tr>
+</table>
+-->
+
+<table style="margin-top:10px;" width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+<tr class="myTR">
+	<td style="border-top:2px #000 solid; padding-top:10px;">
+    <b>说明:</b>
+    <span>（一）医疗付费方式 1.城镇职工基本医疗保险 2.城镇居民基本医疗保险 3.新型农村合作医疗
+			4.贫困救助 5.商业医疗保险 6.全公费 7.全自费 8.其他社会保险 9.其他 </span>
+    <br /><br/>
+	<span >（二）凡可由医院信息系统提供住院费用清单的，住院病案首页中可不填写&quot;住院费用&quot;。</span>
+	</td>
+</tr>
+</table>
+</div>
+
+</body>
+</html>

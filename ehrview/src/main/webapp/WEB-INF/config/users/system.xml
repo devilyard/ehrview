@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<user id="system" name="管理员" password="202cb962ac59075b964b07152d234b70">
+  <proptities>
+    <p name="gender">1</p>
+    <p name="gender_text">男</p>
+    <p name="status">0</p>
+    <p name="img">photo/system.jpg</p>
+    <p name="status_text">正常</p>
+    <p name="pyCode">xtgly</p>
+    <p name="remark"/>
+    <p name="lastModifyUser">system</p>
+    <p name="lastModifyDate">2011-12-30</p>
+  </proptities>
+  <roles>
+    <role id="system" unit="330101"/>
+  </roles>
+</user>

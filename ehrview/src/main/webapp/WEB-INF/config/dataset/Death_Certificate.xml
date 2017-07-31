@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<BasicDataset>
+	<DataSet code="HDSB03.09" displayName="死亡医学证明" codeSystem="WS375-2012" codeSystemName="疾病控制基本数据集"/>
+	<HDSB03.09.001 dataelementName="死亡医学证明编号" value="" datatype="not-null"/>
+	<HDSB03.09.002 dataelementName="本人姓名" value="" datatype="A1..50"/>
+	<HDSB03.09.003 dataelementName="性别代码" code="" datatype="N1" dic="GB_T2261_1" displayName="男性" codeSystem="2.16.156.10011.2.3.3.4" codeSystemName="生理性别代码表(GB/T 2261.1)"/>
+	<HDSB03.09.004 dataelementName="民族" code="" datatype="N2" dic="GB_T3304" displayName="汉族" codeSystem="2.16.156.10011.2.3.3.3" codeSystemName="民族类别代码表(GB 3304)"/>
+	<HDSB03.09.005 dataelementName="职业类别代码" code="" datatype="AN1..3" dic="GB_T6565" displayName="社会学研究人员" codeSystem="2.16.156.10011.2.3.3.7" codeSystemName="职业类别代码表(GB/T 6565)"/>
+	<HDSB03.09.006 dataelementName="身份证件类别代码" code="" datatype="N2" dic="CV02_01_101" displayName="居民身份证" codeSystem="2.16.156.10011.2.3.1.1" codeSystemName="身份证件类别代码表"/>
+	<HDSB03.09.007 dataelementName="身份证件号码" value="" datatype="AN18"/>
+	<HDSB03.09.008 dataelementName="婚姻状况代码" datatype="N2" code="" dic="GB_T2261_2" displayName="再婚" codeSystem="2.16.156.10011.2.3.3.5" codeSystemName="婚姻状况代码表(GB/T 2261.2)"/>
+	<HDSB03.09.009 dataelementName="学历代码" code="" datatype="N2" dic="GB_T4658" displayName="博士研究生肄业" codeSystem="2.16.156.10011.2.3.3.6" codeSystemName="学历代码表(GB/T 4658)"/>
+	<HDSB03.09.010 dataelementName="工作单位名称" value="" datatype="AN1..70"/>
+	<HDSB03.09.011 dataelementName="出生日期" value="" datatype="D8"/>
+	<HDSB03.09.012 dataelementName="死亡日期时间" value="" datatype="D8"/>
+	<HDSB03.09.013 dataelementName="实足年龄" value="" datatype="AN1..5"/>
+	<HDSB03.09.014 dataelementName="行政区划代码" code="" datatype="N6" dic="GB_T2260" displayName="宜良县" codeSystem="2.16.156.10011.2.3.3.2" codeSystemName="中华人民共和国县级及县级以上行政区划代码表(GB/T 2260)"/>
+	<HDSB03.09.015 dataelementName="户籍地址-省（自治区、直辖市）" value="" datatype="AN1..70"/>
+	<HDSB03.09.016 dataelementName="户籍地址-市（地区、州）" value="" datatype="AN1..70"/>
+	<HDSB03.09.017 dataelementName="户籍地址-县（区）" value="" datatype="AN1..70"/>
+	<HDSB03.09.018 dataelementName="户籍地址-乡（镇、街道办事处）" value="" datatype="AN1..70"/>
+	<HDSB03.09.019 dataelementName="户籍地址-村（街、路、弄等）" value="" datatype="AN1..70"/>
+	<HDSB03.09.020 dataelementName="户籍地址-门牌号码" value="" datatype="AN1..70"/>
+	<HDSB03.09.021 dataelementName="现住地址-省（自治区、直辖市）" value="" datatype="AN1..70"/>
+	<HDSB03.09.022 dataelementName="现住地址-市（地区、州）" value="" datatype="AN1..70"/>
+	<HDSB03.09.023 dataelementName="现住地址-县（区）" value="" datatype="AN1..70"/>
+	<HDSB03.09.024 dataelementName="现住地址-乡（镇、街道办事处）" value="" datatype="AN1..70"/>
+	<HDSB03.09.025 dataelementName="现住地址-村（街、路、弄等）" value="" datatype="AN1..70"/>
+	<HDSB03.09.026 dataelementName="现住地址-门牌号码" value="" datatype="AN1..70"/>
+	<HDSB03.09.027 dataelementName="联系人姓名" value="" datatype="A1..50"/>
+	<HDSB03.09.028 dataelementName="家人电话号码" value="" datatype="AN1..20"/>
+	<HDSB03.09.029 dataelementName="工作单位电话号码" value="" datatype="AN1..20"/>
+	<HDSB03.09.030 dataelementName="直接死亡原因a代码" code="" datatype="AN1..5" dic="ICD_10" displayName="急性乙型肝炎" codeSystem="2.16.156.10011.2.3.3.11" codeSystemName="ICD-10"/>
+	<HDSB03.09.031 dataelementName="发病到死亡时长a" value="" datatype="AN1..10"/>
+	<HDSB03.09.032 dataelementName="直接死亡原因b代码" code="" datatype="AN1..5" dic="ICD_10" displayName="巨细胞病毒病" codeSystem="2.16.156.10011.2.3.3.11" codeSystemName="ICD-10"/>
+	<HDSB03.09.033 dataelementName="发病到死亡时长b" value="" datatype="AN1..10"/>
+	<HDSB03.09.034 dataelementName="直接死亡原因c代码" code="" datatype="AN1..5" dic="ICD_10" displayName="皮肤癣菌病" codeSystem="2.16.156.10011.2.3.3.11" codeSystemName="ICD-10"/>
+	<HDSB03.09.035 dataelementName="发病到死亡时长c" value="" datatype="AN1..10"/>
+	<HDSB03.09.036 dataelementName="直接死亡原因d代码" code="" datatype="AN1..5" dic="ICD_10" displayName="口咽恶性肿瘤" codeSystem="2.16.156.10011.2.3.3.11" codeSystemName="ICD-10"/>
+	<HDSB03.09.037 dataelementName="发病到死亡时长d" value="" datatype="AN1..10"/>
+	<HDSB03.09.038 dataelementName="其他疾病诊断1" code="" datatype="AN1..5" dic="ICD_10" displayName="胃恶性肿瘤" codeSystem="2.16.156.10011.2.3.3.11" codeSystemName="ICD-10"/>
+	<HDSB03.09.039 dataelementName="其他疾病诊断2" code="" datatype="AN1..5" dic="ICD_10" displayName="小肠恶性肿瘤" codeSystem="2.16.156.10011.2.3.3.11" codeSystemName="ICD-10"/>
+	<HDSB03.09.040 dataelementName="其他疾病诊断3" code="" datatype="AN1..5" dic="ICD_10" displayName="髓样白血病" codeSystem="2.16.156.10011.2.3.3.11" codeSystemName="ICD-10"/>
+	<HDSB03.09.041 dataelementName="根本死因代码" code="" datatype="AN1..5" dic="ICD_10" displayName="联合免疫缺陷" codeSystem="2.16.156.10011.2.3.3.11" codeSystemName="ICD-10"/>
+	<HDSB03.09.042 dataelementName="主要致死疾病的最高诊断机构级别代码" code="" datatype="N2" dic="CV08_10_004" displayName="省级(市)医院" codeSystem="2.16.156.10011.2.3.1.202" codeSystemName="主要致死疾病的最高诊断机构级别代码表"/>
+	<HDSB03.09.043 dataelementName="死亡医院名称" value="" datatype="AN1..70"/>
+	<HDSB03.09.044 dataelementName="死亡地点类别代码" code="" datatype="N1..2" dic="CV02_01_103" displayName="医院病房" codeSystem="2.16.156.10011.2.3.1.3" codeSystemName="死亡地点类别代码表"/>
+	<HDSB03.09.045 dataelementName="死亡最高诊断依据类别代码" datatype="N1" code="" dic="CV05_01_037" displayName="尸检" codeSystem="2.16.156.10011.2.3.1.136" codeSystemName="死亡最高诊断依据类别代码表"/>
+	<HDSB03.09.046 dataelementName="住院号" value="" datatype="AN1..10"/>
+	<HDSB03.09.047 dataelementName="填报人姓名" value="" datatype="A1..50"/>
+	<HDSB03.09.048 dataelementName="填报机构名称" value="" datatype="AN1..70"/>
+	<HDSB03.09.049 dataelementName="填报日期时间" value="" datatype="D8"/>
+</BasicDataset>

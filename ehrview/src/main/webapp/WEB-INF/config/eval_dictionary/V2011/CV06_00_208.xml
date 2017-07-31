@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="01" text="每2周"/>
+  <item key="02" text="每1个月"/>
+  <item key="03" text="每2个月"/>
+  <item key="04" text="每3个月"/>
+  <item key="05" text="每半年"/>
+  <item key="06" text="每年"/>
+  <item key="07" text="每2年"/>
+  <item key="08" text="无需"/>
+  <item key="99" text="其他"/>
+</dic>

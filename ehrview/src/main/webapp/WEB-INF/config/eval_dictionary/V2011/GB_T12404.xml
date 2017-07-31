@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="10" text="中央" comment="包括全国人大常委，中共中央，国务院各部委及其所属机构，国务院各直属机构、办事机构及其所属机构"/>
+  <item key="20" text="省" comment="包括自治区、直辖市"/>
+  <item key="40" text="市、地区" comment="包括自治州、盟、省辖市、直辖市辖区（县）"/>
+  <item key="50" text="县" comment="包括地（州、盟）辖市、省辖市辖区、自治县（旗）、旗、县级市"/>
+  <item key="60" text="街道、镇、乡"/>
+  <item key="61" text="街道"/>
+  <item key="62" text="镇"/>
+  <item key="63" text="乡"/>
+  <item key="70" text="居民、村民委员会"/>
+  <item key="71" text="居民委员会"/>
+  <item key="72" text="村民委员会"/>
+  <item key="90" text="其他"/>
+</dic>

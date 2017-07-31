@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="未查/不详"/>
+  <item key="2" text="阴性"/>
+  <item key="3" text="旧性"/>
+  <item key="9" text="监测结果不确定"/>
+</dic>

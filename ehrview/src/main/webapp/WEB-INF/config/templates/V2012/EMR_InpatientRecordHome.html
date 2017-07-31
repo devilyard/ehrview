@@ -1,0 +1,559 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>病案首页</title>
+</head>
+
+<body style="padding-top: 20px; font-size: 12px;">
+	<style type="text/css">
+* {
+	font-family: "微软雅黑", "宋体";
+	font-size: 12px;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	color: #232323
+}
+
+table {
+	border-collapse: collapse;
+}
+
+.my li {
+	padding-right: 20px;
+	float: left;
+	display: inline;
+}
+
+body {
+	background-color: #ffffff
+}
+
+.my table {
+	text-align: left;
+	margin-bottom: 20px;
+}
+
+.my td {
+	padding-left: 6px;
+	line-height: 24px;
+	border-bottom: #eee solid 1px;
+}
+
+.two table {
+	border-bottom: #ccc solid 1px;
+	border-left: #ccc solid 1px;
+	border-top: #ccc solid 1px;
+	text-align: left;
+	margin-bottom: 20px;
+}
+
+.two td {
+	border-right: #ccc solid 1px;
+	padding: 4px;
+	border-bottom: #ccc dotted 1px;
+}
+
+u {
+	border-bottom: 1px #666 dotted;
+	text-decoration: none;
+	margin-right: 20px;
+	padding-left: 5px;
+}
+
+.linenone {
+	border-bottom: none;
+}
+</style>
+	<div class="my">
+		<table width="100%" border="0" align="center" cellpadding="0"
+			cellspacing="0">
+			<tr>
+				<td align="center"><strong>医疗机构</strong><u
+					style="margin-right: 100px;"
+					th:if="${doc.element('PrepareAcceptHospitalName') != null}"
+					th:text="${doc.element('PrepareAcceptHospitalName').getText()}"></u>（<strong>组织机构代码：</strong><u></u>）</td>
+			</tr>
+			<tr>
+				<td align="center"
+					style="font-size: 24px; border-bottom: 4px #09F solid; height: 40px; line-height: 50px;"
+					th:text="${hospital == null ?'住院病案首页':hospital + '住院病案首页'}"></td>
+
+			</tr>
+			<tr>
+				<td style="height: 1px;"></td>
+			</tr>
+			<tr>
+				<td height="10" style="border-top: 1px #09f solid;"></td>
+			</tr>
+			<tr>
+				<td height="24"><strong>医疗付费方式：</strong><u
+					th:if="${doc.element('MedicalPayment').attribute('localText')!=null}"
+					th:text="${doc.element('MedicalPayment').attribute('localText').getValue()}"></u></td>
+			</tr>
+			<tr>
+				<td height="24">健康卡号：<u
+					th:if="${doc.element('HealthCardID') != null}"
+					th:text="${doc.element('HealthCardID').getText()}"></u> 第<strong><u
+						th:if="${doc.element('ZYCS') != null}"
+						th:text="${doc.element('ZYCS').getText()}"></u></strong>次住院 病案号：<u
+					th:if="${doc.element('MedicalRecordID') != null}"
+					th:text="${doc.element('MedicalRecordID').getText()}"></u>
+				</td>
+			</tr>
+			<tr>
+				<td height="24"><li><strong>姓名：</strong><u
+						th:if="${doc.element('XM') != null}"
+						th:text="${doc.element('XM').getText()}"></u></li>
+					<li><strong>性别：</strong><u
+						th:if="${doc.element('Sex') != null}"
+						th:text="${doc.element('Sex')} == '1'?'男':'女'"></u></li>
+					<li><strong>出生日期：</strong><u
+						th:if="${doc.element('CSRQSJ') != null}"
+						th:text="${doc.element('CSRQSJ').getText()}"></u></li>
+					<li><strong>年龄：</strong><u
+						th:if="${doc.element('NL') != null}"
+						th:text="${doc.element('NL').getText()}"></u></li>
+					<li><strong>国籍：</strong><u
+						th:if="${doc.element('GJ') != null and doc.element('GJ').attribute('localText') != null}"
+						th:text="${doc.element('GJ').attribute('localText').getValue()}"></u></li></td>
+			</tr>
+			<tr>
+				<td height="24"><strong>出生地：</strong><u
+					th:if="${doc.element('Province') != null}"
+					th:text="${doc.element('Province').getText()}"></u><strong>籍贯：</strong><u
+					th:if="${doc.element('City') != null}"
+					th:text="${doc.element('City').getText()}"></u>省（区、市） <strong>民族：</strong><u
+					th:text="${nationCode_text}"></u></td>
+			</tr>
+			<tr>
+				<td height="24"><strong>身份证号：</strong><u th:text="${idCard}"></u>
+					<strong>职业：</strong><u
+					th:if="${doc.element('ZY') != null and doc.element('ZY').attribute('localText') != null}"
+					th:text="${doc.element('ZY').attribute('localText').getValue()}">
+				</u><strong>婚姻：</strong><u
+					th:if="${doc.element('HY') != null and doc.element('HY').attribute('localText') != null}"
+					th:text="${doc.element('HY').attribute('localText').getValue()}"></u></td>
+			</tr>
+			<tr>
+				<td height="24"><strong>现住址：</strong><u
+					th:if="${doc.element('PresentAddrCity') != null}"
+					th:text="${doc.element('PresentAddrCity').getText()}"></u><strong>电话:</strong><u
+					th:if="${doc.element('PatientPhone') != null}"
+					th:text="${doc.element('PatientPhone').getText()}"></u><strong>邮编：</strong><u
+					th:if="${doc.element('PresentAddrPostalcode') != null}"
+					th:text="${doc.element('PresentAddrPostalcode').getText()}"></u></td>
+			</tr>
+			<tr>
+				<td height="24"><strong>户口地址：</strong><u
+					th:if="${doc.element('HKDZ') != null}"
+					th:text="${doc.element('HKDZ').getText()}"></u><strong>邮编：</strong><u
+					th:if="${doc.element('HKDZYB') != null}"
+					th:text="${doc.element('HKDZYB').getText()}"></u></td>
+			</tr>
+			<tr>
+				<td height="24"><strong>工作单位及地址：</strong> <u
+					th:if="${doc.element('GZDWJDZ') != null}"
+					th:text="${doc.element('GZDWJDZ').getText()}"></u><strong>电话:</strong><u
+					th:if="${doc.element('WorkAddrPhone') !=null}"
+					th:text="${doc.element('WorkAddrPhone').getText()}"></u> <strong>邮编：</strong>
+					<u th:if="${doc.element('GZDDYB') != null}"
+					th:text="${doc.element('GZDDYB').getText()}"></u></td>
+			</tr>
+			<tr>
+				<td height="24"><strong>联系人姓名：</strong><u
+					th:if="${doc.element('LXRXM') != null}"
+					th:text="${doc.element('LXRXM').getText()}"></u> <strong>关系：</strong><u
+					th:if="${doc.element('LXRYHZGX') != null and doc.element('LXRYHZGX').attribute('localText') != null}"
+					th:text="${doc.element('LXRYHZGX').attribute('localText').getValue()}"></u>
+					<strong>地址：</strong><u th:if="${doc.element('LXRDZ') != null}"
+					th:text="${doc.element('LXRDZ').getText()}"></u> <strong>电话:</strong><u
+					th:if="${doc.element('LXRDH') != null}"
+					th:text="${doc.element('LXRDH').getText()}"></u></td>
+			</tr>
+			<tr>
+				<td height="24"><strong>入院途径：</strong><u
+					th:if="${doc.element('AdmissionWay')  != null and doc.element('AdmissionWay').attribute('localText') != null}"
+					th:text="${doc.element('AdmissionWay').attribute('localText').getValue()}"></u></td>
+			</tr>
+			<tr>
+				<td height="24"><strong>治疗类别：</strong><u></u></td>
+			</tr>
+			<tr>
+				<td height="24"><strong>入院时间：</strong><u
+					th:if="${doc.element('AdmissionDateTime') != null}"
+					th:text="${doc.element('AdmissionDateTime').getText()}"></u><strong>入院科别：</strong><u
+					th:if="${doc.element('RYKB') != null}"
+					th:text="${doc.element('RYKB').getText()}"></u><strong>病房：</strong><u
+					th:if="${doc.element('AdmissionSickroom') != null}"
+					th:text="${doc.element('AdmissionSickroom').getText()}"></u><strong>转科科别：</strong><u
+					th:if="${doc.element('TransferredDeptName') != null}"
+					th:text="${doc.element('TransferredDeptName').getText()}"></u></td>
+			</tr>
+			<tr>
+				<td height="24"><strong>出院时间：</strong><u
+					th:if="${doc.element('DischargeDateTime') != null}"
+					th:text="${doc.element('DischargeDateTime').getText()}"></u><strong>出院科别：</strong><u
+					th:if="${doc.element('CYKB') != null}"
+					th:text="${doc.element('CYKB').getText()}"></u><strong>病房：</strong><u
+					th:if="${doc.element('DischargeSickRoom') != null}"
+					th:text="${doc.element('DischargeSickRoom').getText()}"></u><strong>实际住院：</strong><u
+					th:if="${doc.element('ActualHospitalizationDays') != null}"
+					th:text="${doc.element('ActualHospitalizationDays').getText()}"></u>天</td>
+			</tr>
+			<tr>
+				<td height="24"><strong>门（急）诊诊断（中医诊断）：</strong><u></u><strong>疾病编码：</strong><u></u></td>
+			</tr>
+			<tr>
+				<td height="24"><strong>门（急）诊诊断（西医诊断）：</strong><u
+					th:if="${doc.element('ClinicDiagnosis') != null}"
+					th:text="${doc.element('ClinicDiagnosis').getText()}"></u><strong>疾病编码：</strong><u
+					th:if="${doc.element('ClinicWesternDiagnosisCode') != null}"
+					th:text="${doc.element('ClinicWesternDiagnosisCode').getText()}"></u></td>
+			</tr>
+			<tr>
+				<td height="24"><strong>实施临床路径</strong>：<u></u> <strong>使用医疗机构中药制剂：</strong><u></u></td>
+			</tr>
+			<tr>
+				<td height="24"><strong>使用中医诊疗设备：</strong><u> </u> <strong>使用中医诊疗技术：</strong><u></u><strong>辨证施护：</strong><u></u></td>
+			</tr>
+		</table>
+	</div>
+	<div class="two">
+		<table width="100%" border="0" align="center" cellpadding="0"
+			cellspacing="0">
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>出院中医诊断 </strong></td>
+				<td bgcolor="#CAE2F7"><strong>疾病编码 </strong></td>
+				<td bgcolor="#CAE2F7"><strong>出院病情 </strong></td>
+				<td bgcolor="#CAE2F7"><strong>出院西医诊断 </strong></td>
+				<td bgcolor="#CAE2F7"><strong>疾病编码 </strong></td>
+				<td bgcolor="#CAE2F7"><strong>出院病情 </strong></td>
+			</tr>
+			<tr>
+				<td><strong>主病 </strong></td>
+				<td></td>
+				<td></td>
+				<td><strong>主要诊断：</strong><span
+					th:if="${doc.element('MasterDiseaseName') != null}"
+					th:text="${doc.element('MasterDiseaseName').getText()}"></span></td>
+				<td th:if="${doc.element('MasterDiseaseCode') != null}"
+					th:text="${doc.element('MasterDiseaseCode').getText()}"></td>
+				<td
+					th:if="${doc.element('MasterDischargePrognosisCondit').attribute('localText') != null}"
+					th:text="${doc.element('MasterDischargePrognosisCondit').attribute('localText').getValue()}"></td>
+			</tr>
+			<tr>
+				<td><strong>主证 </strong></td>
+				<td></td>
+				<td></td>
+				<td><strong>其他诊断：</strong><span
+					th:if="${doc.element('Ipt_LeaveDiagnosis_news') != null and doc.element('Ipt_LeaveDiagnosis_new') != null}"
+					th:text="${doc.element('Ipt_LeaveDiagnosis_new').element('CYQTZDJBMC').getText()}"></span></td>
+				<td
+					th:if="${doc.element('Ipt_LeaveDiagnosis_news') != null and doc.element('Ipt_LeaveDiagnosis_new') != null}"
+					th:text="${doc.element('Ipt_LeaveDiagnosis_news').element('Ipt_LeaveDiagnosis_new').element('CYQTZDJBBM').getText()}"></td>
+				<td
+					th:if="${doc.element('Ipt_LeaveDiagnosis_news') != null and doc.element('Ipt_LeaveDiagnosis_new') != null}"
+					th:text="${doc.element('Ipt_LeaveDiagnosis_news').element('Ipt_LeaveDiagnosis_new').element('CYZDQTZDCYQK').getText()}"></td>
+			</tr>
+			<tr>
+				<td colspan="3"><strong>入院病情：</strong><u
+					th:if="${doc.element('MasterAdmissionCondition').attribute('localText') != null}"
+					th:text="${doc.element('MasterAdmissionCondition').attribute('localText').getValue()}"></u></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td colspan="6" class="linenone"><strong>损伤、中毒的外部原因:</strong><u
+					th:if="${doc.element('OutsideReasonOfInjuryAndPoison') != null}"
+					th:text="${doc.element('OutsideReasonOfInjuryAndPoison').getText()}"></u><strong>
+						疾病编码: </strong><u
+					th:if="${doc.element('OutsideReasonOfInjuryAndPoCode') != null}"
+					th:text="${doc.element('OutsideReasonOfInjuryAndPoCode').getText()}"></u></td>
+			</tr>
+			<tr>
+				<td colspan="6"><span class="linenone"><strong>病理诊断：</strong><u
+						th:if="${doc.element('PathologyDiseaseName') != null}"
+						th:text="${doc.element('PathologyDiseaseName').getText()}"></u><br />
+						<strong>疾病编码:</strong><u
+						th:if="${doc.element('PathologyDiseaseCode') != null}"
+						th:text="${doc.element('PathologyDiseaseCode').getText()}"></u><strong>病理号:</strong><u
+						th:if="${doc.element('PathologyID') != null}"
+						th:text="${doc.element('PathologyID').getText()}"></u></span></td>
+			</tr>
+			<tr>
+				<td colspan="6"><strong>药物过敏：</strong><u
+					th:if="${doc.element('AllergicDrug').attribute('localText') != null}"
+					th:text="${doc.element('AllergicDrug').attribute('localText').getValue()}">
+				</u><strong>死亡患者尸检:</strong><u
+					th:if="${doc.element('AutopsySign').attribute('localText') != null}"
+					th:text="${doc.element('AutopsySign').attribute('localText').getValue()}"></u></td>
+			</tr>
+			<tr>
+				<td colspan="6"><strong>血型：</strong><u
+					th:if="${doc.element('ABOXX').attribute('localText')!=null}"
+					th:text="${doc.element('ABOXX').attribute('localText').getValue()}"></u><strong>Rh：</strong><u
+					th:if="${doc.element('RHXX').attribute('localText')!=null}"
+					th:text="${doc.element('RHXX').attribute('localText').getValue()}"></u></td>
+			</tr>
+		</table>
+		<table width="100%" border="0" align="center" cellpadding="0"
+			cellspacing="0">
+			<tr>
+				<td colspan="8" bgcolor="#CAE2F7"><strong>相关人员签名</strong></td>
+			</tr>
+			<tr>
+				<td><strong>科主任</strong></td>
+				<td th:if="${doc.element('KZRXM') != null}"
+					th:text="${doc.element('KZRXM').getText()}"></td>
+				<td><strong>主任（副主任）医师</strong></td>
+				<td th:if="${doc.element('ZFZRYSXM') != null}"
+					th:text="${doc.element('ZFZRYSXM').getText()}"></td>
+				<td><strong>主治医师</strong></td>
+				<td th:if="${doc.element('ZZYSXM') != null}"
+					th:text="${doc.element('ZZYSXM').getText()}"></td>
+				<td><strong>住院医师</strong></td>
+				<td th:if="${doc.element('ZYYSXM') != null}"
+					th:text="${doc.element('ZYYSXM').getText()}"></td>
+			</tr>
+			<tr>
+				<td><strong>责任护士</strong></td>
+				<td th:if="${doc.element('ResponsibilityNurse') != null}"
+					th:text="${doc.element('ResponsibilityNurse').getText()}"></td>
+				<td><strong>进修医师 </strong></td>
+				<td th:if="${doc.element('JXYSXM') != null}"
+					th:text="${doc.element('JXYSXM').getText()}"></td>
+				<td><strong>实习医师</strong></td>
+				<td th:if="${doc.element('InternDoctor') != null}"
+					th:text="${doc.element('InternDoctor').getText()}"></td>
+				<td><strong>编码员 </strong></td>
+				<td th:if="${doc.element('MedicalRecordCoderSign') != null}"
+					th:text="${doc.element('MedicalRecordCoderSign').getText()}"></td>
+			</tr>
+			<tr>
+				<td><span style="border-bottom: none;"><strong>病案质量</strong></span></td>
+				<td><span style="border-bottom: none;"
+					th:if="${doc.element('MedicalRecordQuality').attribute('localText')!=null}"
+					th:text="${doc.element('MedicalRecordQuality').attribute('localText').getValue()}"></span></td>
+				<td><span style="border-bottom: none;"><strong>质控医师</strong></span></td>
+				<td th:if="${doc.element('QualityControlDoctor') != null}"
+					th:text="${doc.element('QualityControlDoctor').getText()}"></td>
+				<td><span style="border-bottom: none;"><strong>质控护士</strong></span></td>
+				<td th:if="${doc.element('QualityControlSign') != null}"
+					th:text="${doc.element('QualityControlSign').getText()}"></td>
+				<td><span style="border-bottom: none;"><strong>质控日期</strong></span></td>
+				<td th:if="${doc.element('QualityControlDate') != null}"
+					th:text="${doc.element('QualityControlDate').getText()}"></td>
+			</tr>
+		</table>
+	</div>
+	<div align="left" class="two">
+		<table width="100%" border="0" align="center" cellpadding="0"
+			cellspacing="0">
+			<tr>
+				<td rowspan="2" bgcolor="#CAE2F7"><strong>手术及 </strong> <strong>操作编码</strong></td>
+				<td rowspan="2" bgcolor="#CAE2F7"><strong>手术及 </strong> <strong>操作日期</strong></td>
+				<td rowspan="2" bgcolor="#CAE2F7"><strong>手术级别 </strong></td>
+				<td rowspan="2" bgcolor="#CAE2F7"><strong>手术及操作名称 </strong></td>
+				<td colspan="3" bgcolor="#CAE2F7"><strong>手术及操作医师 </strong></td>
+				<td rowspan="2" bgcolor="#CAE2F7"><strong>切口愈合等级 </strong></td>
+				<td rowspan="2" bgcolor="#CAE2F7"><strong>麻醉方式 </strong></td>
+				<td rowspan="2" bgcolor="#CAE2F7"><strong>麻醉</strong><strong>医师
+				</strong></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>术者 </strong></td>
+				<td bgcolor="#CAE2F7"><strong>Ⅰ助 </strong></td>
+				<td bgcolor="#CAE2F7"><strong>Ⅱ助</strong></td>
+			</tr>
+			<tr>
+				<td th:if="${doc.element('Ipt_Operation_new') != null}"
+					th:text="${doc.element('Ipt_Operation_new').element('SSCZDM').getText()}"></td>
+				<td th:if="${doc.element('Ipt_Operation_new') != null}"
+					th:text="${doc.element('Ipt_Operation_new').element('SSCZRQSJ').getText()}"></td>
+				<td></td>
+				<td th:if="${doc.element('Ipt_Operation_new') != null}"
+					th:text="${doc.element('Ipt_Operation_new').element('SSCZMC').getText()}"></td>
+				<td
+					th:if="${doc.element('Ipt_Operation_new') != null and doc.element('SSYSGH').attribute('localText')!=null}"
+					th:text="${doc.element('Ipt_Operation_new').element('SSYSGH').attribute('localText').getValue()}"></td>
+				<td
+					th:if="${doc.element('Ipt_Operation_new') != null and doc.element('SSZSIGH').attribute('localText')!=null}"
+					th:text="${doc.element('Ipt_Operation_new').element('SSZSIGH').attribute('localText').getValue()}"></td>
+				<td
+					th:if="${doc.element('Ipt_Operation_new') != null and doc.element('SSZSIIGH').attribute('localText')!=null}"
+					th:text="${doc.element('Ipt_Operation_new').element('SSZSIIGH').attribute('localText').getValue()}"></td>
+				<td
+					th:if="${doc.element('Ipt_Operation_new') != null  and doc.element('SSQKYHDJ').attribute('localText')!=null}"
+					th:text="${doc.element('Ipt_Operation_new').element('SSQKYHDJ').attribute('localText').getValue()}"></td>
+				<td th:if="${doc.element('Ipt_Operation_new') != null}"
+					th:text="${doc.element('Ipt_Operation_new').element('MZFFMC').getText()}"></td>
+				<td
+					th:if="${doc.element('Ipt_Operation_new') != null and doc.element('SSYSGH').attribute('MZYSXM')!=null}"
+					th:text="${doc.element('Ipt_Operation_new').element('MZYSXM').attribute('localText').getValue()}"></td>
+			</tr>
+
+		</table>
+	</div>
+	<div class="my">
+		<table width="100%" border="0" align="center" cellpadding="0"
+			cellspacing="0">
+			<tr>
+				<td height="24"><strong>离院方式：</strong><u
+					th:if="${doc.element('DischargeMethods') .attribute('localText')!=null}"
+					th:text="${doc.element('DischargeMethods') .attribute('localText').getValue()}"></u></td>
+			</tr>
+			<tr>
+				<td height="24"><strong>是否有出院31天内再住院计划：</strong><u
+					th:if="${doc.element('Day31InpatientAim') != null}"
+					th:text="${doc.element('Day31InpatientAim').getText()}"></u></td>
+			</tr>
+			<tr>
+				<td height="24"><strong>颅脑损伤患者昏迷时间：</strong> 入院前:<u
+					th:if="${doc.element('StuporTimeBeforeAdmission') != null}"
+					th:text="${doc.element('StuporTimeBeforeAdmission').getText()}"></u>
+					小时&nbsp; 入院后:<u
+					th:if="${doc.element('StuporTimeAfterAdmission') != null}"
+					th:text="${doc.element('StuporTimeAfterAdmission').getText()}"></u>小时&nbsp;</td>
+			</tr>
+			<tr>
+				<td height="24"><strong>住院费用（元）：</strong>总费用￥<u><strong
+						style="color: #F00"
+						th:if="${doc.element('HospizationTotalCost') != null}"
+						th:text="${doc.element('HospizationTotalCost').getText()}"></strong></u>（自付金额：<u
+					style="color: #F00"
+					th:if="${doc.element('HospizationTotalPersonalCost') != null}"
+					th:text="${doc.element('HospizationTotalPersonalCost').getText()}"></u>）
+				</td>
+			</tr>
+			<tr>
+				<td height="24"><strong>1.</strong><strong>综合医疗服务类：</strong>（1）一般医疗服务费：<u
+					style="color: #F00"
+					th:if="${doc.element('GenerMediServCharge') != null}"
+					th:text="${doc.element('GenerMediServCharge').getText()}"></u>（中医辨证论治费：<u
+					style="color: #F00"></u>中医辨证论治会诊费：<u style="color: #F00"></u>）（2）一般治疗操作费：<u
+					style="color: #F00"
+					th:if="${doc.element('GenerTreatHandlingFee') != null}"
+					th:text="${doc.element('GenerTreatHandlingFee').getText()}"></u>（3）护理费：<u
+					style="color: #F00" th:if="${doc.element('Nurse') != null}"
+					th:text="${doc.element('Nurse').getText()}"></u>（4）其他费用：<u
+					style="color: #F00" th:if="${doc.element('OtherFee') != null}"
+					th:text="${doc.element('OtherFee').getText()}"></u></td>
+			</tr>
+			<tr>
+				<td height="24"><strong>2.</strong><strong>诊断类：</strong>（5）病理诊断费：<u
+					style="color: #F00"
+					th:if="${doc.element('PathologicalFee') != null}"
+					th:text="${doc.element('PathologicalFee').getText()}"></u>（6）实验室诊断费：<u
+					style="color: #F00" th:if="${doc.element('LaboratoryFee') != null}"
+					th:text="${doc.element('LaboratoryFee').getText()}"></u>（7）影像学诊断费：<u
+					style="color: #F00" th:if="${doc.element('ImagingFee') != null}"
+					th:text="${doc.element('ImagingFee').getText()}"></u>（8）临床诊断项目费：<u
+					style="color: #F00"
+					th:if="${doc.element('ClinicalDiagnosisFee') != null}"
+					th:text="${doc.element('ClinicalDiagnosisFee').getText()}"></u></td>
+			</tr>
+			<tr>
+				<td height="24"><strong>3.</strong><strong>治疗类：</strong>（9）非手术治疗项目费：<u
+					style="color: #F00"
+					th:if="${doc.element('NonoperativeTreatFee') != null}"
+					th:text="${doc.element('NonoperativeTreatFee').getText()}"></u>（临床物理治疗费：<u
+					style="color: #F00"
+					th:if="${doc.element('ClinicalPhysicalTreatment') != null}"
+					th:text="${doc.element('ClinicalPhysicalTreatment').getText()}"></u>）<u
+					style="color: #F00"></u>（10）手术治疗费：<u style="color: #F00"
+					th:if="${doc.element('SurgicalTreatment') != null}"
+					th:text="${doc.element('SurgicalTreatment').getText()}"></u>（麻醉费：<u
+					style="color: #F00" th:if="${doc.element('EstheticFee') != null}"
+					th:text="${doc.element('EstheticFee').getText()}"></u>手术费：<u
+					style="color: #F00" th:if="${doc.element('OperationFee') != null}"
+					th:text="${doc.element('OperationFee').getText()}"></u>）</td>
+			</tr>
+			<tr>
+				<td height="24"><strong>4.</strong><strong>康复类：</strong>（11）康复费：<u
+					style="color: #F00"
+					th:if="${doc.element('RehabilitationFee') != null}"
+					th:text="${doc.element('RehabilitationFee').getText()}"></u></td>
+			</tr>
+			<tr>
+				<td height="24"><strong>5.</strong><strong>中医类（中医和民族医医疗服务）</strong>（12）中医诊断：<u
+					style="color: #F00"></u>（13）中医治疗<u style="color: #F00"
+					th:if="${doc.element('ZYZLFee') != null}"
+					th:text="${doc.element('ZYZLFee').getText()}"></u>（中医外治:<u
+					style="color: #F00"></u>中医骨伤:<u style="color: #F00"></u>针刺与灸法:<u
+					style="color: #F00"> </u>中医推拿治疗:<u style="color: #F00"></u>中医肛肠治疗:<u
+					style="color: #F00"></u>中医特殊治疗：<u style="color: #F00"></u>）（14）中医其他:<u
+					style="color: #F00"></u>（中药特殊调配加工 ：<u style="color: #F00"></u>辨证施膳：<u
+					style="color: #F00"></u>）</td>
+			</tr>
+			<tr>
+				<td height="24"><strong>6.</strong><strong>西药类：</strong>（15）西药费：<u
+					style="color: #F00" th:if="${doc.element('XYFee') != null}"
+					th:text="${doc.element('XYFee').getText()}"></u>（抗菌药物费用：<u
+					style="color: #F00"
+					th:if="${doc.element('AntibacterialDrugExp') != null}"
+					th:text="${doc.element('AntibacterialDrugExp').getText()}"></u>）</td>
+			</tr>
+			<tr>
+				<td height="24"><strong>7.</strong><strong>中药类：</strong>（16）中成药费：<u
+					style="color: #F00" th:if="${doc.element('MedicineChina') != null}"
+					th:text="${doc.element('MedicineChina').getText()}"></u>（医疗机构中药制剂费：<u
+					style="color: #F00"></u>）（17）中草药费：<u style="color: #F00"
+					th:if="${doc.element('HerbalMedicineFee') != null}"
+					th:text="${doc.element('HerbalMedicineFee').getText()}"></u></td>
+			</tr>
+			<tr>
+				<td height="24"><strong>8.</strong><strong>血液和血液制品类：</strong>（18）血费：<u
+					style="color: #F00" th:if="${doc.element('BloodFee') != null}"
+					th:text="${doc.element('BloodFee').getText()}"></u>（19）白蛋白类制品费：<u
+					style="color: #F00" th:if="${doc.element('ACPFee') != null}"
+					th:text="${doc.element('ACPFee').getText()}"></u>（20）球蛋白类制品费：<u
+					style="color: #F00" th:if="${doc.element('GCPFee') != null}"
+					th:text="${doc.element('GCPFee').getText()}"></u>（21）凝血因子类制品费：<u
+					style="color: #F00" th:if="${doc.element('NXYZFee') != null}"
+					th:text="${doc.element('NXYZFee').getText()}"></u>（22）细胞因子类制品费：<u
+					style="color: #F00" th:if="${doc.element('XBYZFee') != null}"
+					th:text="${doc.element('XBYZFee').getText()}"></u></td>
+			</tr>
+			<tr>
+				<td height="24"><strong>9.</strong><strong>耗材类：</strong>（23）检查用一次性医用材料费：<u
+					style="color: #F00" th:if="${doc.element('YCYYCXFee') != null}"
+					th:text="${doc.element('YCYYCXFee').getText()}"></u>（24）治疗用一次性医用材料费：<u
+					style="color: #F00" th:if="${doc.element('ZLYYCXFee') != null}"
+					th:text="${doc.element('ZLYYCXFee').getText()}"></u>（25）手术用一次性医用材料费：<u
+					style="color: #F00" th:if="${doc.element('SSYYCXZLFee') != null}"
+					th:text="${doc.element('SSYYCXZLFee').getText()}"></u></td>
+			</tr>
+			<tr>
+				<td height="24"><strong>10.</strong><strong>其他类：</strong>（26）其他费：<u
+					style="color: #F00" th:if="${doc.element('OtherFee') != null}"
+					th:text="${doc.element('OtherFee').getText()}"></u></td>
+			</tr>
+		</table>
+	</div>
+	<div class="two">
+		<table width="100%" border="0" align="center" cellpadding="0"
+			cellspacing="0">
+			<tr>
+				<td colspan="10" bgcolor="#CAE2F7"><p>
+						<strong>说明：</strong>
+					</p></td>
+			</tr>
+			<tr>
+				<td colspan="10">（一）医疗付费方式 1.城镇职工基本医疗保险 2.城镇居民基本医疗保险 3.新型农村合作医疗
+					4.贫困救助 5.商业医疗保险 6.全公费 7.全自费 8.其他社会保险 9.其他 <br />
+					（二）凡可由医院信息系统提供住院费用清单的，住院病案首页中可不填写&quot;住院费用&quot;。
+				</td>
+			</tr>
+		</table>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+	</div>
+
+</body>
+
+</html>

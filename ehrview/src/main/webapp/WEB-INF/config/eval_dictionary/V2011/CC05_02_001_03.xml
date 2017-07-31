@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="本人"/>
+  <item key="2" text="配偶"/>
+  <item key="3" text="子女"/>
+  <item key="4" text="亲戚"/>
+  <item key="5" text="政府"/>
+  <item key="6" text="集体"/>
+  <item key="7" text="其它"/>
+</dic>

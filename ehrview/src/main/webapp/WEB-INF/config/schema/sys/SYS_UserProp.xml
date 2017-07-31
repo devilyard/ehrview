@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry id="SYS_UserProp" alias="用户角色">
+    <item id="id" alias="id" type="int" not-null="true" pkey="true" generator="auto" length="50" display="0"/>
+	<item id="userId" alias="工号" type="string" length="50" not-null="1" display="0"/>	
+	<item id="post" alias="职位" type="string" length="50" not-null="1" >
+        <dic id="manageUnit" render="Tree" onlySelectLeaf="true"/>
+    </item>	
+    <item id="manaUnitId" alias="所属部门" type="string" length="50" width="150" fixed="true">
+       <dic id="manageUnit" render="Tree"/>
+    </item>
+    <item id="jobId" alias="角色" type="string" length="50" not-null="1" display="0"/>
+    <item id="regionCode" alias="网格地址" type="string" not-null="1">
+       <dic id="gender" />
+    </item>
+</entry>

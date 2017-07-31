@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="未使用"/>
+  <item key="2" text="中成药"/>
+  <item key="3" text="中草药"/>
+  <item key="9" text="其他中药"/>
+</dic>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="01" text="未取得医疗机构许可证擅自执业"/>
+  <item key="02" text="逾期不校验医疗机构执业许可证"/>
+  <item key="03" text="出卖、转让、出借医疗机构执业许可证"/>
+  <item key="04" text="诊疗活动超出登记范围"/>
+  <item key="05" text="使用非卫生技术人员从事医疗卫生技术工作"/>
+  <item key="06" text="出具虚假证明文件"/>
+  <item key="07" text="违法发布医疗广告"/>
+  <item key="08" text="使用未取得护士执业证书人员或使用未变更执业地点、延续执业注册有效期的护士从事护理活动"/>
+  <item key="09" text="造成、发生医疗事故"/>
+  <item key="10" text="未取得母婴保健技术许可擅自从事母婴保健技术服务活动"/>
+  <item key="11" text="未获许可开展人类辅助生殖技术"/>
+  <item key="12" text="擅自购置、违规使用大型医用设备"/>
+  <item key="13" text="以不正当手段，非法取得执业证书"/>
+  <item key="14" text="违反医疗技术规范"/>
+  <item key="15" text="未取得资格证明或未经注册从事医疗工作"/>
+  <item key="99" text="其他违法行为"/>
+</dic>

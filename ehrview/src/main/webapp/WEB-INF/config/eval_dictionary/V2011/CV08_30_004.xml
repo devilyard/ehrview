@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="医务人员"/>
+  <item key="2" text="乡村医生"/>
+  <item key="3" text="家庭接生员"/>
+  <item key="9" text="其他人员"/>
+</dic>

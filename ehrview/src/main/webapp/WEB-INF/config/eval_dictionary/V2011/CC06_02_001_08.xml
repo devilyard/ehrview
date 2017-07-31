@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="0" text="无"/>
+  <item key="1" text="男性＞55岁或女性＞65岁"/>
+  <item key="2" text="吸烟"/>
+  <item key="3" text="血脂异常"/>
+  <item key="4" text="早发心血管疾病家族史"/>
+  <item key="5" text="腹型肥胖或肥胖"/>
+  <item key="6" text="缺乏体力活动"/>
+  <item key="7" text="高敏C反应蛋白≥3mg/L或C反应蛋白≥10mg/L"/>
+  <item key="8" text="血压异常"/>
+</dic>

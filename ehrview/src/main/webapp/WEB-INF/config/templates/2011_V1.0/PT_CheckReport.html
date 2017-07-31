@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>检查报告</title>
+<style type="text/css">
+.jianyan {
+	padding-bottom: 10px;
+	border-bottom: 2px solid #000;
+}
+
+.jianyan2 {
+	padding-bottom: 10px;
+}
+
+.current {
+	background-color: #f4f4f3;
+}
+
+.jianyan th {
+	border-bottom: 1px solid #000;
+	height: 26px;
+	line-height: 26px;
+	text-align: left;
+	font-weight: bold;
+}
+
+.jianyan td,.bg_table td,.bg_table th,.jianyan2 td {
+	height: 24px;
+	line-height: 18px;
+	padding: 0 2px;
+}
+
+.jian_p {
+	display: block;
+	border-bottom: 1px solid #ccc;
+	height: 24px;
+	line-height: 24px;
+}
+
+.red {
+	color: red;
+	font-weight: bold;
+}
+
+.bg_table {
+	margin: 5px 0 10px 10px;
+	border-top: 1px solid #ccc;
+	border-bottom: #ccc solid 1px;
+	border-left: 1px solid #ccc;
+}
+
+.bg_table td {
+	border-right: 1px solid #ccc;
+	border-bottom: 1px dotted #ccc;
+}
+
+.bg_table th {
+	background-color: #CAE2F7;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+
+.name {
+	padding: 5px 0;
+	float: left;
+	margin-left: 95px;
+}
+
+.name span {
+	padding: 2px 80px 2px 80px;
+	font-weight: bold;
+}
+</style>
+</head>
+<body style="font-size: 12px;">
+	<div style="font-family: 微软雅黑, 宋体; padding: 25px; list-style: none; color: #232323; text-decoration: none;">
+		<table border="0" cellpadding="0" cellspacing="0" width="880">
+			<tr>
+				<td style="padding-left: 20px; border: 1px #ccc solid; background: #FFF">
+					<div style="float: left;">
+						<table width="835" border="0" align="left" cellpadding="0" cellspacing="0" style="margin-bottom: 10px;">
+							<tr>
+								<td colspan="3" align="center" style="height: 40px; font-size: 24px; line-height: 120%;">检查报告</td>
+							</tr>
+							<tr>
+								<td align="left"></td>
+								<td align="right" valign="bottom" style="font-size: 16px;">
+									<strong>NO：</strong><u th:text="${doc.elementText('JCLSH')}"></u>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="3" height="5" style="border-bottom: 2px #ccc solid;"></td>
+							</tr>
+						</table>
+					</div>
+					<div style="float: left;">
+						<table width="835" border="0" align="center" cellpadding="0" cellspacing="0" class="jianyan2">
+							<tr>
+								<td width="25%"><strong>姓名：</strong>
+									<u th:text="${doc.elementText('Name')}"></u>
+								</td>
+								<td width="25%"><strong>性别：</strong>
+									<u th:if="${doc.element('Sex') != null}" th:text="${doc.element('Sex').attributeValue('display')}"></u>
+								</td>
+								<td width="25%"><strong>年龄：</strong>
+									<u th:text="${doc.elementText('Age')}"></u>
+								</td>
+							</tr>
+							<tr>
+								<td width="25%"><strong>检查项目：</strong><u th:text="${doc.elementText('JCXMMC')}"></u></td>
+								<td width="25%"><strong>检查日期：</strong><u th:text="${doc.elementText('JCRQ')}"></u></td>
+								<td width="25%"><strong>申请科室：</strong><u th:text="${doc.elementText('SQKSMC')}"></u></td>
+							</tr>
+							<tr>
+								<td><strong>检查科室：</strong><u th:text="${doc.elementText('BCKSMC')}"></u></td>
+								<td><strong>检查部位：</strong><u th:text="${doc.elementText('JCBW')}"></u></td>
+								<td><strong>阴&nbsp;阳&nbsp;性：</strong><u th:text="${doc.elementText('YYX')}"></u></td>
+							</tr>
+						</table>
+					</div>
+					<div style="float: left; width: 835px;">
+						<strong class="jian_p">检查所见</strong>
+						<p>
+							<span th:text="${doc.elementText('BCKGSJ')}"></span>
+						</p>
+					</div>
+					<div style="float: left; width: 835px;">
+						<strong class="jian_p">诊断</strong>
+						<p>
+							<span th:text="${doc.elementText('BCZGTS')}"></span>
+						</p>
+					</div>
+					<div style="float: left; width: 835px;">
+						<strong class="jian_p">报告备注</strong>
+						<p>
+							<span th:text="${doc.elementText('BGBZ')}"></span>
+						</p>
+					</div>
+					<div style="float: left; margin-bottom: 10px;">
+						<table width="835" border="0" align="left" cellpadding="0"
+							cellspacing="0">
+							<tr>
+								<td width="80%" height="24" align="left"></td>
+								<td align="left"><strong>报告时间：</strong><u th:text="${doc.elementText('BGSJ')}"></u></td>
+							</tr>
+						</table>
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

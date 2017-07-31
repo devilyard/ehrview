@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="警告"/>
+  <item key="2" text="记过"/>
+  <item key="3" text="记大过"/>
+  <item key="4" text="降级"/>
+  <item key="5" text="撤职"/>
+  <item key="6" text="开除"/>
+</dic>

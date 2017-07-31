@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="治疗后回家" comment="患者经过治疗后，即可回家"/>
+  <item key="2" text="观察/住院/转院" comment="患者还需要进一步治疗，包括观察、住院或转其他医院"/>
+  <item key="3" text="死亡" comment="患者死亡"/>
+  <item key="9" text="其他" comment="上述三种情况之外的结局"/>
+</dic>

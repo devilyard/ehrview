@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rolelist version="1329801376621" id="CTRL_CFG_roles" filename="E:\tomcat6.0\webapps\SSSS\WEB-INF\config\roles\roles.xml"> 
+  <role id="base"/>  
+  <role id="system" base="base" alias="系统管理员"/>  
+  <role id="teamer" alias="组员"/>  
+  <role id="teamlead" alias="组长"/>  
+  <role id="product" alias="产品经理"/>  
+  <role id="develop" alias="研发经理"/>
+</rolelist>

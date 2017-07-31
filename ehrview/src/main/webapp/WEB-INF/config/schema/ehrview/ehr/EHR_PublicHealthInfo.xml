@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<entry id="EHR_PublicHealthInfo" alias="EHR公共卫生信息(EHR_PublicHealthInfo)">
+	<item id="ID" alias="ID" type="string" length="16" not-null="1" generator="assigned" pkey="true"/>
+	<item id="MPIID" alias="主索引标识" type="string" length="32" not-null="1"/>
+	<item id="SRCEntryName" alias="业务的代码" type="string" length="50" not-null="1"/>
+	<item id="BusinessName" alias="业务名称" type="string" length="50" not-null="1"/>
+	<item id="SRCID" alias="业务主键" type="string" length="50" not-null="1"/>
+	<item id="ManaUnitID" alias="管辖机构" type="string" length="16"/>
+	<item id="SystemTime" alias="创建日期" type="timestamp"/>
+	<item id="CreateUnitID" alias="创建机构代码" type="string" length="16"/>
+	<item id="CreateUnit_Text" alias="创建机构" type="string" length="200"/>
+	<item id="VersionNumber" alias="版本" type="string" length="10"/>
+	<item id="UploadDate" alias="上传时间" type="timestamp"/>
+	<item id="EndFlag" alias="结束标志" type="string" length="1" />
+</entry>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="01" text="头痛"/>
+  <item key="02" text="头晕"/>
+  <item key="03" text="心悸"/>
+  <item key="04" text="胸闷"/>
+  <item key="05" text="胸痛"/>
+  <item key="06" text="咳嗽"/>
+  <item key="07" text="咳痰"/>
+  <item key="08" text="呼吸困难"/>
+  <item key="09" text="多饮"/>
+  <item key="10" text="多尿"/>
+  <item key="11" text="体重下降"/>
+  <item key="12" text="乏力"/>
+  <item key="13" text="关节肿痛"/>
+  <item key="14" text="视力模糊"/>
+  <item key="15" text="四肢麻木"/>
+  <item key="16" text="消瘦"/>
+  <item key="17" text="尿痛"/>
+  <item key="18" text="便秘"/>
+  <item key="19" text="腹泻"/>
+  <item key="20" text="恶心呕吐"/>
+  <item key="21" text="眼花"/>
+  <item key="22" text="耳鸣"/>
+  <item key="23" text="发热"/>
+  <item key="24" text="鼻衄"/>
+  <item key="25" text="浮肿"/>
+  <item key="26" text="多食"/>
+  <item key="27" text="皮疹"/>
+  <item key="99" text="其他"/>
+</dic>

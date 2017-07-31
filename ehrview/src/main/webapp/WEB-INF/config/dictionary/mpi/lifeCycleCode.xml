@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dic> 
+  <item key="01" text="婴儿期" min="0" max="1" pyCode="yeq"/>  
+  <item key="02" text="幼儿期" min="2" max="3" pyCode="yeq"/>  
+  <item key="03" text="学龄前" min="4" max="6" pyCode="xlq"/>  
+  <item key="04" text="学龄期" min="7" max="12" pyCode="xlq"/>  
+  <item key="05" text="青春期" min="13" max="20" pyCode="qcq"/>  
+  <item key="06" text="青年期" min="21" max="45" pyCode="qnq"/>  
+  <item key="07" text="中年期" min="46" max="60" pyCode="znq"/>  
+  <item key="08" text="老年期" min="61" max="999" pyCode="lnq"/>  
+</dic>

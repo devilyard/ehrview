@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="从不吸烟"/>
+  <item key="2" text="过去吸，已戒烟"/>
+  <item key="3" text="吸烟"/>
+</dic>

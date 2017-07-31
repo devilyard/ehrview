@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<BasicDataset>
+	<DataSet code="HDSD00.01.01" displayName="个人基本信息" codeSystem="WS365-2011" codeSystemName="城乡居民健康档案基本数据集"/>
+	<HDSD00.01.001 dataelementName="城乡居民健康档案编号" value="" datatype="N17"/>
+	<HDSD00.01.002 dataelementName="本人姓名" value="" datatype="A1..50"/>
+	<HDSD00.01.003 dataelementName="性别代码" code="" datatype="N1" dic="GB_T2261_1" displayName="男性" codeSystem="2.16.156.10011.2.3.3.4" codeSystemName="生理性别代码表(GB/T 2261.1)"/>
+	<HDSD00.01.004 dataelementName="出生日期" value="" datatype="D8"/>
+	<HDSD00.01.005 dataelementName="身份证件类别代码" code="" datatype="N2" dic="CV02_01_101" displayName="居民身份证" codeSystem="2.16.156.10011.2.3.1.1" codeSystemName="身份证件类别代码表"/>
+	<HDSD00.01.006 dataelementName="身份证件号码" value="" datatype="AN18"/>
+	<HDSD00.01.007 dataelementName="工作单位名称" value="" datatype="AN1..70"/>
+	<HDSD00.01.008 dataelementName="本人电话号码" value="" datatype="AN1..20"/>
+	<HDSD00.01.009 dataelementName="联系人姓名" value="" datatype="A1..50"/>
+	<HDSD00.01.010 dataelementName="联系人电话号码" value="" datatype="AN1..20"/>
+	<HDSD00.01.011 dataelementName="常住地址户籍标志" value="" datatype="T/F"/>
+	<HDSD00.01.012 dataelementName="民族" code="" datatype="N2" dic="GB_T3304" displayName="汉族" codeSystem="2.16.156.10011.2.3.3.3" codeSystemName="民族类别代码表(GB 3304)"/>
+	<HDSD00.01.013 dataelementName="ABO血型代码" code="" datatype="N1" dic="CV04_50_005" displayName="AB型" codeSystem="2.16.156.10011.2.3.1.85" codeSystemName="ABO血型代码表"/>
+	<HDSD00.01.014 dataelementName="Rh血型代码" code="" datatype="N1" dic="CC04_50_010_00"  displayName="不详"  codeSystem="2.16.156.10011.2.3.1.250"  codeSystemName="Rh(D)血型代码表"/>
+	<HDSD00.01.015 dataelementName="学历代码" code="" datatype="N2" dic="GB_T4658" displayName="博士研究生肄业" codeSystem="2.16.156.10011.2.3.3.6" codeSystemName="学历代码表(GB/T 4658)"/>
+	<HDSD00.01.016 dataelementName="职业类别代码" code="" datatype="AN1..3" dic="GB_T6565" displayName="社会学研究人员" codeSystem="2.16.156.10011.2.3.3.7" codeSystemName="职业类别代码表(GB/T 6565)"/>
+	<HDSD00.01.017 dataelementName="婚姻状况代码" code="" datatype="N2" dic="GB_T2261_2" displayName="再婚" codeSystem="2.16.156.10011.2.3.3.5" codeSystemName="婚姻状况代码表(GB/T 2261.2)"/>
+	<HDSD00.01.018 dataelementName="医疗费用支付方式代码" code="" datatype="N1" dic="CV07_10_003" displayName="城镇职工基本医疗保险" codeSystem="2.16.156.10011.2.3.1.197" codeSystemName="医疗费用来源类别代码表"/>
+	<HDSD00.01.019 dataelementName="药物过敏史标志" value="" datatype="T/F"/>
+	<HDSD00.01.020 dataelementName="药物过敏源" code="" datatype="N1..3" dic="CV05_01_038" displayName="青霉素抗生素" codeSystem="2.16.156.10011.2.3.1.137" codeSystemName="过敏源代码表"/>
+	<HDSD00.01.021 dataelementName="环境危险因素暴露类别代码" code="" datatype="N1" dic="CV03_00_301" displayName="其他" codeSystem="2.16.156.10011.2.3.1.33" codeSystemName="环境危险因素暴露类别代码表"/>
+	<HDSD00.01.022 dataelementName="既往患病种类代码" code="" datatype="N2" dic="CV02_10_005" displayName="高血压" codeSystem="2.16.156.10011.2.3.1.12" codeSystemName="既往常见疾病种类代码表"/>
+	<HDSD00.01.023 dataelementName="既往患病确诊日期" value="" datatype="D8"/>
+	<HDSD00.01.024 dataelementName="手术史标志" value="" datatype="T/F"/>
+	<HDSD00.01.025 dataelementName="手术史" value="" datatype="AN..100"/>
+	<HDSD00.01.026 dataelementName="手术（操作）日期时间" value="" datatype="D8"/>
+	<HDSD00.01.027 dataelementName="外伤史标志" value="" datatype="T/F"/>
+	<HDSD00.01.028 dataelementName="外伤名称" value="" datatype="AN..100"/>
+	<HDSD00.01.029 dataelementName="外伤发生日期时间" value="" datatype="D8"/>
+	<HDSD00.01.030 dataelementName="输血史标志" value="" datatype="T/F"/>
+	<HDSD00.01.031 dataelementName="输血原因" value="" datatype="AN..100"/>
+	<HDSD00.01.032 dataelementName="输血日期时间" value="" datatype="D8"/>
+	<HDSD00.01.033 dataelementName="家族性疾病名称代码" code="" datatype="N2" dic="CV02_10_005" displayName="无" codeSystem="2.16.156.10011.2.3.1.12" codeSystemName="既往常见疾病种类代码表"/>
+	<HDSD00.01.034 dataelementName="患者与本人关系代码" code="" datatype="N2" dic="GB_T4761" displayName="本人或户主" codeSystem="2.16.156.10011.2.3.3.8" codeSystemName="家庭关系代码表(GB/T 4761)"/>
+	<HDSD00.01.035 dataelementName="遗传性疾病史" value="" datatype="AN..100"/>
+	<HDSD00.01.036 dataelementName="残疾情况代码" code="" datatype="N2" dic="CV05_10_001" displayName="无残疾" codeSystem="2.16.156.10011.2.3.1.139" codeSystemName="残疾情况代码表"/>
+	<HDSD00.01.037 dataelementName="家庭厨房排风设施标识" value="" datatype="T/F"/>
+	<HDSD00.01.038 dataelementName="家庭厨房排风设施类别代码" code="" datatype="N1" dic="CV03_00_302" displayName="油烟机" codeSystem="2.16.156.10011.2.3.1.34" codeSystemName="厨房排风设施类别代码表"/>
+	<HDSD00.01.039 dataelementName="家庭燃料类型类别代码" code="" datatype="N1" dic="CV03_00_303" displayName="液化气" codeSystem="2.16.156.10011.2.3.1.35" codeSystemName="燃料类型类别代码表"/>
+	<HDSD00.01.040 dataelementName="家庭饮水类别代码" code="" datatype="N1" dic="CV03_00_115" displayName="自来水" codeSystem="2.16.156.10011.2.3.1.27" codeSystemName="饮水类别代码表"/>
+	<HDSD00.01.041 dataelementName="家庭厕所类别代码" code="" datatype="N1" dic="CV03_00_304" displayName="卫生厕所" codeSystem="2.16.156.10011.2.3.1.36" codeSystemName="厕所类别代码表"/>
+	<HDSD00.01.042 dataelementName="家庭禽畜栏类别" code="" datatype="N1" dic="CC03_00_049_00" displayName="单设"  codeSystem="2.16.156.10011.2.3.2.2"  codeSystemName="家庭禽畜栏类别表"/>
+</BasicDataset>

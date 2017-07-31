@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="正常"/>
+  <item key="2" text="心脏杂音Ⅰ"/>
+  <item key="3" text="心脏杂音Ⅱ"/>
+  <item key="4" text="心脏杂音Ⅲ"/>
+  <item key="5" text="心脏杂音Ⅳ"/>
+  <item key="6" text="心律不齐"/>
+  <item key="7" text="心率快"/>
+  <item key="8" text="其他"/>
+</dic>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="SYS_Quick" table="SYS_Quick">
+		<id name="id" type="java.lang.Integer" length="30">
+			<column name="id" />
+			<generator class="sequence">
+            	<param name="sequence">SEQ_SYS_Quick</param>
+           	</generator>
+		</id>
+		<property name="userId" type="java.lang.String" length="30" />
+		<property name="moduleId" type="java.lang.String" length="100" />
+		<property name="appId" type="java.lang.String" length="20" />
+		<property name="categoryId" type="java.lang.String" length="20" />
+	</class>
+</hibernate-mapping>

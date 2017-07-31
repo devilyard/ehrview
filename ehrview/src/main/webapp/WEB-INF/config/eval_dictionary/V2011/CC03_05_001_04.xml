@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="父"/>
+  <item key="2" text="母"/>
+  <item key="3" text="祖（外祖）父母"/>
+  <item key="4" text="保姆"/>
+  <item key="5" text="保育员"/>
+  <item key="6" text="老师"/>
+  <item key="7" text="其它亲属"/>
+  <item key="8" text="其他人员"/>
+</dic>

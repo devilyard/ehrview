@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="急性血吸虫病"/>
+  <item key="11" text="急性血吸虫病疑似病例"/>
+  <item key="12" text="急性血吸虫病临床诊断病例"/>
+  <item key="13" text="急性血吸虫病确诊病例"/>
+  <item key="2" text="慢性血吸虫病"/>
+  <item key="21" text="慢性血吸虫病临床诊断病例"/>
+  <item key="22" text="慢性血吸虫病确诊病例"/>
+  <item key="3" text="晚期血吸虫病"/>
+  <item key="31" text="晚期血吸虫病临床诊断病例"/>
+  <item key="32" text="晚期血吸虫病确诊病例"/>
+</dic>

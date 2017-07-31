@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="每天"/>
+  <item key="2" text="5-6天/周"/>
+  <item key="3" text="3-4天/周"/>
+  <item key="4" text="1-2天/周"/>
+  <item key="5" text="1-3天/月"/>
+  <item key="9" text="少于1天/月"/>
+</dic>

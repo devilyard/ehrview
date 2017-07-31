@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<entry id="EMR_OperationRecord" alias="5502一般手术记录(EMR_OperationRecord)">
+  <item id="DCID" alias="记录号" type="string" length="16" generator="assigned" pkey="true"/>
+  <item id="VisitID" alias="就诊标识" type="string" length="16"/>
+  <item id="PatientType" alias="患者类型" type="string" length="2"/>
+  <item id="MPIID" alias="主索引标识" type="string" length="32"/>
+  <item id="ZoneID" alias="分区标识" type="string" length="1"/>
+  <item id="StatisticDate" alias="统计日期" type="timestamp"/>
+  <item id="AuthorOrganization" alias="创建机构" type="string" length="16"/>
+  <item id="DeptName" alias="科室名称" type="string" length="50"/>
+  <item id="WardAreaNm" alias="病区名称" type="string" length="50"/>
+  <item id="PreoperativeDiagnosis" alias="术前诊断" type="string" length="100"/>
+  <item id="PostoperativeDiagnosis" alias="术后诊断" type="string" length="100"/>
+  <item id="OperationStartDateTime" alias="手术开始日期时间" type="timestamp"/>
+  <item id="OperationEndDateTime" alias="手术结束日期时间" type="timestamp"/>
+  <item id="OperationWholeTime" alias="手术全程时间" length="4"/>
+  <item id="OperationCode" alias="手术/操作代码" type="string" length="5"/>
+  <item id="OperationName" alias="手术名称" type="string" length="80"/>
+  <item id="OperationLevel" alias="手术级别" type="string" length="1"/>
+  <item id="OperationPartName" alias="手术目标部位名称" type="string" length="50"/>
+  <item id="OperationDateTime" alias="手术日期时间" type="timestamp"/>
+  <item id="OperationPartCode" alias="手术体位代码" type="string" length="2"/>
+  <item id="OperationProcessDescription" alias="手术过程描述" type="string" length="2000"/>
+  <item id="OperationMark" alias="手术标志" type="string" length="1"/>
+  <item id="SkinDisinfection" alias="皮肤消毒" type="string" length="200"/>
+  <item id="OperationIncisionDescription" alias="手术切口描述" type="string" length="200"/>
+  <item id="DrainageUseSign" alias="是否引流" type="string" length="1"/>
+  <item id="OperationBleeding" alias="手术出血量" length="5"/>
+  <item id="InfusionVolume" alias="输液量（ml）" length="5"/>
+  <item id="BloodTransfusionVolume" alias="输血量" length="4"/>
+  <item id="PreoperativeDrug" alias="术前用药" type="string" length="200"/>
+  <item id="OperatingUsedDrug" alias="术中用药" type="string" length="200"/>
+  <item id="InterpositionName" alias="介入物名称" type="string" length="100"/>
+  <item id="DrainageMaterialName" alias="引流材料名称" type="string" length="200"/>
+  <item id="DrainageMaterialCount" alias="引流材料数目" type="string" length="200"/>
+  <item id="PutDepart" alias="放置部位" type="string" length="20"/>
+  <item id="TransfusionReactionSign" alias="输血反应标志" type="string" length="1"/>
+  <item id="Operator" alias="手术者" type="string" length="50"/>
+  <item id="Assistant1" alias="Ⅰ助姓名" type="string" length="50"/>
+  <item id="Assistant2" alias="Ⅱ助姓名" type="string" length="50"/>
+  <item id="ApparatusNurse" alias="器械护士" type="string" length="50"/>
+  <item id="StatioNurses" alias="巡台护士" type="string" length="50"/>
+  <item id="AnaesthesiaMethod" alias="麻醉方法名称" type="string" length="50"/>
+  <item id="AnaesthesiaMethodCode" alias="麻醉方法代码" type="string" length="2"/>
+  <item id="AnesthetistName" alias="麻醉医师姓名" type="string" length="50"/>
+  <item id="OperatorSign" alias="手术者签名" type="string" length="50"/>
+  <item id="SignDateTime" alias="签名日期时间" type="timestamp"/>
+</entry>

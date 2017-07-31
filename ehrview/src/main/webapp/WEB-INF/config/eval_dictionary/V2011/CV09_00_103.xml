@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="审核通过"/>
+  <item key="2" text="审核未通过"/>
+  <item key="3" text="未审核"/>
+  <item key="4" text="备案"/>
+</dic>

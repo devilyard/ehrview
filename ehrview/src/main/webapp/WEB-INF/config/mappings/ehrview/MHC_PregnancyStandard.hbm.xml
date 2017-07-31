@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="MHC_PregnancyStandard" table="MHC_PregnancyStandard">
+			<id name="DCID" type="java.lang.String">
+            	<column name="DCID"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="WEEK" type="float" />
+        	<property name="TENTH" type="float" />
+        	<property name="FIVETH" type="float" />
+        	<property name="NINETH" type="float" />
+</class>
+</hibernate-mapping>

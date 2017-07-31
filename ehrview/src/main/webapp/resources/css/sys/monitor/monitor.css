@@ -1,0 +1,25 @@
+.app-node{
+	margin: 5px;
+	padding : 4px;
+	cursor: pointer;
+}
+
+.app-node-over{
+	background: #D9E8FC;
+}
+
+.app-node-selected{
+	background: #99BBE8;
+}
+
+.app-node-normal{
+	width: 64px;
+	height: 64px;
+	background: url("images/computer-green.png") repeat-x top;
+}
+
+.app-node-busy{
+	width: 64px;
+	height: 64px;
+	background: url("images/computer-red.png") repeat-x top;
+}

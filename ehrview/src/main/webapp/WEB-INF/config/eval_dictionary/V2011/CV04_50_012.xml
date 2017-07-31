@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="尿HCG"/>
+  <item key="2" text="血HCG"/>
+  <item key="3" text="B超"/>
+  <item key="4" text="其他"/>
+</dic>

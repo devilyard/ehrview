@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="SYS_LayoutData" table="SYS_LAYOUTDATA">
+		<id name="RecordID" type="java.lang.Integer" length="30">
+			<column name="RECORDID" />
+				<generator class="sequence">
+            	<param name="sequence">SEQ_SYS_LayoutData</param>
+           	</generator>
+		</id>
+		<property name="TemplateID" type="java.lang.String" length="32" />
+		<property name="LayoutText" type="java.lang.String" length="32" />
+		<property name="LayoutData" type="java.lang.String" length="2000" />
+		<property name="Fixed" type="java.lang.String" length="1"/>
+	</class>
+</hibernate-mapping>

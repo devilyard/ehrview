@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic id="CC04_04_001_13" version="1358397154671"> 
+  <item key="0" text="国家机关、党群组织、企业、事业单位负责人" pyCode="gjjg-dqzz-qy-sydwfzr"/>  
+  <item key="1" text="专业技术人员" pyCode="zyjsry"/>  
+  <item key="3" text="办事人员和有关人员" pyCode="bsryhygry"/>  
+  <item key="4" text="商业、服务业人员" pyCode="sy-fwyry"/>  
+  <item key="5" text="农、林、牧、渔、水利业生产人员" pyCode="n-l-m-y-slyscry"/>  
+  <item key="7" text="生产、运输设备操作人员及有关人员" pyCode="sc-yssbczryjygry"/>  
+  <item key="Y" text="不便分类的其他从业人员" pyCode="bbfldqtcyry"/>
+</dic>

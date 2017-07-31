@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="0" text="新开"/>
+  <item key="1" text="已提交"/>
+  <item key="2" text="需校对"/>
+  <item key="3" text="已作废"/>
+  <item key="4" text="已停嘱"/>
+  <item key="5" text="已复核"/>
+</dic>

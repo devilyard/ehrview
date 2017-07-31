@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>1～2岁儿童健康检查记录表</title>
+</head>
+
+<body style="padding: 20px;font-size: 12px">
+	<style type="text/css">
+
+
+.my table {
+	border-bottom: #ccc solid 1px;
+	border-left: #ccc solid 1px;
+	border-top: #ccc solid 1px;
+	text-align: left;
+}
+
+.my td {
+	border-right: #ccc solid 1px;
+	border-bottom: #ccc dotted 1px;
+	padding: 4px;
+}
+
+.red {
+	color: red;
+	font-weight: bold;
+}
+
+</style>
+	<div style="text-align: left; margin-bottom: 5px; font-size: 12px;">
+		<table width="95%" border="0" align="center" cellpadding="0"
+			cellspacing="0">
+			<tr>
+				<td colspan="3" align="center"
+					style="font-size: 24px; height: 40px; line-height: 50px; padding-left: 6px;">
+					1～2岁儿童健康检查记录表</td>
+			</tr>
+			<tr>
+				<td align="right" style="padding-left: 6px; line-height: 24px;"><strong>编号：
+				</strong><u th:text="${doc.elementText('PHRID')}"></u></td>
+			</tr>
+					<tr>
+			<td style="border-bottom: 4px #09F solid;" colspan="2"></td>
+		</tr>
+		<tr>
+			<td style="height: 1px;" colspan="2"></td>
+		</tr>
+		<tr>
+			<td height="10" style="border-top: 1px #09f solid;" colspan="2"></td>
+		</tr>
+			
+		</table>
+	</div>
+	<div class="my">
+		<table width="95%" border="0" align="center" cellpadding="0"
+			cellspacing="0">
+			<tr>
+				<td width="120" bgcolor="#CAE2F7"><strong>月（年）龄</strong></td>
+				<td colspan="2" th:if="${doc.element('CheckupStage') != null}" th:text="${doc.element('CheckupStage').attributeValue('display')}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>随访日期</strong></td>
+				<td colspan="2" th:text="${doc.elementText('CheckupDate')}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>体重（kg）</strong></td>
+				<td colspan="2" th:text="${doc.elementText('Weight')}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>身长（cm）</strong></td>
+				<td colspan="2" th:text="${doc.elementText('Height')}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7" rowspan="5"><strong>体格检查</strong></td>
+				<td width="349"><strong>面色：</strong> 
+					<label th:if="${doc.element('Face') != null}" th:text="${doc.element('Face').attributeValue('display')}"></label>
+				</td>
+				<td width="331"><strong>皮肤：</strong>
+				  <label th:if="${doc.element('Skin') != null}" th:text="${doc.element('Skin').attributeValue('display')}"></label>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>前囟：</strong> 
+					<label th:if="${doc.element('BregmaClose') != null}" th:text="${doc.element('BregmaClose').attributeValue('display')}"></label>
+					<strong th:text="${doc.elementText('BregmaTransverse')}"></strong>cm×
+					<strong th:text="${doc.elementText('BregmaLongitudinal')}"></strong>cm
+				</td>
+				<td><strong>眼外观：</strong>
+				  <label
+					 th:if="${doc.element('Pupil') != null}" th:text="${doc.element('Pupil').attributeValue('display')}"></label></td>
+			</tr>
+			<tr>
+				<td><strong>耳外观：</strong> <label
+					 th:if="${doc.element('Ear') != null}" th:text="${doc.element('Ear').attributeValue('display')}"></label>
+				</td>
+				<td><strong>听力：</strong>
+				  <label
+					 th:if="${doc.element('HearingTest2') != null}" th:text="${doc.element('HearingTest2').attributeValue('display')}"></label></td>
+			</tr>
+			<tr>
+				<td><strong>出牙/龋齿数（颗）：</strong> <label th:text="${doc.elementText('DecayedTooth')}"></label></td>
+				<td><strong>心肺：</strong>
+				  <label th:if="${doc.element('Heart') != null}" th:text="${doc.element('Heart').attributeValue('display')}"></label>
+				  ，
+  				  <label th:if="${doc.element('Lung') != null}" th:text="${doc.element('Lung').attributeValue('display')}"></label>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>腹部：</strong>
+					<label th:if="${doc.element('Abdomen') != null}" th:text="${doc.element('Abdomen').attributeValue('display')}"></label>
+				</td>
+				<td><strong>四肢：</strong>
+				  <label
+					 th:if="${doc.element('Extremities') != null}" th:text="${doc.element('Extremities').attributeValue('display')}">
+				  </label>
+				</td>
+			</tr>
+			<!-- 			<tr> -->
+			<!-- 				<td></td> -->
+			<!-- 			</tr> -->
+			<!-- 			<tr> -->
+			<!-- 				<td><strong>可疑佝偻病体征：（没有字段）</strong></td> -->
+			<!-- 			</tr> -->
+			<!-- 			<tr> -->
+			<!-- 				<td></td> -->
+			<!-- 			</tr> -->
+			<!-- 			<tr> -->
+			<!-- 				<td bgcolor="#CAE2F7">户外活动（没有字段）</td> -->
+			<!-- 				<td></td> -->
+			<!-- 			</tr> -->
+			<!-- 			<tr> -->
+			<!-- 				<td bgcolor="#CAE2F7">服用维生素D（没有字段）</td> -->
+			<!-- 				<td></td> -->
+			<!-- 			</tr> -->
+			<!-- 			<tr> -->
+			<!-- 				<td bgcolor="#CAE2F7">发育评估（没有字段）</td> -->
+			<!-- 				<td></td> -->
+			<!-- 			</tr> -->
+			<!-- 			<tr> -->
+			<!-- 				<td bgcolor="#CAE2F7">两次随访间患病情况（没有字段）</td> -->
+			<!-- 				<td></td> -->
+			<!-- 			</tr> -->
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>其他</strong></td>
+				<td colspan="2" th:text="${doc.elementText('Other')}"></td>
+			</tr>
+			<!-- 			<tr> -->
+			<!-- 				<td bgcolor="#CAE2F7">转诊建议（没有字段）</td> -->
+			<!-- 				<td></td> -->
+			<!-- 			</tr> -->
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>指导</strong></td>
+				<td colspan="2"><label th:if="${doc.element('CDH_CORRECTION')!=null}"
+					th:text="${doc.element('CDH_CORRECTION').elementText('Suggestion')}"></label>
+				</td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>下次随访日期</strong></td>
+				<td colspan="2" th:text="${doc.elementText('NextCheckupDate')}"></td>
+			</tr>
+			<tr>
+				<td bgcolor="#CAE2F7"><strong>随访医生签名</strong></td>
+				<td colspan="2" th:text="${doc.elementText('CheckDoctor')}"></td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

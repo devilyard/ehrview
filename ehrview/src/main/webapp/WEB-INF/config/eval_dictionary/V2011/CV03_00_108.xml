@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="次数/d"/>
+  <item key="2" text="次数/周"/>
+  <item key="3" text="次数/月"/>
+  <item key="4" text="次数/年"/>
+  <item key="5" text="不食用"/>
+</dic>

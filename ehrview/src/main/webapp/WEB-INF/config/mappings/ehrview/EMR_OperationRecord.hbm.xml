@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="EMR_OperationRecord" table="EMR_OperationRecord">
+			<id name="DCID" type="java.lang.String">
+            	<column name="DCID"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="VisitID" type="java.lang.String" length="16" />
+        	<property name="PatientType" type="java.lang.String" length="2" />
+        	<property name="MPIID" type="java.lang.String" length="32" />
+        	<property name="ZoneID" type="java.lang.String" length="1" />
+        	<property name="StatisticDate" type="timestamp"  />
+        	<property name="AuthorOrganization" type="java.lang.String" length="16" />
+        	<property name="AuthorOrganizationName" type="java.lang.String" length="100" />
+        	<property name="DeptName" type="java.lang.String" length="50" />
+        	<property name="WardAreaNm" type="java.lang.String" length="50" />
+        	<property name="PreoperativeDiagnosis" type="java.lang.String" length="100" />
+        	<property name="PostoperativeDiagnosis" type="java.lang.String" length="100" />
+        	<property name="OperationStartDateTime" type="timestamp"  />
+        	<property name="OperationEndDateTime" type="timestamp"  />
+        	<property name="OperationWholeTime" type="java.lang.String" length="4" />
+        	<property name="OperationCode" type="java.lang.String" length="5" />
+        	<property name="OperationName" type="java.lang.String" length="80" />
+        	<property name="OperationLevel" type="java.lang.String" length="1" />
+        	<property name="OperationPartName" type="java.lang.String" length="50" />
+        	<property name="OperationDateTime" type="timestamp"  />
+        	<property name="OperationPartCode" type="java.lang.String" length="2" />
+        	<property name="OperationProcessDescription" type="java.lang.String" length="2000" />
+        	<property name="OperationMark" type="java.lang.String" length="1" />
+        	<property name="SkinDisinfection" type="java.lang.String" length="200" />
+        	<property name="OperationIncisionDescription" type="java.lang.String" length="200" />
+        	<property name="DrainageUseSign" type="java.lang.String" length="1" />
+        	<property name="OperationBleeding" type="java.lang.String" length="5" />
+        	<property name="InfusionVolume" type="java.lang.String" length="5" />
+        	<property name="BloodTransfusionVolume" type="java.lang.String" length="4" />
+        	<property name="PreoperativeDrug" type="java.lang.String" length="200" />
+        	<property name="OperatingUsedDrug" type="java.lang.String" length="200" />
+        	<property name="InterpositionName" type="java.lang.String" length="100" />
+        	<property name="DrainageMaterialName" type="java.lang.String" length="200" />
+        	<property name="DrainageMaterialCount" type="java.lang.String" length="200" />
+        	<property name="PutDepart" type="java.lang.String" length="20" />
+        	<property name="TransfusionReactionSign" type="java.lang.String" length="1" />
+        	<property name="Operator" type="java.lang.String" length="50" />
+        	<property name="Assistant1" type="java.lang.String" length="50" />
+        	<property name="Assistant2" type="java.lang.String" length="50" />
+        	<property name="ApparatusNurse" type="java.lang.String" length="50" />
+        	<property name="StatioNurses" type="java.lang.String" length="50" />
+        	<property name="AnaesthesiaMethod" type="java.lang.String" length="50" />
+        	<property name="AnaesthesiaMethodCode" type="java.lang.String" length="2" />
+        	<property name="AnesthetistName" type="java.lang.String" length="50" />
+        	<property name="OperatorSign" type="java.lang.String" length="50" />
+        	<property name="VersionNumber" type="java.lang.String" length="10" />
+        	<property name="EffectiveFlag" type="java.lang.String" length="1" />
+        	<property name="SignDateTime" type="timestamp"  />
+</class>
+</hibernate-mapping>

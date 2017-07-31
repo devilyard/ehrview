@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="Opt_Record" table="Opt_Record">
+			<id name="DCID" type="java.lang.String">
+            	<column name="DCID"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="MPIID" type="java.lang.String" length="32" />
+        	<property name="SourceID" type="java.lang.String" length="50" />
+        	<property name="RecordClassifying" type="java.lang.String" length="50" />
+        	<property name="RecordTitle" type="java.lang.String" length="50" />
+        	<property name="EffectiveTime" type="date"  />
+        	<property name="EffectiveFlag" type="java.lang.String" length="1" />
+        	<property name="VersionNumber" type="java.lang.String" length="10" />
+        	<property name="AuthorOrganization" type="java.lang.String" length="22" />
+        	<property name="AuthorOrganization_text" type="java.lang.String" length="50" />
+        	<property name="Author" type="java.lang.String" length="32" />
+        	<property name="SystemTime" type="date"  />
+        	<property name="UploadTime" type="date"  />
+        	<property name="UpdateTime" type="date"  />
+        	<property name="JZLSH" type="java.lang.String" length="32" />
+        	<property name="GHLSH" type="java.lang.String" length="32" />
+        	<property name="SFYY" type="java.lang.String" length="2" />
+        	<property name="MZLB" type="java.lang.String" length="32" />
+        	<property name="JZRQ" type="date"  />
+        	<property name="ZDMC" type="java.lang.String" length="100" />
+        	<property name="JZKSBM" type="java.lang.String" length="15" />
+        	<property name="JZKSMC" type="java.lang.String" length="100" />
+</class>
+</hibernate-mapping>

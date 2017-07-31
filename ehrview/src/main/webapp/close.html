@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>电子健康档案浏览器</title>
+<script type="text/javascript">
+	var code = Request("code")
+	function clo(){
+		if(code == '201'){
+			alert("传输的参数需加密");
+		}else{
+			alert("无该身份证用户信息");
+		}
+		window.close();
+	}
+	
+	function Request(strName){  
+		var strHref = location.href; 
+		var intPos = strHref.indexOf("?");  
+		var strRight = strHref.substr(intPos + 1);  
+		var arrTmp = strRight.split("&");  
+		for(var i = 0; i < arrTmp.length; i++) {  
+		var arrTemp = arrTmp[i].split("=");  
+		if(arrTemp[0].toUpperCase() == strName.toUpperCase()) return decodeURI(arrTemp[1]);  
+		}  
+		return "";  
+	} 
+</script>
+</head>
+<body onload="clo()">
+</body>
+
+</html>

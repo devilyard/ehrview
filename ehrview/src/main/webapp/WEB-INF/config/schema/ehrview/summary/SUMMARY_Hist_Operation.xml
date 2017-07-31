@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<entry id="SUMMARY_History_Operation" alias="既往史_手术史">
+  <item id="DCID" alias="记录号" type="string" length="16" not-null="1" generator="assigned" pkey="true"/>
+  <item id="MPIID" alias="主索引标识" type="string" length="32" not-null="1"/>
+  <item id="OPERATIONCODE" alias="手术编码" length="500"/>
+  <item id="OPERATIONNAME" alias="手术名称" length="50"/>
+  <item id="OPERATIONDATETIME" alias="手术日期" type="date"/>
+  <item id="OPERATIONUNITID" alias="机构名称" length="16"/>
+  <item id="OPERATIONUNIT_TEXT" alias="机构名称" length="200"/>
+  <item id="UploadTime" alias="上传时间" type="date"/>
+  <item id="SystemTime" alias="创建时间" type="date"/>
+  <item id="AuthorOrganization" alias="创建机构" dic="JG01" length="16"/>
+  <item id="SRCEntryName" alias="数据来源" length="50"/>
+  <item id="SRCID" alias="源标识号" length="50"/>
+  <item id="SOURCEFLAG" alias="来源标示" length="1"/>
+</entry>

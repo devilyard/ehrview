@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<entry id="EMR_DischargeRecord" alias="EMR出院记录(EMR_DischargeRecord)">
+  <item id="DCID" alias="记录号" type="string" length="16" generator="assigned" pkey="true"/>
+  <item id="PatientType" alias="患者类型" type="string" length="2"/>
+  <item id="VisitID" alias="就诊标识" type="string" length="16"/>
+  <item id="MPIID" alias="主索引标识" type="string" length="32"/>
+  <item id="ZoneID" alias="分区标识" type="string" length="1"/>
+  <item id="StatisticDate" alias="统计日期" type="date"/>
+  <item id="AuthorOrganization" alias="创建机构" length="16"/>
+  <item id="AdmissionDateTime" alias="入院日期时间" type="date"/>
+  <item id="AdmissionCondition" alias="入院情况" length="2000"/>
+  <item id="AdmissionDiagnose" alias="入院诊断" length="100"/>
+  <item id="AdmissionDiagCode" alias="入院诊断代码" length="7"/>
+  <item id="DischargeDateTime" alias="出院日期时间" type="date"/>
+  <item id="Diagnose" alias="出院诊断" length="100"/>
+  <item id="DiagnoseCode" alias="出院诊断代码" length="7"/>
+  <item id="DischargeSituation" alias="出院情况" length="2000"/>
+  <item id="AuxiliaryExaminationPositiveRe" alias="阳性辅助检查结果" length="2000"/>
+  <item id="DischargeSymptomAndSign" alias="出院时症状与体征" length="2000"/>
+  <item id="AdmissionAdvice" alias="出院医嘱" length="2000"/>
+  <item id="SeniorDoctor" alias="上级医师签名" length="50"/>
+  <item id="SignDateTime" alias="签名日期时间" type="date"/>
+  <item id="TreatmentProcess" alias="诊疗过程描述" length="2000"/>
+  <item id="ChineseFourObservationDescript" alias="中医&quot;四诊&quot;观察结果描述" length="2000"/>
+  <item id="DifferentiationTypeCode" alias="辨证分型代码" length="7"/>
+  <item id="DifferentiationTypeName" alias="辩证分型名称" length="50"/>
+  <item id="TherapeuticPrinciple" alias="治则治法" length="100"/>
+  <item id="ChiefDoctorSign" alias="主任医师签名" length="50"/>
+  <item id="AttendingDoctor" alias="主治医师签名" length="50"/>
+  <item id="HospizationDoctor" alias="住院医师签名" length="50"/>
+  <item id="ActualHospitalizationDays" alias="实际住院天数" length="4"/>
+</entry>

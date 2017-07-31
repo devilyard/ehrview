@@ -1,0 +1,8 @@
+.u{ margin:0; padding:0; list-style:none; font-size:12px;height:32px; line-height:32px; background:#FFF; width:135px; clear:both;}
+.u li{ margin:0; padding:0; list-style:none; font-size:12px;float:left; padding-right:5px;}
+.u img{ margin:0; padding:0; list-style:none; font-size:12px;float:left;border:1px #fff solid;}
+.u span{ margin:0; padding:0; list-style:none; font-size:12px;float:right; padding-right:10px; font-family:Arial;color:red;display:none}
+.us{ margin:0; padding:0; list-style:none; font-size:12px;height:42px; line-height:42px; background:#3d95d6; font-size:14px; color:#fff; width:135px;clear:both;}
+.us li{ margin:0; padding:0; list-style:none; font-size:12px;float:left;padding-right:5px;color:blue;font-weight: bold;}
+.us span{ margin:0; padding:0; list-style:none; font-size:12px;float:right; padding-right:10px; font-family:Arial;color:red;display:block}
+.us img{ margin:0; padding:0; list-style:none; font-size:12px;float:left;border:1px #fff solid;width:40px;height:40px;}

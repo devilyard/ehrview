@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="杀虫剂"/>
+  <item key="11" text="有机磷杀虫剂"/>
+  <item key="111" text="敌敌畏"/>
+  <item key="112" text="甲胺磷"/>
+  <item key="113" text="对硫锛(别名1605或一六零五)，含甲基对硫磷"/>
+  <item key="114" text="氧乐果(含乐果)"/>
+  <item key="115" text="敌百虫"/>
+  <item key="116" text="水胺硫磷"/>
+  <item key="119" text="其他有机磷" comment="不属于111～116的有机磷杀虫剂归入119"/>
+  <item key="12" text="菊酯类杀虫剂"/>
+  <item key="121" text="溴氰菊酯"/>
+  <item key="129" text="其他菊酯类" comment="不属于121的菊酯类归入129"/>
+  <item key="13" text="氨基甲酸酯类杀虫剂"/>
+  <item key="131" text="克百威(呋喃丹)"/>
+  <item key="132" text="灭多威"/>
+  <item key="139" text="其他氨基甲酸酯类" comment="不属于131～132的氨基甲酸酯类归入139"/>
+  <item key="14" text="杀虫脒"/>
+  <item key="15" text="杀虫双"/>
+  <item key="16" text="有机氯类"/>
+  <item key="19" text="其他杀虫剂" comment="不属于11～16的 杀虫剂归入19"/>
+  <item key="2" text="杀菌剂"/>
+  <item key="3" text="杀鼠剂"/>
+  <item key="31" text="毒鼠强"/>
+  <item key="32" text="氟乙酰胺"/>
+  <item key="33" text="抗凝血杀鼠剂"/>
+  <item key="39" text="其他杀鼠剂" comment="不属于31～33的杀鼠剂归入39"/>
+  <item key="4" text="除草剂"/>
+  <item key="41" text="百草枯"/>
+  <item key="49" text="其他除草剂" comment="不属于41的除草剂归入49"/>
+  <item key="5" text="混合制剂" comment="同时使用两种以上的农药制剂或自配两种以上农药归入5混合制剂"/>
+  <item key="6" text="生物化学农药"/>
+  <item key="9" text="其他" comment="不能列入1～6的农药 品种归入其他9"/>
+</dic>

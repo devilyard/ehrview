@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="每天"/>
+  <item key="2" text="每周一次以上"/>
+  <item key="21" text="5次/周～6次/周"/>
+  <item key="22" text="3次/周～4次/周"/>
+  <item key="23" text="1次/周～2次/周"/>
+  <item key="3" text="偶尔"/>
+  <item key="31" text="1次/月～3次/月"/>
+  <item key="32" text="少于1次/月"/>
+  <item key="4" text="不运动"/>
+</dic>

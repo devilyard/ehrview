@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="散步"/>
+  <item key="2" text="做操或气功"/>
+  <item key="3" text="太极拳"/>
+  <item key="4" text="跑步"/>
+  <item key="5" text="跳舞"/>
+  <item key="6" text="球类"/>
+  <item key="7" text="其他"/>
+</dic>

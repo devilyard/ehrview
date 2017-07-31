@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="头先露"/>
+  <item key="2" text="臀先露"/>
+  <item key="3" text="肩先露"/>
+  <item key="9" text="不详"/>
+</dic>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="幻觉"/>
+  <item key="2" text="思维混乱"/>
+  <item key="3" text="言语难理解"/>
+  <item key="4" text="猜疑"/>
+  <item key="5" text="喜怒无常"/>
+  <item key="6" text="行为怪异"/>
+  <item key="7" text="兴奋话多"/>
+  <item key="8" text="伤人毁物"/>
+  <item key="9" text="悲观厌世"/>
+  <item key="10" text="无故外走"/>
+  <item key="11" text="自语自笑"/>
+  <item key="12" text="孤僻懒散"/>
+  <item key="13" text="呆滞"/>
+  <item key="14" text="否认有病 15其他"/>
+</dic>

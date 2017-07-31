@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>重性精神疾病患者随访服务记录表</title>
+</head>
+
+<body style="padding: 20px;" align="center">
+	<style type="text/css">
+.my table {
+	border-bottom: #ccc solid 1px;
+	border-left: #ccc solid 1px;
+	border-top: #ccc solid 1px;
+	text-align: left;
+}
+
+.my td {
+	border-right: #ccc solid 1px;
+	border-bottom: #ccc dotted 1px;
+	padding: 4px;
+}
+
+.red {
+	color: red;
+	font-weight: bold;
+}
+</style>
+	<div style="width: 100%; min-width: 500px;">
+		<div style="text-align: center; height: 40px; line-height: 40px; font-size: 16px; font-weight: bold;">重性精神疾病患者随访服务记录表</div>
+		<table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
+			<tr>
+				<td align="right"><strong>编号：</strong><u th:text="${doc.elementText('PHRID')}"></u></td>
+			</tr>
+			<tr><td style="border-bottom: 4px #09F solid;" colspan="2"></td></tr>
+			<tr>
+				<td style="height: 1px;" colspan="2"></td>
+			</tr>
+			<tr>
+				<td height="10" style="border-top: 1px #09f solid;" colspan="2"></td>
+			</tr>
+		</table>
+		<div class="my">
+			<table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
+				<tr>
+					<td bgcolor="#CAE2F7" width="120"><strong>目前症状</strong></td>
+					<td colspan="3"><span th:if="${doc.element('Symptom') != null}"
+						th:text="${doc.element('Symptom').attributeValue('display')} + '&nbsp;' + ${doc.elementText('SymptomText')}"></span></td>
+				</tr>
+				<tr>
+					<td bgcolor="#CAE2F7"><strong>自知力</strong></td>
+					<td colspan="3">
+						<span th:if="${doc.element('Insight') != null}" th:text="${doc.element('Insight').attributeValue('display')}"></span>
+					</td>
+				</tr>
+				<tr>
+					<td bgcolor="#CAE2F7"><strong>睡眠情况</strong></td>
+					<td colspan="3">
+						<span th:if="${doc.element('SleepQuality') != null}" th:text="${doc.element('SleepQuality').attributeValue('display')}"></span>
+					</td>
+				</tr>
+				<tr>
+					<td bgcolor="#CAE2F7"><strong>饮食情况</strong></td>
+					<td colspan="3">
+						<span th:if="${doc.element('EatQuality') != null}" th:text="${doc.element('EatQuality').attributeValue('display')}"></span>
+					</td>
+				</tr>
+				<!-- 				<tr> -->
+				<!-- 					<td bgcolor="#CAE2F7">既往主要症状</td> -->
+				<!-- 					<td colspan="3" -->
+				<!-- 						 th:if="${doc.element('Symptom') != null}" th:text="${doc.element('Symptom').attributeValue('display')}+${doc.element('SymptomText')}"></td> -->
+
+				<!-- 				</tr> -->
+				<tr bgcolor="#CAE2F7">
+					<td rowspan="6"><strong>社会功能情况</strong></td>
+				</tr>
+				<tr>
+					<td><strong>个人生活料理：</strong> 
+						<span th:if="${doc.element('LiveQuality') != null}" th:text="${doc.element('LiveQuality').attributeValue('display')}"></span>
+					</td>
+					<td colspan="2"><strong>家务劳动：</strong>
+						<span th:if="${doc.element('HouseWork') != null}" th:text="${doc.element('HouseWork').attributeValue('display')}"></span>
+					</td>
+				</tr>
+				<tr>
+				   	<td><strong>学习能力：</strong> 
+				  		<span th:if="${doc.element('Study') != null}" th:text="${doc.element('Study').attributeValue('display')}"></span>
+				  	</td>
+				  	<td colspan="2"><strong>生产劳动及工作：</strong> 
+				  		<span th:if="${doc.element('ProductiveLabor') != null}" th:text="${doc.element('ProductiveLabor').attributeValue('display')}"></span>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3"><strong>社会人际交往：</strong> 
+						<span th:if="${doc.element('Social') != null}" th:text="${doc.element('Social').attributeValue('display')}"></span>
+					</td>
+				</tr>
+				<tr>
+					<td bgcolor="#CAE2F7"><strong>患病对家庭社会的影响</strong></td>
+					<td colspan="3">
+						<span th:if="${doc.elementText('LightAffray') != ''}">轻度滋事次数
+							<u style="margin-right: 5px;" th:text="${doc.elementText('LightAffray')} "></u>次
+						</span> 
+						<span th:if="${doc.elementText('CauseTrouble') != ''}">肇事次数
+							<u style="margin-right: 5px;" th:text="${doc.elementText('CauseTrouble')} "></u>次
+						</span> 
+						<span th:if="${doc.elementText('CauseAccident') != ''}">肇祸次数
+							<u style="margin-right: 5px;" th:text="${doc.elementText('CauseAccident')} "></u>次
+						</span> 
+						<span th:if="${doc.elementText('SelfHurt') != ''}">自伤次数
+							<u style="margin-right: 5px;" th:text=" ${doc.elementText('SelfHurt')} "></u>次
+						</span> 
+						<span th:if="${doc.elementText('Suicide') != ''}">自杀未遂次数
+							<u style="margin-right: 5px;" th:text=" ${doc.elementText('Suicide')} "></u>次
+						</span>
+					</td>
+				</tr>
+				<!-- 				<tr> -->
+				<!-- 					<td bgcolor="#CAE2F7">实验室检查</td> -->
+				<!-- 					<td colspan="3"></td> -->
+				<!-- 				</tr> -->
+				<tr>
+					<td bgcolor="#CAE2F7"><strong>服药依从性</strong></td>
+					<td colspan="3">
+						<span th:if="${doc.element('Medicine') != null}" th:text="${doc.element('Medicine').attributeValue('display')}"></span>
+					</td>
+				</tr>
+				<tr>
+					<td bgcolor="#CAE2F7"><strong>药物不良反应</strong></td>
+					<td colspan="3">
+						<span th:if="${doc.element('AdverseReactions') != null}"
+							th:text="${doc.element('AdverseReactions').attributeValue('display')} == '有' ? ${doc.elementText('AdverseReactionsText')}:'无'"></span>
+					</td>
+				</tr>
+				<tr>
+					<td bgcolor="#CAE2F7"><strong>治疗效果</strong></td>
+					<td colspan="3">
+						<span th:if="${doc.element('Treatment') != null}" th:text="${doc.element('Treatment').attributeValue('display')}"></span>
+					</td>
+				</tr>
+				<tr>
+					<td rowspan="2" bgcolor="#CAE2F7"><strong>是否转诊</strong></td>
+					<td colspan="3"><strong>原因：</strong><span th:text="${doc.elementText('Reason')}"></span></td>
+				</tr>
+				<tr>
+					<td colspan="3"><strong>机构及科室：</strong><span th:text="${doc.elementText('Doccol')}"></span></td>
+				</tr>
+				<tr>
+					<td align="left" bgcolor="#CAE2F7"><strong>用药情况</strong></td>
+					<td colspan="3">
+						<table width="95%" border="0" align="center" cellpadding="0" cellspacing="0" style="border: 0;"
+							th:each="opt:${doc.element('PSY_PsychosisVisitMedicines').selectNodes('PSY_PsychosisVisitMedicine')}">
+							<td colspan="2" style="border-right: 0;"><strong>药物：</strong>
+								<strong> <span th:text="${opt.elementText('MedicineName')}"></span></strong>
+							</td>
+							<tr>
+								<td width="50%"><strong>每日(月) ：</strong> 
+									<span th:text="${opt.elementText('MedicineFrequency')} + '次' + '/' + ${opt.elementText('Days')}"></span>
+								</td>
+								<td width="50%" style="border-right: 0;"><strong>每次剂量：</strong> 
+									<span th:text="${opt.elementText('MedicineDosage')} + ${opt.elementText('MedicineUnit')}"></span>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td bgcolor="#CAE2F7"><strong>康复措施</strong></td>
+					<td colspan="3">
+						<span th:if="${doc.element('Healing') != null}"
+							th:text="${doc.element('Healing').attributeValue('display')} + '&nbsp;' + ${doc.elementText('HealingText')}"></span>
+					</td>
+				</tr>
+				<tr>
+					<td bgcolor="#CAE2F7"><strong>本次随访分类</strong></td>
+					<td colspan="3">
+						<span th:if="${doc.element('VisitType') != null}" th:text="${doc.element('VisitType').attributeValue('display')}"></span>
+					</td>
+				</tr>
+				<tr>
+					<td bgcolor="#CAE2F7"><strong>下次随访日期</strong></td>
+					<td th:text="${doc.elementText('NextDate')}"></td>
+					<td bgcolor="#CAE2F7"><strong>随访医生签名</strong></td>
+					<td th:text="${doc.elementText('VisitDoctor')}"></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</body>
+</html>

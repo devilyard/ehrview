@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class entity-name="EMR_InpatientAdvice" table="EMR_InpatientAdvice">
+			<id name="AdviceID" type="java.lang.String">
+            	<column name="AdviceID"/>
+            	<generator class="assigned" />
+        	</id>
+        	<property name="VisitID" type="java.lang.String" length="16" />
+        	<property name="PatientType" type="java.lang.String" length="2" />
+        	<property name="MPIID" type="java.lang.String" length="32" />
+        	<property name="SourceID" type="java.lang.String" length="50" />
+        	<property name="ZoneID" type="java.lang.String" length="1" />
+        	<property name="StatisticDate" type="timestamp"  />
+        	<property name="AuthorOrganization" type="java.lang.String" length="16" />
+        	<property name="PatientDept" type="java.lang.String" length="18" />
+        	<property name="DeptName" type="java.lang.String" length="50" />
+        	<property name="PatientWardArea" type="java.lang.String" length="18" />
+        	<property name="WardAreaNm" type="java.lang.String" length="50" />
+        	<property name="AdviceTypeCode" type="java.lang.String" length="1" />
+        	<property name="AdviceOpenDateTime" type="timestamp"  />
+        	<property name="AdviceOpenerSign" type="java.lang.String" length="50" />
+        	<property name="AdviceOpenDept" type="java.lang.String" length="50" />
+        	<property name="AdvicePlanStartTime" type="timestamp"  />
+        	<property name="AdvicePlanEndTime" type="timestamp"  />
+        	<property name="AdviceItemType" type="java.lang.String" length="4" />
+        	<property name="AdviceItem" type="java.lang.String" length="100" />
+        	<property name="ElectronicRequestNoteID" type="java.lang.String" length="20" />
+        	<property name="CostItem" type="java.lang.String" length="200" />
+        	<property name="AdviceNote" type="java.lang.String" length="100" />
+        	<property name="AdviceAuditSign" type="java.lang.String" length="50" />
+        	<property name="ReviewDateTime" type="timestamp"  />
+        	<property name="CheckNurse" type="java.lang.String" length="50" />
+        	<property name="NurseCheckTime" type="timestamp"  />
+        	<property name="AdviceExecutiveDepartment" type="java.lang.String" length="50" />
+        	<property name="AdviceExecutiveStatus" type="java.lang.String" length="50" />
+        	<property name="AdviceStopDateTime" type="timestamp"  />
+        	<property name="StopAdviceDoctor" type="java.lang.String" length="50" />
+        	<property name="AdviceCancelDateTime" type="timestamp"  />
+        	<property name="MedicalAdviceCancelDoctor" type="java.lang.String" length="50" />
+        	<property name="StopAdviceCheckNurse" type="java.lang.String" length="50" />
+        	<property name="StopAdviceCheckDate" type="timestamp"  />
+        	<property name="AdviceGroupID" type="java.lang.String" length="18" />
+        	<property name="ArrangeOrder" type="java.lang.String" length="4" />
+        	<property name="ItemID" type="java.lang.String" length="18" />
+        	<property name="ItemPrice" type="java.lang.String" length="10" />
+        	<property name="OnceDosage" type="java.lang.Double" length="10" />
+        	<property name="DosageUnit" type="java.lang.String" length="20" />
+        	<property name="OnceTotalNumber" type="java.lang.String" length="10" />
+        	<property name="TotalNumberUnit" type="java.lang.String" length="20" />
+        	<property name="UsageFrequency" type="java.lang.String" length="18" />
+        	<property name="AdministrationRoute" type="java.lang.String" length="3" />
+        	<property name="MedicineDays" type="java.lang.String" length="4" />
+        	<property name="FirstDayFrequency" type="java.lang.String" length="6" />
+        	<property name="ExecuteTimePoint" type="java.lang.String" length="100" />
+        	<property name="VenaDroppingSpeed" type="java.lang.String" length="4" />
+        	<property name="DroppingSpeedUnit" type="java.lang.String" length="20" />
+        	<property name="SkinTestSign" type="java.lang.String" length="1" />
+        	<property name="HerbalMedicineDecoction" type="java.lang.String" length="8" />
+        	<property name="MedicineProperty" type="java.lang.String" length="8" />
+        	<property name="DispensingProperty" type="java.lang.String" length="1" />
+        	<property name="BackEnterAdvice" type="java.lang.String" length="1" />
+        	<property name="AdviceStatus" type="java.lang.String" length="8" />
+        	<property name="ExecuteStatus" type="java.lang.String" length="8" />
+        	<property name="PrintStatus" type="java.lang.String" length="8" />
+        	<property name="ReformingSign" type="java.lang.String" length="1" />
+        	<property name="DrugstoreSpec" type="java.lang.String" length="20" />
+        	<property name="DrugstoreUnit" type="java.lang.String" length="10" />
+        	<property name="DrugstorePacking" type="java.lang.String" length="8" />
+        	<property name="DrugProductionPlace" type="java.lang.String" length="18" />
+        	<property name="SelfChargeDiscretion" type="java.lang.String" length="8" />
+        	<property name="MedicalInsuranceType" type="java.lang.String" length="8" />
+        	<property name="EffectiveFlag" type="java.lang.String" length="1" />
+        	<property name="AdviceType" type="java.lang.String" length="32" not-null="true" />
+        	<property name="AdministrationRoute_Text" type="java.lang.String" length="32" not-null="true" />
+        	<property name="AdviceStatus_Text" type="java.lang.String" length="32" not-null="true" />
+</class>
+</hibernate-mapping>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<role name="产品经理" parent="base" version="1329801376604">
+  <accredit>
+    <apps>
+      <app id="BS">
+        <others/>
+      </app>
+      <app id="SYS">
+        <module id="SYS02"/>
+        <module id="SYS01"/>
+      </app>
+    </apps>
+    <service acType="whitelist">
+      <service id="logon"/>
+      <service id="schemaLoader"/>
+      <service id="simpleSave"/>
+      <service id="simpleLoad"/>
+      <service id="simpleQuery"/>
+      <service id="simpleRemove"/>
+      <others/>
+    </service>
+    <storage acType="whitelist">
+      <others acValue="1111"/>
+    </storage>
+  </accredit>
+</role>

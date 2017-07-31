@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="粪检血吸虫虫卵"/>
+  <item key="2" text="血检血吸虫病抗体"/>
+  <item key="3" text="直肠镜活检血吸虫虫卵"/>
+  <item key="4" text="粪检血吸虫虫卵+血检血吸虫病抗体"/>
+  <item key="5" text="血检血吸虫病抗体+直肠镜活检血吸虫虫卵"/>
+  <item key="6" text="粪检血吸虫虫卵+直肠镜活检血吸虫虫卵"/>
+  <item key="9" text="其他"/>
+</dic>

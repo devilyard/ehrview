@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="健康档案"/>
+  <item key="2" text="35岁首诊测压"/>
+  <item key="3" text="普查"/>
+  <item key="4" text="门诊就诊"/>
+  <item key="5" text="体检"/>
+</dic>

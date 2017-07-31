@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dic>
+	<item key="10" text="未婚" mCode="1" />
+	<item key="20" text="已婚" mCode="2">
+		<item key="21" text="初婚" mCode="3" />
+		<item key="22" text="再婚" mCode="4" />
+		<item key="23" text="复婚" mCode="5" />
+	</item>
+	<item key="40" text="丧偶" mCode="6" />
+	<item key="30" text="离婚" mCode="7" />
+	<item key="90" text="未说明的婚姻状况" mCode="9" />
+</dic>

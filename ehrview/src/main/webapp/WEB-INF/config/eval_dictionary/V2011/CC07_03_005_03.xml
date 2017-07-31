@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="肾脏病变"/>
+  <item key="2" text="神经病变"/>
+  <item key="3" text="血管病变"/>
+  <item key="4" text="视网膜病变"/>
+  <item key="5" text="皮肤感染"/>
+</dic>

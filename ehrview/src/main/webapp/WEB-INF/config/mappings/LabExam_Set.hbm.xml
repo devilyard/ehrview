@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class entity-name="LabExam_Set" table="LabExam_Set">
+		<id name="RecordClassifying" type="java.lang.String">
+           	<column name="RecordClassifying"/>
+           	<generator class="assigned" />
+       	</id>
+		<property name="limit" type="java.lang.String" length="5"/>
+		<property name="times" type="java.lang.String" length="5"/>
+		<property name="AuthorOrganizationCode" type="java.lang.String" length="22"/>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="正在治疗"/>
+  <item key="2" text="转为正常"/>
+  <item key="3" text="病情加重住院治疗"/>
+  <item key="4" text="已终止妊娠"/>
+  <item key="5" text="其他"/>
+</dic>

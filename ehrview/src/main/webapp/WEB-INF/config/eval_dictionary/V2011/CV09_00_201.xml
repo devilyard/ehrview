@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dic>
+  <item key="1" text="A" comment="按100分标化后，总得分在90分以上的，卫生状况为优秀，卫生信誉度为A级"/>
+  <item key="2" text="B" comment="总得分在7O分～89分的，卫生状况为良好，卫生信誉度为B级"/>
+  <item key="3" text="C" comment="总得分在60分～69分的，卫生状况为一般，卫生信誉度为C级"/>
+  <item key="4" text="不予评级" comment="总得分低于60的，责令限期整改，并依法处理"/>
+  <item key="5" text="未评级" comment="未进行量化评级"/>
+</dic>
